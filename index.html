@@ -1008,7 +1008,7 @@ function pick(qi, oi) {
 }
 
 function vis() {
-  return QQ.map((_, i) => i).filter(i => !document.getElementById('q' + i).classList.contains('hide'));
+ return QQ.map((_, i) => i).filter(i => document.getElementById('q' + i) && !document.getElementById('q' + i).classList.contains('hide'));
 }
 
 function updProg() {
