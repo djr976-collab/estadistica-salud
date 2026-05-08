@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="description" content="Repaso y autoevaluación de Estadística en Salud — Tecnicatura Superior en Instrumentación Quirúrgica · Cruz Roja Argentina, Filial Corrientes">
+<meta name="theme-color" content="#C8102E">
+<title>Estadística en Salud · Repaso</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,500;0,9..40,700;1,9..40,300&family=DM+Mono:wght@400;500&display=swap');
+
+:root {
+  --r: #C8102E;
+  --rd: #8B0A1E;
+  --rl: #fce8eb;
+  --rll: #fdf4f5;
+  --bk: #0f0e0d;
+  --bk2: #1c1b19;
+  --bk3: #2a2926;
+  --fg: #f5f3ee;
+  --fg2: #c9c5bb;
+  --fg3: #878379;
+  --v: #16a34a;
+  --vl: #dcfce7;
+  --am: #d97706;
+  --aml: #fef3c7;
+  --line: rgba(255,255,255,0.08);
+  --card: rgba(255,255,255,0.04);
+  --card2: rgba(255,255,255,0.07);
+  --font: 'DM Sans', system-ui, sans-serif;
+  --mono: 'DM Mono', 'Courier New', monospace;
+  --radius: 12px;
+  --radius-sm: 8px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+
+body {
+  font-family: var(--font);
+  background: var(--bk);
+  color: var(--fg);
+  min-height: 100vh;
+  font-size: 15px;
+  line-height: 1.6;
+  overscroll-behavior: none;
+}
+
+/* ── HEADER ── */
+.header {
+  background: var(--r);
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.3);
+}
+
+.header-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 14px 20px 0;
+}
+
+.header-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.logo {
+  width: 36px;
+  height: 36px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.logo svg { width: 20px; height: 20px; }
+
+.header-text { flex: 1; min-width: 0; }
+
+.header-text h1 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.header-text p {
+  font-size: 11px;
+  color: rgba(255,255,255,0.7);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 300;
+  margin-top: 1px;
+}
+
+.tabs {
+  display: flex;
+  gap: 0;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px 12px;
+  border: none;
+  background: none;
+  color: rgba(255,255,255,0.6);
+  font-family: var(--font);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.tab svg { width: 15px; height: 15px; opacity: 0.8; }
+.tab:hover { color: rgba(255,255,255,0.85); }
+.tab.on { color: #fff; border-bottom-color: #fff; }
+
+/* ── MAIN ── */
+.main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 20px 16px 80px;
+}
+
+/* ── SECTIONS ── */
+.sec { display: none; }
+.sec.on { display: block; }
+
+/* ── REPASO ── */
+.repaso-intro {
+  background: var(--bk2);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--r);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  font-size: 13px;
+  color: var(--fg2);
+  line-height: 1.55;
+}
+
+.repaso-intro strong { color: var(--fg); }
+
+.tema {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  margin-bottom: 10px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.tema.open { border-color: rgba(200,16,46,0.4); }
+
+.tema-hdr {
+  background: var(--bk2);
+  padding: 14px 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  user-select: none;
+  transition: background 0.15s;
+  gap: 10px;
+}
+
+.tema-hdr:active { background: var(--bk3); }
+
+.tema-num {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--r);
+  letter-spacing: 1.5px;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.tema-title { flex: 1; min-width: 0; }
+
+.chev {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: var(--fg3);
+  transition: transform 0.25s;
+}
+
+.tema.open .chev { transform: rotate(180deg); }
+
+.tema-body {
+  display: none;
+  padding: 16px;
+  border-top: 1px solid var(--line);
+  font-size: 13.5px;
+  line-height: 1.65;
+  background: var(--bk);
+}
+
+.tema.open .tema-body { display: block; }
+
+.ci {
+  margin-bottom: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.ci:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+.ct {
+  font-weight: 700;
+  color: var(--r);
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.ej {
+  background: var(--aml);
+  border-left: 3px solid var(--am);
+  padding: 9px 12px;
+  margin-top: 8px;
+  font-size: 12.5px;
+  border-radius: 0 6px 6px 0;
+  color: #7c5a00;
+  line-height: 1.5;
+}
+
+.ej strong { color: #5a3f00; }
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 7px;
+}
+
+.tag {
+  background: rgba(200,16,46,0.12);
+  color: #f4a0ac;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 9px;
+  border-radius: 20px;
+  font-family: var(--mono);
+}
+
+.tag.v { background: rgba(22,163,74,0.12); color: #86efac; }
+
+.fm {
+  background: var(--bk2);
+  border: 1px solid var(--line);
+  color: #a5f3c0;
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 10px 13px;
+  border-radius: var(--radius-sm);
+  margin: 7px 0;
+  overflow-x: auto;
+}
+
+/* ── EXAMEN ── */
+.ex-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.prog-wrap { flex: 1; min-width: 150px; }
+
+.prog-lbl {
+  font-size: 11px;
+  color: var(--fg3);
+  margin-bottom: 5px;
+  font-family: var(--mono);
+}
+
+.prog-bar {
+  height: 4px;
+  background: var(--bk3);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.prog-fill {
+  height: 100%;
+  background: var(--r);
+  border-radius: 2px;
+  transition: width 0.4s cubic-bezier(0.4,0,0.2,1);
+  width: 0%;
+}
+
+.nota-badge {
+  background: var(--bk2);
+  border: 1px solid var(--line);
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  color: var(--fg2);
+  white-space: nowrap;
+}
+
+.filtros {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.fbtn {
+  padding: 5px 12px;
+  border: 1px solid var(--line);
+  background: var(--bk2);
+  border-radius: 20px;
+  font-family: var(--font);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--fg3);
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.fbtn:hover { border-color: var(--r); color: #f4a0ac; }
+.fbtn.on { background: var(--r); border-color: var(--r); color: #fff; }
+
+.qcard {
+  background: var(--bk2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px;
+  margin-bottom: 10px;
+  transition: border-color 0.2s;
+}
+
+.qcard.hide { display: none; }
+.qcard.ans { border-color: rgba(255,255,255,0.14); }
+
+.qn {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--r);
+  letter-spacing: 1.5px;
+  margin-bottom: 9px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.qblq {
+  background: var(--bk3);
+  color: var(--fg3);
+  font-size: 10px;
+  padding: 2px 7px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+}
+
+.qt {
+  font-size: 14.5px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 13px;
+  color: var(--fg);
+}
+
+.opts { display: flex; flex-direction: column; gap: 7px; }
+
+.obtn {
+  text-align: left;
+  padding: 11px 14px;
+  border: 1px solid var(--line);
+  background: var(--bk3);
+  border-radius: var(--radius-sm);
+  font-family: var(--font);
+  font-size: 13.5px;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  line-height: 1.45;
+  color: var(--fg2);
+  transition: all 0.15s;
+  width: 100%;
+}
+
+.obtn:active:not(:disabled) {
+  transform: scale(0.99);
+  background: rgba(200,16,46,0.1);
+  border-color: rgba(200,16,46,0.4);
+  color: var(--fg);
+}
+
+.obtn:disabled { cursor: default; }
+
+.ol {
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: 11px;
+  min-width: 18px;
+  padding-top: 1px;
+  color: var(--fg3);
+  flex-shrink: 0;
+}
+
+.obtn.ok { border-color: rgba(22,163,74,0.5); background: rgba(22,163,74,0.08); color: #86efac; }
+.obtn.ok .ol { color: var(--v); }
+.obtn.err { border-color: rgba(200,16,46,0.5); background: rgba(200,16,46,0.08); color: #f4a0ac; }
+.obtn.err .ol { color: var(--r); }
+.obtn.rev { border-color: rgba(22,163,74,0.4); background: rgba(22,163,74,0.06); opacity: 0.65; }
+
+.fb {
+  margin-top: 10px;
+  padding: 10px 13px;
+  border-radius: var(--radius-sm);
+  font-size: 12.5px;
+  line-height: 1.55;
+  display: none;
+}
+
+.fb.show { display: block; }
+.fb.ok { background: rgba(22,163,74,0.1); color: #86efac; border-left: 3px solid var(--v); }
+.fb.err { background: rgba(200,16,46,0.1); color: #f4a0ac; border-left: 3px solid var(--r); }
+
+/* ── RESULTADO ── */
+.resultado {
+  background: var(--bk2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px 20px;
+  text-align: center;
+  margin-top: 20px;
+  display: none;
+}
+
+.resultado.show { display: block; }
+
+.res-nota {
+  font-size: 64px;
+  font-weight: 700;
+  font-family: var(--mono);
+  color: var(--fg);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.res-nota span { font-size: 28px; color: var(--fg3); }
+
+.res-lbl {
+  font-size: 14px;
+  color: var(--fg2);
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.res-stats {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+
+.rs {
+  background: var(--bk3);
+  border-radius: var(--radius-sm);
+  padding: 12px 18px;
+  min-width: 85px;
+}
+
+.rs-n {
+  font-family: var(--mono);
+  font-size: 26px;
+  font-weight: 500;
+  display: block;
+  color: var(--fg);
+}
+
+.rs-l {
+  font-size: 10px;
+  color: var(--fg3);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.btn-r {
+  background: var(--r);
+  color: #fff;
+  border: none;
+  padding: 12px 26px;
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn-r:active { background: var(--rd); transform: scale(0.98); }
+
+/* ── BOTTOM BAR ── */
+.sbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(15,14,13,0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--line);
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  z-index: 50;
+}
+
+.sbar-msg {
+  font-size: 12px;
+  color: var(--fg3);
+  font-family: var(--mono);
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.btn-ver {
+  background: var(--r);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: 13px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.15s;
+}
+
+.btn-ver:active { background: var(--rd); transform: scale(0.98); }
+.btn-ver:disabled { background: var(--bk3); color: var(--fg3); cursor: not-allowed; }
+
+/* ── RESPONSIVE ── */
+@media (min-width: 600px) {
+  .obtn:hover:not(:disabled) {
+    border-color: rgba(200,16,46,0.4);
+    background: rgba(200,16,46,0.06);
+    color: var(--fg);
+  }
+  .tema-hdr:hover { background: var(--bk3); }
+}
+
+/* ── SCROLL ── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--bk3); border-radius: 2px; }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <div class="header-top">
+      <div class="logo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+        </svg>
+      </div>
+      <div class="header-text">
+        <h1>Estadística en Salud</h1>
+        <p>Instrumentación Quirúrgica · Cruz Roja Argentina · Corrientes</p>
+      </div>
+    </div>
+    <div class="tabs">
+      <button class="tab on" onclick="showTab('repaso',this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        Repaso
+      </button>
+      <button class="tab" onclick="showTab('examen',this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        Autoevaluación · 70 preguntas
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="main">
+
+<!-- ═══ REPASO ═══ -->
+<div id="repaso" class="sec on">
+
+  <div class="repaso-intro">
+    <strong>Unidad 1 — Introducción a la Estadística en Salud.</strong><br>
+    Tocá cada tema para desplegar el contenido. Todos los ejemplos están contextualizados en instrumentación quirúrgica.
+  </div>
+
+  <div class="tema" id="t1">
+    <div class="tema-hdr" onclick="toggleTema('t1')">
+      <span class="tema-num">01</span>
+      <span class="tema-title">¿Qué es la Estadística en Salud?</span>
+      <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+    <div class="tema-body">
+      <div class="ci">
+        <div class="ct">Definición</div>
+        Conjunto de métodos científicos para <strong>recopilar, representar, condensar y analizar datos</strong> con el objetivo de tomar <strong>decisiones basadas en evidencia</strong>.
+      </div>
+      <div class="ci">
+        <div class="ct">Estadística Descriptiva</div>
+        Describe y resume características de datos ya observados. No generaliza más allá de lo observado.
+        <div class="ej"><strong>Ejemplo:</strong> Calcular el tiempo promedio de 20 cirugías de apendicectomía realizadas durante el mes.</div>
+      </div>
+      <div class="ci">
+        <div class="ct">Estadística Inferencial</div>
+        Generaliza conclusiones sobre una <strong>población</strong> a partir de una <strong>muestra</strong> representativa.
+        <div class="ej"><strong>Ejemplo:</strong> Estimar la tasa de infección de todo el hospital a partir del análisis de 50 cirugías.</div>
+      </div>
+      <div class="ci">
+        <div class="ct">Conceptos clave</div>
+        <div class="tags">
+          <span class="tag">Población/Universo</span>
+          <span class="tag">Muestra</span>
+          <span class="tag">Variable</span>
+          <span class="tag">Constante</span>
+          <span class="tag">Sesgo</span>
+        </div>
+        <div style="margin-top:9px;font-size:12.5px;color:var(--fg3)">
+          <strong style="color:var(--fg2)">Sesgo</strong> = error sistemático en la recolección, análisis o interpretación de datos que distorsiona los resultados.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tema" id="t2">
+    <div class="tema-hdr" onclick="toggleTema('t2')">
+      <span class="tema-num">02</span>
+      <span class="tema-title">Variables: Concepto y Clasificación</span>
+      <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+    <div class="tema-body">
+      <div class="ci">
+        <div class="ct">Variable vs. Constante</div>
+        <strong>Variable:</strong> característica que cambia entre unidades de análisis.<br>
+        <strong>Constante:</strong> no cambia entre unidades.
+      </div>
+      <div class="ci">
+        <div class="ct">Variables Cualitativas</div>
+        Expresan cualidades o categorías. No son numéricas.
+        <div class="tags">
+          <span class="tag">Dicotómica: 2 categorías (Sí/No)</span>
+          <span class="tag">Politómica: 3 o más</span>
+        </div>
+        <div style="margin-top:10px;font-size:13px;line-height:1.6">
+          <strong>Nominal —</strong> sin orden ni jerarquía.<br>
+          <span style="color:var(--fg3)">Ej: especialidad quirúrgica, sexo, tipo de cirugía.</span><br><br>
+          <strong>Ordinal —</strong> con orden progresivo, sin intervalos iguales.<br>
+          <span style="color:var(--fg3)">Ej: Escala de Glasgow (3–15), grado de carcinoma (I/II/III/IV).</span>
+        </div>
+      </div>
+      <div class="ci">
+        <div class="ct">Variables Cuantitativas</div>
+        Expresan cantidades numéricas.
+        <div class="tags">
+          <span class="tag v">Discreta: solo valores enteros</span>
+          <span class="tag v">Continua: cualquier valor en un intervalo</span>
+        </div>
+        <div class="ej">
+          <strong>Discreta:</strong> N° de intervenciones por quirófano (3, 5, 7…)<br>
+          <strong>Continua:</strong> temperatura (37,4°C), presión arterial, tiempo quirúrgico.
+        </div>
+      </div>
+      <div class="ci">
+        <div class="ct">Dependiente / Independiente</div>
+        <strong>Independiente:</strong> el investigador la manipula; sus cambios determinan cambios en otras.<br>
+        <strong>Dependiente:</strong> se ve determinada por los valores de la variable independiente.
+      </div>
+    </div>
+  </div>
+
+  <div class="tema" id="t3">
+    <div class="tema-hdr" onclick="toggleTema('t3')">
+      <span class="tema-num">03</span>
+      <span class="tema-title">Escalas de Medición</span>
+      <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+    <div class="tema-body">
+      <div class="ci">
+        <div class="ct">Nominal</div>
+        Sin orden ni jerarquía. <strong>Solo permite calcular la Moda.</strong><br>
+        <span style="color:var(--fg3)">Ej: tipo de cirugía, sexo, diagnóstico, especialidad médica.</span>
+      </div>
+      <div class="ci">
+        <div class="ct">Ordinal</div>
+        Con orden natural, sin intervalos iguales. Permite <strong>Moda y Mediana.</strong><br>
+        <span style="color:var(--fg3)">Ej: Glasgow (3–15), grado de carcinoma (I/II/III/IV), Apgar.</span>
+      </div>
+      <div class="ci">
+        <div class="ct">Intervalo</div>
+        Intervalos iguales, <strong>sin cero absoluto</strong> (el cero es arbitrario). Permite Media, Mediana y Moda.<br>
+        <span style="color:var(--fg3)">Ej: temperatura en °C — 0°C no significa ausencia de temperatura.</span>
+      </div>
+      <div class="ci">
+        <div class="ct">Razón</div>
+        Intervalos iguales + <strong>cero absoluto</strong>. Permite <strong>todos los estadísticos.</strong><br>
+        <span style="color:var(--fg3)">Ej: peso (kg), talla, tiempo quirúrgico, hemoglobina, presión arterial.</span>
+      </div>
+      <div class="ej" style="margin-top:4px">
+        <strong>Regla clave:</strong> cada escala incluye las propiedades de las anteriores. La Razón es la más completa.
+      </div>
+    </div>
+  </div>
+
+  <div class="tema" id="t4">
+    <div class="tema-hdr" onclick="toggleTema('t4')">
+      <span class="tema-num">04</span>
+      <span class="tema-title">Fuentes e Instrumentos de Datos</span>
+      <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+    <div class="tema-body">
+      <div class="ci">
+        <div class="ct">Fuentes Primarias</div>
+        Información <strong>original</strong>, creada por el propio investigador para el estudio. Mayor control, mayor costo.
+        <div class="ej">Encuesta diseñada por el servicio de cirugía · Observación directa en quirófano · Registro propio de tiempos operatorios.</div>
+      </div>
+      <div class="ci">
+        <div class="ct">Fuentes Secundarias</div>
+        Producidas por <strong>terceros</strong>. Menor costo, menor control metodológico.
+        <div class="ej">Ministerio de Salud · INDEC · SINAVE · Publicaciones científicas indexadas.</div>
+      </div>
+      <div class="ci">
+        <div class="ct">Matriz de Datos</div>
+        <strong>Columnas = variables</strong> · <strong>Filas = unidades de observación</strong> (pacientes, cirugías, etc.)
+      </div>
+      <div class="ci">
+        <div class="ct">Criterios de Confiabilidad</div>
+        ¿De dónde vienen los datos? ¿Son coherentes con otras evidencias? ¿Representan a todos los grupos? ¿La conclusión es lógica?
+      </div>
+    </div>
+  </div>
+
+  <div class="tema" id="t5">
+    <div class="tema-hdr" onclick="toggleTema('t5')">
+      <span class="tema-num">05</span>
+      <span class="tema-title">Tablas de Frecuencia</span>
+      <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+    <div class="tema-body">
+      <div class="ci">
+        <div class="ct">Frecuencia Simple — f (minúscula)</div>
+        Número de veces que aparece cada categoría. La suma de todas las f = N.
+      </div>
+      <div class="ci">
+        <div class="ct">Frecuencia Acumulada — F (MAYÚSCULA)</div>
+        Suma progresiva de las frecuencias. <strong>La última F siempre es igual a N.</strong>
+        <div class="ej">UTI: Nivel 1 → f=5, F=5 · Nivel 2 → f=3, F=8 · Nivel 3 → f=10, F=18 · Nivel 4 → f=2, F=20 · N=20</div>
+      </div>
+      <div class="ci">
+        <div class="ct">Distribución por Intervalos</div>
+        Para variables cuantitativas continuas con muchos valores. Reglas: <strong>igual amplitud</strong> e <strong>intervalos mutuamente excluyentes.</strong>
+        <div style="margin-top:6px;font-size:12px;color:var(--fg3)">Amplitud = (Valor máximo − Valor mínimo) / N° de intervalos</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tema" id="t6">
+    <div class="tema-hdr" onclick="toggleTema('t6')">
+      <span class="tema-num">06</span>
+      <span class="tema-title">Indicadores de Salud</span>
+      <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+    <div class="tema-body">
+      <div class="ci">
+        <div class="ct">Razón vs. Proporción vs. Tasa</div>
+        <strong>Razón:</strong> A/B — el denominador NO incluye al numerador.<br>
+        <strong>Proporción:</strong> A/(A+B) — el numerador está incluido en el denominador. Valor entre 0 y 1.<br>
+        <strong>Tasa:</strong> considera tiempo de exposición (tiempo-persona). Mide velocidad de cambio.
+      </div>
+      <div class="ci">
+        <div class="ct">Fórmulas Hospitalarias</div>
+        <div class="fm">Tasa Ocupación = (Camas ocupadas / Camas disponibles) × 100</div>
+        <div class="fm">Tasa Mortalidad = (Total defunciones / Total egresos) × 100</div>
+        <div class="fm">Interv./quirófano/día = (N° cirugías en el año / 365) / N° quirófanos</div>
+      </div>
+      <div class="ci">
+        <div class="ct">Prevalencia vs. Incidencia</div>
+        <strong>Prevalencia:</strong> casos existentes ahora / población total. (¿Cuántos TIENEN la enfermedad HOY?)<br>
+        <strong>Incidencia:</strong> casos NUEVOS en un período / población en riesgo.
+      </div>
+    </div>
+  </div>
+
+</div><!-- /repaso -->
+
+<!-- ═══ EXAMEN ═══ -->
+<div id="examen" class="sec">
+
+  <div class="ex-top">
+    <div class="prog-wrap">
+      <div class="prog-lbl" id="pLbl">0 / 70 respondidas</div>
+      <div class="prog-bar"><div class="prog-fill" id="pFill"></div></div>
+    </div>
+    <div class="nota-badge" id="nBadge">Nota: —</div>
+  </div>
+
+  <div class="filtros" id="filtros"></div>
+  <div id="qCont"></div>
+
+  <div class="resultado" id="resPanel">
+    <div class="res-nota" id="resNota">— <span>/ 10</span></div>
+    <div class="res-lbl" id="resLbl">—</div>
+    <div class="res-stats">
+      <div class="rs"><span class="rs-n" id="rsCor">—</span><span class="rs-l">Correctas</span></div>
+      <div class="rs"><span class="rs-n" id="rsErr">—</span><span class="rs-l">Incorrectas</span></div>
+      <div class="rs"><span class="rs-n" id="rsPct">—</span><span class="rs-l">Porcentaje</span></div>
+    </div>
+    <button class="btn-r" onclick="reiniciar()">↺ Reiniciar</button>
+  </div>
+
+</div><!-- /examen -->
+
+</main>
+
+<div class="sbar" id="sbar" style="display:none">
+  <span class="sbar-msg" id="sMsg">Respondé todas las preguntas visibles.</span>
+  <button class="btn-ver" id="btnVer" onclick="verRes()" disabled>Ver resultados</button>
+</div>
+
+<script>
+// ── DATA ──────────────────────────────────────────────────────
+const BLOCKS = [
+  {id:'all', lbl:'Todas (70)'},
+  {id:'Intro', lbl:'Introducción'},
+  {id:'Variables', lbl:'Variables'},
+  {id:'Escalas', lbl:'Escalas'},
+  {id:'Fuentes', lbl:'Fuentes'},
+  {id:'Tablas', lbl:'Tablas'},
+  {id:'Graficos', lbl:'Gráficos'},
+  {id:'MedTC', lbl:'Medidas TC'},
+  {id:'Indicadores', lbl:'Indicadores'},
+];
+
+const QQ = [
+  {b:'Intro',q:'¿Cuál es el objetivo principal de la estadística en salud?',o:['Registrar datos de cada paciente individualmente','Reemplazar el juicio clínico del profesional','Clasificar enfermedades por nivel de gravedad','Tomar decisiones basadas en evidencia, planificar estrategias y evaluar la atención'],a:3,t:'La estadística permite tomar decisiones basadas en evidencia, planificar estrategias preventivas y evaluar la calidad de la atención.'},
+  {b:'Intro',q:'La estadística descriptiva se define como aquella que:',o:['Generaliza conclusiones desde una muestra hacia la población','Calcula intervalos de confianza y pruebas de significación','Describe y resume las características del conjunto de datos ya observados','Compara medias de dos o más grupos'],a:2,t:'La estadística descriptiva describe y resume los datos observados sin inferir más allá de ellos.'},
+  {b:'Intro',q:'Una instrumentadora analiza los tiempos operatorios de 30 colecistectomías del mes de abril para describir el comportamiento del equipo. Esto corresponde a:',o:['Estadística inferencial','Análisis de varianza','Estadística descriptiva','Prueba de hipótesis'],a:2,t:'Describir datos ya observados en un período específico = estadística descriptiva.'},
+  {b:'Intro',q:'¿Qué es una muestra en estadística?',o:['La totalidad de los elementos estudiados','El instrumento de recolección utilizado','El resultado de una prueba inferencial','Un subconjunto de datos obtenidos de la población con un método de recopilación'],a:3,t:'La muestra es un subconjunto de la población, obtenida con el método de recopilación elegido.'},
+  {b:'Intro',q:'El sesgo estadístico es:',o:['El valor central de una distribución','La variabilidad natural esperada','La diferencia entre la media y la mediana','Un error sistemático en la recolección, análisis, interpretación o revisión de los datos'],a:3,t:'El sesgo es un error sistemático que distorsiona los resultados del estudio.'},
+  {b:'Intro',q:'Una constante estadística se diferencia de una variable en que:',o:['Solo puede tomar valores enteros','Siempre se mide en escala nominal','No puede incluirse en tablas','Su valor no varía de una unidad de análisis a otra'],a:3,t:'La constante NO varía entre las unidades de análisis. La variable SÍ varía.'},
+  {b:'Intro',q:'La estadística inferencial permite:',o:['Calcular únicamente la moda y la mediana','Describir el comportamiento de los datos observados','Construir tablas de frecuencia y gráficos','Generalizar conclusiones y estimar parámetros poblacionales a partir de una muestra'],a:3,t:'La estadística inferencial permite hacer estimaciones y generalizaciones sobre la población.'},
+  {b:'Intro',q:'¿Cuál de los siguientes es un ejemplo de POBLACIÓN estadística en instrumentación quirúrgica?',o:['Las 15 pacientes colecistectomizadas en la primera semana de mayo','El cuestionario de satisfacción aplicado a 50 pacientes','El tiempo promedio de las 20 últimas apendicectomías','Todos los pacientes que serán intervenidos quirúrgicamente en el hospital durante el año'],a:3,t:'La población estadística es la TOTALIDAD de los elementos estudiados.'},
+  {b:'Intro',q:'Los métodos estadísticos permiten describir una muestra en función de:',o:['Las características de cada observación individual','El historial clínico de cada paciente','Las conclusiones del médico tratante','Las características del grupo de observaciones en su conjunto'],a:3,t:'Los métodos estadísticos describen el grupo, no cada observación en particular.'},
+  {b:'Intro',q:'Cuando se quiere generalizar lo observado en 80 cirugías de un mes hacia todos los meses del año, se aplica:',o:['Estadística descriptiva','Bioestadística histórica','Estadística normativa','Estadística inferencial'],a:3,t:'Generalizar conclusiones de una muestra hacia la población = estadística inferencial.'},
+  {b:'Variables',q:'¿Cuál de las siguientes es una variable cualitativa NOMINAL?',o:['Tiempo de cirugía en minutos','Temperatura corporal en °C','Escala de Glasgow al ingreso (3–15)','Tipo de cirugía (laparoscópica / abierta / robótica)'],a:3,t:'La escala nominal clasifica sin orden ni jerarquía. Los tipos de cirugía no tienen orden entre sí.'},
+  {b:'Variables',q:'El número de intervenciones quirúrgicas realizadas en un quirófano durante la jornada es:',o:['Cualitativa ordinal','Cuantitativa continua','Cualitativa nominal politómica','Cuantitativa discreta'],a:3,t:'Las variables discretas toman solo valores enteros y se miden contando. No puede haber 3,5 cirugías.'},
+  {b:'Variables',q:'La temperatura corporal postoperatoria (ej. 37,4°C) es una variable:',o:['Cualitativa ordinal','Cuantitativa discreta','Cualitativa nominal dicotómica','Cuantitativa continua'],a:3,t:'La temperatura puede tomar cualquier valor dentro de un intervalo → cuantitativa continua.'},
+  {b:'Variables',q:"La variable 'presencia o ausencia de infección postoperatoria' es:",o:['Cuantitativa discreta','Cualitativa ordinal','Cuantitativa continua','Cualitativa nominal dicotómica'],a:3,t:'Solo tiene dos categorías (presencia/ausencia) → cualitativa dicotómica.'},
+  {b:'Variables',q:'La concentración de hemoglobina en sangre expresada en g/dL es:',o:['Cualitativa ordinal','Cuantitativa discreta','Cualitativa nominal politómica','Cuantitativa continua'],a:3,t:'Puede tomar infinitos valores dentro de un intervalo → cuantitativa continua.'},
+  {b:'Variables',q:'Una variable cuantitativa discreta se caracteriza por:',o:['Poder tomar cualquier valor decimal dentro de un intervalo','Expresar solo cualidades o categorías','Carecer de cero absoluto en su escala','Tomar solo valores enteros; se mide contando unidades'],a:3,t:'Discreta = valores enteros, se cuentan. Ej: N° de cirugías, de pacientes, de complicaciones.'},
+  {b:'Variables',q:'¿Cuál de las siguientes es una variable cuantitativa CONTINUA en instrumentación quirúrgica?',o:['Número de gasas usadas en una cirugía','Número de pacientes en lista de espera','Presencia o ausencia de complicación','Tiempo de duración de la cirugía en minutos y segundos'],a:3,t:'El tiempo de cirugía puede medirse con decimales (45,5 min) → continua.'},
+  {b:'Variables',q:'Las variables DEPENDIENTES se caracterizan por:',o:['Ser manipuladas por el investigador','No tener relación con otras variables','Expresar solo categorías cualitativas','Ser determinadas por los valores que asuma la variable independiente'],a:3,t:'Las variables dependientes dependen de los valores que asuman las variables independientes.'},
+  {b:'Variables',q:"La variable 'grado de satisfacción postoperatoria' (Muy satisfecho / Satisfecho / Poco satisfecho / Insatisfecho) es:",o:['Cuantitativa continua','Cualitativa nominal','Cuantitativa discreta','Cualitativa ordinal'],a:3,t:'Tiene categorías con orden progresivo, pero sin intervalos iguales → ordinal.'},
+  {b:'Variables',q:'El peso del paciente expresado en kilogramos es:',o:['Cualitativa ordinal','Cuantitativa discreta','Cualitativa nominal dicotómica','Cuantitativa continua'],a:3,t:'El peso puede tomar cualquier valor decimal → cuantitativa continua.'},
+  {b:'Variables',q:'¿Cuál de los siguientes NO es un ejemplo de variable en instrumentación quirúrgica?',o:['Tipo de anestesia utilizada','Temperatura de la sala de operaciones','Número de compresas utilizadas','La institución Cruz Roja Argentina como contexto del estudio'],a:3,t:'La institución es el contexto del estudio, no una característica que varía entre unidades de análisis.'},
+  {b:'Variables',q:'Una variable politómica tiene:',o:['Exactamente dos categorías posibles','Siempre valores numéricos enteros','Solo aplicación en escala de razón','Tres o más categorías posibles'],a:3,t:'Politómica = 3 o más categorías. Dicotómica = solo 2 categorías.'},
+  {b:'Escalas',q:'La Escala de Glasgow (nivel de consciencia, 3–15) es un ejemplo de escala:',o:['Nominal','Razón','Intervalo','Ordinal'],a:3,t:'La escala ordinal establece categorías con orden o progresión natural esperable.'},
+  {b:'Escalas',q:'La escala NOMINAL se caracteriza por:',o:['Tener intervalos iguales entre sus valores','Admitir el cálculo de la media aritmética','No poder someter los valores a criterio de orden ni jerarquía','Poseer un cero absoluto'],a:2,t:'Escala nominal: clasificación sin orden ni jerarquía. Solo permite calcular la moda.'},
+  {b:'Escalas',q:'La escala ORDINAL se diferencia de la nominal en que:',o:['Permite calcular la media aritmética','Sus intervalos entre valores son iguales','El cero representa ausencia absoluta del atributo','Sus categorías tienen un orden o progresión natural esperable'],a:3,t:'La escala ordinal tiene orden, pero no garantiza intervalos iguales entre valores.'},
+  {b:'Escalas',q:'¿Cuál corresponde a una escala de RAZÓN?',o:['Temperatura en grados Celsius','Grado de dolor según escala EVA (0–10)','Fecha de la cirugía según el calendario','Peso del paciente expresado en kilogramos'],a:3,t:'La escala de razón tiene intervalos iguales Y cero absoluto. El peso en kg: 0 = ausencia total de peso.'},
+  {b:'Escalas',q:'La escala de INTERVALO se diferencia de la de RAZÓN en que:',o:['No permite calcular la media aritmética','Sus categorías no tienen orden progresivo','No posee un cero absoluto (el cero es arbitrario)','No admite valores negativos'],a:2,t:'La escala de intervalo NO tiene cero absoluto. Ej: 0°C no significa ausencia de temperatura.'},
+  {b:'Escalas',q:'¿Qué estadísticos pueden calcularse para una variable en escala NOMINAL?',o:['Media, mediana y moda','Media y desviación estándar','Solo la mediana','Solo la moda'],a:3,t:'En escala nominal SOLO se puede calcular la moda. No hay orden ni magnitud numérica.'},
+  {b:'Escalas',q:'La Escala de Apgar (0–10) para evaluar el estado del recién nacido es un ejemplo de escala:',o:['Nominal','Razón','Ordinal','Intervalo'],a:2,t:'La Escala de Apgar tiene valores ordenados con progresión → escala ordinal.'},
+  {b:'Escalas',q:'La temperatura corporal en grados Kelvin (0 K = ausencia total de calor) es un ejemplo de escala:',o:['Nominal','Ordinal','Intervalo','Razón'],a:3,t:'En grados Kelvin el cero ES absoluto → escala de razón. En Celsius el cero es arbitrario → intervalo.'},
+  {b:'Escalas',q:"La variable 'especialidad quirúrgica' (Cirugía General / Traumatología / Neurocirugía) se mide en escala:",o:['Ordinal','Razón','Intervalo','Nominal'],a:3,t:'Las especialidades son categorías sin orden ni jerarquía posible entre sí → escala nominal.'},
+  {b:'Escalas',q:'¿Cuál de las siguientes afirmaciones sobre las escalas de medición es CORRECTA?',o:['Una variable nominal permite calcular la mediana si tiene muchas categorías','Una variable ordinal tiene siempre intervalos iguales entre sus valores','Una variable de escala intervalo tiene un cero que indica ausencia real del atributo','Una variable de escala razón puede analizarse con todos los estadísticos disponibles'],a:3,t:'La escala de razón es la más completa: admite todos los estadísticos.'},
+  {b:'Fuentes',q:'¿Cuál corresponde a una fuente de información PRIMARIA?',o:['Registros epidemiológicos del Ministerio de Salud','Estadísticas publicadas por el INDEC','Un artículo científico en revista indexada','Una encuesta diseñada y aplicada por el equipo de investigación del servicio de cirugía'],a:3,t:'La fuente primaria es original, creada por el propio investigador para el estudio específico.'},
+  {b:'Fuentes',q:'Las fuentes de información SECUNDARIAS se caracterizan por:',o:['Ser creadas por el investigador para el estudio','Garantizar mayor control metodológico','Requerir trabajo de campo directo con los sujetos','Ser producidas por terceros y reducir los costos del estudio'],a:3,t:'Las fuentes secundarias son producidas por terceros. Reducen costos pero implican menor control metodológico.'},
+  {b:'Fuentes',q:'En una matriz de datos estadísticos, las COLUMNAS representan:',o:['Cada unidad de observación (paciente, cirugía)','Las frecuencias acumuladas de cada categoría','Los intervalos de clase','Las variables relevadas en el estudio'],a:3,t:'En la matriz de datos: columnas = variables; filas = unidades de observación.'},
+  {b:'Fuentes',q:'¿Cuál de los siguientes NO es un criterio válido para evaluar la confiabilidad de los datos?',o:['¿De dónde provienen los datos y la fuente es tendenciosa?','¿Los datos representan a todos los grupos del estudio?','¿La conclusión es lógica según la evidencia disponible?','¿El gráfico elegido para presentar los datos es visualmente atractivo?'],a:3,t:'El diseño gráfico es irrelevante para la confiabilidad de los datos.'},
+  {b:'Fuentes',q:'Una base de datos se diseña con el propósito de:',o:['Sustituir el registro médico individual','Presentar los resultados en formato gráfico','Calcular automáticamente las medidas de tendencia central','Organizar la carga de datos en soporte informático para su posterior análisis'],a:3,t:'La base de datos organiza los datos cargados en soporte informático para su análisis estadístico posterior.'},
+  {b:'Fuentes',q:'Los datos aisladamente:',o:['Siempre contienen información relevante para tomar decisiones','Son suficientes para caracterizar a una población','No pueden organizarse en matrices','Cobran significado cuando se examinan en conjunto bajo un enfoque o hipótesis'],a:3,t:'Los datos aislados pueden no tener información relevante. Cobran sentido al analizarse en conjunto.'},
+  {b:'Fuentes',q:'¿Cuál de las siguientes es una fuente SECUNDARIA típica en salud pública?',o:['Observación directa de procedimientos en quirófano','Encuesta domiciliaria diseñada por el equipo de enfermería','Registro propio de tiempos operatorios del servicio de cirugía','Estadísticas de mortalidad publicadas por el SINAVE nacional'],a:3,t:'El SINAVE es producido por terceros (nivel nacional) → fuente secundaria.'},
+  {b:'Fuentes',q:'En una matriz de datos con 50 pacientes y 8 variables medidas, la matriz tiene:',o:['50 columnas y 8 filas','50 columnas y 50 filas','8 filas y 8 columnas','8 columnas y 50 filas'],a:3,t:'Columnas = variables (8) · Filas = unidades de observación (50 pacientes).'},
+  {b:'Tablas',q:"En una tabla de frecuencias, la letra 'f' minúscula representa:",o:['La frecuencia acumulada','El total de la población N','La frecuencia relativa en porcentaje','La frecuencia simple de cada categoría'],a:3,t:"La 'f' minúscula = frecuencia simple (cuántas veces aparece esa categoría)."},
+  {b:'Tablas',q:'La Frecuencia Acumulada (F mayúscula) de la ÚLTIMA categoría siempre:',o:['Es igual a la moda','Representa el 50% de la distribución','Es igual a la frecuencia simple de esa categoría','Coincide con N (total de la población)'],a:3,t:'La última F siempre es igual a N porque es la suma de TODAS las frecuencias.'},
+  {b:'Tablas',q:'Una tabla de frecuencias por intervalos se construye preferentemente cuando:',o:['La variable es cualitativa politómica con pocas categorías','Se quiere mostrar proporciones en un gráfico de sectores','La muestra tiene menos de 10 unidades','La variable cuantitativa continua tiene muchos valores distintos'],a:3,t:'Cuando la variable cuantitativa continua tiene muchos valores distintos, se agrupa en intervalos.'},
+  {b:'Tablas',q:'En una UTI: Nivel 1 (f=5), Nivel 2 (f=3), Nivel 3 (f=10), Nivel 4 (f=2). ¿Cuál es la F del Nivel 3?',o:['10','8','20','18'],a:3,t:'F nivel 3 = 5 + 3 + 10 = 18.'},
+  {b:'Tablas',q:'Una condición fundamental para la distribución por intervalos es que:',o:['Los intervalos tengan amplitud variable','El número de intervalos sea exactamente 10','La primera categoría comience siempre en cero','Los intervalos sean mutuamente excluyentes y de igual amplitud'],a:3,t:'Los intervalos deben ser mutuamente excluyentes (cada valor entra en uno solo) y de igual amplitud.'},
+  {b:'Tablas',q:'¿Qué debe incluir obligatoriamente el encabezado de una tabla estadística científica?',o:['El tipo de software utilizado y la escala de colores','Solo el título y las categorías','El nombre del investigador y la fecha','Número de tabla, título descriptivo y fuente de datos al pie'],a:3,t:'Toda tabla científica debe llevar número de identificación, título y fuente al pie.'},
+  {b:'Tablas',q:'En una tabla de 50 pacientes por diagnóstico, la suma de todas las f debe ser igual a:',o:['La frecuencia de la categoría más numerosa','La moda de la distribución','La mediana de la distribución','50 (N total)'],a:3,t:'La suma de todas las frecuencias simples siempre es igual a N.'},
+  {b:'Tablas',q:'Si la F del segundo nivel es 8 y la f del tercer nivel es 10, ¿cuál es la F del tercer nivel?',o:['10','8','2','18'],a:3,t:'F nivel 3 = F nivel 2 + f nivel 3 = 8 + 10 = 18.'},
+  {b:'Tablas',q:'Las tablas de frecuencia pueden construirse para:',o:['Solo variables cuantitativas continuas','Solo variables cualitativas','Solo variables con escala de razón','Cualquier tipo de variable: cualitativa o cuantitativa'],a:3,t:'Se pueden construir tablas para cualquier tipo de variable: cualitativa o cuantitativa.'},
+  {b:'Tablas',q:'Si el valor mínimo de tiempos quirúrgicos es 30 min, el máximo es 90 min, y se eligen 3 intervalos, ¿cuál es la amplitud de cada intervalo?',o:['30 min','10 min','15 min','20 min'],a:3,t:'Amplitud = (90 - 30) / 3 = 60 / 3 = 20 min.'},
+  {b:'Graficos',q:'Para representar la distribución de 120 pacientes según el tipo de cirugía, el gráfico más adecuado es:',o:['Histograma','Gráfico de dispersión','Polígono de frecuencias','Gráfico de barras'],a:3,t:'El gráfico de barras se usa para variables cualitativas o discretas.'},
+  {b:'Graficos',q:'La diferencia principal entre un histograma y un gráfico de barras es:',o:['El histograma usa colores y el de barras no','El histograma es para variables cualitativas','El de barras representa frecuencias acumuladas','En el histograma NO existe separación entre las barras'],a:3,t:'Histograma (cuantitativa continua): barras contiguas. Barras (cualitativa/discreta): con separación.'},
+  {b:'Graficos',q:'¿Para qué tipo de análisis es más apropiado el gráfico de LÍNEAS?',o:['Comparar proporciones de una variable cualitativa','Mostrar la distribución de una variable continua','Identificar la correlación entre dos variables','Presentar la tendencia de un indicador a lo largo del tiempo'],a:3,t:'Los gráficos de líneas se usan para presentar tendencias temporales.'},
+  {b:'Graficos',q:'El gráfico de sectores (torta) es más útil cuando:',o:['Se quiere mostrar la evolución mensual de un indicador','Se necesita comparar distribuciones de dos o más grupos','La variable es cuantitativa continua con muchos valores','Las categorías son pocas y se desean representar como proporciones del total'],a:3,t:'El gráfico de torta es útil cuando las categorías son pocas.'},
+  {b:'Graficos',q:'Un gráfico de dispersión se utiliza para:',o:['Mostrar la distribución de una variable cualitativa','Representar la estructura demográfica por sexo y edad','Ordenar categorías de mayor a menor frecuencia','Analizar la correlación entre dos variables cuantitativas'],a:3,t:'El gráfico de dispersión muestra la relación (correlación) entre dos variables cuantitativas.'},
+  {b:'Graficos',q:'Una pirámide poblacional muestra:',o:['La distribución de pacientes por diagnóstico','La tendencia de casos nuevos por mes','La correlación entre peso y talla','La estructura demográfica por sexo y grupos de edad'],a:3,t:'La pirámide poblacional muestra la distribución de una población por sexo y grupos de edad.'},
+  {b:'Graficos',q:'El gráfico de Pareto se caracteriza por:',o:['Barras ordenadas alfabéticamente y una línea de tendencia','Representar variables cuantitativas continuas sin separación','Mostrar la correlación entre dos variables','Barras ordenadas de MAYOR a MENOR frecuencia con una línea de % acumulado'],a:3,t:'El gráfico de Pareto: barras verticales de mayor a menor frecuencia + línea del porcentaje acumulado.'},
+  {b:'Graficos',q:'Si al aumentar el tiempo de cirugía también aumenta el riesgo de infección, el gráfico de dispersión mostraría:',o:['Correlación nula','Correlación no lineal','Correlación lineal negativa','Correlación lineal positiva'],a:3,t:'Correlación positiva: al aumentar una variable, aumenta la otra.'},
+  {b:'Graficos',q:'Para mostrar la evolución mensual de la tasa de infección del quirófano durante un año, el gráfico más adecuado es:',o:['Histograma','Gráfico de barras','Gráfico de torta','Gráfico de líneas'],a:3,t:'Las tendencias temporales se representan con gráficos de líneas.'},
+  {b:'Graficos',q:'¿Cuál de las siguientes afirmaciones sobre el histograma es CORRECTA?',o:['Puede usarse para variables cualitativas con pocas categorías','Sus barras tienen separación entre sí','Solo puede construirse con menos de 5 intervalos','Se usa para variables cuantitativas continuas y sus barras son contiguas'],a:3,t:'El histograma representa variables cuantitativas continuas y las barras son contiguas.'},
+  {b:'MedTC',q:'Tiempos de 5 colecistectomías: 45, 60, 55, 70, 50 min. ¿Cuál es la Media Aritmética?',o:['55 min','60 min','57,5 min','56 min'],a:3,t:'X = (45+60+55+70+50) / 5 = 280 / 5 = 56 min.'},
+  {b:'MedTC',q:'Datos ordenados de 8 alumnos: 3, 4, 4, 5, 5, 6, 7, 8 horas de estudio. ¿Cuál es la Mediana?',o:['4,5 horas','5,5 horas','6 horas','5 horas'],a:3,t:'N=8 (par). Posiciones 4 y 5 son 5 y 5. Mediana = (5+5)/2 = 5 horas.'},
+  {b:'MedTC',q:'La complicación más frecuente es náuseas y vómitos (18 casos). ¿Qué medida estadística es ese dato?',o:['Media aritmética','Mediana','Frecuencia acumulada','Moda'],a:3,t:'La moda es el valor o categoría que más se repite.'},
+  {b:'MedTC',q:'¿Cuál es la única medida de tendencia central posible para variables en escala NOMINAL?',o:['Media aritmética','Mediana','Cuartil','Moda'],a:3,t:'En escala nominal SOLO puede calcularse la moda, ya que no hay orden ni valor numérico.'},
+  {b:'MedTC',q:'La Media Aritmética se obtiene:',o:['Seleccionando el valor más frecuente','Identificando el valor central al ordenar los datos','Calculando la diferencia entre el valor máximo y el mínimo','Sumando todos los valores y dividiendo por el número total de observaciones'],a:3,t:'X = Suma de valores / n.'},
+  {b:'MedTC',q:'Tiempos quirúrgicos (ya ordenados): 42, 48, 52, 55, 62, 68, 75 min. ¿Cuál es la Mediana?',o:['52 min','62 min','48 min','55 min'],a:3,t:'N=7 (impar). El valor central es el 4° = 55 min.'},
+  {b:'Indicadores',q:'Un hospital tiene 80 camas disponibles y hoy hay 64 camas ocupadas. ¿Cuál es la tasa de ocupación?',o:['64%','125%','16%','80%'],a:3,t:'Tasa Ocupación = (64/80) × 100 = 80%.'},
+  {b:'Indicadores',q:'La diferencia principal entre prevalencia e incidencia es:',o:['La prevalencia mide casos nuevos; la incidencia mide casos existentes','Ambas miden lo mismo pero con distinta fórmula','La incidencia solo se aplica a enfermedades infecciosas','La prevalencia mide casos EXISTENTES en un momento; la incidencia mide casos NUEVOS en un período'],a:3,t:'Prevalencia = casos existentes AHORA / población total. Incidencia = casos NUEVOS en un período / población en riesgo.'},
+  {b:'Indicadores',q:'Si en un año se realizaron 730 cirugías en un hospital con 2 quirófanos, ¿cuántas intervenciones por quirófano se realizan por día?',o:['365','2','0,5','1'],a:3,t:'Interv./quirófano = (730/365) / 2 = 2 / 2 = 1 intervención por quirófano por día.'},
+  {b:'Indicadores',q:'La PROPORCIÓN se diferencia de la RAZÓN en que:',o:['La proporción siempre es mayor que 1','La razón se expresa en porcentaje y la proporción no','Solo la proporción se usa en indicadores de salud','En la proporción el numerador está incluido en el denominador; en la razón no necesariamente'],a:3,t:'Proporción: A/(A+B) — el numerador ES parte del denominador. Razón: A/B — el denominador no incluye necesariamente al numerador.'},
+];
+
+// ── ENGINE ────────────────────────────────────────────────────
+let ans = {}, curF = 'all';
+const L = ['A','B','C','D'];
+
+function showTab(id, btn) {
+  document.querySelectorAll('.sec').forEach(s => s.classList.remove('on'));
+  document.querySelectorAll('.tab').forEach(b => b.classList.remove('on'));
+  document.getElementById(id).classList.add('on');
+  btn.classList.add('on');
+  document.getElementById('sbar').style.display = id === 'examen' ? 'flex' : 'none';
+}
+
+function toggleTema(id) {
+  const t = document.getElementById(id);
+  const isOpen = t.classList.contains('open');
+  document.querySelectorAll('.tema').forEach(x => x.classList.remove('open'));
+  if (!isOpen) t.classList.add('open');
+}
+
+function buildFilters() {
+  const c = document.getElementById('filtros');
+  c.innerHTML = '';
+  BLOCKS.forEach(bl => {
+    const btn = document.createElement('button');
+    btn.className = 'fbtn' + (bl.id === 'all' ? ' on' : '');
+    btn.textContent = bl.lbl;
+    btn.onclick = () => filtrar(bl.id, btn);
+    c.appendChild(btn);
+  });
+}
+
+function buildExam() {
+  const c = document.getElementById('qCont');
+  c.innerHTML = ''; ans = {};
+  updProg();
+  QQ.forEach((q, i) => {
+    const d = document.createElement('div');
+    d.className = 'qcard'; d.id = 'q' + i; d.dataset.b = q.b;
+    const opts = q.o.map((op, j) =>
+      `<button class="obtn" id="o${i}_${j}" onclick="pick(${i},${j})"><span class="ol">${L[j]}</span><span>${op}</span></button>`
+    ).join('');
+    d.innerHTML = `<div class="qn"><span>PREGUNTA ${String(i+1).padStart(2,'0')} / 70</span><span class="qblq">${q.b}</span></div><div class="qt">${q.q}</div><div class="opts">${opts}</div><div class="fb" id="f${i}"></div>`;
+    c.appendChild(d);
+  });
+  applyFilter(curF);
+}
+
+function pick(qi, oi) {
+  if (ans[qi] !== undefined) return;
+  ans[qi] = oi;
+  const q = QQ[qi];
+  for (let j = 0; j < 4; j++) document.getElementById(`o${qi}_${j}`).disabled = true;
+  const sel = document.getElementById(`o${qi}_${oi}`);
+  const cor = document.getElementById(`o${qi}_${q.a}`);
+  const fb  = document.getElementById('f' + qi);
+  if (oi === q.a) {
+    sel.classList.add('ok');
+    fb.className = 'fb show ok';
+    fb.innerHTML = '<strong>Correcto.</strong> ' + q.t;
+  } else {
+    sel.classList.add('err');
+    cor.classList.add('rev');
+    fb.className = 'fb show err';
+    fb.innerHTML = '<strong>Incorrecto.</strong> La respuesta correcta es <strong>' + L[q.a] + ') ' + q.o[q.a] + '</strong>. ' + q.t;
+  }
+  document.getElementById('q' + qi).classList.add('ans');
+  updProg();
+}
+
+function vis() {
+  return QQ.map((_, i) => i).filter(i => !document.getElementById('q' + i).classList.contains('hide'));
+}
+
+function updProg() {
+  const v = vis(), tot = v.length;
+  const done = v.filter(i => ans[i] !== undefined).length;
+  const pct = tot > 0 ? Math.round(done / tot * 100) : 0;
+  document.getElementById('pLbl').textContent = `${done} / ${tot} respondidas`;
+  document.getElementById('pFill').style.width = pct + '%';
+  const btn = document.getElementById('btnVer');
+  const msg = document.getElementById('sMsg');
+  if (done === tot && tot > 0) {
+    btn.disabled = false;
+    const cor = v.filter(i => ans[i] !== undefined && QQ[i].a === ans[i]).length;
+    const nota = (cor / tot * 10).toFixed(1);
+    msg.textContent = `${done} respondidas · Nota estimada: ${nota}`;
+    document.getElementById('nBadge').textContent = 'Nota: ' + nota;
+  } else {
+    btn.disabled = true;
+    msg.textContent = 'Respondé todas las preguntas visibles.';
+    document.getElementById('nBadge').textContent = 'Nota: —';
+  }
+}
+
+function filtrar(bl, btn) {
+  curF = bl;
+  document.querySelectorAll('.fbtn').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+  applyFilter(bl);
+  document.getElementById('resPanel').classList.remove('show');
+  updProg();
+}
+
+function applyFilter(bl) {
+  QQ.forEach((q, i) => {
+    const card = document.getElementById('q' + i);
+    if (!card) return;
+    if (bl === 'all' || q.b === bl) card.classList.remove('hide');
+    else card.classList.add('hide');
+  });
+}
+
+function verRes() {
+  const v = vis(), tot = v.length;
+  const cor = v.filter(i => ans[i] !== undefined && QQ[i].a === ans[i]).length;
+  const err = tot - cor;
+  const pct = Math.round(cor / tot * 100);
+  const nota = (cor / tot * 10).toFixed(1);
+  const lbl = nota >= 8 ? 'Excelente. Muy bien preparado/a.' :
+              nota >= 7 ? 'Aprobado con buena nota.' :
+              nota >= 6 ? 'Aprobado. Seguí reforzando los temas más débiles.' :
+              nota >= 4 ? 'Cercano al aprobado. Repasá los temas con más errores.' :
+                          'A repasar. Revisá el material de repaso y volvé a intentarlo.';
+  document.getElementById('resNota').innerHTML = `${nota} <span>/ 10</span>`;
+  document.getElementById('resLbl').textContent = lbl;
+  document.getElementById('rsCor').textContent = cor;
+  document.getElementById('rsErr').textContent = err;
+  document.getElementById('rsPct').textContent = pct + '%';
+  const p = document.getElementById('resPanel');
+  p.classList.add('show');
+  setTimeout(() => p.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
+}
+
+function reiniciar() {
+  document.getElementById('resPanel').classList.remove('show');
+  buildExam();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+buildFilters();
+buildExam();
+</script>
+</body>
+</html>
