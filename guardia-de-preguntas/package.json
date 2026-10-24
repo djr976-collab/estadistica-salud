@@ -1,0 +1,30 @@
+{
+  "name": "guardia-de-preguntas",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Juego educativo de preguntas y desafíos para Práctica Profesional II (Enfermería).",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "npm run validate:content && tsc -p tsconfig.json && vite build",
+    "preview": "vite preview --host",
+    "test": "vitest run",
+    "validate:content": "vitest run tests/content.test.ts",
+    "typecheck": "tsc -p tsconfig.json",
+    "verify:ui": "node scripts/verify-ui.mjs"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.18.12",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "@vitejs/plugin-react": "^5.1.0",
+    "fake-indexeddb": "^6.2.4",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.12",
+    "vitest": "^4.0.5"
+  }
+}
