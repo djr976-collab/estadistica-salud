@@ -56,6 +56,13 @@ El uso sin conexión y la instalación como app **requieren HTTPS** (salvo en `l
 2. Entrá a <https://app.netlify.com/drop> y arrastrá la carpeta `dist`.
 3. Netlify te da una dirección `https://…netlify.app`.
 
+**Opción A2 — Netlify conectado al repositorio (se actualiza solo con cada cambio)**
+1. En Netlify: *Add new site → Import an existing project → GitHub* y elegí este repositorio.
+2. En **Base directory** escribí `guardia-de-preguntas`. El resto (comando `npm run build`, carpeta `dist`, Node 22) lo toma de `netlify.toml`.
+3. Elegí la rama a publicar (por ejemplo `main`, una vez fusionado el PR).
+
+El archivo `public/_headers` hace que `sw.js` y la página se revaliden siempre, para que los celulares detecten cada versión nueva.
+
 **Opción B — GitHub Pages**
 1. Ejecutá `npm run build`.
 2. Publicá el contenido de `dist/` en la rama o carpeta configurada para Pages (por ejemplo, con la acción oficial `actions/deploy-pages`).
