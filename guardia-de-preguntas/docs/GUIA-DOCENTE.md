@@ -15,7 +15,9 @@ Los contenidos están en `src/content/`:
 
 | Archivo | Contenido |
 |---|---|
-| `questions.json` | 36 preguntas base y variantes de recuperación (`isRecoveryVariant: true`) |
+| `questions.json` | 36 preguntas base de PP2 y variantes de recuperación (`isRecoveryVariant: true`) |
+| `subjects.json` | Las 8 materias del «Repaso por materia»: nombre, color, temas y regla de la insignia |
+| `subjects/mat-*.json` | 20 preguntas por materia (cada una con `topic`, el tema dentro de la materia) |
 | `final-challenge.json` | Caso integrador y sus 3 decisiones |
 | `categories.json` | Categorías, colores, nombres de insignias y temas |
 | `sources.json` | Catálogo de fuentes |

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { academicModeAvailability, bank, countPlayable } from '../../content/bank';
+import { academicModeAvailability, bank, countPlayable, type Bank } from '../../content/bank';
 import { finalStepState, reviewQueue, sanitizeAlias } from '../../engine/game';
 import { buildSummary, finalLabel, ratioText, summaryToText } from '../../engine/summary';
 import type { ContentMode, GameState, Settings } from '../../types';
@@ -18,6 +18,7 @@ interface HomeProps {
   offline: OfflineStatus;
   updateAvailable: boolean;
   onContinue: () => void;
+  onStudy: () => void;
   onNew: () => void;
   onReview: () => void;
   onSummary: () => void;
@@ -75,6 +76,10 @@ export function HomeScreen(p: HomeProps) {
             <Icon.Play size={20} /> Empezar «Mi guardia»
           </button>
         )}
+        <button type="button" className="btn btn-secondary btn-block home-study" onClick={p.onStudy}>
+          <Icon.Book size={20} /> Repaso por materia
+        </button>
+        <p className="muted small center">Anatomía, Fisiología, Bioquímica, Farmacología, Infectología, Epidemiología, Comunitaria e Inglés técnico.</p>
         <button type="button" className="btn btn-ghost btn-block" disabled aria-describedby="duel-note">
           Duelo local (dos jugadores en un celular)
         </button>
@@ -225,8 +230,20 @@ export function SetupScreen({ onStart, onBack }: { onStart: (alias: string, avat
 
 // ───────────────────────── Repasar mis errores ─────────────────────────
 
-export function ReviewScreen({ game, onStart, onBack }: { game: GameState; onStart: (conceptId: string) => void; onBack: () => void }) {
-  const queue = reviewQueue(game, bank);
+export function ReviewScreen({
+  game,
+  onStart,
+  onBack,
+  areaBank = bank,
+  backLabel = 'Volver al tablero',
+}: {
+  game: GameState;
+  onStart: (conceptId: string) => void;
+  onBack: () => void;
+  areaBank?: Bank;
+  backLabel?: string;
+}) {
+  const queue = reviewQueue(game, areaBank);
   return (
     <div className="review">
       <ScreenTitle>Repasar mis errores</ScreenTitle>
@@ -262,7 +279,7 @@ export function ReviewScreen({ game, onStart, onBack }: { game: GameState; onSta
       )}
       <div className="action-bar">
         <button type="button" className="btn btn-ghost btn-block" onClick={onBack}>
-          Volver al tablero
+          {backLabel}
         </button>
       </div>
     </div>
@@ -344,18 +361,22 @@ export function SummaryScreen({
   onExport,
   onBack,
   copyStatus,
+  areaBank = bank,
 }: {
   game: GameState;
   onCopy: (text: string) => void;
   onExport: () => void;
   onBack: () => void;
   copyStatus: string | null;
+  areaBank?: Bank;
 }) {
-  const s = buildSummary(game, bank);
-  const text = summaryToText(s, bank);
+  const s = buildSummary(game, areaBank);
+  const text = summaryToText(s, areaBank);
+  const hasFinal = areaBank.final.stepQuestionIds.length > 0;
+  const single = areaBank.categories.length === 1 ? areaBank.categories[0] : null;
   return (
     <div className="summary">
-      <ScreenTitle>Resumen de aprendizaje</ScreenTitle>
+      <ScreenTitle>{single ? `Resumen · ${single.name}` : 'Resumen de aprendizaje'}</ScreenTitle>
       <p className="muted small">
         Los puntos y las insignias reconocen logros dentro del juego: no son una nota académica ni certifican competencia clínica.
       </p>
@@ -381,18 +402,20 @@ export function SummaryScreen({
       </div>
 
       <section className="card">
-        <h2 className="card-title">Insignias ({s.badges.num} de 6)</h2>
+        <h2 className="card-title">
+          {s.badges.den === 1 ? `Insignia (${s.badges.num ? 'obtenida' : 'pendiente'})` : `Insignias (${s.badges.num} de ${s.badges.den})`}
+        </h2>
         <ul className="badge-row">
           {s.perCategory.map((c) => (
             <li key={c.category}>
               <BadgeMedal category={c.category} earned={c.badge} size={44} />
               <span className="small">
-                {bank.categoryById[c.category].shortName}: {c.resolved}/{c.presented}
+                {areaBank.categoryById[c.category].shortName}: {c.resolved}/{c.presented}
               </span>
             </li>
           ))}
         </ul>
-        <p className="small">Desafío final: {finalLabel(s.finalStatus)}.</p>
+        {hasFinal ? <p className="small">Desafío final: {finalLabel(s.finalStatus)}.</p> : null}
       </section>
 
       <section className="card">
@@ -418,7 +441,7 @@ export function SummaryScreen({
           <ul className="plain-list">
             {s.pendingConcepts.map((p) => (
               <li key={p.conceptId}>
-                {p.competency} ({bank.categoryById[p.category].shortName}){p.critical ? ' · crítico' : ''}
+                {p.competency} ({areaBank.categoryById[p.category].shortName}){p.critical ? ' · crítico' : ''}
               </li>
             ))}
           </ul>
@@ -474,6 +497,10 @@ export function HelpScreen({ onBack }: { onBack: () => void }) {
           <li>Cada categoría da una insignia al resolver 3 preguntas distintas (al menos una de aplicación) sin críticas pendientes.</li>
           <li>Con las seis insignias se habilita «{bank.final.title}»: un caso con tres decisiones encadenadas.</li>
           <li>En «Repasar mis errores» vuelven los conceptos que te costaron, con preguntas equivalentes cuando existen.</li>
+          <li>
+            Para estudiar, «Repaso por materia» ofrece 20 preguntas por materia (Anatomía, Fisiología, Bioquímica, Farmacología, Infectología,
+            Epidemiología, Enfermería Comunitaria e Inglés técnico), con su propio repaso, resumen e insignia. No modifica tu «Mi guardia».
+          </li>
         </ol>
       </section>
       <section className="card">

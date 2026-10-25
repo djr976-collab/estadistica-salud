@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { bank } from './content/bank';
+import { subjectBanks } from './content/subjects';
 import {
   answer,
   closeFeedback,
@@ -7,6 +8,7 @@ import {
   dismissCelebration,
   newGame,
   presentFromSpin,
+  presentNext,
   reconcileWithBank,
   spin,
   startFinal,
@@ -23,9 +25,10 @@ import { BoardScreen, type SpinPhase } from './ui/screens/BoardScreen';
 import { FeedbackScreen } from './ui/screens/FeedbackScreen';
 import { FinalCase, FinalIntroScreen, FinalSteps, HelpScreen, HomeScreen, ReviewScreen, SetupScreen, SummaryScreen } from './ui/screens/OtherScreens';
 import { QuestionScreen } from './ui/screens/QuestionScreen';
+import { SubjectScreen, SubjectsScreen } from './ui/screens/StudyScreens';
 import { play } from './ui/sfx';
 
-type Screen = 'home' | 'setup' | 'board' | 'review' | 'final-intro' | 'summary' | 'help';
+type Screen = 'home' | 'setup' | 'board' | 'review' | 'final-intro' | 'summary' | 'help' | 'subjects' | 'subject';
 
 const DEFAULT_SETTINGS: Settings = { sound: false, motion: 'auto' };
 
@@ -69,6 +72,9 @@ export default function App() {
   const [store, setStore] = useState<KeyValueStore | null>(null);
   const [loaded, setLoaded] = useState(false);
   const [game, setGame] = useState<GameState | null>(null);
+  // Repaso por materia: una partida por materia, independiente de «Mi guardia».
+  const [studyGames, setStudyGames] = useState<Record<string, GameState>>({});
+  const [subject, setSubject] = useState<string | null>(null);
   const [settings, setSettings] = useState<Settings>(DEFAULT_SETTINGS);
   const [screen, setScreen] = useState<Screen>('home');
   const [returnTo, setReturnTo] = useState<Screen>('board');
@@ -93,6 +99,7 @@ export default function App() {
       const s = await openBestStore();
       const savedGame = await s.get<GameState>(KEYS.game).catch(() => undefined);
       const savedSettings = await s.get<Settings>(KEYS.settings).catch(() => undefined);
+      const savedStudy = await s.get<Record<string, GameState>>(KEYS.study).catch(() => undefined);
       if (cancelled) return;
       setStore(s);
       if (savedGame && savedGame.schemaVersion === 1) {
@@ -101,6 +108,14 @@ export default function App() {
         if (g.pendingSpin) setPhase('landed');
       }
       if (savedSettings) setSettings({ ...DEFAULT_SETTINGS, ...savedSettings });
+      if (savedStudy) {
+        const restored: Record<string, GameState> = {};
+        for (const [id, g] of Object.entries(savedStudy)) {
+          const b = subjectBanks.get(id);
+          if (b && g?.schemaVersion === 1) restored[id] = reconcileWithBank(g, b);
+        }
+        setStudyGames(restored);
+      }
       setLoaded(true);
       void navigator.storage?.persist?.().catch(() => undefined);
     })();
@@ -126,13 +141,59 @@ export default function App() {
   }, [settings, store, loaded]);
 
   useEffect(() => {
+    if (!store || !loaded) return;
+    store.set(KEYS.study, studyGames).then(() => setSaveError(false)).catch(() => setSaveError(true));
+  }, [studyGames, store, loaded]);
+
+  // Sesión activa: «Mi guardia» o la materia abierta. Las preguntas, devoluciones,
+  // recuperaciones, repaso y resumen funcionan igual en ambos casos.
+  const activeBank = subject ? subjectBanks.get(subject)! : bank;
+  const activeGame = subject ? studyGames[subject] ?? null : game;
+  const setActive = (g: GameState) => {
+    if (subject) setStudyGames((prev) => ({ ...prev, [subject]: g }));
+    else setGame(g);
+  };
+  const homeOfSession: Screen = subject ? 'subject' : 'board';
+
+  useEffect(() => {
     document.documentElement.dataset.motion = reduceMotion ? 'reduce' : 'full';
   }, [reduceMotion]);
 
   const go = (s: Screen) => {
     setMessage(null);
     setCopyStatus(null);
+    // Salir a una pantalla de «Mi guardia» o al inicio cierra la materia abierta.
+    if (['home', 'subjects', 'board', 'setup', 'final-intro', 'help'].includes(s)) setSubject(null);
     setScreen(s);
+  };
+
+  const openSubject = (id: string) => {
+    if (!studyGames[id]) {
+      const g = newGame({ alias: game?.player.alias ?? '', avatarId: game?.player.avatarId ?? 'a1', contentMode: 'demo' });
+      setStudyGames((prev) => ({ ...prev, [id]: g }));
+    }
+    setSubject(id);
+    setMessage(null);
+    setCopyStatus(null);
+    setScreen('subject');
+  };
+
+  const handleNext = () => {
+    if (!subject || !activeGame) return;
+    const p = presentNext(activeGame, activeBank, subject);
+    if (!p.ok) {
+      setMessage('No quedan preguntas nuevas en esta materia. Seguí con «Repasar mis errores».');
+      return;
+    }
+    setReturnTo('subject');
+    setActive(p.state);
+  };
+
+  const handleResetSubject = () => {
+    if (!subject) return;
+    const g = newGame({ alias: game?.player.alias ?? '', avatarId: game?.player.avatarId ?? 'a1', contentMode: 'demo' });
+    setStudyGames((prev) => ({ ...prev, [subject]: g }));
+    setMessage('Se reinició el progreso de la materia.');
   };
 
   // ── Ruleta ──
@@ -177,44 +238,48 @@ export default function App() {
 
   // ── Preguntas ──
   const handleAnswer = (input: AnswerInput) => {
-    if (!game) return;
-    const r = answer(game, bank, input);
+    if (!activeGame) return;
+    const r = answer(activeGame, activeBank, input);
     if (!r.ok) return;
-    setGame(r.state);
+    setActive(r.state);
     play(r.attempt.correct ? 'correct' : r.attempt.critical ? 'stop' : 'review', settings.sound);
-    if (r.state.celebration && !game.celebration) play('badge', settings.sound);
+    if (r.state.celebration && !activeGame.celebration) play('badge', settings.sound);
   };
 
   const handleContinue = () => {
-    if (!game) return;
-    const next = closeFeedback(game, bank);
-    setGame(next);
-    if (!next.current) go(returnTo);
+    if (!activeGame) return;
+    const next = closeFeedback(activeGame, activeBank);
+    setActive(next);
+    if (!next.current) {
+      setMessage(null);
+      setScreen(returnTo);
+    }
   };
 
   const handleRecoverCurrent = () => {
-    if (!game?.current) return;
-    const q = bank.byId.get(game.current.questionId)!;
-    setGame(startRecovery(closeFeedback(game, bank), bank, q.conceptId));
+    if (!activeGame?.current) return;
+    const q = activeBank.byId.get(activeGame.current.questionId)!;
+    setActive(startRecovery(closeFeedback(activeGame, activeBank), activeBank, q.conceptId));
   };
 
   const handleLater = () => {
-    if (!game) return;
-    setGame(closeFeedback(game, bank));
-    go('board');
+    if (!activeGame) return;
+    setActive(closeFeedback(activeGame, activeBank));
+    setScreen(homeOfSession);
   };
 
   const startRecoveryFrom = (conceptId: string, from: Screen) => {
-    if (!game) return;
+    if (!activeGame) return;
     setReturnTo(from);
-    setGame(startRecovery(game, bank, conceptId));
+    setActive(startRecovery(activeGame, activeBank, conceptId));
   };
 
   // ── Exportación ──
   const handleExport = async () => {
-    if (!game) return;
-    const csv = toCsv(attemptsToRows(game, bank));
-    const name = exportFileName(game);
+    if (!activeGame) return;
+    const csv = toCsv(attemptsToRows(activeGame, activeBank));
+    const base = exportFileName(activeGame);
+    const name = subject ? base.replace('guardia-de-preguntas_', `guardia-de-preguntas_${subject.replace('mat-', '')}_`) : base;
     const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
     const file = typeof File !== 'undefined' ? new File([blob], name, { type: 'text/csv' }) : null;
     // En celulares, compartir el archivo suele ser más práctico que descargarlo.
@@ -258,13 +323,14 @@ export default function App() {
   };
 
   // ── Render ──
-  const playing = game?.current && screen !== 'home' && screen !== 'help' && screen !== 'summary' ? game.current : null;
-  const q = playing ? bank.byId.get(playing.questionId) ?? null : null;
-  const attempt = game && playing?.phase === 'feedback' ? currentAttempt(game) : null;
+  const playing =
+    activeGame?.current && !['home', 'help', 'summary', 'subjects', 'setup'].includes(screen) ? activeGame.current : null;
+  const q = playing ? activeBank.byId.get(playing.questionId) ?? null : null;
+  const attempt = activeGame && playing?.phase === 'feedback' ? currentAttempt(activeGame) : null;
 
   const content = (() => {
     if (!loaded) return <p className="loading">Cargando…</p>;
-    if (game && playing && q) {
+    if (activeGame && playing && q) {
       if (playing.phase === 'feedback' && attempt) {
         return (
           <FeedbackScreen
@@ -272,7 +338,7 @@ export default function App() {
             q={q}
             presentation={playing}
             attempt={attempt}
-            concept={game.concepts[q.conceptId]}
+            concept={activeGame.concepts[q.conceptId]}
             onContinue={handleContinue}
             onRecover={handleRecoverCurrent}
             onLater={handleLater}
@@ -282,11 +348,19 @@ export default function App() {
       const finalCase =
         playing.context === 'final' ? (
           <>
-            <FinalSteps game={game} />
+            <FinalSteps game={activeGame} />
             <FinalCase compact />
           </>
         ) : undefined;
-      return <QuestionScreen key={`q-${playing.questionId}-${game.presented.length}-${game.attempts.length}`} q={q} presentation={playing} onAnswer={handleAnswer} finalCase={finalCase} />;
+      return (
+        <QuestionScreen
+          key={`q-${playing.questionId}-${activeGame.presented.length}-${activeGame.attempts.length}`}
+          q={q}
+          presentation={playing}
+          onAnswer={handleAnswer}
+          finalCase={finalCase}
+        />
+      );
     }
     switch (screen) {
       case 'setup':
@@ -294,7 +368,34 @@ export default function App() {
       case 'help':
         return <HelpScreen onBack={() => go(game ? 'board' : 'home')} />;
       case 'review':
-        return game ? <ReviewScreen game={game} onStart={(c) => startRecoveryFrom(c, 'review')} onBack={() => go('board')} /> : null;
+        return activeGame ? (
+          <ReviewScreen
+            game={activeGame}
+            areaBank={activeBank}
+            onStart={(c) => startRecoveryFrom(c, 'review')}
+            onBack={() => setScreen(homeOfSession)}
+            backLabel={subject ? 'Volver a la materia' : 'Volver al tablero'}
+          />
+        ) : null;
+      case 'subjects':
+        return <SubjectsScreen games={studyGames} onOpen={openSubject} onBack={() => go('home')} />;
+      case 'subject':
+        return subject && activeGame ? (
+          <SubjectScreen
+            subjectId={subject}
+            game={activeGame}
+            message={message}
+            onNext={handleNext}
+            onReview={() => setScreen('review')}
+            onRecoverCritical={(c) => startRecoveryFrom(c, 'subject')}
+            onSummary={() => {
+              setSummaryBack('subject');
+              setScreen('summary');
+            }}
+            onReset={handleResetSubject}
+            onBack={() => go('subjects')}
+          />
+        ) : null;
       case 'final-intro':
         return game ? (
           <FinalIntroScreen
@@ -307,7 +408,19 @@ export default function App() {
           />
         ) : null;
       case 'summary':
-        return game ? <SummaryScreen game={game} onCopy={handleCopy} onExport={handleExport} onBack={() => go(summaryBack)} copyStatus={copyStatus} /> : null;
+        return activeGame ? (
+          <SummaryScreen
+            game={activeGame}
+            areaBank={activeBank}
+            onCopy={handleCopy}
+            onExport={handleExport}
+            onBack={() => {
+              setCopyStatus(null);
+              setScreen(summaryBack);
+            }}
+            copyStatus={copyStatus}
+          />
+        ) : null;
       case 'board':
         if (game) {
           return (
@@ -338,6 +451,7 @@ export default function App() {
             offline={offline}
             updateAvailable={updateAvailable}
             onContinue={() => go('board')}
+            onStudy={() => go('subjects')}
             onNew={() => go('setup')}
             onReview={() => go('review')}
             onSummary={() => {
@@ -354,7 +468,7 @@ export default function App() {
     }
   })();
 
-  const inGame = !!game && screen !== 'home' && screen !== 'setup';
+  const inGame = !!activeGame && !['home', 'setup', 'subjects'].includes(screen);
 
   return (
     <div className="app">
@@ -392,7 +506,7 @@ export default function App() {
           No se pudo guardar el último cambio en este dispositivo. Si el problema sigue, exportá el CSV para no perder tus resultados.
         </p>
       ) : null}
-      <main className="main" inert={paused || (!!game?.celebration && !game.current) ? true : undefined}>
+      <main className="main" inert={paused || (!!activeGame?.celebration && !activeGame.current) ? true : undefined}>
         {content}
       </main>
       {paused ? (
@@ -405,13 +519,13 @@ export default function App() {
         />
       ) : null}
       {/* La celebración aparece después de leer la devolución, nunca encima de ella. */}
-      {game?.celebration && !paused && !game.current ? (
+      {activeGame?.celebration && !paused && !activeGame.current ? (
         <Celebration
-          celebration={game.celebration}
+          celebration={activeGame.celebration}
           reduceMotion={reduceMotion}
           onClose={() => {
-            const wasFinal = game.celebration?.kind === 'final';
-            setGame(dismissCelebration(game));
+            const wasFinal = activeGame.celebration?.kind === 'final';
+            setActive(dismissCelebration(activeGame));
             if (wasFinal) {
               setSummaryBack('board');
               go('summary');

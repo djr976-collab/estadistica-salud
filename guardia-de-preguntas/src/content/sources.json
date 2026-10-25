@@ -230,6 +230,156 @@
       "doi": null,
       "kind": "manual",
       "verification": "Marcador: la cátedra debe reemplazarlo por el protocolo local correspondiente."
+    },
+    {
+      "id": "libro-anatomia",
+      "title": "Latarjet M, Ruiz Liard A. Anatomía humana",
+      "organization": "Editorial Médica Panamericana",
+      "year": null,
+      "url": null,
+      "doi": null,
+      "kind": "libro",
+      "verification": "Libro de referencia existente. Pendiente: la cátedra debe indicar la edición y el capítulo disponibles."
+    },
+    {
+      "id": "libro-bioquimica",
+      "title": "Blanco A, Blanco G. Química biológica",
+      "organization": "Editorial El Ateneo",
+      "year": null,
+      "url": null,
+      "doi": null,
+      "kind": "libro",
+      "verification": "Libro de referencia existente. Pendiente: la cátedra debe indicar la edición y el capítulo disponibles."
+    },
+    {
+      "id": "libro-microbiologia",
+      "title": "Murray PR, Rosenthal KS, Pfaller MA. Microbiología médica",
+      "organization": "Elsevier",
+      "year": null,
+      "url": null,
+      "doi": null,
+      "kind": "libro",
+      "verification": "Libro de referencia existente. Pendiente: la cátedra debe indicar la edición y el capítulo disponibles."
+    },
+    {
+      "id": "ops-mopece",
+      "title": "Módulos de Principios de Epidemiología para el Control de Enfermedades (MOPECE), 2.ª ed. revisada",
+      "organization": "Organización Panamericana de la Salud",
+      "year": 2011,
+      "url": "https://www3.paho.org/col/dmdocuments/MOPECE1.pdf",
+      "doi": null,
+      "kind": "manual",
+      "verification": "Existencia, autores y estructura en 5 unidades comprobado por búsqueda web el 2026-10-24. El enlace corresponde a la unidad 1 (las demás: MOPECE2…MOPECE5)."
+    },
+    {
+      "id": "oms-alma-ata-1978",
+      "title": "Declaración de Alma-Ata. Conferencia Internacional sobre Atención Primaria de Salud",
+      "organization": "OMS y UNICEF",
+      "year": 1978,
+      "url": "https://www.paho.org/hq/dmdocuments/2012/Alma-Ata-1978Declaracion.pdf",
+      "doi": null,
+      "kind": "guia",
+      "verification": "Texto oficial en español alojado por la OPS, comprobado por búsqueda web el 2026-10-24."
+    },
+    {
+      "id": "oms-ottawa-1986",
+      "title": "Carta de Ottawa para la Promoción de la Salud",
+      "organization": "Organización Mundial de la Salud",
+      "year": 1986,
+      "url": null,
+      "doi": null,
+      "kind": "guia",
+      "verification": "Existencia, fecha (21/11/1986) y cinco áreas de acción comprobado por búsqueda web el 2026-10-24. Pendiente: enlazar la copia oficial de OMS/OPS."
+    },
+    {
+      "id": "oms-determinantes-2008",
+      "title": "Subsanar las desigualdades en una generación. Comisión sobre Determinantes Sociales de la Salud",
+      "organization": "Organización Mundial de la Salud",
+      "year": 2008,
+      "url": "https://iris.who.int/handle/10665/43943",
+      "doi": null,
+      "kind": "guia",
+      "verification": "Registro en el repositorio IRIS de la OMS comprobado por búsqueda web el 2026-10-24."
+    },
+    {
+      "id": "ops-aps-renovada-2007",
+      "title": "La renovación de la atención primaria de salud en las Américas. Documento de posición de la OPS/OMS",
+      "organization": "Organización Panamericana de la Salud",
+      "year": 2007,
+      "url": "https://www3.paho.org/els/dmdocuments/Renovacion_Atencion_Primaria_Salud_Americas-OPS.pdf",
+      "doi": null,
+      "kind": "guia",
+      "verification": "Existencia y PDF oficial comprobado por búsqueda web el 2026-10-24."
+    },
+    {
+      "id": "ismp-alto-riesgo-2024",
+      "title": "ISMP List of High-Alert Medications in Acute Care Settings",
+      "organization": "Institute for Safe Medication Practices (ISMP)",
+      "year": 2024,
+      "url": "https://home.ecri.org/blogs/ismp-resources/high-alert-medications-in-acute-care-settings",
+      "doi": null,
+      "kind": "herramienta",
+      "verification": "Existencia y edición 2024 comprobado por búsqueda web el 2026-10-24."
+    },
+    {
+      "id": "ismp-abreviaturas-2024",
+      "title": "ISMP List of Error-Prone Abbreviations, Symbols, and Dose Designations",
+      "organization": "Institute for Safe Medication Practices (ISMP)",
+      "year": 2024,
+      "url": "https://online.ecri.org/hubfs/ISMP/Resources/ISMP_ErrorProneAbbreviation_List.pdf",
+      "doi": null,
+      "kind": "herramienta",
+      "verification": "Existencia y edición 2024 comprobado por búsqueda web el 2026-10-24."
+    },
+    {
+      "id": "anmat-farmacovigilancia",
+      "title": "Sistema Nacional de Farmacovigilancia (Resolución 706/1993)",
+      "organization": "ANMAT, Argentina",
+      "year": null,
+      "url": "https://www.argentina.gob.ar/anmat",
+      "doi": null,
+      "kind": "guia",
+      "verification": "Existencia del sistema y vías de notificación (hoja amarilla, correo electrónico, formulario en línea) comprobado por búsqueda web el 2026-10-24. Verificar el formulario vigente en el sitio de la ANMAT."
+    },
+    {
+      "id": "sepsis3-2016",
+      "title": "The Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3)",
+      "organization": "Singer M, et al. JAMA 2016;315(8):801-10",
+      "year": 2016,
+      "url": "https://doi.org/10.1001/jama.2016.0287",
+      "doi": "10.1001/jama.2016.0287",
+      "kind": "articulo",
+      "verification": "Metadatos y DOI comprobados en PubMed (PMID 26903338) el 2026-10-24."
+    },
+    {
+      "id": "cdc-pep-2013",
+      "title": "Updated US Public Health Service guidelines for the management of occupational exposures to HIV and recommendations for postexposure prophylaxis",
+      "organization": "Kuhar DT, et al. Infect Control Hosp Epidemiol 2013;34(9):875-92",
+      "year": 2013,
+      "url": "https://doi.org/10.1086/672271",
+      "doi": "10.1086/672271",
+      "kind": "guia",
+      "verification": "Metadatos y DOI comprobados en PubMed (PMID 23917901) el 2026-10-24."
+    },
+    {
+      "id": "cdc-cauti-2009",
+      "title": "Guideline for prevention of catheter-associated urinary tract infections 2009",
+      "organization": "Gould CV, et al. CDC/HICPAC. Infect Control Hosp Epidemiol 2010;31(4):319-26",
+      "year": 2010,
+      "url": "https://doi.org/10.1086/651091",
+      "doi": "10.1086/651091",
+      "kind": "guia",
+      "verification": "Metadatos y DOI comprobados en PubMed (PMID 20156062) el 2026-10-24."
+    },
+    {
+      "id": "material-original",
+      "title": "Texto original redactado para el ejercicio",
+      "organization": "Guardia de Preguntas (contenido propio, ficticio)",
+      "year": null,
+      "url": null,
+      "doi": null,
+      "kind": "manual",
+      "verification": "Texto breve en inglés escrito para el juego; no reproduce documentos de terceros. Revisar con la cátedra de Inglés."
     }
   ]
 }

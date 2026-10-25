@@ -9,7 +9,7 @@
     "build": "npm run validate:content && tsc -p tsconfig.json && vite build",
     "preview": "vite preview --host",
     "test": "vitest run",
-    "validate:content": "vitest run tests/content.test.ts",
+    "validate:content": "vitest run tests/content.test.ts tests/subjects.test.ts",
     "typecheck": "tsc -p tsconfig.json",
     "verify:ui": "node scripts/verify-ui.mjs"
   },

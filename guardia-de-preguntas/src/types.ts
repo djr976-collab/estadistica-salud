@@ -1,5 +1,6 @@
 // Tipos compartidos: contenido académico, estado de partida y configuración.
 
+/** Categorías de «Mi guardia» (PP2). Las materias del repaso usan sus propios IDs. */
 export const CATEGORY_IDS = [
   'fisiologia',
   'farmacologia',
@@ -8,7 +9,9 @@ export const CATEGORY_IDS = [
   'seguridad',
   'valoracion',
 ] as const;
-export type CategoryId = (typeof CATEGORY_IDS)[number];
+export type Pp2CategoryId = (typeof CATEGORY_IDS)[number];
+/** ID de un área: una categoría de PP2 o una materia del repaso. */
+export type CategoryId = string;
 
 export type Difficulty = 'conceptual' | 'aplicacion' | 'integracion';
 
@@ -54,7 +57,18 @@ export interface Source {
 
 /** Datos para recalcular de forma independiente una respuesta numérica. */
 export interface NumericCheck {
-  formula: 'volumen_dosis' | 'conversion_mg_mcg' | 'goteo' | 'velocidad_bomba' | 'balance' | 'pam';
+  formula:
+    | 'volumen_dosis'
+    | 'conversion_mg_mcg'
+    | 'goteo'
+    | 'velocidad_bomba'
+    | 'balance'
+    | 'pam'
+    | 'gasto_cardiaco'
+    | 'dosis_por_peso'
+    | 'glucemia_mgdl_mmol'
+    | 'tasa'
+    | 'porcentaje';
   inputs: Record<string, number | number[]>;
 }
 
@@ -64,6 +78,8 @@ export interface Question {
   conceptId: string;
   category: CategoryId;
   competency: string;
+  /** Tema dentro de la materia (repaso por materia). */
+  topic?: string;
   difficulty: Difficulty;
   type: QuestionType;
   format: QuestionFormat;

@@ -52,6 +52,8 @@ export default defineConfig({
   build: {
     target: 'es2020',
     sourcemap: false,
+    // Todo el banco viaja en el paquete para funcionar sin conexión (~210 kB comprimido).
+    chunkSizeWarningLimit: 1000,
   },
   test: {
     environment: 'node',

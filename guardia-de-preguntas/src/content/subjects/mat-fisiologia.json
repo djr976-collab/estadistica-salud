@@ -1,0 +1,1058 @@
+{
+  "subject": "mat-fisiologia",
+  "bankVersion": "1.0",
+  "note": "Contenido en borrador generado con asistencia de IA a partir de contenidos estándar. Casos y datos ficticios. Pendiente de revisión docente y de contraste con el programa vigente.",
+  "questions": [
+    {
+      "id": "fi-01",
+      "conceptId": "mat-fisiologia:fi-01",
+      "category": "mat-fisiologia",
+      "topic": "Membrana y transporte",
+      "competency": "Describir la función de la bomba de sodio-potasio",
+      "difficulty": "conceptual",
+      "format": "concepto",
+      "stem": "¿Qué hace la bomba de sodio-potasio (Na⁺/K⁺-ATPasa) de la membrana celular?",
+      "rationale": "La Na⁺/K⁺-ATPasa mantiene los gradientes de sodio y potasio a ambos lados de la membrana, necesarios para el potencial de reposo, la excitabilidad de nervios y músculos y el control del volumen celular. Consume una parte importante de la energía de la célula.",
+      "transferPrinciple": "Los gradientes iónicos explican por qué las alteraciones del potasio o del sodio en sangre afectan el corazón, los músculos y la conciencia.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-fisiologia",
+          "section": "Transporte a través de la membrana celular"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "3na2k",
+          "text": "Saca 3 iones de sodio de la célula e ingresa 2 de potasio, con gasto de ATP.",
+          "feedback": "Correcto. Es un transporte activo que mantiene el sodio alto afuera y el potasio alto adentro."
+        },
+        {
+          "id": "pasivo",
+          "text": "Deja pasar sodio y potasio a favor de su gradiente de concentración, sin gasto de energía, como un canal abierto.",
+          "feedback": "Eso describe la difusión a través de canales. La bomba trabaja contra el gradiente y consume ATP."
+        },
+        {
+          "id": "invertida",
+          "text": "Ingresa 3 iones de sodio y saca 2 de potasio, para cargar positivamente el interior celular.",
+          "feedback": "La dirección está invertida: la bomba saca sodio y mete potasio."
+        },
+        {
+          "id": "agua",
+          "text": "Transporta agua hacia el interior de la célula para mantener su volumen.",
+          "feedback": "El agua se mueve por ósmosis. La bomba transporta iones, aunque indirectamente ayuda a controlar el volumen celular."
+        }
+      ],
+      "correctOptionId": "3na2k",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "fi-02",
+      "conceptId": "mat-fisiologia:fi-02",
+      "category": "mat-fisiologia",
+      "topic": "Membrana y transporte",
+      "competency": "Predecir el efecto de la tonicidad de una solución sobre las células",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "Si los glóbulos rojos se colocan en agua destilada (solución hipotónica), ¿qué les ocurre?",
+      "rationale": "La ósmosis es el paso de agua a través de una membrana semipermeable hacia el compartimiento con mayor concentración de solutos. En un medio hipotónico, las células ganan agua y pueden lisarse; en uno hipertónico, la pierden. Por eso nunca se administra agua destilada por vía endovenosa y las soluciones se eligen según su tonicidad, por indicación médica.",
+      "transferPrinciple": "Antes de preparar o administrar una solución, preguntate si es isotónica, hipotónica o hipertónica respecto del plasma.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-fisiologia",
+          "section": "Ósmosis y presión osmótica"
+        },
+        {
+          "ref": "libro-fundamentos",
+          "section": "Soluciones endovenosas: tonicidad"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "hemolisis",
+          "text": "Ingresa agua por ósmosis, se hinchan y pueden romperse (hemólisis).",
+          "feedback": "Correcto. El agua se mueve hacia donde hay más solutos, es decir, al interior de la célula."
+        },
+        {
+          "id": "crenacion",
+          "text": "Pierden agua, se arrugan y disminuyen de tamaño, porque el agua sale hacia la solución.",
+          "feedback": "Eso ocurre en una solución hipertónica. En una hipotónica el agua entra a la célula."
+        },
+        {
+          "id": "nada",
+          "text": "No cambian, porque la membrana del glóbulo rojo es impermeable al agua.",
+          "feedback": "La membrana es permeable al agua: por eso la tonicidad del medio modifica el volumen celular."
+        },
+        {
+          "id": "sodio",
+          "text": "Ganan sodio desde la solución y se vuelven hipertónicos respecto del plasma.",
+          "feedback": "El agua destilada no aporta sodio. El cambio se debe al movimiento de agua."
+        }
+      ],
+      "correctOptionId": "hemolisis",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "fi-03",
+      "conceptId": "mat-fisiologia:fi-03",
+      "category": "mat-fisiologia",
+      "topic": "Membrana y transporte",
+      "competency": "Explicar el edema por disminución de la presión oncótica",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "Un paciente desnutrido tiene albúmina sérica muy baja y edemas en ambas piernas. ¿Qué mecanismo explica el edema?",
+      "rationale": "El intercambio de líquido capilar depende del equilibrio entre la presión hidrostática (empuja hacia afuera) y la presión oncótica del plasma, dada sobre todo por la albúmina (retiene adentro). La hipoalbuminemia (desnutrición, enfermedad hepática o renal) reduce la presión oncótica y favorece el edema.",
+      "transferPrinciple": "Cuando valorés un edema, pensá en las fuerzas: más presión que empuja, menos proteínas que retienen o linfáticos que no drenan.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-fisiologia",
+          "section": "Microcirculación e intercambio capilar: fuerzas de Starling"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "oncotica",
+          "text": "La presión oncótica del plasma disminuye y el líquido tiende a salir de los capilares al intersticio.",
+          "feedback": "Correcto. La albúmina retiene agua dentro del vaso. Con menos albúmina, predominan las fuerzas que sacan líquido."
+        },
+        {
+          "id": "hidrostatica",
+          "text": "La presión hidrostática dentro del capilar disminuye, empujando el líquido desde el intersticio hacia la sangre.",
+          "feedback": "Una menor presión hidrostática favorecería el ingreso de líquido al vaso, no el edema."
+        },
+        {
+          "id": "sodio",
+          "text": "El riñón elimina más sodio y agua, lo que deja menos volumen en la sangre y más en los tejidos.",
+          "feedback": "Eliminar sodio y agua no genera edema por sí mismo. La causa aquí es la caída de la presión oncótica."
+        },
+        {
+          "id": "linfa",
+          "text": "Los vasos linfáticos producen más linfa y la vuelcan en el tejido de las piernas.",
+          "feedback": "Los linfáticos drenan el intersticio; su falla puede dar edema, pero no explica este caso."
+        }
+      ],
+      "correctOptionId": "oncotica",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "fi-04",
+      "conceptId": "mat-fisiologia:fi-04",
+      "category": "mat-fisiologia",
+      "topic": "Corazón y circulación",
+      "competency": "Identificar el marcapasos fisiológico del corazón",
+      "difficulty": "conceptual",
+      "format": "concepto",
+      "stem": "¿Qué estructura inicia normalmente cada latido cardíaco?",
+      "rationale": "El sistema de conducción incluye el nódulo sinusal, las vías internodales, el nódulo AV, el haz de His, sus ramas y las fibras de Purkinje. El nódulo sinusal marca el ritmo («ritmo sinusal») y el sistema nervioso autónomo modula su frecuencia.",
+      "transferPrinciple": "Cuando leas «ritmo sinusal» en un ECG, significa que el latido nace donde corresponde.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-fisiologia",
+          "section": "Excitación rítmica del corazón"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "sinusal",
+          "text": "El nódulo sinusal, en la aurícula derecha.",
+          "feedback": "Correcto. Es el marcapasos natural porque tiene la frecuencia de descarga espontánea más alta."
+        },
+        {
+          "id": "av",
+          "text": "El nódulo auriculoventricular, en la unión entre aurículas y ventrículos, que retrasa el impulso.",
+          "feedback": "El nódulo AV retrasa y conduce el impulso. Solo actúa como marcapasos si falla el sinusal."
+        },
+        {
+          "id": "purkinje",
+          "text": "Las fibras de Purkinje, que distribuyen el impulso por los ventrículos.",
+          "feedback": "Las fibras de Purkinje conducen el impulso; su frecuencia propia es mucho más baja."
+        },
+        {
+          "id": "vago",
+          "text": "El nervio vago, que envía cada impulso de contracción al corazón.",
+          "feedback": "El vago modula la frecuencia, pero el latido se origina en el propio corazón (automatismo)."
+        }
+      ],
+      "correctOptionId": "sinusal",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "fi-05",
+      "conceptId": "mat-fisiologia:fi-05",
+      "category": "mat-fisiologia",
+      "topic": "Corazón y circulación",
+      "competency": "Calcular el gasto cardíaco a partir de la frecuencia y el volumen sistólico",
+      "difficulty": "aplicacion",
+      "format": "calculo",
+      "stem": "Una persona tiene una frecuencia cardíaca de 80 latidos/min y un volumen sistólico de 70 mL. Calculá el gasto cardíaco (GC = FC × VS) y expresalo en litros por minuto.",
+      "rationale": "GC = FC × VS = 80 latidos/min × 70 mL/latido = 5600 mL/min = 5,6 L/min, un valor dentro del rango habitual en reposo para un adulto. El gasto cardíaco aumenta si sube la frecuencia, el volumen sistólico o ambos.",
+      "transferPrinciple": "Si la frecuencia cardíaca sube mucho, el llenado ventricular puede acortarse y el volumen sistólico caer: una taquicardia no siempre significa más gasto.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-fisiologia",
+          "section": "Gasto cardíaco y su regulación"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "numeric",
+      "options": [],
+      "correctOptionId": null,
+      "numericAnswer": 5.6,
+      "unit": "L/min",
+      "tolerance": 0.05,
+      "rounding": "Expresá el resultado en L/min con un decimal (1 L = 1000 mL).",
+      "numericCheck": {
+        "formula": "gasto_cardiaco",
+        "inputs": {
+          "fc": 80,
+          "vs_ml": 70
+        }
+      },
+      "numericFeedback": "80 × 70 = 5600 mL/min. Para pasar a litros se divide por 1000: 5,6 L/min. Si obtuviste 5600, te faltó convertir la unidad."
+    },
+    {
+      "id": "fi-06",
+      "conceptId": "mat-fisiologia:fi-06",
+      "category": "mat-fisiologia",
+      "topic": "Corazón y circulación",
+      "competency": "Aplicar el mecanismo de Frank-Starling",
+      "difficulty": "aplicacion",
+      "format": "concepto",
+      "stem": "Según el mecanismo de Frank-Starling, ¿qué ocurre cuando aumenta el volumen de sangre que llega al ventrículo (precarga), dentro de límites fisiológicos?",
+      "rationale": "La ley de Frank-Starling describe la capacidad intrínseca del corazón de adaptar su fuerza al retorno venoso: más estiramiento de las fibras, dentro de un rango, genera más fuerza. En la insuficiencia cardíaca, este mecanismo se agota y el exceso de volumen produce congestión.",
+      "transferPrinciple": "Por eso la reposición de volumen ayuda en la hipovolemia pero puede ser peligrosa en un corazón que falla: el plan de líquidos siempre lo indica el equipo.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-fisiologia",
+          "section": "El corazón como bomba: mecanismo de Frank-Starling"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "mas-fuerza",
+          "text": "Las fibras se estiran más y el ventrículo se contrae con mayor fuerza, expulsando más sangre.",
+          "feedback": "Correcto. Dentro de cierto rango, a mayor llenado, mayor volumen sistólico."
+        },
+        {
+          "id": "menos-fuerza",
+          "text": "El ventrículo se contrae con menos fuerza para evitar que el corazón se sobrecargue con cada latido.",
+          "feedback": "En condiciones fisiológicas ocurre lo contrario. Solo con una distensión excesiva la contracción se vuelve ineficaz."
+        },
+        {
+          "id": "frecuencia",
+          "text": "Solo aumenta la frecuencia cardíaca, mientras la fuerza de contracción se mantiene constante.",
+          "feedback": "El mecanismo de Frank-Starling se refiere a la fuerza de contracción, no a la frecuencia."
+        },
+        {
+          "id": "valvulas",
+          "text": "Las válvulas se cierran antes y el ventrículo retiene más sangre en cada latido.",
+          "feedback": "El mecanismo no depende de las válvulas sino del estiramiento de las fibras musculares."
+        }
+      ],
+      "correctOptionId": "mas-fuerza",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "fi-07",
+      "conceptId": "mat-fisiologia:fi-07",
+      "category": "mat-fisiologia",
+      "topic": "Corazón y circulación",
+      "competency": "Prevenir caídas por hipotensión ortostática con base fisiológica",
+      "difficulty": "integracion",
+      "format": "error_seguridad",
+      "stem": "Una paciente estuvo en cama tres días. Al levantarla de golpe para llevarla al baño refiere mareo y visión borrosa. ¿Qué explica el cuadro y qué corresponde?",
+      "rationale": "Al pasar de acostado a de pie, la gravedad desplaza sangre hacia los miembros inferiores y disminuye el retorno venoso. Normalmente el barorreflejo compensa en segundos; tras el reposo prolongado, la deshidratación o algunos fármacos, esa respuesta es insuficiente. La conducta es proteger a la persona, sentarla antes de pararla, controlar la presión en distintas posiciones y comunicar si persiste.",
+      "transferPrinciple": "Antes de movilizar a alguien que estuvo en reposo, incorporalo por etapas: acostado, sentado con piernas colgando y luego de pie, valorando síntomas en cada paso.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-fisiologia",
+          "section": "Regulación nerviosa de la circulación"
+        },
+        {
+          "ref": "ahrq-caidas-2013",
+          "section": "Intervenciones individualizadas: hipotensión ortostática"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "ortostatica",
+          "text": "Al ponerse de pie, la sangre se acumula en las piernas y la presión cae; la acuesto y luego la incorporo por etapas.",
+          "feedback": "Correcto. Es una hipotensión ortostática: se protege a la paciente y se planifica una movilización progresiva, controlando la presión."
+        },
+        {
+          "id": "hipoglucemia",
+          "text": "Es una hipoglucemia porque no desayunó: le doy algo dulce y la acompaño enseguida al baño caminando.",
+          "feedback": "Sin datos de glucemia, atribuirlo a hipoglucemia y seguir caminando expone a una caída. El mecanismo más probable es postural."
+        },
+        {
+          "id": "ansiedad",
+          "text": "Es ansiedad por la internación: la tranquilizo y seguimos caminando despacio hasta el baño.",
+          "feedback": "Continuar la marcha con mareo aumenta el riesgo de caída. Primero se protege a la paciente."
+        },
+        {
+          "id": "normal",
+          "text": "Es normal después de estar acostada: si se sostiene del brazo puede seguir sola hasta el baño.",
+          "feedback": "Que sea frecuente no lo hace seguro. Dejarla seguir sola con síntomas es un riesgo de caída."
+        }
+      ],
+      "correctOptionId": "ortostatica",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "fi-08",
+      "conceptId": "mat-fisiologia:fi-08",
+      "category": "mat-fisiologia",
+      "topic": "Respiración",
+      "competency": "Explicar el mecanismo del intercambio gaseoso alveolar",
+      "difficulty": "conceptual",
+      "format": "concepto",
+      "stem": "¿Por qué mecanismo pasa el oxígeno desde el alvéolo hacia la sangre capilar?",
+      "rationale": "La difusión de gases depende de la diferencia de presiones parciales, la superficie disponible, el grosor de la membrana alveolocapilar y la solubilidad del gas. El edema pulmonar o la fibrosis engrosan la membrana; el enfisema reduce la superficie. Ambos dificultan la oxigenación.",
+      "transferPrinciple": "Cuando una enfermedad pulmonar baja la saturación, pensá qué factor de la difusión está afectado.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-fisiologia",
+          "section": "Difusión de gases a través de la membrana respiratoria"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "difusion",
+          "text": "Por difusión, desde donde su presión parcial es mayor (alvéolo) hacia donde es menor (sangre venosa).",
+          "feedback": "Correcto. El intercambio gaseoso es un proceso pasivo que depende de la diferencia de presiones parciales."
+        },
+        {
+          "id": "activo",
+          "text": "Por transporte activo, con proteínas de la membrana alveolar que consumen ATP para bombear oxígeno.",
+          "feedback": "El intercambio gaseoso no requiere energía: es difusión pasiva."
+        },
+        {
+          "id": "hemoglobina",
+          "text": "Porque la hemoglobina sale del capilar, capta el oxígeno dentro del alvéolo y vuelve a la sangre con el oxígeno ya unido a su estructura.",
+          "feedback": "La hemoglobina permanece dentro de los glóbulos rojos; el oxígeno difunde hacia ella."
+        },
+        {
+          "id": "osmosis",
+          "text": "Por ósmosis, porque el oxígeno se disuelve en el agua y se mueve con ella hacia la sangre.",
+          "feedback": "La ósmosis describe el movimiento de agua, no el de los gases."
+        }
+      ],
+      "correctOptionId": "difusion",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "fi-09",
+      "conceptId": "mat-fisiologia:fi-09",
+      "category": "mat-fisiologia",
+      "topic": "Respiración",
+      "competency": "Identificar el principal estímulo químico de la ventilación",
+      "difficulty": "aplicacion",
+      "format": "concepto",
+      "stem": "En una persona sana, ¿qué variación de la sangre estimula con más fuerza el aumento de la ventilación?",
+      "rationale": "Los quimiorreceptores centrales del bulbo detectan cambios de pH del líquido cefalorraquídeo producidos por el CO₂; los periféricos (carotídeos y aórticos) responden sobre todo a la hipoxemia marcada. En algunas enfermedades respiratorias crónicas esta regulación cambia, y la oxigenoterapia se ajusta según indicación médica.",
+      "transferPrinciple": "Una frecuencia respiratoria alta muchas veces es el intento del organismo por eliminar CO₂ o compensar una acidosis.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-fisiologia",
+          "section": "Regulación de la respiración: control químico"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "co2",
+          "text": "El aumento del dióxido de carbono (y de los iones hidrógeno) en la sangre arterial.",
+          "feedback": "Correcto. Los quimiorreceptores centrales responden sobre todo al CO₂ a través de los cambios de pH."
+        },
+        {
+          "id": "o2-alto",
+          "text": "El aumento del oxígeno en sangre, que obliga a respirar más para eliminarlo.",
+          "feedback": "Un oxígeno alto no estimula la ventilación."
+        },
+        {
+          "id": "o2-leve",
+          "text": "Una leve disminución del oxígeno, que es el estímulo más sensible e inmediato para la respiración en cualquier persona.",
+          "feedback": "Los quimiorreceptores periféricos responden a la hipoxemia, pero en personas sanas el CO₂ es el estímulo principal."
+        },
+        {
+          "id": "glucosa",
+          "text": "El descenso de la glucosa en sangre, que aumenta la necesidad de oxígeno de las células.",
+          "feedback": "La glucemia no es un regulador directo de la ventilación."
+        }
+      ],
+      "correctOptionId": "co2",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "fi-10",
+      "conceptId": "mat-fisiologia:fi-10",
+      "category": "mat-fisiologia",
+      "topic": "Respiración",
+      "competency": "Interpretar los desplazamientos de la curva de disociación de la hemoglobina",
+      "difficulty": "integracion",
+      "format": "caso",
+      "stem": "Un paciente con fiebre de 39 °C y acidosis metabólica tiene la curva de disociación de la hemoglobina desplazada hacia la derecha. ¿Qué significa?",
+      "rationale": "La curva de disociación de la oxihemoglobina se desplaza a la derecha con el aumento de temperatura, de CO₂, de iones hidrógeno (acidosis) y de 2,3-DPG: la hemoglobina cede más oxígeno en los tejidos, donde más se necesita. La hipotermia y la alcalosis la desplazan a la izquierda.",
+      "transferPrinciple": "Los mismos cambios que indican mayor actividad tisular (calor, ácido, CO₂) hacen que la sangre entregue más oxígeno: el organismo responde a la demanda.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-fisiologia",
+          "section": "Transporte de oxígeno y curva de disociación de la hemoglobina"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "libera",
+          "text": "La hemoglobina tiene menor afinidad por el oxígeno y lo libera con más facilidad a los tejidos.",
+          "feedback": "Correcto. Temperatura alta, acidosis y aumento del CO₂ desplazan la curva a la derecha y favorecen la entrega de O₂."
+        },
+        {
+          "id": "retiene",
+          "text": "La hemoglobina retiene con más fuerza el oxígeno y los tejidos reciben menos.",
+          "feedback": "Eso corresponde a un desplazamiento hacia la izquierda (por ejemplo, con hipotermia o alcalosis)."
+        },
+        {
+          "id": "saturacion",
+          "text": "La saturación de oxígeno medida por el oxímetro aumenta en forma proporcional a la fiebre.",
+          "feedback": "El desplazamiento a la derecha no aumenta la saturación; a igual presión de O₂ puede incluso ser algo menor."
+        },
+        {
+          "id": "sin-efecto",
+          "text": "No tiene efecto clínico, porque la curva solo cambia en personas que viven en la altura.",
+          "feedback": "Los desplazamientos de la curva ocurren con cambios frecuentes en la clínica: temperatura, pH y CO₂."
+        }
+      ],
+      "correctOptionId": "libera",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "fi-11",
+      "conceptId": "mat-fisiologia:fi-11",
+      "category": "mat-fisiologia",
+      "topic": "Riñón y líquidos",
+      "competency": "Explicar la acción de la hormona antidiurética",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "Una persona deshidratada elimina poca orina y muy concentrada. ¿Qué hormona explica principalmente este efecto?",
+      "rationale": "La ADH (vasopresina) se libera desde la neurohipófisis cuando aumenta la osmolaridad del plasma o disminuye el volumen circulante. Inserta canales de agua (acuaporinas) en el túbulo colector, lo que concentra la orina. Una orina oscura y escasa en una persona con pérdidas de líquido es una señal de que el organismo está conservando agua.",
+      "transferPrinciple": "El color y el volumen de la orina son datos fisiológicos valiosos: registralos y comunicá los cambios junto con el balance.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-fisiologia",
+          "section": "Concentración y dilución de la orina: hormona antidiurética"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "adh",
+          "text": "La hormona antidiurética (ADH), que aumenta la reabsorción de agua en el túbulo colector.",
+          "feedback": "Correcto. Ante una osmolaridad plasmática alta o un volumen bajo, la ADH aumenta y el riñón conserva agua."
+        },
+        {
+          "id": "insulina",
+          "text": "La insulina, que retiene glucosa en la sangre y con ella arrastra el agua del túbulo renal.",
+          "feedback": "La insulina no regula directamente la concentración de la orina."
+        },
+        {
+          "id": "anp",
+          "text": "El péptido natriurético auricular, que aumenta cuando hay poco volumen circulante.",
+          "feedback": "El péptido natriurético aumenta con el exceso de volumen y favorece la eliminación de sodio y agua."
+        },
+        {
+          "id": "glucagon",
+          "text": "El glucagón, que estimula al riñón a producir menos orina durante el ayuno.",
+          "feedback": "El glucagón regula la glucemia y no es el responsable de la concentración urinaria."
+        }
+      ],
+      "correctOptionId": "adh",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "fi-12",
+      "conceptId": "mat-fisiologia:fi-12",
+      "category": "mat-fisiologia",
+      "topic": "Riñón y líquidos",
+      "competency": "Relacionar la aldosterona con el sodio y el potasio",
+      "difficulty": "integracion",
+      "format": "caso",
+      "stem": "En una hipovolemia se activa el sistema renina-angiotensina-aldosterona. ¿Qué efecto tiene la aldosterona sobre el riñón?",
+      "rationale": "Ante una caída de la perfusión renal, el riñón libera renina; se forma angiotensina II (vasoconstrictora) y se estimula la aldosterona, que actúa en el túbulo distal y el colector reteniendo sodio y agua y eliminando potasio e hidrogeniones. Es una respuesta compensadora del volumen.",
+      "transferPrinciple": "Cuando un paciente compensa una pérdida de volumen, vigilá también el potasio: el mismo mecanismo que retiene sodio puede hacerlo bajar.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-fisiologia",
+          "section": "Regulación renal del sodio y del potasio"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "na-k",
+          "text": "Aumenta la reabsorción de sodio (y con él de agua) y la eliminación de potasio.",
+          "feedback": "Correcto. Ayuda a recuperar volumen, aunque puede favorecer la pérdida de potasio."
+        },
+        {
+          "id": "pierde-na",
+          "text": "Aumenta la eliminación de sodio y agua para disminuir la presión arterial.",
+          "feedback": "Ese es el efecto contrario. La aldosterona retiene sodio."
+        },
+        {
+          "id": "retiene-k",
+          "text": "Retiene potasio y elimina sodio, por lo que el potasio en sangre tiende a subir.",
+          "feedback": "La aldosterona elimina potasio; por eso su exceso puede dar hipopotasemia."
+        },
+        {
+          "id": "glucosa",
+          "text": "Aumenta la reabsorción de glucosa en el túbulo proximal para aportar energía.",
+          "feedback": "La reabsorción de glucosa no depende de la aldosterona."
+        }
+      ],
+      "correctOptionId": "na-k",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "fi-13",
+      "conceptId": "mat-fisiologia:fi-13",
+      "category": "mat-fisiologia",
+      "topic": "Endocrino",
+      "competency": "Diferenciar las acciones de la insulina y del glucagón",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "Después de una comida rica en hidratos de carbono, ¿qué hormona predomina y qué efecto produce?",
+      "rationale": "La insulina (células beta del páncreas) es la principal hormona hipoglucemiante: favorece la captación de glucosa, la síntesis de glucógeno, lípidos y proteínas. El glucagón, el cortisol, la adrenalina y la hormona de crecimiento son hiperglucemiantes y predominan en el ayuno o el estrés.",
+      "transferPrinciple": "Relacioná la glucemia con el momento: ayuno, comida, estrés o actividad física cambian qué hormonas predominan.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-fisiologia",
+          "section": "Insulina, glucagón y diabetes mellitus"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "insulina",
+          "text": "La insulina, que facilita el ingreso de glucosa a músculos y tejido adiposo y su almacenamiento como glucógeno.",
+          "feedback": "Correcto. La insulina baja la glucemia después de comer."
+        },
+        {
+          "id": "glucagon",
+          "text": "El glucagón, que transforma la glucosa de la comida en glucógeno dentro del músculo y del hígado para guardarla como reserva.",
+          "feedback": "El glucagón predomina en el ayuno y eleva la glucemia, liberando glucosa del hígado."
+        },
+        {
+          "id": "cortisol",
+          "text": "El cortisol, que se libera con cada comida para distribuir la glucosa a los tejidos.",
+          "feedback": "El cortisol aumenta la glucemia y se asocia al estrés, no a la respuesta habitual a la comida."
+        },
+        {
+          "id": "adrenalina",
+          "text": "La adrenalina, que aumenta la captación de glucosa por el cerebro después de comer.",
+          "feedback": "La adrenalina eleva la glucemia en situaciones de alarma; no es la hormona de la respuesta posprandial."
+        }
+      ],
+      "correctOptionId": "insulina",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "fi-14",
+      "conceptId": "mat-fisiologia:fi-14",
+      "category": "mat-fisiologia",
+      "topic": "Endocrino",
+      "competency": "Explicar la hiperglucemia de estrés en el posoperatorio",
+      "difficulty": "integracion",
+      "format": "caso",
+      "stem": "Un paciente sin diabetes conocida presenta glucemias elevadas en el posoperatorio inmediato de una cirugía mayor. ¿Qué mecanismo fisiológico contribuye?",
+      "rationale": "Ante el estrés (cirugía, trauma, infección), el eje hipotálamo-hipófisis-suprarrenal y el sistema simpático aumentan el cortisol, el glucagón y las catecolaminas. Esto eleva la producción hepática de glucosa y genera resistencia a la insulina. La hiperglucemia se asocia a peores resultados, por lo que se controla y comunica según el protocolo.",
+      "transferPrinciple": "Un valor inesperado se verifica y se comunica: no se descarta por no coincidir con los antecedentes.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-fisiologia",
+          "section": "Hormonas corticosuprarrenales"
+        },
+        {
+          "ref": "protocolo-institucional",
+          "section": "Control glucémico del paciente internado"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "estres",
+          "text": "El estrés quirúrgico aumenta el cortisol y las catecolaminas, que elevan la glucemia y reducen la acción de la insulina.",
+          "feedback": "Correcto. Es la respuesta neuroendocrina al estrés. Igual se comunica y se controla según indicación."
+        },
+        {
+          "id": "suero",
+          "text": "Que todo plan de hidratación posoperatorio contiene insulina, y su falta al terminar la cirugía eleva la glucosa.",
+          "feedback": "Los planes de hidratación no contienen insulina de rutina. La explicación es hormonal."
+        },
+        {
+          "id": "ayuno",
+          "text": "El ayuno prolongado, que siempre eleva la glucemia porque el hígado deja de producir glucosa.",
+          "feedback": "En el ayuno el hígado produce glucosa para mantenerla, pero el ayuno solo no explica una hiperglucemia marcada."
+        },
+        {
+          "id": "error",
+          "text": "Necesariamente un error del glucómetro, ya que una persona sin diabetes no puede tener glucemias altas.",
+          "feedback": "Una persona sin diabetes puede tener hiperglucemia de estrés. El valor se verifica y se comunica, no se descarta."
+        }
+      ],
+      "correctOptionId": "estres",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "fi-15",
+      "conceptId": "mat-fisiologia:fi-15",
+      "category": "mat-fisiologia",
+      "topic": "Endocrino",
+      "competency": "Relacionar la función tiroidea con signos clínicos",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "¿Qué conjunto de signos es compatible con hipotiroidismo (disminución de hormonas tiroideas)?",
+      "rationale": "Las hormonas tiroideas (T3 y T4) aumentan el metabolismo basal, la producción de calor y la frecuencia cardíaca. En el hipotiroidismo predominan el enlentecimiento (bradicardia, cansancio, constipación), la intolerancia al frío, la piel seca y el aumento de peso.",
+      "transferPrinciple": "Pensá en las hormonas como «aceleradores» o «frenos»: su exceso o déficit se nota en los signos vitales y la temperatura.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-fisiologia",
+          "section": "Hormonas metabólicas tiroideas"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "hipo",
+          "text": "Bradicardia, intolerancia al frío, cansancio, piel seca y aumento de peso.",
+          "feedback": "Correcto. Las hormonas tiroideas regulan el metabolismo; su déficit lo enlentece."
+        },
+        {
+          "id": "hiper",
+          "text": "Taquicardia, intolerancia al calor, pérdida de peso, temblor y nerviosismo.",
+          "feedback": "Ese cuadro corresponde al hipertiroidismo (exceso de hormonas tiroideas)."
+        },
+        {
+          "id": "poliuria",
+          "text": "Sed intensa, orina abundante y pérdida de peso con mucho apetito.",
+          "feedback": "Esos signos orientan a una diabetes mellitus descompensada."
+        },
+        {
+          "id": "hipoca",
+          "text": "Calambres, hormigueo alrededor de la boca y espasmos en las manos.",
+          "feedback": "Esos signos sugieren hipocalcemia (por ejemplo, por alteración de las paratiroides)."
+        }
+      ],
+      "correctOptionId": "hipo",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "fi-16",
+      "conceptId": "mat-fisiologia:fi-16",
+      "category": "mat-fisiologia",
+      "topic": "Sangre y hemostasia",
+      "competency": "Describir la hemostasia primaria",
+      "difficulty": "conceptual",
+      "format": "concepto",
+      "stem": "Ante una lesión de un vaso pequeño, ¿qué elementos forman el primer tapón que detiene el sangrado (hemostasia primaria)?",
+      "rationale": "La hemostasia incluye vasoconstricción, formación del tapón plaquetario (hemostasia primaria) y la cascada de coagulación que genera fibrina (hemostasia secundaria). Después, la fibrinólisis disuelve el coágulo cuando el vaso se repara.",
+      "transferPrinciple": "Cuando un paciente tiene pocas plaquetas o toma antiagregantes, esperá sangrados más prolongados en punciones y mucosas.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-fisiologia",
+          "section": "Hemostasia y coagulación de la sangre"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "plaquetas",
+          "text": "Las plaquetas, que se adhieren al vaso lesionado y se agregan entre sí.",
+          "feedback": "Correcto. Junto con la vasoconstricción local, forman el tapón plaquetario."
+        },
+        {
+          "id": "globulos-rojos",
+          "text": "Los glóbulos rojos, que se apilan en el sitio de la lesión y la cierran.",
+          "feedback": "Los glóbulos rojos quedan atrapados en el coágulo, pero no inician la hemostasia primaria."
+        },
+        {
+          "id": "blancos",
+          "text": "Los glóbulos blancos, que llegan al sitio para combatir la infección de la herida.",
+          "feedback": "Los leucocitos participan en la inflamación, no en la formación del tapón inicial."
+        },
+        {
+          "id": "fibrina",
+          "text": "La red de fibrina, que se forma antes que cualquier otra respuesta del vaso.",
+          "feedback": "La fibrina corresponde a la hemostasia secundaria (coagulación), que refuerza el tapón plaquetario."
+        }
+      ],
+      "correctOptionId": "plaquetas",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "fi-17",
+      "conceptId": "mat-fisiologia:fi-17",
+      "category": "mat-fisiologia",
+      "topic": "Sangre y hemostasia",
+      "competency": "Planificar cuidados ante plaquetas bajas",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "Un paciente tiene plaquetopenia marcada informada por el laboratorio. ¿Qué cuidado se relaciona directamente con este hallazgo?",
+      "rationale": "Con plaquetas bajas aumenta el riesgo de sangrado. Los cuidados incluyen compresión prolongada tras punciones, minimizar procedimientos invasivos, usar cepillo blando, vigilar petequias, hematomas, hematuria y sangrado de mucosas, y comunicar cambios. Las vías de administración y las indicaciones específicas las define el equipo tratante.",
+      "transferPrinciple": "Un resultado de laboratorio cambia el plan de cuidados: traducí cada valor alterado en algo concreto que tenés que vigilar o evitar.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-fisiologia",
+          "section": "Trastornos de la hemostasia"
+        },
+        {
+          "ref": "libro-fundamentos",
+          "section": "Cuidados del paciente con riesgo de sangrado"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "compresion",
+          "text": "Aplicar compresión prolongada en los sitios de punción y vigilar sangrado en encías, orina y piel.",
+          "feedback": "Correcto. Con pocas plaquetas, la hemostasia primaria es deficiente y los sangrados pueden prolongarse."
+        },
+        {
+          "id": "calor",
+          "text": "Aplicar calor local en los sitios de punción para favorecer la circulación, la cicatrización y el alivio del dolor después de cada extracción.",
+          "feedback": "El calor produce vasodilatación y puede aumentar el sangrado."
+        },
+        {
+          "id": "masaje",
+          "text": "Masajear con firmeza los sitios de inyección para distribuir el medicamento y evitar hematomas.",
+          "feedback": "Masajear puede aumentar el sangrado en un paciente con plaquetopenia."
+        },
+        {
+          "id": "cepillo",
+          "text": "Indicar cepillado dental enérgico con cepillo duro para evitar infecciones en las encías.",
+          "feedback": "Un cepillado enérgico puede provocar sangrado gingival. Se recomienda un cepillo blando."
+        }
+      ],
+      "correctOptionId": "compresion",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "fi-18",
+      "conceptId": "mat-fisiologia:fi-18",
+      "category": "mat-fisiologia",
+      "topic": "Termorregulación",
+      "competency": "Explicar la fase de escalofríos de la fiebre",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "Un paciente comienza con escalofríos intensos y piel fría, y a la hora tiene 39,2 °C. ¿Qué ocurría durante los escalofríos?",
+      "rationale": "En la fiebre, sustancias pirógenas elevan el punto de ajuste hipotalámico. Fases: ascenso (escalofríos, vasoconstricción, piel fría), meseta (piel caliente) y descenso (vasodilatación, sudoración). Por eso medir la temperatura durante los escalofríos y repetir después da información útil sobre la evolución.",
+      "transferPrinciple": "Los escalofríos pueden anunciar una fiebre en ascenso: controlá la temperatura y comunicá según el protocolo, sobre todo si hay signos de infección.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-fisiologia",
+          "section": "Regulación de la temperatura corporal y fiebre"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "set-point",
+          "text": "El hipotálamo elevó su punto de ajuste y el cuerpo producía y conservaba calor (temblor y vasoconstricción).",
+          "feedback": "Correcto. En la fase de ascenso, el organismo «siente frío» porque su temperatura está por debajo del nuevo punto de ajuste."
+        },
+        {
+          "id": "perdida",
+          "text": "El cuerpo estaba perdiendo calor rápidamente por la piel, lo que bajaba la temperatura.",
+          "feedback": "La vasoconstricción y el temblor conservan y producen calor: la temperatura sube."
+        },
+        {
+          "id": "hipotermia",
+          "text": "El paciente tenía hipotermia, que luego se corrigió de forma espontánea.",
+          "feedback": "La piel fría se debe a la vasoconstricción, no a una hipotermia central."
+        },
+        {
+          "id": "sudor",
+          "text": "El hipotálamo había bajado su punto de ajuste y activaba la sudoración para enfriar el cuerpo.",
+          "feedback": "Eso describe la fase de defervescencia, cuando baja la fiebre."
+        }
+      ],
+      "correctOptionId": "set-point",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "fi-19",
+      "conceptId": "mat-fisiologia:fi-19",
+      "category": "mat-fisiologia",
+      "topic": "Termorregulación",
+      "competency": "Prevenir la hipotermia en el posoperatorio",
+      "difficulty": "integracion",
+      "format": "caso",
+      "stem": "Un paciente llega del quirófano con 35,2 °C, tiritando. ¿Qué relación fisiológica y qué conducta corresponden?",
+      "rationale": "Durante la anestesia se inhibe la respuesta termorreguladora y la vasodilatación redistribuye el calor central hacia la periferia; a eso se suman el ambiente frío y las soluciones infundidas. El temblor aumenta mucho el consumo de oxígeno. Se recomienda mantener la normotermia con calentamiento activo según el protocolo y vigilar la temperatura.",
+      "transferPrinciple": "Un temblor posoperatorio no es solo una molestia: aumenta la demanda de oxígeno del corazón y debe valorarse.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-fisiologia",
+          "section": "Regulación de la temperatura corporal"
+        },
+        {
+          "ref": "oms-isq-2018",
+          "section": "Mantenimiento de la normotermia perioperatoria"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "anestesia",
+          "text": "La anestesia altera la termorregulación y causa vasodilatación; corresponde calentamiento según protocolo y controles de temperatura.",
+          "feedback": "Correcto. La hipotermia posoperatoria es frecuente y aumenta el consumo de oxígeno, el sangrado y el riesgo de infección."
+        },
+        {
+          "id": "fiebre",
+          "text": "Es el inicio de una fiebre por infección del sitio quirúrgico; corresponde aplicar paños fríos.",
+          "feedback": "Con 35,2 °C el paciente está hipotérmico. Enfriarlo agravaría el cuadro."
+        },
+        {
+          "id": "normal",
+          "text": "Es esperable y no requiere acción: la temperatura se normaliza sola en las primeras horas sin intervenir.",
+          "feedback": "Aunque sea frecuente, la hipotermia tiene consecuencias y se trata activamente según el protocolo."
+        },
+        {
+          "id": "ansiedad",
+          "text": "El temblor se debe a la ansiedad posquirúrgica; corresponde tranquilizarlo y retirar las mantas para que no transpire.",
+          "feedback": "Retirar el abrigo empeora la pérdida de calor."
+        }
+      ],
+      "correctOptionId": "anestesia",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "fi-20",
+      "conceptId": "mat-fisiologia:fi-20",
+      "category": "mat-fisiologia",
+      "topic": "Ácido-base",
+      "competency": "Reconocer una acidosis respiratoria por hipoventilación",
+      "difficulty": "integracion",
+      "format": "caso",
+      "stem": "Un paciente que recibió un opioide está muy somnoliento y respira 8 veces por minuto, de forma superficial. ¿Qué alteración ácido-base es esperable?",
+      "rationale": "El CO₂ se combina con agua y forma ácido carbónico. La hipoventilación (opioides, sedantes, agotamiento) retiene CO₂ y produce acidosis respiratoria. La compensación renal (retención de bicarbonato) es lenta. Una frecuencia respiratoria baja con somnolencia tras opioides es un signo de alarma que se comunica de inmediato; la reversión con antagonistas la indica el médico según el protocolo.",
+      "transferPrinciple": "La frecuencia y profundidad respiratoria son tan importantes como la saturación: un paciente puede saturar bien con oxígeno y estar reteniendo CO₂.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-fisiologia",
+          "section": "Regulación del equilibrio ácido-base"
+        },
+        {
+          "ref": "protocolo-institucional",
+          "section": "Vigilancia del paciente con opioides"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "acidosis-resp",
+          "text": "Acidosis respiratoria, porque la hipoventilación retiene CO₂ y baja el pH.",
+          "feedback": "Correcto. Es una situación de riesgo: se estimula al paciente, se pide ayuda y se actúa según el protocolo."
+        },
+        {
+          "id": "alcalosis-resp",
+          "text": "Alcalosis respiratoria, porque al respirar menos se elimina más CO₂.",
+          "feedback": "Al respirar menos se elimina menos CO₂: se acumula y el pH baja."
+        },
+        {
+          "id": "alcalosis-met",
+          "text": "Alcalosis metabólica, por la acumulación de bicarbonato causada por el opioide.",
+          "feedback": "El opioide deprime la respiración; la alteración primaria es respiratoria, no metabólica."
+        },
+        {
+          "id": "ninguna",
+          "text": "Ninguna: con 8 respiraciones por minuto el pH se mantiene normal gracias a los riñones.",
+          "feedback": "La compensación renal tarda horas o días: no corrige una hipoventilación aguda."
+        }
+      ],
+      "correctOptionId": "acidosis-resp",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    }
+  ]
+}

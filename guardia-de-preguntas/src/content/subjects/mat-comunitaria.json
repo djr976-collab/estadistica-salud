@@ -1,0 +1,1091 @@
+{
+  "subject": "mat-comunitaria",
+  "bankVersion": "1.0",
+  "note": "Contenido en borrador generado con asistencia de IA a partir de contenidos estándar. Casos y datos ficticios. Pendiente de revisión docente y de contraste con el programa vigente.",
+  "questions": [
+    {
+      "id": "co-01",
+      "conceptId": "mat-comunitaria:co-01",
+      "category": "mat-comunitaria",
+      "topic": "Atención primaria de la salud",
+      "competency": "Definir la atención primaria de la salud según Alma-Ata",
+      "difficulty": "conceptual",
+      "format": "concepto",
+      "stem": "Según la Declaración de Alma-Ata (1978), la atención primaria de la salud es:",
+      "rationale": "La Declaración de Alma-Ata definió la APS como la asistencia sanitaria esencial basada en métodos y tecnologías prácticos, científicamente fundados y socialmente aceptables, puesta al alcance de individuos y familias con su plena participación. La ubicó como núcleo del sistema de salud y parte del desarrollo social y económico.",
+      "transferPrinciple": "La APS no es «atención de segunda»: es la estrategia que organiza el sistema desde las necesidades de la comunidad.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "oms-alma-ata-1978",
+          "section": "Punto VI: definición de atención primaria de salud"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "esencial",
+          "text": "La asistencia sanitaria esencial, accesible a individuos y familias, con su plena participación y a un costo que la comunidad y el país puedan soportar.",
+          "feedback": "Correcto. Es la definición central de la Declaración, que la ubica como el primer contacto con el sistema de salud."
+        },
+        {
+          "id": "pobres",
+          "text": "Un paquete mínimo y de baja complejidad de servicios médicos destinado solo a las poblaciones más pobres del país.",
+          "feedback": "Esa interpretación restrictiva fue criticada; la APS es una estrategia integral para toda la población."
+        },
+        {
+          "id": "hospital",
+          "text": "La atención que se brinda en las guardias de los hospitales de alta complejidad durante las primeras horas.",
+          "feedback": "La APS se centra en el primer nivel y en la comunidad, no en la guardia hospitalaria."
+        },
+        {
+          "id": "medicos",
+          "text": "La consulta con médicos especialistas sin necesidad de turno previo ni derivación desde otro nivel.",
+          "feedback": "La APS no se define por el acceso directo a especialistas."
+        }
+      ],
+      "correctOptionId": "esencial",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "co-02",
+      "conceptId": "mat-comunitaria:co-02",
+      "category": "mat-comunitaria",
+      "topic": "Niveles de prevención",
+      "competency": "Clasificar acciones de prevención primaria",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "¿Cuál de estas acciones corresponde a la prevención primaria?",
+      "rationale": "Niveles de prevención: primaria (evitar la aparición: vacunación, promoción de hábitos, saneamiento); secundaria (detección precoz y tratamiento oportuno: tamizajes); terciaria (limitar secuelas y rehabilitar). Algunos autores agregan la prevención cuaternaria (evitar intervenciones innecesarias).",
+      "transferPrinciple": "Para clasificar una acción, preguntate en qué momento de la historia natural de la enfermedad actúa.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "ops-mopece",
+          "section": "Unidad 2: historia natural de la enfermedad y niveles de prevención"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "vacunar",
+          "text": "Vacunar a la población según el calendario vigente.",
+          "feedback": "Correcto. La prevención primaria evita que la enfermedad aparezca, actuando antes de la exposición o del daño."
+        },
+        {
+          "id": "tamizaje",
+          "text": "Realizar controles para detectar en forma temprana una enfermedad que todavía no produce síntomas.",
+          "feedback": "La detección precoz corresponde a la prevención secundaria."
+        },
+        {
+          "id": "rehabilitar",
+          "text": "Ofrecer kinesiología y apoyo a una persona que quedó con secuelas de un accidente cerebrovascular.",
+          "feedback": "La rehabilitación de secuelas corresponde a la prevención terciaria."
+        },
+        {
+          "id": "tratar",
+          "text": "Tratar una neumonía ya diagnosticada.",
+          "feedback": "El tratamiento de una enfermedad establecida no es prevención primaria."
+        }
+      ],
+      "correctOptionId": "vacunar",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "co-03",
+      "conceptId": "mat-comunitaria:co-03",
+      "category": "mat-comunitaria",
+      "topic": "Niveles de prevención",
+      "competency": "Clasificar acciones de prevención secundaria",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "Una campaña invita a mujeres a realizarse el Papanicolaou (PAP) para detectar lesiones del cuello uterino. ¿A qué nivel de prevención corresponde?",
+      "rationale": "La prevención secundaria actúa en la fase presintomática o inicial de la enfermedad, mediante la detección precoz y el tratamiento oportuno. El tamizaje de cáncer de cuello uterino es un ejemplo. Su eficacia depende de la cobertura y del seguimiento de los resultados alterados.",
+      "transferPrinciple": "Un tamizaje sin seguimiento de los resultados positivos pierde su sentido: el circuito incluye el contacto y la derivación.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "ops-mopece",
+          "section": "Unidad 2: niveles de prevención"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "secundaria",
+          "text": "Prevención secundaria.",
+          "feedback": "Correcto. El tamizaje busca detectar lesiones precozmente, cuando el tratamiento es más eficaz."
+        },
+        {
+          "id": "primaria",
+          "text": "Prevención primaria, porque evita que las mujeres se contagien la infección que causa las lesiones.",
+          "feedback": "El PAP no evita la infección; detecta lesiones. La vacunación sí sería prevención primaria."
+        },
+        {
+          "id": "terciaria",
+          "text": "Prevención terciaria, porque está dirigida a mujeres que ya tienen la enfermedad avanzada.",
+          "feedback": "El tamizaje se dirige a personas sin síntomas para encontrar lesiones tempranas."
+        },
+        {
+          "id": "promocion",
+          "text": "Promoción de la salud, porque se trata de una actividad educativa que no requiere ningún estudio.",
+          "feedback": "El PAP es un estudio de detección, no solo una actividad educativa."
+        }
+      ],
+      "correctOptionId": "secundaria",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "co-04",
+      "conceptId": "mat-comunitaria:co-04",
+      "category": "mat-comunitaria",
+      "topic": "Niveles de prevención",
+      "competency": "Clasificar acciones de prevención terciaria",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "Un equipo de salud acompaña a una persona con amputación por diabetes con rehabilitación, prótesis y adaptación de su vivienda. ¿Qué nivel de prevención es?",
+      "rationale": "La prevención terciaria interviene cuando la enfermedad ya produjo daño, para evitar complicaciones, reducir la discapacidad y favorecer la reinserción. Incluye rehabilitación física, apoyo psicosocial y adaptación del entorno, con participación de la familia y la comunidad.",
+      "transferPrinciple": "También hay prevención cuando la enfermedad ya existe: evitar que empeore o que deje más secuelas.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "ops-mopece",
+          "section": "Unidad 2: niveles de prevención"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "terciaria",
+          "text": "Prevención terciaria.",
+          "feedback": "Correcto. Busca limitar la discapacidad, rehabilitar y mejorar la calidad de vida."
+        },
+        {
+          "id": "primaria",
+          "text": "Prevención primaria, porque evita que la persona desarrolle diabetes en el futuro.",
+          "feedback": "La persona ya tiene la enfermedad y sus secuelas."
+        },
+        {
+          "id": "secundaria",
+          "text": "Prevención secundaria, porque se trata de detectar la diabetes antes de que aparezcan los síntomas.",
+          "feedback": "La detección precoz es secundaria; aquí se trabaja sobre secuelas establecidas."
+        },
+        {
+          "id": "ninguna",
+          "text": "Ningún nivel de prevención, porque la rehabilitación es solo asistencia y no tiene fines preventivos.",
+          "feedback": "La rehabilitación previene complicaciones y discapacidad adicional: es prevención terciaria."
+        }
+      ],
+      "correctOptionId": "terciaria",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "co-05",
+      "conceptId": "mat-comunitaria:co-05",
+      "category": "mat-comunitaria",
+      "topic": "Promoción de la salud",
+      "competency": "Definir promoción de la salud según la Carta de Ottawa",
+      "difficulty": "conceptual",
+      "format": "concepto",
+      "stem": "Según la Carta de Ottawa (1986), la promoción de la salud consiste en:",
+      "rationale": "La Carta de Ottawa define la promoción de la salud como el proceso de capacitar a las personas para aumentar el control sobre su salud y mejorarla. Propone cinco áreas de acción: políticas públicas saludables, entornos que apoyen la salud, fortalecimiento de la acción comunitaria, desarrollo de aptitudes personales y reorientación de los servicios.",
+      "transferPrinciple": "Promover salud no es solo informar: es generar condiciones para que las decisiones saludables sean posibles.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "oms-ottawa-1986",
+          "section": "Definición de promoción de la salud"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "medios",
+          "text": "Proporcionar a los pueblos los medios para mejorar su salud y ejercer un mayor control sobre ella.",
+          "feedback": "Correcto. Pone el foco en la capacidad de las personas y las comunidades de decidir sobre su salud."
+        },
+        {
+          "id": "medicos",
+          "text": "Aumentar la cantidad de médicos y hospitales en cada región para que la población reciba más tratamientos y en menos tiempo.",
+          "feedback": "La Carta de Ottawa propone reorientar los servicios, pero la promoción va más allá de la asistencia."
+        },
+        {
+          "id": "folletos",
+          "text": "Repartir folletos informativos sobre enfermedades en las salas de espera de los centros de salud.",
+          "feedback": "La información es solo una parte; la promoción incluye políticas, entornos y acción comunitaria."
+        },
+        {
+          "id": "prohibir",
+          "text": "Prohibir las conductas de riesgo de la población mediante sanciones legales y multas.",
+          "feedback": "Las políticas públicas son un área de acción, pero la promoción se basa en la capacitación y la participación."
+        }
+      ],
+      "correctOptionId": "medios",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "co-06",
+      "conceptId": "mat-comunitaria:co-06",
+      "category": "mat-comunitaria",
+      "topic": "Promoción de la salud",
+      "competency": "Identificar las áreas de acción de la Carta de Ottawa",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "Una municipalidad aprueba una ordenanza que prohíbe fumar en espacios públicos cerrados. ¿A qué área de acción de la Carta de Ottawa corresponde?",
+      "rationale": "Las cinco áreas de acción de Ottawa se complementan: una política pública (ley antitabaco) es más eficaz si se acompaña de entornos libres de humo, acción comunitaria, educación y servicios que ayuden a dejar de fumar.",
+      "transferPrinciple": "Las intervenciones más eficaces combinan varias áreas de acción a la vez.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "oms-ottawa-1986",
+          "section": "Áreas de acción: políticas públicas saludables"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "politicas",
+          "text": "Elaborar políticas públicas saludables.",
+          "feedback": "Correcto. Las normas que protegen la salud de toda la población son políticas públicas saludables."
+        },
+        {
+          "id": "aptitudes",
+          "text": "Desarrollar las aptitudes personales, porque cada persona aprende a dejar de fumar por su cuenta.",
+          "feedback": "Las aptitudes personales se refieren a la educación y la capacitación individual."
+        },
+        {
+          "id": "servicios",
+          "text": "Reorientar los servicios sanitarios, porque los hospitales ofrecen tratamiento para dejar de fumar.",
+          "feedback": "La ordenanza no reorganiza los servicios de salud."
+        },
+        {
+          "id": "comunitaria",
+          "text": "Reforzar la acción comunitaria, porque los vecinos se organizan para controlar a quienes fuman.",
+          "feedback": "La ordenanza es una decisión normativa, aunque pueda complementarse con acción comunitaria."
+        }
+      ],
+      "correctOptionId": "politicas",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "co-07",
+      "conceptId": "mat-comunitaria:co-07",
+      "category": "mat-comunitaria",
+      "topic": "Determinantes sociales",
+      "competency": "Definir los determinantes sociales de la salud",
+      "difficulty": "conceptual",
+      "format": "concepto",
+      "stem": "¿A qué se refieren los determinantes sociales de la salud?",
+      "rationale": "La Comisión sobre Determinantes Sociales de la Salud de la OMS (2008) mostró que las inequidades en salud se explican en gran medida por las condiciones de vida y de trabajo, y por la distribución desigual del poder y los recursos. Propuso mejorar las condiciones de vida, luchar contra la distribución desigual de los recursos y medir el problema.",
+      "transferPrinciple": "Detrás de un problema de salud individual suele haber condiciones sociales: incluirlas en la valoración cambia el plan de cuidados.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "oms-determinantes-2008",
+          "section": "Marco conceptual y recomendaciones generales"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "condiciones",
+          "text": "A las condiciones en que las personas nacen, crecen, viven, trabajan y envejecen.",
+          "feedback": "Correcto. Incluyen la distribución del poder, el dinero y los recursos, que explican las inequidades en salud."
+        },
+        {
+          "id": "geneticos",
+          "text": "A los genes heredados que determinan qué enfermedades va a tener cada persona a lo largo de su vida.",
+          "feedback": "La genética influye en la salud, pero no es lo que se define como determinantes sociales."
+        },
+        {
+          "id": "servicios",
+          "text": "Solo a la cantidad de hospitales y de profesionales de salud disponibles en cada región del país.",
+          "feedback": "El acceso a los servicios es uno de los determinantes, pero no el único."
+        },
+        {
+          "id": "habitos",
+          "text": "Exclusivamente a los hábitos individuales que cada persona elige libremente, como fumar o hacer ejercicio.",
+          "feedback": "Las conductas están condicionadas por el contexto social; los determinantes sociales van más allá de lo individual."
+        }
+      ],
+      "correctOptionId": "condiciones",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "co-08",
+      "conceptId": "mat-comunitaria:co-08",
+      "category": "mat-comunitaria",
+      "topic": "Determinantes sociales",
+      "competency": "Planificar una intervención que considere los determinantes sociales",
+      "difficulty": "integracion",
+      "format": "caso",
+      "stem": "En un barrio sin agua de red, el centro de salud atiende muchos casos de diarrea infantil. ¿Qué intervención aborda mejor el problema de fondo?",
+      "rationale": "Los problemas de salud vinculados a determinantes estructurales (agua, saneamiento, vivienda) requieren intervenciones intersectoriales. El equipo de salud aporta datos, educación y articulación con otros sectores y con la comunidad, sin dejar de atender los casos.",
+      "transferPrinciple": "Tratar los casos es necesario, pero si la causa sigue, los casos vuelven: pensá siempre también en el «aguas arriba».",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "oms-determinantes-2008",
+          "section": "Recomendación 1: mejorar las condiciones de vida"
+        },
+        {
+          "ref": "ops-aps-renovada-2007",
+          "section": "Acción intersectorial"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "intersectorial",
+          "text": "Articular con el municipio y organizaciones del barrio para mejorar el acceso a agua segura, junto con educación sobre su manejo.",
+          "feedback": "Correcto. El problema de fondo es un determinante ambiental: requiere acción intersectorial y participación comunitaria."
+        },
+        {
+          "id": "suero",
+          "text": "Entregar sales de rehidratación oral a todas las familias y esperar que la situación mejore con el tiempo.",
+          "feedback": "La rehidratación es necesaria para tratar los casos, pero no modifica la causa."
+        },
+        {
+          "id": "culpar",
+          "text": "Explicar a las madres que los casos se deben a la falta de higiene de sus hogares.",
+          "feedback": "Culpabilizar a las familias ignora las condiciones estructurales y daña el vínculo con la comunidad."
+        },
+        {
+          "id": "antibioticos",
+          "text": "Indicar antibióticos preventivos a todos los niños del barrio durante los meses de verano.",
+          "feedback": "No es una medida indicada y no actúa sobre la causa."
+        }
+      ],
+      "correctOptionId": "intersectorial",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "co-09",
+      "conceptId": "mat-comunitaria:co-09",
+      "category": "mat-comunitaria",
+      "topic": "Educación para la salud",
+      "competency": "Aplicar una metodología participativa",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "Vas a coordinar un taller sobre alimentación con un grupo de madres. ¿Qué estrategia corresponde a una metodología participativa?",
+      "rationale": "La educación para la salud con enfoque participativo reconoce a las personas como protagonistas: parte de sus saberes y prácticas, promueve el diálogo y busca acuerdos viables según sus condiciones de vida. Se evalúa si las propuestas resultaron aplicables.",
+      "transferPrinciple": "Antes de enseñar, preguntá: ¿qué saben, qué hacen y qué pueden cambiar con sus recursos?",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "oms-ottawa-1986",
+          "section": "Desarrollo de aptitudes personales"
+        },
+        {
+          "ref": "libro-fundamentos",
+          "section": "Educación para la salud: principios de aprendizaje"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "saberes",
+          "text": "Partir de lo que ya saben y hacen, y construir propuestas junto con ellas.",
+          "feedback": "Correcto. La participación valora los saberes previos y genera aprendizajes más significativos."
+        },
+        {
+          "id": "charla",
+          "text": "Dar una charla de una hora con diapositivas y responder preguntas al final si queda tiempo.",
+          "feedback": "La exposición unidireccional puede informar, pero no es una metodología participativa."
+        },
+        {
+          "id": "folleto",
+          "text": "Entregar un folleto con la lista de alimentos prohibidos y pedirles que lo cumplan en sus casas.",
+          "feedback": "Las indicaciones prescriptivas sin diálogo suelen tener poca adherencia."
+        },
+        {
+          "id": "corregir",
+          "text": "Corregir en público los errores de alimentación de cada madre para que el resto aprenda del ejemplo.",
+          "feedback": "Exponer a las personas genera vergüenza y resistencia, no aprendizaje."
+        }
+      ],
+      "correctOptionId": "saberes",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "co-10",
+      "conceptId": "mat-comunitaria:co-10",
+      "category": "mat-comunitaria",
+      "topic": "Educación para la salud",
+      "competency": "Adaptar la educación a personas con baja alfabetización",
+      "difficulty": "integracion",
+      "format": "caso",
+      "stem": "Un adulto mayor con baja alfabetización comienza un tratamiento con varios medicamentos. ¿Qué estrategia educativa es la más adecuada?",
+      "rationale": "La alfabetización en salud influye en la seguridad del paciente. Las estrategias recomendadas incluyen lenguaje claro, pocos mensajes por vez, apoyos visuales (calendarios, pictogramas, organizadores de medicación), participación de la familia con acuerdo del paciente y la verificación de la comprensión con preguntas abiertas.",
+      "transferPrinciple": "No preguntes «¿entendió?»: pedí que te lo explique. Así sabés qué entendió de verdad.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-fundamentos",
+          "section": "Educación del paciente: alfabetización en salud"
+        },
+        {
+          "ref": "oms-medicacion-sin-danio-2017",
+          "section": "Pacientes y público"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "teach-back",
+          "text": "Usar lenguaje simple y apoyos visuales, y pedirle que explique con sus palabras cómo los va a tomar.",
+          "feedback": "Correcto. La verificación de la comprensión (técnica de «enseñar de vuelta») detecta malentendidos antes de que causen errores."
+        },
+        {
+          "id": "folleto-largo",
+          "text": "Entregarle el prospecto completo de cada medicamento para que lo lea con tranquilidad en su casa.",
+          "feedback": "Un texto técnico extenso no es accesible para una persona con baja alfabetización."
+        },
+        {
+          "id": "rapido",
+          "text": "Explicarle todo rápidamente una sola vez, porque repetir la información puede confundirlo todavía más.",
+          "feedback": "Una explicación única y rápida suele no ser suficiente; la repetición y la verificación ayudan."
+        },
+        {
+          "id": "familia-sola",
+          "text": "Explicarle solo a un familiar, porque el paciente no va a entender las indicaciones.",
+          "feedback": "Involucrar a la familia ayuda, pero excluir al paciente vulnera su autonomía."
+        }
+      ],
+      "correctOptionId": "teach-back",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "co-11",
+      "conceptId": "mat-comunitaria:co-11",
+      "category": "mat-comunitaria",
+      "topic": "Visita domiciliaria",
+      "competency": "Planificar una visita domiciliaria",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "¿Qué corresponde hacer antes de una visita domiciliaria programada?",
+      "rationale": "La visita domiciliaria tiene tres momentos: planificación (objetivo, antecedentes, acuerdos, materiales, seguridad del equipo), ejecución (presentación, valoración integral, intervenciones, acuerdos) y evaluación y registro (resultados, seguimiento, articulación con el equipo).",
+      "transferPrinciple": "Una visita bien planificada respeta el tiempo y el espacio de la familia y permite medir lo que se logró.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-fundamentos",
+          "section": "Atención domiciliaria"
+        },
+        {
+          "ref": "ops-aps-renovada-2007",
+          "section": "Atención integral e integrada"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "planificar",
+          "text": "Definir el objetivo, revisar los antecedentes, acordar el horario con la familia y preparar los materiales necesarios.",
+          "feedback": "Correcto. La planificación hace que la visita sea útil, respetuosa y segura."
+        },
+        {
+          "id": "sorpresa",
+          "text": "Presentarse sin aviso, para observar cómo vive realmente la familia sin que pueda prepararse.",
+          "feedback": "Las visitas sin acuerdo previo vulneran la intimidad y pueden dañar el vínculo, salvo situaciones especiales previstas en el protocolo."
+        },
+        {
+          "id": "improvisar",
+          "text": "Ir sin un objetivo definido y decidir qué hacer según lo que se encuentre al llegar.",
+          "feedback": "Sin un objetivo claro, la visita puede ser poco útil y difícil de evaluar."
+        },
+        {
+          "id": "solo-materiales",
+          "text": "Llevar solo el tensiómetro, porque la visita domiciliaria consiste únicamente en controlar la presión.",
+          "feedback": "La visita domiciliaria es integral: incluye la valoración de la persona, la familia y el entorno."
+        }
+      ],
+      "correctOptionId": "planificar",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "co-12",
+      "conceptId": "mat-comunitaria:co-12",
+      "category": "mat-comunitaria",
+      "topic": "Visita domiciliaria",
+      "competency": "Detectar y gestionar riesgos en el hogar",
+      "difficulty": "integracion",
+      "format": "caso",
+      "stem": "En una visita a una mujer de 82 años que vive sola, encontrás alfombras sueltas, poca iluminación y varias cajas de medicamentos vencidos mezclados con los actuales. ¿Qué corresponde?",
+      "rationale": "La visita domiciliaria permite detectar riesgos que no se ven en la consulta: caídas, polifarmacia, aislamiento. La intervención combina educación, adaptaciones del entorno consensuadas, conciliación de la medicación con el equipo y la red de apoyo, siempre con la participación de la persona.",
+      "transferPrinciple": "En el domicilio, vos sos visita: las propuestas se acuerdan, no se imponen.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "ahrq-caidas-2013",
+          "section": "Factores de riesgo y medidas universales"
+        },
+        {
+          "ref": "oms-medicacion-sin-danio-2017",
+          "section": "Polifarmacia"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "valorar-acordar",
+          "text": "Valorar los riesgos con ella, acordar cambios posibles, ordenar la medicación con la indicación vigente y coordinar seguimiento con el equipo.",
+          "feedback": "Correcto. Se trabaja con la persona, respetando su autonomía, y se articula con el equipo para el seguimiento."
+        },
+        {
+          "id": "tirar",
+          "text": "Tirar por mi cuenta todos los medicamentos y retirar las alfombras sin consultarle, para evitar riesgos.",
+          "feedback": "Actuar sin la persona vulnera su autonomía y puede descartar medicación necesaria."
+        },
+        {
+          "id": "internar",
+          "text": "Informar que no puede vivir sola y gestionar su internación en un geriátrico lo antes posible.",
+          "feedback": "Esa decisión excede la visita y debe construirse con la persona, la familia y el equipo."
+        },
+        {
+          "id": "registrar-solo",
+          "text": "Registrar los hallazgos en la historia clínica y no intervenir, porque son decisiones privadas de la paciente.",
+          "feedback": "Registrar es necesario, pero los riesgos detectados requieren intervención y seguimiento."
+        }
+      ],
+      "correctOptionId": "valorar-acordar",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "co-13",
+      "conceptId": "mat-comunitaria:co-13",
+      "category": "mat-comunitaria",
+      "topic": "Redes y referencia",
+      "competency": "Diferenciar referencia y contrarreferencia",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "Un paciente fue derivado del centro de salud al hospital para un estudio. Al terminar, el hospital envía un informe al centro de salud con los resultados y las indicaciones. ¿Cómo se llama ese envío?",
+      "rationale": "La referencia es la derivación de un paciente a otro nivel o servicio; la contrarreferencia es la respuesta que vuelve al nivel que derivó, con la información necesaria para continuar el seguimiento. Un sistema de referencia y contrarreferencia funcional es clave para la continuidad de la atención en redes integradas.",
+      "transferPrinciple": "Si la información no vuelve al centro de salud, el seguimiento se corta: la contrarreferencia cierra el circuito.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "ops-aps-renovada-2007",
+          "section": "Redes integradas de servicios de salud"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "contrarreferencia",
+          "text": "Contrarreferencia.",
+          "feedback": "Correcto. Es el retorno de la información al nivel que derivó, para dar continuidad a la atención."
+        },
+        {
+          "id": "referencia",
+          "text": "Referencia, porque es el documento con el que el centro de salud deriva al paciente a un nivel de mayor complejidad.",
+          "feedback": "La referencia es la derivación inicial; el retorno de la información es la contrarreferencia."
+        },
+        {
+          "id": "interconsulta",
+          "text": "Interconsulta.",
+          "feedback": "La interconsulta ocurre dentro de un mismo establecimiento, entre profesionales."
+        },
+        {
+          "id": "alta",
+          "text": "Epicrisis interna, que se archiva en el hospital y no se envía a ningún otro establecimiento.",
+          "feedback": "El concepto clave aquí es que la información vuelve al centro de salud."
+        }
+      ],
+      "correctOptionId": "contrarreferencia",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "co-14",
+      "conceptId": "mat-comunitaria:co-14",
+      "category": "mat-comunitaria",
+      "topic": "Redes y referencia",
+      "competency": "Reconocer el rol del primer nivel de atención",
+      "difficulty": "aplicacion",
+      "format": "concepto",
+      "stem": "En un sistema de salud organizado en redes basado en la atención primaria, ¿qué función cumple el primer nivel de atención?",
+      "rationale": "El primer nivel (centros de atención primaria, postas sanitarias) es el contacto inicial con el sistema. Brinda promoción, prevención, atención de problemas frecuentes y seguimiento de enfermedades crónicas, y coordina con los niveles de mayor complejidad. Su fortalecimiento mejora la eficiencia y la equidad.",
+      "transferPrinciple": "El primer nivel conoce a las familias y su contexto: esa información es valiosa para todo el sistema.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "ops-aps-renovada-2007",
+          "section": "Elementos esenciales de un sistema de salud basado en la APS"
+        },
+        {
+          "ref": "oms-alma-ata-1978",
+          "section": "Punto VI"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "puerta",
+          "text": "Es la puerta de entrada al sistema y coordina la atención a lo largo del tiempo.",
+          "feedback": "Correcto. Resuelve la mayor parte de los problemas y articula con los otros niveles."
+        },
+        {
+          "id": "urgencias",
+          "text": "Atiende solamente las urgencias y emergencias que no pueden esperar un turno en el hospital de referencia.",
+          "feedback": "El primer nivel atiende mucho más que urgencias: promoción, prevención, atención y seguimiento."
+        },
+        {
+          "id": "alta-complejidad",
+          "text": "Realiza las cirugías y los estudios de alta complejidad que no se hacen en otros niveles.",
+          "feedback": "Eso corresponde al tercer nivel."
+        },
+        {
+          "id": "administrativo",
+          "text": "Cumple solo una función administrativa: entregar turnos para los hospitales de la zona.",
+          "feedback": "El primer nivel es asistencial y comunitario, no solo administrativo."
+        }
+      ],
+      "correctOptionId": "puerta",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "co-15",
+      "conceptId": "mat-comunitaria:co-15",
+      "category": "mat-comunitaria",
+      "topic": "Participación comunitaria",
+      "competency": "Definir participación comunitaria en salud",
+      "difficulty": "conceptual",
+      "format": "concepto",
+      "stem": "¿Qué implica la participación comunitaria en salud?",
+      "rationale": "La Declaración de Alma-Ata ubicó la participación comunitaria como un pilar de la APS. Existen distintos grados, desde recibir información hasta compartir decisiones. Los procesos con mayor participación suelen ser más pertinentes y sostenibles.",
+      "transferPrinciple": "Preguntate en qué momento participa la comunidad en cada proyecto: si solo aparece al final, la participación es escasa.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "oms-alma-ata-1978",
+          "section": "Punto VII: participación de la comunidad"
+        },
+        {
+          "ref": "oms-ottawa-1986",
+          "section": "Reforzamiento de la acción comunitaria"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "protagonista",
+          "text": "Que la comunidad intervenga en el diagnóstico, la planificación, la ejecución y la evaluación de las acciones.",
+          "feedback": "Correcto. La comunidad no es solo destinataria: participa en las decisiones."
+        },
+        {
+          "id": "asistir",
+          "text": "Que la comunidad asista a las charlas y campañas que organiza el centro de salud en el barrio.",
+          "feedback": "Asistir a una actividad es una forma limitada de participación."
+        },
+        {
+          "id": "pagar",
+          "text": "Que la comunidad aporte dinero para financiar los servicios de salud que recibe.",
+          "feedback": "El aporte económico no define la participación comunitaria en salud."
+        },
+        {
+          "id": "voluntarios",
+          "text": "Que los vecinos reemplacen al personal de salud en las tareas asistenciales del centro.",
+          "feedback": "La participación no implica reemplazar funciones profesionales."
+        }
+      ],
+      "correctOptionId": "protagonista",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "co-16",
+      "conceptId": "mat-comunitaria:co-16",
+      "category": "mat-comunitaria",
+      "topic": "Participación comunitaria",
+      "competency": "Construir un diagnóstico de situación de salud comunitario",
+      "difficulty": "integracion",
+      "format": "caso",
+      "stem": "El equipo de un centro de salud quiere elaborar el diagnóstico de situación de salud del barrio. ¿Qué enfoque es el más completo?",
+      "rationale": "El diagnóstico de situación de salud integra datos demográficos, epidemiológicos, socioeconómicos y ambientales con la percepción de la comunidad, los recursos disponibles (organizaciones, redes) y la observación del territorio. Es la base para priorizar problemas y planificar acciones.",
+      "transferPrinciple": "Los números dicen cuánto; la comunidad dice por qué y qué recursos tiene: necesitás ambas miradas.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "ops-mopece",
+          "section": "Unidad 3: medición de las condiciones de salud"
+        },
+        {
+          "ref": "ops-aps-renovada-2007",
+          "section": "Orientación familiar y comunitaria"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "mixto",
+          "text": "Combinar datos estadísticos, observación del territorio y la mirada de vecinos y referentes.",
+          "feedback": "Correcto. La integración de fuentes cuantitativas y cualitativas, con participación comunitaria, da un diagnóstico más real."
+        },
+        {
+          "id": "estadisticas",
+          "text": "Usar solamente las estadísticas oficiales de morbilidad y mortalidad, porque son los únicos datos confiables.",
+          "feedback": "Las estadísticas son necesarias, pero no muestran percepciones, recursos ni problemas no registrados."
+        },
+        {
+          "id": "opinion-equipo",
+          "text": "Basarse en la opinión del equipo de salud, que conoce mejor que nadie los problemas de la comunidad.",
+          "feedback": "Sin la mirada de la comunidad, el diagnóstico puede dejar afuera problemas y recursos importantes."
+        },
+        {
+          "id": "encuesta-rapida",
+          "text": "Hacer una encuesta telefónica breve a diez vecinos elegidos al azar de la guía telefónica.",
+          "feedback": "Una muestra tan pequeña y no representativa no alcanza para un diagnóstico de situación."
+        }
+      ],
+      "correctOptionId": "mixto",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "co-17",
+      "conceptId": "mat-comunitaria:co-17",
+      "category": "mat-comunitaria",
+      "topic": "Atención primaria de la salud",
+      "competency": "Reconocer los valores de la APS renovada",
+      "difficulty": "aplicacion",
+      "format": "concepto",
+      "stem": "Según el documento de posición de la OPS (2007), un sistema de salud basado en la atención primaria renovada se sustenta en:",
+      "rationale": "La renovación de la APS en las Américas (OPS, 2007) propone construir sistemas de salud basados en la APS, cuyos valores son el derecho al mayor nivel posible de salud, la equidad y la solidaridad. Sus principios incluyen la respuesta a las necesidades de la población, la orientación a la calidad, la responsabilidad de los gobiernos, la sostenibilidad y la participación.",
+      "transferPrinciple": "La APS no es un lugar sino una forma de organizar el sistema: se aplica también en el hospital.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "ops-aps-renovada-2007",
+          "section": "Valores, principios y elementos de los sistemas basados en la APS"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "valores",
+          "text": "El derecho a la salud, la equidad y la solidaridad, con un enfoque de todo el sistema de salud.",
+          "feedback": "Correcto. La renovación propone la APS como estrategia para organizar todo el sistema, no como un nivel aislado."
+        },
+        {
+          "id": "paquete",
+          "text": "Un paquete básico y fijo de servicios de bajo costo para las zonas rurales y las poblaciones más pobres.",
+          "feedback": "El documento descarta la idea de la APS como paquete fijo de servicios."
+        },
+        {
+          "id": "privatizacion",
+          "text": "La transferencia de los servicios de salud al sector privado para mejorar su eficiencia y su calidad.",
+          "feedback": "El documento se basa en el derecho a la salud y la equidad, no en la privatización."
+        },
+        {
+          "id": "hospitales",
+          "text": "La construcción de más hospitales de alta complejidad como eje principal del sistema de salud.",
+          "feedback": "La APS renovada fortalece el primer nivel y las redes integradas."
+        }
+      ],
+      "correctOptionId": "valores",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "co-18",
+      "conceptId": "mat-comunitaria:co-18",
+      "category": "mat-comunitaria",
+      "topic": "Niveles de prevención",
+      "competency": "Evitar oportunidades perdidas de vacunación",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "Una niña llega al centro de salud por un control de rutina y su carnet muestra una vacuna del calendario atrasada. No tiene contraindicaciones registradas. ¿Qué corresponde?",
+      "rationale": "Las oportunidades perdidas de vacunación ocurren cuando una persona con indicación y sin contraindicaciones tiene contacto con el sistema de salud y no se la vacuna. Revisar el carnet en cada consulta y vacunar en el momento, según la norma nacional vigente, mejora las coberturas. Cada dosis se registra.",
+      "transferPrinciple": "Revisá el carnet en cada contacto, aunque la consulta sea por otro motivo.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "protocolo-institucional",
+          "section": "Normas nacionales de vacunación vigentes"
+        },
+        {
+          "ref": "libro-microbiologia",
+          "section": "Vacunas"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "vacunar",
+          "text": "Aprovechar la consulta para completar el esquema según la norma vigente o gestionar la vacunación en el mismo día.",
+          "feedback": "Correcto. Cada contacto con el sistema de salud es una oportunidad para revisar y completar el calendario."
+        },
+        {
+          "id": "otro-turno",
+          "text": "Indicar a la familia que pida un turno específico para vacunación en las próximas semanas, ya que la consulta de hoy fue por otro motivo.",
+          "feedback": "Postergar sin motivo genera una oportunidad perdida de vacunación."
+        },
+        {
+          "id": "reiniciar",
+          "text": "Indicar que debe reiniciar todo el esquema de vacunas desde el principio por el atraso.",
+          "feedback": "En general, los esquemas atrasados se completan sin reiniciar; lo define la norma vigente."
+        },
+        {
+          "id": "no-registrar",
+          "text": "Vacunar, pero no registrar la dosis en el carnet porque ya se encuentra atrasada.",
+          "feedback": "Toda dosis aplicada se registra en el carnet y en el sistema correspondiente."
+        }
+      ],
+      "correctOptionId": "vacunar",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "co-19",
+      "conceptId": "mat-comunitaria:co-19",
+      "category": "mat-comunitaria",
+      "topic": "Educación para la salud",
+      "competency": "Brindar cuidados con enfoque intercultural",
+      "difficulty": "integracion",
+      "format": "caso",
+      "stem": "Una familia de una comunidad originaria usa una práctica tradicional para tratar la fiebre de su hijo, junto con el tratamiento indicado. La práctica no implica riesgos. ¿Qué actitud corresponde?",
+      "rationale": "El enfoque intercultural en salud reconoce la diversidad de saberes y prácticas, promueve el diálogo y busca integrar lo que no implica riesgos. Cuando una práctica puede ser peligrosa, se explica el riesgo y se buscan alternativas consensuadas. Los acuerdos sobre signos de alarma son fundamentales.",
+      "transferPrinciple": "Preguntá con curiosidad y respeto qué hacen las familias: la confianza mejora la seguridad.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "ops-aps-renovada-2007",
+          "section": "Pertinencia cultural"
+        },
+        {
+          "ref": "oms-ottawa-1986",
+          "section": "Reforzamiento de la acción comunitaria"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "respetar",
+          "text": "Respetarla, dialogar sobre ella e integrarla al plan de cuidados, acordando también los signos de alarma.",
+          "feedback": "Correcto. El enfoque intercultural respeta las prácticas que no dañan y construye acuerdos."
+        },
+        {
+          "id": "prohibir",
+          "text": "Prohibirla y explicar que solo el tratamiento médico es válido, para evitar confusiones en la familia.",
+          "feedback": "Descalificar las prácticas culturales debilita el vínculo y puede reducir la adherencia."
+        },
+        {
+          "id": "ignorar",
+          "text": "No preguntar ni mencionar la práctica, para no incomodar a la familia durante la consulta.",
+          "feedback": "Ignorarla impide conocer qué hace la familia y detectar posibles riesgos."
+        },
+        {
+          "id": "denunciar",
+          "text": "Informar a las autoridades que la familia no cumple con el tratamiento indicado al niño.",
+          "feedback": "La familia cumple el tratamiento; la práctica no implica riesgos."
+        }
+      ],
+      "correctOptionId": "respetar",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "co-20",
+      "conceptId": "mat-comunitaria:co-20",
+      "category": "mat-comunitaria",
+      "topic": "Atención primaria de la salud",
+      "competency": "Priorizar problemas de salud comunitarios",
+      "difficulty": "integracion",
+      "format": "caso",
+      "stem": "El diagnóstico de un barrio identificó varios problemas y el equipo tiene recursos limitados. ¿Qué criterios corresponde usar para priorizarlos?",
+      "rationale": "La priorización de problemas de salud usa criterios como magnitud (cuántos afecta), trascendencia o gravedad, vulnerabilidad (posibilidad de modificarlo con las intervenciones disponibles), factibilidad (recursos, aceptabilidad) y la valoración de la comunidad. Hay métodos que asignan puntajes a cada criterio.",
+      "transferPrinciple": "Priorizar no es descartar: es decidir con fundamento por dónde empezar y explicarlo a la comunidad.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "ops-mopece",
+          "section": "Unidad 3: análisis de la situación de salud"
+        },
+        {
+          "ref": "ops-aps-renovada-2007",
+          "section": "Orientación hacia las necesidades de la población"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "criterios",
+          "text": "Magnitud, gravedad, vulnerabilidad a la intervención, factibilidad y lo que la comunidad considera importante.",
+          "feedback": "Correcto. La priorización combina criterios técnicos y la perspectiva de la comunidad."
+        },
+        {
+          "id": "facil",
+          "text": "Elegir el problema más fácil y rápido de resolver, aunque afecte a pocas personas y tenga baja gravedad, para mostrar resultados pronto.",
+          "feedback": "La factibilidad es un criterio, pero no el único: se pondera con la magnitud y la gravedad."
+        },
+        {
+          "id": "equipo",
+          "text": "Elegir el problema que más le interesa al equipo, porque así habrá más motivación para trabajar.",
+          "feedback": "El interés del equipo no puede reemplazar los criterios de necesidad de la población."
+        },
+        {
+          "id": "azar",
+          "text": "Sortear los problemas entre los integrantes del equipo para que la decisión sea imparcial.",
+          "feedback": "El azar no garantiza que se atiendan los problemas más relevantes."
+        }
+      ],
+      "correctOptionId": "criterios",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    }
+  ]
+}

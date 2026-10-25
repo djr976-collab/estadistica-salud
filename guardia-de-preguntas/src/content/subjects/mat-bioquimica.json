@@ -1,0 +1,1097 @@
+{
+  "subject": "mat-bioquimica",
+  "bankVersion": "1.0",
+  "note": "Contenido en borrador generado con asistencia de IA a partir de contenidos estándar. Casos y datos ficticios. Pendiente de revisión docente y de contraste con el programa vigente.",
+  "questions": [
+    {
+      "id": "bq-01",
+      "conceptId": "mat-bioquimica:bq-01",
+      "category": "mat-bioquimica",
+      "topic": "Biomoléculas",
+      "competency": "Identificar la forma de almacenamiento de la glucosa en el ser humano",
+      "difficulty": "conceptual",
+      "format": "concepto",
+      "stem": "¿Cómo se almacena la glucosa en el hígado y en el músculo humano?",
+      "rationale": "El glucógeno hepático mantiene la glucemia entre comidas; el muscular aporta energía al propio músculo durante el ejercicio. Las reservas de glucógeno son limitadas: en un ayuno prolongado el organismo depende cada vez más de las grasas y de la producción hepática de glucosa.",
+      "transferPrinciple": "Relacioná el tiempo de ayuno con la fuente de energía: primero glucógeno, después grasas y cuerpos cetónicos.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-bioquimica",
+          "section": "Glúcidos: polisacáridos de reserva"
+        },
+        {
+          "ref": "libro-bioquimica",
+          "section": "Metabolismo del glucógeno"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "glucogeno",
+          "text": "Como glucógeno.",
+          "feedback": "Correcto. El glucógeno es un polisacárido ramificado de glucosa, que se moviliza rápidamente cuando se necesita energía."
+        },
+        {
+          "id": "almidon",
+          "text": "Como almidón, el mismo polisacárido de reserva que almacenan las plantas.",
+          "feedback": "El almidón es la reserva vegetal. Los animales almacenan glucógeno."
+        },
+        {
+          "id": "celulosa",
+          "text": "Como celulosa, una fibra que el organismo acumula para usar en el ayuno.",
+          "feedback": "La celulosa es un polisacárido estructural vegetal que el ser humano no digiere."
+        },
+        {
+          "id": "trigliceridos",
+          "text": "Como triglicéridos, ya que toda la glucosa se transforma en grasa apenas ingresa.",
+          "feedback": "El exceso de glucosa puede transformarse en grasa, pero la reserva de glucosa propiamente dicha es el glucógeno."
+        }
+      ],
+      "correctOptionId": "glucogeno",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "bq-02",
+      "conceptId": "mat-bioquimica:bq-02",
+      "category": "mat-bioquimica",
+      "topic": "Enzimas",
+      "competency": "Describir la función de las enzimas",
+      "difficulty": "conceptual",
+      "format": "concepto",
+      "stem": "¿Qué hacen las enzimas en las reacciones químicas del organismo?",
+      "rationale": "Las enzimas aumentan la velocidad de las reacciones al reducir la energía de activación. Son específicas para su sustrato y su actividad depende de la temperatura, el pH y la presencia de cofactores (minerales o vitaminas). Muchas se miden en el laboratorio como marcadores de daño de órganos.",
+      "transferPrinciple": "Si una enzima aparece elevada en sangre, preguntate de qué tejido salió: eso orienta qué órgano puede estar lesionado.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-bioquimica",
+          "section": "Enzimas: propiedades y cinética"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "catalizan",
+          "text": "Aceleran las reacciones disminuyendo la energía de activación, sin consumirse en el proceso.",
+          "feedback": "Correcto. Las enzimas son catalizadores biológicos, en su mayoría proteínas."
+        },
+        {
+          "id": "energia",
+          "text": "Aportan la energía necesaria para que ocurra la reacción, y se consumen al terminarla.",
+          "feedback": "Las enzimas no aportan energía ni se consumen: facilitan la reacción."
+        },
+        {
+          "id": "equilibrio",
+          "text": "Cambian el resultado final de la reacción, fabricando más producto del que se formaría sin ellas.",
+          "feedback": "Las enzimas aceleran la llegada al equilibrio, pero no cambian el equilibrio de la reacción."
+        },
+        {
+          "id": "lipidos",
+          "text": "Son lípidos que almacenan energía para las reacciones de la célula.",
+          "feedback": "La mayoría de las enzimas son proteínas, no lípidos."
+        }
+      ],
+      "correctOptionId": "catalizan",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "bq-03",
+      "conceptId": "mat-bioquimica:bq-03",
+      "category": "mat-bioquimica",
+      "topic": "Enzimas",
+      "competency": "Relacionar la temperatura con la actividad enzimática",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "¿Por qué una temperatura corporal muy elevada y sostenida (por ejemplo, un golpe de calor) puede alterar gravemente el funcionamiento celular?",
+      "rationale": "Cada enzima tiene una temperatura y un pH óptimos. El calor extremo rompe los enlaces que mantienen la estructura terciaria de las proteínas (desnaturalización), con pérdida de función. Esto explica parte del daño multiorgánico del golpe de calor, que es una emergencia.",
+      "transferPrinciple": "Las alteraciones extremas de temperatura o de pH afectan a todas las enzimas a la vez: por eso producen fallas en muchos órganos.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-bioquimica",
+          "section": "Enzimas: factores que modifican la actividad"
+        },
+        {
+          "ref": "libro-bioquimica",
+          "section": "Proteínas: desnaturalización"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "desnaturaliza",
+          "text": "Porque las enzimas, que son proteínas, pierden su estructura y su actividad (desnaturalización).",
+          "feedback": "Correcto. Por encima de cierta temperatura, las proteínas pierden su forma tridimensional y dejan de funcionar."
+        },
+        {
+          "id": "mas-rapido",
+          "text": "Porque las enzimas funcionan cada vez más rápido sin límite y agotan toda la glucosa en pocos minutos.",
+          "feedback": "La actividad aumenta con la temperatura solo hasta un punto óptimo; después cae por desnaturalización."
+        },
+        {
+          "id": "agua",
+          "text": "Porque el calor transforma las enzimas en agua, que se elimina luego por el sudor.",
+          "feedback": "Las enzimas no se transforman en agua; pierden su estructura."
+        },
+        {
+          "id": "sin-efecto",
+          "text": "No altera el funcionamiento celular, porque las enzimas humanas resisten cualquier temperatura.",
+          "feedback": "Las enzimas humanas tienen un rango de temperatura óptimo cercano a los 37 °C."
+        }
+      ],
+      "correctOptionId": "desnaturaliza",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "bq-04",
+      "conceptId": "mat-bioquimica:bq-04",
+      "category": "mat-bioquimica",
+      "topic": "Metabolismo energético",
+      "competency": "Explicar la formación de cuerpos cetónicos",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "Una persona con diabetes tipo 1 descompensada tiene aliento con olor a frutas y cetonas en orina. ¿Por qué se forman los cuerpos cetónicos?",
+      "rationale": "Cuando falta insulina (o en el ayuno prolongado), las células no captan glucosa y el organismo moviliza grasas. En el hígado, el exceso de acetil-CoA genera acetoacetato, β-hidroxibutirato y acetona. En la diabetes descompensada, su acumulación produce cetoacidosis, una emergencia.",
+      "transferPrinciple": "El olor cetónico del aliento es un dato observable: registralo y comunicalo junto con la glucemia y el estado de conciencia.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-bioquimica",
+          "section": "Metabolismo de lípidos: cetogénesis"
+        },
+        {
+          "ref": "libro-bioquimica",
+          "section": "Integración metabólica: ayuno y diabetes"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "grasas",
+          "text": "Porque, sin insulina, las células no usan glucosa y el hígado oxida ácidos grasos en exceso, formando cuerpos cetónicos.",
+          "feedback": "Correcto. La falta de insulina activa la lipólisis y la cetogénesis hepática."
+        },
+        {
+          "id": "proteinas",
+          "text": "Porque el exceso de proteínas de la dieta se transforma directamente en acetona en el estómago.",
+          "feedback": "Los cuerpos cetónicos se forman en el hígado a partir de ácidos grasos, no en el estómago."
+        },
+        {
+          "id": "glucosa-alta",
+          "text": "Porque la glucosa alta en sangre se transforma en acetona cuando pasa por el pulmón y se elimina con el aliento.",
+          "feedback": "La glucosa no se convierte en acetona en el pulmón. La acetona proviene de la oxidación de grasas."
+        },
+        {
+          "id": "infeccion",
+          "text": "Porque una infección bacteriana de la boca produce cetonas que pasan luego a la orina.",
+          "feedback": "El olor del aliento se debe a la acetona sanguínea, no a una infección bucal."
+        }
+      ],
+      "correctOptionId": "grasas",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "bq-05",
+      "conceptId": "mat-bioquimica:bq-05",
+      "category": "mat-bioquimica",
+      "topic": "Metabolismo energético",
+      "competency": "Relacionar la glucólisis anaeróbica con el lactato en la hipoperfusión",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "En un paciente con shock, el laboratorio informa lactato elevado. ¿Qué explica este hallazgo desde el punto de vista bioquímico?",
+      "rationale": "Con oxígeno suficiente, el piruvato entra en la mitocondria y se oxida por completo, con gran rendimiento de ATP. Sin oxígeno, el piruvato se reduce a lactato para regenerar NAD⁺ y mantener la glucólisis, con mucho menos ATP. El lactato elevado se usa como indicador de hipoperfusión, por ejemplo en la sepsis.",
+      "transferPrinciple": "Un valor de laboratorio puede contar lo que pasa en los tejidos: el lactato alto te dice que las células no están recibiendo suficiente oxígeno.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-bioquimica",
+          "section": "Glucólisis y destino del piruvato"
+        },
+        {
+          "ref": "sepsis3-2016",
+          "section": "Criterios clínicos de shock séptico: lactato"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "anaerobio",
+          "text": "Los tejidos reciben poco oxígeno y obtienen energía por glucólisis anaeróbica, que produce lactato.",
+          "feedback": "Correcto. El lactato elevado refleja hipoperfusión tisular y es un marcador de gravedad."
+        },
+        {
+          "id": "dieta",
+          "text": "El paciente consumió muchos lácteos antes de internarse y el lactato proviene de la leche.",
+          "feedback": "El lactato sanguíneo no proviene de los lácteos: se produce en el metabolismo celular."
+        },
+        {
+          "id": "higado-produce",
+          "text": "El hígado produce más lactato para aportar energía extra durante el shock, protegiendo al corazón y al cerebro de la falta de glucosa.",
+          "feedback": "En el shock, el lactato aumenta sobre todo por la falta de oxígeno en los tejidos; el hígado normalmente lo depura."
+        },
+        {
+          "id": "aerobio",
+          "text": "Los tejidos tienen exceso de oxígeno y lo transforman en lactato para almacenarlo.",
+          "feedback": "Es al revés: el lactato aumenta cuando falta oxígeno."
+        }
+      ],
+      "correctOptionId": "anaerobio",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "bq-06",
+      "conceptId": "mat-bioquimica:bq-06",
+      "category": "mat-bioquimica",
+      "topic": "Metabolismo energético",
+      "competency": "Identificar la molécula que almacena energía utilizable por la célula",
+      "difficulty": "conceptual",
+      "format": "concepto",
+      "stem": "¿Qué molécula es la principal «moneda energética» que las células usan directamente para realizar trabajo?",
+      "rationale": "Los nutrientes (glúcidos, lípidos y proteínas) se oxidan y su energía se conserva en el ATP, sobre todo en la mitocondria mediante la fosforilación oxidativa. El ATP se consume en forma continua y se regenera permanentemente.",
+      "transferPrinciple": "Cuando falta oxígeno o glucosa, lo primero que se resiente es la producción de ATP: por eso el cerebro y el corazón son tan sensibles a la hipoxia y la hipoglucemia.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-bioquimica",
+          "section": "Bioenergética: ATP"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "atp",
+          "text": "El ATP (adenosín trifosfato).",
+          "feedback": "Correcto. La hidrólisis del ATP libera la energía que usan la contracción muscular, el transporte activo y la síntesis de moléculas."
+        },
+        {
+          "id": "glucosa",
+          "text": "La glucosa, que se usa directamente en cada reacción sin necesidad de transformarse.",
+          "feedback": "La glucosa es un combustible, pero su energía se transfiere al ATP antes de usarse."
+        },
+        {
+          "id": "oxigeno",
+          "text": "El oxígeno, que contiene la energía que se libera en la respiración.",
+          "feedback": "El oxígeno es el aceptor final de electrones; no es la molécula que almacena energía utilizable."
+        },
+        {
+          "id": "adn",
+          "text": "El ADN, que guarda la energía química necesaria para la división celular.",
+          "feedback": "El ADN almacena información genética, no energía de uso inmediato."
+        }
+      ],
+      "correctOptionId": "atp",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "bq-07",
+      "conceptId": "mat-bioquimica:bq-07",
+      "category": "mat-bioquimica",
+      "topic": "Lípidos",
+      "competency": "Diferenciar las funciones de las lipoproteínas LDL y HDL",
+      "difficulty": "aplicacion",
+      "format": "concepto",
+      "stem": "¿Por qué el colesterol HDL suele describirse como «protector» en la educación cardiovascular?",
+      "rationale": "Las lipoproteínas transportan lípidos en la sangre. Las LDL llevan colesterol a los tejidos y, en exceso, favorecen la aterosclerosis. Las HDL recogen colesterol de los tejidos y lo devuelven al hígado. Las recomendaciones de tratamiento las define el equipo médico según el riesgo global de cada persona.",
+      "transferPrinciple": "Al educar, explicá para qué sirve cada dato del análisis y no solo si está «alto» o «bajo».",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-bioquimica",
+          "section": "Lípidos: lipoproteínas plasmáticas"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "hdl-higado",
+          "text": "Porque las HDL transportan colesterol desde los tejidos hacia el hígado para su eliminación.",
+          "feedback": "Correcto. Es el transporte reverso del colesterol."
+        },
+        {
+          "id": "hdl-arterias",
+          "text": "Porque las HDL llevan colesterol desde el hígado hacia las arterias para reparar la pared de los vasos.",
+          "feedback": "Ese transporte desde el hígado hacia los tejidos corresponde sobre todo a las LDL."
+        },
+        {
+          "id": "sin-colesterol",
+          "text": "Porque las HDL no contienen colesterol: solo transportan proteínas.",
+          "feedback": "Las HDL sí contienen colesterol; lo transportan hacia el hígado."
+        },
+        {
+          "id": "energia",
+          "text": "Porque las HDL se queman como energía durante el ejercicio y bajan el peso corporal.",
+          "feedback": "Las HDL son transportadoras de lípidos, no un combustible que se queme durante el ejercicio."
+        }
+      ],
+      "correctOptionId": "hdl-higado",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "bq-08",
+      "conceptId": "mat-bioquimica:bq-08",
+      "category": "mat-bioquimica",
+      "topic": "Lípidos",
+      "competency": "Explicar el fundamento del ayuno antes de un perfil lipídico",
+      "difficulty": "integracion",
+      "format": "caso",
+      "stem": "Un paciente pregunta por qué tiene que venir en ayunas para el análisis de triglicéridos. ¿Qué le explicás?",
+      "rationale": "Después de una comida, los triglicéridos de la dieta se transportan en los quilomicrones y aumentan en la sangre durante varias horas. Por eso la preparación preanalítica (ayuno, medicación, actividad física) influye en los resultados. Enfermería informa las indicaciones del laboratorio y registra si no se cumplieron.",
+      "transferPrinciple": "Un resultado es tan confiable como la preparación del paciente: verificá y registrá las condiciones de la toma de muestra.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-bioquimica",
+          "section": "Lípidos: digestión, absorción y quilomicrones"
+        },
+        {
+          "ref": "libro-fundamentos",
+          "section": "Preparación del paciente para estudios de laboratorio"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "post-comida",
+          "text": "Que después de comer, los triglicéridos de la dieta circulan en sangre durante horas y elevan el valor.",
+          "feedback": "Correcto. La preparación busca que el resultado refleje el estado basal. Las horas de ayuno las indica el laboratorio."
+        },
+        {
+          "id": "agua",
+          "text": "Que el ayuno incluye no tomar agua, porque el agua diluye la sangre y altera todos los resultados del análisis.",
+          "feedback": "Habitualmente se permite agua. Las indicaciones precisas las da el laboratorio."
+        },
+        {
+          "id": "aguja",
+          "text": "Que en ayunas las venas están más dilatadas y la extracción resulta más fácil y menos dolorosa.",
+          "feedback": "El ayuno no se indica por la facilidad de la punción sino por su efecto sobre los resultados."
+        },
+        {
+          "id": "costumbre",
+          "text": "Que es solo una costumbre antigua del laboratorio y no cambia los resultados de los lípidos.",
+          "feedback": "Los triglicéridos varían con la ingesta: la preparación tiene fundamento bioquímico."
+        }
+      ],
+      "correctOptionId": "post-comida",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "bq-09",
+      "conceptId": "mat-bioquimica:bq-09",
+      "category": "mat-bioquimica",
+      "topic": "Proteínas",
+      "competency": "Relacionar la naturaleza proteica de la insulina con su vía de administración",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "Un paciente pregunta por qué la insulina se inyecta y no se toma en pastillas. ¿Cuál es la explicación bioquímica?",
+      "rationale": "La insulina es una hormona proteica (dos cadenas de aminoácidos unidas por puentes disulfuro). En el tubo digestivo, el ácido y las proteasas la desnaturalizan e hidrolizan. Por eso se administra por vía parenteral, habitualmente subcutánea. La estructura química de un fármaco condiciona su vía de administración.",
+      "transferPrinciple": "La naturaleza química de un medicamento explica muchas de sus indicaciones de administración: preguntate siempre «por qué esta vía».",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-bioquimica",
+          "section": "Proteínas: estructura y digestión"
+        },
+        {
+          "ref": "libro-farmacologia",
+          "section": "Insulina: farmacocinética"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "proteasas",
+          "text": "Porque es una proteína y las enzimas digestivas la degradarían antes de que pueda absorberse.",
+          "feedback": "Correcto. Las proteasas del estómago y del intestino la romperían en aminoácidos."
+        },
+        {
+          "id": "sabor",
+          "text": "Porque tiene un sabor muy desagradable que provoca náuseas y vómitos cuando se ingiere, lo que impide completar la dosis indicada.",
+          "feedback": "El motivo no es el sabor sino la degradación digestiva."
+        },
+        {
+          "id": "lipido",
+          "text": "Porque es un lípido que no se disuelve en el jugo gástrico y se elimina sin absorberse.",
+          "feedback": "La insulina es una proteína, no un lípido."
+        },
+        {
+          "id": "higado",
+          "text": "Porque si se absorbiera por vía oral pasaría directo al cerebro y causaría convulsiones.",
+          "feedback": "No es lo que ocurriría: se degradaría en el tubo digestivo antes de absorberse."
+        }
+      ],
+      "correctOptionId": "proteasas",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "bq-10",
+      "conceptId": "mat-bioquimica:bq-10",
+      "category": "mat-bioquimica",
+      "topic": "Laboratorio clínico",
+      "competency": "Interpretar la hemoglobina glicosilada",
+      "difficulty": "aplicacion",
+      "format": "concepto",
+      "stem": "¿Qué información aporta la hemoglobina glicosilada (HbA1c) en una persona con diabetes?",
+      "rationale": "La glucosa se une de forma no enzimática a la hemoglobina (glicación). Como los glóbulos rojos viven unos 120 días, la HbA1c refleja el control glucémico de los últimos 2 a 3 meses. Puede alterarse con anemias o hemoglobinopatías. Las metas individuales las establece el equipo tratante.",
+      "transferPrinciple": "Un mismo dato (la glucosa) puede medirse en distintas escalas de tiempo: el momento, el día o los últimos meses. Sabé cuál estás mirando.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-bioquimica",
+          "section": "Glúcidos: glicación de proteínas"
+        },
+        {
+          "ref": "ada-hipoglucemia-2025",
+          "section": "Evaluación del control glucémico: A1C"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "promedio",
+          "text": "Un reflejo del promedio de la glucemia de los últimos 2 a 3 meses.",
+          "feedback": "Correcto. La glucosa se une a la hemoglobina en proporción a la glucemia durante la vida del glóbulo rojo."
+        },
+        {
+          "id": "instante",
+          "text": "La glucemia exacta en el momento de la extracción, con más precisión que la glucemia capilar.",
+          "feedback": "Para el valor del momento se usa la glucemia. La HbA1c refleja un promedio de varias semanas."
+        },
+        {
+          "id": "ayuno",
+          "text": "La glucemia de la última noche de ayuno, por eso exige 12 horas sin comer antes de la extracción.",
+          "feedback": "La HbA1c no refleja una noche en particular sino un período de semanas."
+        },
+        {
+          "id": "insulina",
+          "text": "La cantidad de insulina que produce el páncreas de la persona.",
+          "feedback": "La HbA1c no mide insulina sino la glicación de la hemoglobina."
+        }
+      ],
+      "correctOptionId": "promedio",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "bq-11",
+      "conceptId": "mat-bioquimica:bq-11",
+      "category": "mat-bioquimica",
+      "topic": "Laboratorio clínico",
+      "competency": "Convertir la glucemia de mg/dL a mmol/L",
+      "difficulty": "aplicacion",
+      "format": "calculo",
+      "stem": "Un informe de laboratorio expresa la glucemia en mg/dL y una guía que estás leyendo usa mmol/L. Convertí 126 mg/dL a mmol/L sabiendo que, para la glucosa, mmol/L = mg/dL ÷ 18.",
+      "rationale": "Para la glucosa, 1 mmol/L equivale aproximadamente a 18 mg/dL (su masa molar es de unos 180 g/mol). 126 / 18 = 7,0 mmol/L. Las unidades cambian según el país y el laboratorio: confundirlas puede llevar a interpretaciones peligrosas.",
+      "transferPrinciple": "Antes de interpretar un valor, verificá la unidad en la que está expresado; no compares números de unidades distintas.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-bioquimica",
+          "section": "Glúcidos: glucemia"
+        },
+        {
+          "ref": "ada-hipoglucemia-2025",
+          "section": "Umbrales de glucemia en mg/dL y mmol/L"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "numeric",
+      "options": [],
+      "correctOptionId": null,
+      "numericAnswer": 7.0,
+      "unit": "mmol/L",
+      "tolerance": 0.05,
+      "rounding": "Expresá el resultado con un decimal.",
+      "numericCheck": {
+        "formula": "glucemia_mgdl_mmol",
+        "inputs": {
+          "mg_dl": 126
+        }
+      },
+      "numericFeedback": "126 ÷ 18 = 7,0 mmol/L. Si multiplicaste por 18, obtuviste un valor muy alto (2268): para pasar de mg/dL a mmol/L se divide."
+    },
+    {
+      "id": "bq-12",
+      "conceptId": "mat-bioquimica:bq-12",
+      "category": "mat-bioquimica",
+      "topic": "Laboratorio clínico",
+      "competency": "Interpretar la creatinina como indicador de función renal",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "Un paciente tiene creatinina sérica elevada respecto de su valor previo. ¿Qué sugiere este dato?",
+      "rationale": "La creatinina se origina en el metabolismo de la creatina muscular a un ritmo bastante constante y se filtra en el glomérulo. Su aumento indica una caída de la filtración glomerular, aunque también depende de la masa muscular. La urea sube además con la deshidratación, el sangrado digestivo o una dieta rica en proteínas. Ajustar dosis de fármacos según la función renal lo define el equipo médico.",
+      "transferPrinciple": "Un cambio en la función renal puede modificar la dosis segura de muchos medicamentos: comunicá los valores alterados.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-bioquimica",
+          "section": "Metabolismo de compuestos nitrogenados: creatinina y urea"
+        },
+        {
+          "ref": "kdigo-ira-2012",
+          "section": "Definición: creatinina sérica"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "filtracion",
+          "text": "Una disminución de la filtración glomerular (función renal).",
+          "feedback": "Correcto. La creatinina se elimina casi exclusivamente por filtración; si el riñón filtra menos, sube en sangre."
+        },
+        {
+          "id": "higado",
+          "text": "Un daño hepático, porque la creatinina se produce y se elimina en el hígado.",
+          "feedback": "La creatinina proviene del músculo y se elimina por el riñón."
+        },
+        {
+          "id": "dieta",
+          "text": "Que el paciente comió muchos dulces el día anterior al análisis.",
+          "feedback": "Los dulces no elevan la creatinina."
+        },
+        {
+          "id": "hidratado",
+          "text": "Que el paciente está muy bien hidratado y elimina mucha orina.",
+          "feedback": "Una buena hidratación no eleva la creatinina; la deshidratación sí puede aumentarla."
+        }
+      ],
+      "correctOptionId": "filtracion",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "bq-13",
+      "conceptId": "mat-bioquimica:bq-13",
+      "category": "mat-bioquimica",
+      "topic": "Laboratorio clínico",
+      "competency": "Relacionar la ictericia con el metabolismo de la bilirrubina",
+      "difficulty": "integracion",
+      "format": "caso",
+      "stem": "Un paciente tiene ictericia, orina oscura (colúrica) y materia fecal clara (acolia). ¿Qué sugiere este conjunto de datos?",
+      "rationale": "La hemoglobina se degrada a bilirrubina no conjugada, que el hígado conjuga y excreta en la bilis. En el intestino se transforma en pigmentos que colorean la materia fecal. Si el flujo biliar se obstruye, la bilirrubina conjugada (hidrosoluble) vuelve a la sangre y se elimina por la orina (coluria), y las heces se decoloran (acolia).",
+      "transferPrinciple": "Observar y registrar el color de la orina y de la materia fecal aporta datos diagnósticos reales: no es un detalle menor.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-bioquimica",
+          "section": "Metabolismo del hemo y de la bilirrubina"
+        },
+        {
+          "ref": "libro-fundamentos",
+          "section": "Valoración de la eliminación"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "obstruccion",
+          "text": "Una obstrucción del flujo biliar: la bilirrubina conjugada no llega al intestino y se elimina por la orina.",
+          "feedback": "Correcto. La acolia indica que no llega bilirrubina al intestino y la coluria, que la conjugada pasa a la orina."
+        },
+        {
+          "id": "hemolisis",
+          "text": "Una hemólisis aumentada, que produce mucha bilirrubina no conjugada y la elimina por la orina.",
+          "feedback": "La bilirrubina no conjugada no es hidrosoluble y no pasa a la orina; además, en la hemólisis la materia fecal no es clara."
+        },
+        {
+          "id": "deshidratacion",
+          "text": "Una deshidratación, que concentra la orina y la materia fecal y tiñe la piel de amarillo.",
+          "feedback": "La deshidratación oscurece la orina, pero no explica la ictericia ni la acolia."
+        },
+        {
+          "id": "dieta",
+          "text": "Un consumo excesivo de zanahorias, que tiñe la piel y la orina de color oscuro.",
+          "feedback": "La carotenemia tiñe la piel pero no las escleróticas ni produce coluria y acolia."
+        }
+      ],
+      "correctOptionId": "obstruccion",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "bq-14",
+      "conceptId": "mat-bioquimica:bq-14",
+      "category": "mat-bioquimica",
+      "topic": "Laboratorio clínico",
+      "competency": "Reconocer el valor de la troponina como marcador de lesión miocárdica",
+      "difficulty": "integracion",
+      "format": "caso",
+      "stem": "A un paciente con dolor torácico se le indican determinaciones seriadas de troponina. ¿Por qué se mide esta proteína?",
+      "rationale": "Las troponinas cardíacas forman parte del aparato contráctil del miocardio. Cuando las células se lesionan, pasan a la sangre. La interpretación depende de la técnica del laboratorio y de la evolución entre muestras. Enfermería garantiza que las extracciones se hagan en los horarios indicados y que queden rotuladas con fecha y hora.",
+      "transferPrinciple": "En las determinaciones seriadas, la hora exacta de cada muestra es parte del resultado: registrala y respetala.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-bioquimica",
+          "section": "Proteínas musculares y marcadores de lesión"
+        },
+        {
+          "ref": "protocolo-institucional",
+          "section": "Toma de muestras seriadas"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "miocardio",
+          "text": "Porque es una proteína propia del músculo cardíaco que aumenta en sangre cuando hay lesión de las células miocárdicas.",
+          "feedback": "Correcto. Su elevación y su curva en el tiempo ayudan al diagnóstico; por eso se indican muestras seriadas."
+        },
+        {
+          "id": "higado",
+          "text": "Porque es una enzima hepática que sube cuando el dolor torácico se debe a un problema del hígado.",
+          "feedback": "La troponina es una proteína del músculo cardíaco, no hepática."
+        },
+        {
+          "id": "coagulacion",
+          "text": "Porque mide la capacidad de coagulación de la sangre antes de indicar anticoagulantes al paciente con dolor torácico, para evitar sangrados.",
+          "feedback": "La troponina no mide la coagulación."
+        },
+        {
+          "id": "estres",
+          "text": "Porque es una hormona del estrés que sube con cualquier dolor y permite medir su intensidad.",
+          "feedback": "No es una hormona ni mide la intensidad del dolor."
+        }
+      ],
+      "correctOptionId": "miocardio",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "bq-15",
+      "conceptId": "mat-bioquimica:bq-15",
+      "category": "mat-bioquimica",
+      "topic": "Vitaminas y minerales",
+      "competency": "Clasificar las vitaminas liposolubles",
+      "difficulty": "conceptual",
+      "format": "concepto",
+      "stem": "¿Cuáles son las vitaminas liposolubles?",
+      "rationale": "Las vitaminas liposolubles (A, D, E, K) requieren una absorción adecuada de grasas: su déficit aparece en enfermedades que alteran la digestión o la absorción de lípidos. Al almacenarse, también pueden acumularse en exceso. Las hidrosolubles (complejo B y C) se almacenan poco, salvo la B12.",
+      "transferPrinciple": "Si un paciente tiene problemas para absorber grasas, pensá en posibles déficits de las vitaminas A, D, E y K.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-bioquimica",
+          "section": "Vitaminas liposolubles e hidrosolubles"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "adek",
+          "text": "Las vitaminas A, D, E y K.",
+          "feedback": "Correcto. Se absorben junto con las grasas y pueden almacenarse en el organismo."
+        },
+        {
+          "id": "byc",
+          "text": "Las vitaminas del complejo B y la vitamina C.",
+          "feedback": "Esas son las vitaminas hidrosolubles, que se almacenan poco y se eliminan por la orina."
+        },
+        {
+          "id": "todas",
+          "text": "Todas las vitaminas se disuelven en grasas por igual, sin diferencias entre ellas.",
+          "feedback": "Las vitaminas se clasifican en liposolubles e hidrosolubles según su solubilidad."
+        },
+        {
+          "id": "cyd",
+          "text": "Solo las vitaminas C y D, que son las que se obtienen con la exposición al sol.",
+          "feedback": "La vitamina C es hidrosoluble y solo la D se sintetiza en la piel con la luz solar."
+        }
+      ],
+      "correctOptionId": "adek",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "bq-16",
+      "conceptId": "mat-bioquimica:bq-16",
+      "category": "mat-bioquimica",
+      "topic": "Vitaminas y minerales",
+      "competency": "Relacionar la vitamina K con la coagulación",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "¿Por qué se administra vitamina K a los recién nacidos, según las normas habituales de atención neonatal?",
+      "rationale": "La vitamina K es necesaria para la carboxilación de los factores II, VII, IX y X y de las proteínas C y S. El recién nacido tiene escasas reservas y una flora intestinal todavía no productora, por lo que se previene la enfermedad hemorrágica con vitamina K. La dosis y la vía las establece la norma o el protocolo vigente.",
+      "transferPrinciple": "Cuando un fármaco o un déficit interfiere con la vitamina K, esperá alteraciones de la coagulación y vigilá sangrados.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-bioquimica",
+          "section": "Vitamina K y coagulación"
+        },
+        {
+          "ref": "protocolo-institucional",
+          "section": "Atención inmediata del recién nacido"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "coagulacion",
+          "text": "Porque es necesaria para producir varios factores de la coagulación y el recién nacido tiene reservas bajas.",
+          "feedback": "Correcto. Se busca prevenir la enfermedad hemorrágica del recién nacido. La pauta exacta la define la norma vigente."
+        },
+        {
+          "id": "huesos",
+          "text": "Porque es la vitamina que fija el calcio en los huesos del recién nacido y previene el raquitismo durante los primeros meses de vida.",
+          "feedback": "La prevención del raquitismo se relaciona con la vitamina D."
+        },
+        {
+          "id": "vision",
+          "text": "Porque protege la visión del recién nacido frente a la luz intensa de la sala de partos.",
+          "feedback": "La vitamina relacionada con la visión es la A."
+        },
+        {
+          "id": "defensas",
+          "text": "Porque fortalece las defensas y reemplaza a las vacunas durante el primer mes.",
+          "feedback": "La vitamina K no reemplaza a las vacunas ni actúa sobre las defensas."
+        }
+      ],
+      "correctOptionId": "coagulacion",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "bq-17",
+      "conceptId": "mat-bioquimica:bq-17",
+      "category": "mat-bioquimica",
+      "topic": "Vitaminas y minerales",
+      "competency": "Fundamentar la educación alimentaria en la anemia ferropénica",
+      "difficulty": "integracion",
+      "format": "caso",
+      "stem": "Una paciente con anemia ferropénica recibe indicaciones alimentarias. ¿Qué recomendación tiene fundamento bioquímico?",
+      "rationale": "El hierro forma parte del grupo hemo de la hemoglobina. El hierro hemo (de las carnes) se absorbe mejor que el no hemo (de los vegetales). La vitamina C reduce el hierro a su forma ferrosa, más absorbible; los taninos, los fitatos y el calcio pueden reducir su absorción. Las indicaciones dietéticas y la suplementación las define el equipo tratante.",
+      "transferPrinciple": "Una buena educación alimentaria explica el «por qué»: así la persona puede adaptar la recomendación a sus propias comidas.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-bioquimica",
+          "section": "Metabolismo del hierro"
+        },
+        {
+          "ref": "libro-fundamentos",
+          "section": "Educación para la salud: alimentación"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "vitamina-c",
+          "text": "Acompañar los alimentos con hierro con una fuente de vitamina C, que mejora la absorción del hierro no hemo.",
+          "feedback": "Correcto. La vitamina C favorece la absorción del hierro de origen vegetal."
+        },
+        {
+          "id": "te",
+          "text": "Tomar té o mate junto con las comidas ricas en hierro, porque estimulan su absorción en el intestino.",
+          "feedback": "Los taninos del té y del mate pueden reducir la absorción del hierro."
+        },
+        {
+          "id": "leche",
+          "text": "Tomar abundante leche con cada comida para que el calcio ayude a transportar el hierro a la sangre.",
+          "feedback": "El calcio en exceso puede disminuir la absorción del hierro."
+        },
+        {
+          "id": "azucar",
+          "text": "Aumentar el consumo de azúcar, porque la glucosa forma parte del grupo hemo de la hemoglobina.",
+          "feedback": "El grupo hemo contiene hierro, no glucosa."
+        }
+      ],
+      "correctOptionId": "vitamina-c",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "bq-18",
+      "conceptId": "mat-bioquimica:bq-18",
+      "category": "mat-bioquimica",
+      "topic": "pH y amortiguadores",
+      "competency": "Interpretar un valor de pH sanguíneo",
+      "difficulty": "aplicacion",
+      "format": "concepto",
+      "stem": "Una gasometría arterial informa un pH de 7,25. ¿Cómo se interpreta?",
+      "rationale": "El pH sanguíneo se mantiene en un rango estrecho (aproximadamente 7,35 a 7,45) gracias a los sistemas amortiguadores, la respiración y el riñón. Por debajo hay acidemia; por encima, alcalemia. Su interpretación completa requiere el CO₂ y el bicarbonato, y la realiza el equipo médico.",
+      "transferPrinciple": "Diferencias de décimas en el pH son grandes cambios: la escala es logarítmica.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-bioquimica",
+          "section": "Agua, pH y equilibrio ácido-base"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "acidemia",
+          "text": "Como acidemia, porque está por debajo del rango normal (aproximadamente 7,35 a 7,45).",
+          "feedback": "Correcto. Un pH menor a 7,35 indica acidemia; la causa puede ser respiratoria o metabólica."
+        },
+        {
+          "id": "alcalemia",
+          "text": "Como alcalemia, porque cualquier valor por encima de 7 es alcalino.",
+          "feedback": "En química, 7 es neutro, pero el rango normal de la sangre es 7,35 a 7,45: 7,25 es acidemia."
+        },
+        {
+          "id": "normal",
+          "text": "Como normal, porque la sangre tolera variaciones amplias, entre 6,8 y 7,8, sin consecuencias clínicas para el paciente.",
+          "feedback": "Ese no es el rango normal. Variaciones pequeñas del pH tienen consecuencias clínicas importantes."
+        },
+        {
+          "id": "neutro",
+          "text": "Como neutro, porque es un valor muy cercano a 7.",
+          "feedback": "El pH sanguíneo normal no es neutro: es levemente alcalino."
+        }
+      ],
+      "correctOptionId": "acidemia",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "bq-19",
+      "conceptId": "mat-bioquimica:bq-19",
+      "category": "mat-bioquimica",
+      "topic": "pH y amortiguadores",
+      "competency": "Explicar la compensación respiratoria de una acidosis metabólica",
+      "difficulty": "integracion",
+      "format": "caso",
+      "stem": "Un paciente con cetoacidosis diabética respira de forma profunda y rápida (respiración de Kussmaul). ¿Qué explica este patrón?",
+      "rationale": "El sistema bicarbonato/ácido carbónico (CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻) es el principal amortiguador extracelular. En la acidosis metabólica, los quimiorreceptores estimulan la ventilación para eliminar CO₂ (compensación respiratoria, rápida); el riñón aumenta la excreción de ácido y la reabsorción de bicarbonato (compensación lenta).",
+      "transferPrinciple": "Un patrón respiratorio anormal puede ser la respuesta a un problema metabólico: valorá la respiración junto con la glucemia y el estado de conciencia.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-bioquimica",
+          "section": "Sistemas amortiguadores: bicarbonato"
+        },
+        {
+          "ref": "libro-fisiologia",
+          "section": "Compensación respiratoria y renal del pH"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "compensa",
+          "text": "Es una compensación: al eliminar más CO₂, el sistema bicarbonato tiende a subir el pH.",
+          "feedback": "Correcto. El pulmón responde a la acidosis metabólica eliminando ácido volátil (CO₂)."
+        },
+        {
+          "id": "causa",
+          "text": "Es la causa de la acidosis: respirar rápido y profundo produce ácido en la sangre y empeora el estado metabólico del paciente.",
+          "feedback": "Respirar rápido elimina CO₂: tiende a alcalinizar, no a acidificar."
+        },
+        {
+          "id": "ansiedad",
+          "text": "Se debe solo a la ansiedad del paciente y no tiene relación con su estado metabólico.",
+          "feedback": "Este patrón es una respuesta fisiológica a la acidosis, no un síntoma de ansiedad."
+        },
+        {
+          "id": "oxigeno",
+          "text": "Es una señal de que el paciente tiene exceso de oxígeno y necesita eliminarlo.",
+          "feedback": "No se debe a un exceso de oxígeno. Se relaciona con la eliminación de CO₂."
+        }
+      ],
+      "correctOptionId": "compensa",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "bq-20",
+      "conceptId": "mat-bioquimica:bq-20",
+      "category": "mat-bioquimica",
+      "topic": "Laboratorio clínico",
+      "competency": "Detectar un resultado de potasio alterado por un error preanalítico",
+      "difficulty": "integracion",
+      "format": "error_seguridad",
+      "stem": "Llega un potasio de 6,2 mEq/L en una muestra informada como «hemolizada». El paciente está asintomático. ¿Qué corresponde?",
+      "rationale": "Los glóbulos rojos contienen mucho más potasio que el plasma. Si se rompen durante la extracción (aguja muy fina, aspiración enérgica, torniquete prolongado, agitación del tubo), el potasio informado sube sin que cambie el del paciente. La técnica de extracción correcta previene el error; ante un resultado dudoso, se comunica con su observación y se sigue el protocolo.",
+      "transferPrinciple": "Un resultado inesperado se comunica con todo su contexto: lo que informa el laboratorio sobre la muestra también es un dato.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-bioquimica",
+          "section": "Electrolitos: distribución del potasio"
+        },
+        {
+          "ref": "libro-fundamentos",
+          "section": "Toma de muestras de sangre venosa"
+        },
+        {
+          "ref": "protocolo-institucional",
+          "section": "Comunicación de valores críticos"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "informar-repetir",
+          "text": "Comunicar el resultado con la observación de hemólisis para que se evalúe y, según el protocolo, se repita la muestra.",
+          "feedback": "Correcto. La hemólisis libera potasio de los glóbulos rojos y puede elevar falsamente el valor; igual se comunica para que el equipo decida."
+        },
+        {
+          "id": "ignorar",
+          "text": "No comunicarlo, porque una muestra hemolizada nunca es válida y el paciente está bien.",
+          "feedback": "No se descarta un valor por decisión propia: podría tratarse de una hiperpotasemia real."
+        },
+        {
+          "id": "tratar",
+          "text": "Comunicar el resultado como una hiperpotasemia confirmada y solicitar que se inicie tratamiento de inmediato.",
+          "feedback": "Con hemólisis el valor no está confirmado; la observación del laboratorio debe acompañar la comunicación."
+        },
+        {
+          "id": "repetir-solo",
+          "text": "Volver a extraer por cuenta propia con un torniquete apretado durante varios minutos para obtener más sangre.",
+          "feedback": "Repetir sin indicación y con torniquete prolongado puede volver a alterar el resultado."
+        }
+      ],
+      "correctOptionId": "informar-repetir",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    }
+  ]
+}

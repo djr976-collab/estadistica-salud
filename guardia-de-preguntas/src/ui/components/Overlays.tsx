@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { bank } from '../../content/bank';
+import { areaById } from '../../content/subjects';
 import type { GameState } from '../../types';
 import { GuardianEmblem } from './Avatar';
 import { BadgeMedal } from './Common';
@@ -17,7 +18,7 @@ function useDialogFocus() {
 export function Celebration({ celebration, onClose, reduceMotion }: { celebration: NonNullable<GameState['celebration']>; onClose: () => void; reduceMotion: boolean }) {
   const btn = useDialogFocus();
   const isFinal = celebration.kind === 'final';
-  const cat = celebration.kind === 'badge' ? bank.categoryById[celebration.category] : null;
+  const cat = celebration.kind === 'badge' ? areaById(celebration.category) : null;
   return (
     <div className="overlay" role="dialog" aria-modal="true" aria-labelledby="cel-title">
       <div className="overlay-card celebration">

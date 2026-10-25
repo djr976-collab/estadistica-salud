@@ -58,6 +58,16 @@ export function recomputeNumeric(q: Question): number | null {
       return sum('ingresos') - sum('egresos');
     case 'pam':
       return (n('pas') + 2 * n('pad')) / 3;
+    case 'gasto_cardiaco':
+      return (n('fc') * n('vs_ml')) / 1000;
+    case 'dosis_por_peso':
+      return n('dosis_por_kg') * n('peso_kg');
+    case 'glucemia_mgdl_mmol':
+      return n('mg_dl') / 18;
+    case 'tasa':
+      return (n('casos') / n('poblacion')) * n('base');
+    case 'porcentaje':
+      return (n('parte') / n('total')) * 100;
     default:
       return null;
   }

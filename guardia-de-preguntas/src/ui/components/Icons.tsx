@@ -1,7 +1,6 @@
 // Iconografía original en SVG (sin emojis). Trazos con currentColor para
 // heredar el color del contexto.
 
-import type { CategoryId } from '../../types';
 
 type IconProps = { size?: number; className?: string; title?: string };
 
@@ -27,7 +26,7 @@ function Svg({ size = 24, className, title, children }: IconProps & { children: 
   );
 }
 
-const CATEGORY_PATHS: Record<CategoryId, React.ReactNode> = {
+const CATEGORY_PATHS: Record<string, React.ReactNode> = {
   // Corazón con trazo de pulso
   fisiologia: (
     <>
@@ -74,10 +73,60 @@ const CATEGORY_PATHS: Record<CategoryId, React.ReactNode> = {
       <path d="M7.8 8.6h8.4M7.8 11.8h5.2" />
     </>
   ),
+  // Materias del repaso
+  // Hueso
+  'mat-anatomia': (
+    <>
+      <path d="M8.2 15.8l7.6-7.6" />
+      <path d="M8.2 15.8a2.4 2.4 0 1 1-3.4 2.1 2.4 2.4 0 1 1 1.3-4.2" />
+      <path d="M15.8 8.2a2.4 2.4 0 1 1 3.4-2.1 2.4 2.4 0 1 1-1.3 4.2" />
+    </>
+  ),
+  // Molécula (hexágono con enlaces)
+  'mat-bioquimica': (
+    <>
+      <path d="M12 4.5l5.2 3v6l-5.2 3-5.2-3v-6z" />
+      <circle cx="12" cy="10.5" r="1.6" />
+      <path d="M17.2 13.5l2.6 1.5M6.8 13.5L4.2 15M12 16.5v3" />
+    </>
+  ),
+  // Microorganismo
+  'mat-infectologia': (
+    <>
+      <circle cx="12" cy="12" r="5" />
+      <path d="M12 3.5V7M12 17v3.5M3.5 12H7M17 12h3.5M6 6l2.5 2.5M15.5 15.5L18 18M18 6l-2.5 2.5M8.5 15.5L6 18" />
+      <circle cx="10.5" cy="11" r=".9" />
+      <circle cx="13.5" cy="13.2" r=".9" />
+    </>
+  ),
+  // Curva epidémica sobre ejes
+  'mat-epidemiologia': (
+    <>
+      <path d="M4 4v16h16" />
+      <path d="M6.5 17c2-6 3.5-9 5.5-9s3 4 6 9" />
+    </>
+  ),
+  // Casa con corazón (comunidad)
+  'mat-comunitaria': (
+    <>
+      <path d="M3.5 11L12 4l8.5 7" />
+      <path d="M6 9.5V20h12V9.5" />
+      <path d="M12 17.2s-3-1.8-3-4a1.6 1.6 0 0 1 3-.9 1.6 1.6 0 0 1 3 .9c0 2.2-3 4-3 4z" />
+    </>
+  ),
+  // Globo de diálogo con «EN»
+  'mat-ingles': (
+    <>
+      <path d="M4 4.8h16v11H10l-4.8 3.6v-3.6H4z" />
+      <path d="M7.5 8h2.8M7.5 10.3h2.4M7.5 12.6h2.8M7.5 8v4.6M13 12.6V8l3.4 4.6V8" />
+    </>
+  ),
 };
+CATEGORY_PATHS['mat-fisiologia'] = CATEGORY_PATHS.fisiologia;
+CATEGORY_PATHS['mat-farmacologia'] = CATEGORY_PATHS.farmacologia;
 
-export function CategoryIcon({ category, ...p }: IconProps & { category: CategoryId }) {
-  return <Svg {...p}>{CATEGORY_PATHS[category]}</Svg>;
+export function CategoryIcon({ category, ...p }: IconProps & { category: string }) {
+  return <Svg {...p}>{CATEGORY_PATHS[category] ?? CATEGORY_PATHS.valoracion}</Svg>;
 }
 
 export const Icon = {

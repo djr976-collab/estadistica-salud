@@ -1,0 +1,1163 @@
+{
+  "subject": "mat-anatomia",
+  "bankVersion": "1.0",
+  "note": "Contenido en borrador generado con asistencia de IA a partir de contenidos estándar. Casos y datos ficticios. Pendiente de revisión docente y de contraste con el programa vigente.",
+  "questions": [
+    {
+      "id": "an-01",
+      "conceptId": "mat-anatomia:an-01",
+      "category": "mat-anatomia",
+      "topic": "Terminología y planos",
+      "competency": "Describir la posición anatómica de referencia",
+      "difficulty": "conceptual",
+      "format": "concepto",
+      "stem": "En la posición anatómica de referencia, ¿hacia dónde se orientan las palmas de las manos?",
+      "rationale": "La posición anatómica es la referencia universal para describir ubicaciones: persona de pie, mirada al frente, brazos a los costados con las palmas hacia adelante y pies juntos. Todos los términos (medial, lateral, proximal, distal) se interpretan desde esa posición, aunque el paciente esté acostado.",
+      "transferPrinciple": "Para registrar o interpretar la ubicación de una lesión, imaginá siempre al paciente en posición anatómica, aunque esté en la cama.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-anatomia",
+          "section": "Generalidades: posición anatómica y terminología de orientación"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "adelante",
+          "text": "Hacia adelante, con los brazos a los lados del cuerpo y los pulgares hacia afuera.",
+          "feedback": "Correcto. En posición anatómica las palmas miran hacia adelante: por eso el pulgar queda en el lado lateral y el meñique en el medial."
+        },
+        {
+          "id": "atras",
+          "text": "Hacia atrás, con el dorso de la mano mirando hacia adelante.",
+          "feedback": "Esa es la posición en pronación. La referencia anatómica usa las palmas hacia adelante (supinación)."
+        },
+        {
+          "id": "muslo",
+          "text": "Hacia los muslos, como cuando una persona está parada en forma natural y relajada.",
+          "feedback": "Es la postura habitual de pie, pero no la posición anatómica de referencia que se usa para describir ubicaciones."
+        },
+        {
+          "id": "arriba",
+          "text": "Hacia arriba, con los brazos extendidos en cruz a la altura de los hombros.",
+          "feedback": "Esa postura no corresponde a la posición anatómica, en la que los brazos están a los costados del cuerpo."
+        }
+      ],
+      "correctOptionId": "adelante",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "an-02",
+      "conceptId": "mat-anatomia:an-02",
+      "category": "mat-anatomia",
+      "topic": "Terminología y planos",
+      "competency": "Identificar los planos anatómicos",
+      "difficulty": "conceptual",
+      "format": "concepto",
+      "stem": "¿Qué plano divide al cuerpo en una parte derecha y una parte izquierda?",
+      "rationale": "Los tres planos de referencia son el sagital (derecha-izquierda), el frontal o coronal (anterior-posterior) y el transversal (superior-inferior). Se usan para describir cortes en estudios por imágenes y para ubicar estructuras.",
+      "transferPrinciple": "Asociá cada plano con un corte conocido: sagital como el perfil, frontal como una foto de frente y transversal como una tajada horizontal.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-anatomia",
+          "section": "Generalidades: planos y ejes del cuerpo"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "sagital",
+          "text": "El plano sagital.",
+          "feedback": "Correcto. El plano sagital (y el sagital medio, que pasa por la línea media) separa derecha de izquierda."
+        },
+        {
+          "id": "frontal",
+          "text": "El plano frontal o coronal, paralelo a la frente.",
+          "feedback": "El plano frontal divide al cuerpo en una parte anterior y otra posterior."
+        },
+        {
+          "id": "transversal",
+          "text": "El plano transversal u horizontal, paralelo al suelo.",
+          "feedback": "El plano transversal separa una parte superior de otra inferior, como en los cortes de una tomografía."
+        },
+        {
+          "id": "oblicuo",
+          "text": "Cualquier plano oblicuo que atraviese el tronco en diagonal.",
+          "feedback": "Un plano oblicuo cruza en ángulo y no define por sí mismo derecha e izquierda."
+        }
+      ],
+      "correctOptionId": "sagital",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "an-03",
+      "conceptId": "mat-anatomia:an-03",
+      "category": "mat-anatomia",
+      "topic": "Terminología y planos",
+      "competency": "Interpretar términos de ubicación en un registro clínico",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "En un registro figura: «herida en cara medial del antebrazo derecho, 3 cm proximal a la muñeca». ¿Dónde está la herida?",
+      "rationale": "Medial y lateral se definen respecto de la línea media en posición anatómica: en el antebrazo, medial es el lado cubital (meñique) y lateral el radial (pulgar). Proximal y distal indican cercanía o lejanía respecto de la raíz del miembro.",
+      "transferPrinciple": "Un registro preciso permite que otra persona encuentre la lesión sin buscarla: usá siempre términos anatómicos y una referencia medible.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-anatomia",
+          "section": "Generalidades: terminología de orientación"
+        },
+        {
+          "ref": "libro-fundamentos",
+          "section": "Documentación de la valoración de la piel"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "cubital-codo",
+          "text": "Del lado del dedo meñique, a 3 cm de la muñeca en dirección al codo.",
+          "feedback": "Correcto. Medial es el lado cercano a la línea media en posición anatómica (lado cubital, del meñique), y proximal es más cerca de la raíz del miembro."
+        },
+        {
+          "id": "radial-codo",
+          "text": "Del lado del pulgar, a 3 cm de la muñeca en dirección al codo.",
+          "feedback": "El lado del pulgar es el lateral (radial). Medial, en posición anatómica, corresponde al lado del meñique."
+        },
+        {
+          "id": "cubital-mano",
+          "text": "Del lado del dedo meñique, a 3 cm de la muñeca, ya sobre el dorso de la mano.",
+          "feedback": "Proximal significa más cerca del tronco. Una lesión 3 cm proximal a la muñeca está en el antebrazo, no en la mano."
+        },
+        {
+          "id": "dorso",
+          "text": "En la cara posterior del antebrazo, a mitad de camino entre la muñeca y el codo, sobre el dorso del miembro.",
+          "feedback": "Medial no equivale a posterior, y la distancia indicada son 3 cm desde la muñeca, no la mitad del antebrazo."
+        }
+      ],
+      "correctOptionId": "cubital-codo",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "an-04",
+      "conceptId": "mat-anatomia:an-04",
+      "category": "mat-anatomia",
+      "topic": "Sistema osteomuscular",
+      "competency": "Localizar el sitio ventroglúteo con referencias óseas",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "Para localizar el sitio de inyección intramuscular ventroglúteo, ¿qué estructura ósea se toma como base apoyando la palma de la mano?",
+      "rationale": "El sitio ventroglúteo se ubica en el músculo glúteo medio, lejos de grandes nervios y vasos. Sus referencias son el trocánter mayor (palma), la espina ilíaca anterosuperior (índice) y la cresta ilíaca (dedo medio). La elección del sitio se ajusta al protocolo institucional y al volumen y tipo de medicamento.",
+      "transferPrinciple": "Las referencias óseas palpables son más confiables que «calcular a ojo»: identificalas siempre antes de inyectar.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-anatomia",
+          "section": "Miembro inferior: región glútea"
+        },
+        {
+          "ref": "libro-fundamentos",
+          "section": "Inyecciones intramusculares: sitios de punción"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "trocanter",
+          "text": "El trocánter mayor del fémur.",
+          "feedback": "Correcto. Con la palma sobre el trocánter mayor, el índice se dirige a la espina ilíaca anterosuperior y el dedo medio hacia la cresta ilíaca; se inyecta en el centro de la «V»."
+        },
+        {
+          "id": "isquion",
+          "text": "La tuberosidad isquiática, que se palpa en la parte inferior del glúteo al sentarse.",
+          "feedback": "La tuberosidad isquiática no es referencia para el sitio ventroglúteo y se encuentra en la zona de mayor riesgo para el nervio ciático."
+        },
+        {
+          "id": "eips",
+          "text": "La espina ilíaca posterosuperior, que se palpa en la parte alta y posterior de la pelvis.",
+          "feedback": "La espina ilíaca posterosuperior es una referencia del sitio dorsoglúteo, no del ventroglúteo."
+        },
+        {
+          "id": "coccix",
+          "text": "El cóccix.",
+          "feedback": "El cóccix no se usa como referencia para inyecciones intramusculares."
+        }
+      ],
+      "correctOptionId": "trocanter",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "an-05",
+      "conceptId": "mat-anatomia:an-05",
+      "category": "mat-anatomia",
+      "topic": "Sistema nervioso",
+      "competency": "Prevenir lesiones nerviosas al elegir el sitio de una inyección intramuscular",
+      "difficulty": "integracion",
+      "format": "error_seguridad",
+      "stem": "Durante la práctica, un compañero se dispone a aplicar una inyección intramuscular en el cuadrante inferior interno del glúteo. ¿Qué hacés?",
+      "rationale": "El nervio ciático recorre la región glútea por la parte inferior e interna, junto a vasos glúteos. Por eso la inyección en el cuadrante inferior interno es peligrosa. El sitio ventroglúteo se considera de menor riesgo; si se usa el dorsoglúteo, debe localizarse por referencias óseas en el cuadrante superoexterno, según el protocolo.",
+      "transferPrinciple": "Si ves que alguien está por hacer algo inseguro, frenar la acción antes de que llegue al paciente es parte del cuidado, aunque sea incómodo.",
+      "criticalSafety": true,
+      "riskNote": "Una inyección en el cuadrante inferior interno del glúteo puede lesionar el nervio ciático y causar dolor, alteraciones sensitivas o parálisis.",
+      "recoveryQuestionId": "an-05r",
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-anatomia",
+          "section": "Miembro inferior: región glútea y nervio ciático"
+        },
+        {
+          "ref": "libro-fundamentos",
+          "section": "Inyecciones intramusculares: complicaciones"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "detener",
+          "text": "Lo detengo antes de punzar: en esa zona pasan el nervio ciático y vasos glúteos. Revisamos el sitio con el docente.",
+          "feedback": "Correcto. Ese cuadrante tiene riesgo de lesionar el nervio ciático. Se detiene la acción y se elige un sitio seguro según el protocolo, con supervisión."
+        },
+        {
+          "id": "aspirar",
+          "text": "Le sugiero aspirar antes de inyectar: si no refluye sangre, el sitio es seguro y puede continuar con la aplicación.",
+          "feedback": "Aspirar puede detectar un vaso, pero no protege al nervio ciático. El problema es la ubicación, no solo el riesgo vascular."
+        },
+        {
+          "id": "aguja-corta",
+          "text": "Le indico que use una aguja más corta para no llegar tan profundo y así evitar estructuras importantes.",
+          "feedback": "Una aguja corta puede dejar el medicamento en el tejido subcutáneo y no corrige el error de ubicación."
+        },
+        {
+          "id": "despues",
+          "text": "Lo dejo terminar y luego le comento la ubicación, para no ponerlo nervioso delante del paciente.",
+          "feedback": "Esperar a que termine expone al paciente a una lesión evitable. La corrección tiene que ser antes de punzar."
+        }
+      ],
+      "correctOptionId": "detener",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "an-05r",
+      "conceptId": "mat-anatomia:an-05",
+      "category": "mat-anatomia",
+      "topic": "Sistema nervioso",
+      "competency": "Prevenir lesiones nerviosas al elegir el sitio de una inyección intramuscular",
+      "difficulty": "integracion",
+      "format": "error_seguridad",
+      "stem": "Un compañero va a aplicar una inyección intramuscular en el deltoides, pero marca el sitio a mitad del brazo, casi a la altura de la inserción del músculo. ¿Qué corresponde?",
+      "rationale": "El sitio deltoideo se localiza en la parte más gruesa del músculo, aproximadamente 2 a 3 traveses de dedo (2,5 a 5 cm) por debajo del acromion. Más abajo aumenta el riesgo de lesionar el nervio radial y la arteria braquial profunda. El volumen admitido es pequeño y lo define el protocolo.",
+      "transferPrinciple": "Cada sitio de inyección tiene una referencia ósea: sin ubicarla, no se punza.",
+      "criticalSafety": true,
+      "riskNote": "Una inyección deltoidea demasiado baja puede lesionar el nervio radial.",
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": true,
+      "sources": [
+        {
+          "ref": "libro-anatomia",
+          "section": "Miembro superior: región deltoidea y nervio radial"
+        },
+        {
+          "ref": "libro-fundamentos",
+          "section": "Inyecciones intramusculares: sitio deltoideo"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "subir-sitio",
+          "text": "Detenerlo: el sitio queda demasiado bajo, cerca del nervio radial. Se localiza 2 a 3 traveses de dedo por debajo del acromion.",
+          "feedback": "Correcto. En el deltoides, un sitio demasiado bajo se acerca al trayecto del nervio radial. La referencia es el acromion."
+        },
+        {
+          "id": "seguir",
+          "text": "Dejarlo seguir, porque el deltoides es un músculo pequeño y cualquier punto de su superficie es seguro para inyectar.",
+          "feedback": "El deltoides es pequeño justamente por eso: hay que localizarlo con precisión. No cualquier punto es seguro."
+        },
+        {
+          "id": "otro-brazo",
+          "text": "Sugerirle cambiar al otro brazo y marcar el mismo punto, a mitad de camino entre el hombro y el codo.",
+          "feedback": "Cambiar de brazo no corrige el error: la ubicación sigue siendo demasiado baja."
+        },
+        {
+          "id": "volumen",
+          "text": "Indicarle que inyecte más lento para que el músculo tolere mejor el volumen en esa zona.",
+          "feedback": "La velocidad no protege al nervio radial. El problema es la ubicación."
+        }
+      ],
+      "correctOptionId": "subir-sitio",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "an-06",
+      "conceptId": "mat-anatomia:an-06",
+      "category": "mat-anatomia",
+      "topic": "Sistema cardiovascular",
+      "competency": "Localizar pulsos periféricos para valorar la perfusión distal",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "Después de una cirugía de rodilla, tenés que valorar la perfusión distal del miembro operado. ¿Dónde palpás el pulso pedio?",
+      "rationale": "La valoración neurovascular distal incluye pulsos (pedio y tibial posterior), color, temperatura, relleno capilar, sensibilidad y movilidad, comparando con el miembro sano. El pulso pedio puede ser difícil de palpar en algunas personas; la comparación bilateral y el registro de la tendencia son clave.",
+      "transferPrinciple": "Comparás siempre con el lado sano: un pulso débil en ambos pies tiene otro significado que uno ausente solo en el miembro operado.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-anatomia",
+          "section": "Miembro inferior: arterias del pie"
+        },
+        {
+          "ref": "libro-fundamentos",
+          "section": "Valoración de pulsos periféricos"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "dorso-pie",
+          "text": "En el dorso del pie, lateral al tendón del extensor largo del dedo gordo.",
+          "feedback": "Correcto. El pulso pedio (arteria dorsal del pie) se palpa en el dorso, junto al tendón del extensor del hallux."
+        },
+        {
+          "id": "maleolo",
+          "text": "Detrás del maléolo medial, en la cara interna del tobillo, entre el hueso y el tendón de Aquiles.",
+          "feedback": "Ahí se palpa el pulso tibial posterior, que también sirve para valorar la perfusión, pero no es el pedio."
+        },
+        {
+          "id": "popliteo",
+          "text": "En el hueco poplíteo, detrás de la rodilla, con la pierna ligeramente flexionada para relajar los tejidos.",
+          "feedback": "Ese es el pulso poplíteo, proximal a la cirugía. Para valorar la perfusión distal se buscan los pulsos del pie."
+        },
+        {
+          "id": "femoral",
+          "text": "En el pliegue inguinal (pulso femoral).",
+          "feedback": "Ese es el pulso femoral, muy proximal: no informa sobre la perfusión del pie."
+        }
+      ],
+      "correctOptionId": "dorso-pie",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "an-07",
+      "conceptId": "mat-anatomia:an-07",
+      "category": "mat-anatomia",
+      "topic": "Sistema cardiovascular",
+      "competency": "Describir el recorrido de la sangre en la circulación pulmonar",
+      "difficulty": "conceptual",
+      "format": "concepto",
+      "stem": "¿Qué vasos llevan sangre oxigenada desde los pulmones hacia el corazón?",
+      "rationale": "Circulación pulmonar: ventrículo derecho → arterias pulmonares → capilares pulmonares (intercambio gaseoso) → venas pulmonares → aurícula izquierda. Los nombres «arteria» y «vena» indican la dirección respecto del corazón, no el contenido de oxígeno.",
+      "transferPrinciple": "Arteria sale del corazón y vena llega al corazón: esa regla no depende del oxígeno.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-anatomia",
+          "section": "Corazón y grandes vasos: circulación pulmonar"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "venas-pulm",
+          "text": "Las venas pulmonares, que desembocan en la aurícula izquierda.",
+          "feedback": "Correcto. Las venas pulmonares son una excepción: son venas que transportan sangre oxigenada."
+        },
+        {
+          "id": "arterias-pulm",
+          "text": "Las arterias pulmonares, que salen del ventrículo derecho hacia ambos pulmones.",
+          "feedback": "Las arterias pulmonares llevan sangre poco oxigenada desde el corazón hacia los pulmones."
+        },
+        {
+          "id": "cava",
+          "text": "La vena cava superior.",
+          "feedback": "La vena cava superior lleva sangre poco oxigenada a la aurícula derecha."
+        },
+        {
+          "id": "aorta",
+          "text": "La arteria aorta, que nace del ventrículo izquierdo y distribuye la sangre al cuerpo.",
+          "feedback": "La aorta lleva sangre oxigenada, pero desde el corazón hacia el cuerpo, no desde los pulmones."
+        }
+      ],
+      "correctOptionId": "venas-pulm",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "an-08",
+      "conceptId": "mat-anatomia:an-08",
+      "category": "mat-anatomia",
+      "topic": "Sistema cardiovascular",
+      "competency": "Seleccionar una vena adecuada para la extracción de sangre",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "Para una extracción de sangre en la fosa del codo, ¿qué vaso suele elegirse por ser superficial y relativamente fijo?",
+      "rationale": "En la fosa antecubital se encuentran las venas cefálica (lateral), basílica (medial) y mediana del codo, que las comunica. La basílica está cerca de la arteria braquial y del nervio mediano, por lo que su punción requiere más cuidado. Antes de punzar se palpa para descartar pulso.",
+      "transferPrinciple": "Antes de punzar cualquier vaso, palpá: si late, es una arteria y no corresponde para una extracción venosa.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-anatomia",
+          "section": "Miembro superior: venas superficiales y fosa del codo"
+        },
+        {
+          "ref": "libro-fundamentos",
+          "section": "Venopunción: selección del sitio"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "mediana",
+          "text": "La vena mediana del codo (mediana cubital).",
+          "feedback": "Correcto. Es superficial, suele ser visible y está relativamente fija, lo que facilita la punción."
+        },
+        {
+          "id": "braquial",
+          "text": "La arteria braquial, porque su pulso permite ubicarla con facilidad y siempre tiene buen flujo.",
+          "feedback": "Es una arteria, no una vena: no se usa para una extracción venosa. Si se palpa pulso en el sitio, no se punza."
+        },
+        {
+          "id": "safena",
+          "text": "La vena safena mayor, que es la vena superficial más larga del cuerpo.",
+          "feedback": "La safena mayor está en el miembro inferior, no en la fosa del codo."
+        },
+        {
+          "id": "yugular",
+          "text": "La vena yugular externa.",
+          "feedback": "La yugular externa está en el cuello y no se usa en una extracción periférica habitual."
+        }
+      ],
+      "correctOptionId": "mediana",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "an-09",
+      "conceptId": "mat-anatomia:an-09",
+      "category": "mat-anatomia",
+      "topic": "Sistema cardiovascular",
+      "competency": "Relacionar la anatomía del corazón con la exploración del tórax",
+      "difficulty": "aplicacion",
+      "format": "concepto",
+      "stem": "En una persona adulta, ¿dónde se palpa o ausculta normalmente el choque de la punta (ápex cardíaco)?",
+      "rationale": "El corazón se ubica en el mediastino, con su base hacia arriba y a la derecha y su punta hacia abajo, adelante y a la izquierda. El choque de la punta se proyecta habitualmente en el quinto espacio intercostal izquierdo, en la línea medioclavicular. Un desplazamiento puede indicar agrandamiento cardíaco.",
+      "transferPrinciple": "Para contar espacios intercostales, ubicá primero el ángulo de Louis (segunda costilla) y bajá desde ahí.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-anatomia",
+          "section": "Tórax: corazón y su proyección en la pared torácica"
+        },
+        {
+          "ref": "aha-ecg-2007",
+          "section": "Lead placement"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "quinto-mc",
+          "text": "En el quinto espacio intercostal izquierdo, sobre la línea medioclavicular.",
+          "feedback": "Correcto. La punta del corazón se dirige hacia abajo, adelante y a la izquierda, y suele proyectarse en ese punto."
+        },
+        {
+          "id": "segundo-der",
+          "text": "En el segundo espacio intercostal derecho, junto al borde del esternón.",
+          "feedback": "Ese es el foco aórtico de auscultación, no el choque de la punta."
+        },
+        {
+          "id": "cuarto-der",
+          "text": "En el cuarto espacio intercostal derecho, junto al borde derecho del esternón, a la altura de V1.",
+          "feedback": "Esa zona corresponde a la ubicación de V1 en el ECG, no a la punta del corazón."
+        },
+        {
+          "id": "epigastrio",
+          "text": "En el epigastrio, justo por debajo de la apófisis xifoides.",
+          "feedback": "Un latido epigástrico puede verse en algunas personas, pero no es la ubicación habitual del ápex."
+        }
+      ],
+      "correctOptionId": "quinto-mc",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "an-10",
+      "conceptId": "mat-anatomia:an-10",
+      "category": "mat-anatomia",
+      "topic": "Sistema respiratorio",
+      "competency": "Relacionar la anatomía bronquial con el riesgo de aspiración",
+      "difficulty": "aplicacion",
+      "format": "concepto",
+      "stem": "Un cuerpo extraño aspirado, o una sonda que entra por error en la vía aérea, se dirige con mayor frecuencia al bronquio principal derecho. ¿Por qué?",
+      "rationale": "El bronquio principal derecho forma un ángulo menor con la tráquea, es más corto y de mayor calibre. Por eso la broncoaspiración y la intubación selectiva suelen afectar al pulmón derecho, en especial a sus lóbulos inferiores cuando la persona está sentada o de pie.",
+      "transferPrinciple": "Ante una sospecha de aspiración, esperá encontrar los hallazgos con más frecuencia en el pulmón derecho.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-anatomia",
+          "section": "Tórax: tráquea y bronquios principales"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "vertical",
+          "text": "Porque es más corto, más ancho y más vertical que el izquierdo.",
+          "feedback": "Correcto. Su disposición casi en línea con la tráquea facilita que el material descienda hacia ese lado."
+        },
+        {
+          "id": "largo",
+          "text": "Porque es más largo y más estrecho, lo que hace que los objetos queden atrapados en su recorrido.",
+          "feedback": "Es al revés: el bronquio derecho es más corto y más ancho que el izquierdo."
+        },
+        {
+          "id": "higado",
+          "text": "Porque el hígado, ubicado debajo del pulmón derecho, empuja el diafragma y genera una presión que «aspira» hacia ese lado.",
+          "feedback": "La posición del hígado no explica la aspiración preferente. La causa es la forma y orientación del bronquio."
+        },
+        {
+          "id": "lobulos",
+          "text": "Porque tiene tres lóbulos.",
+          "feedback": "El número de lóbulos no es la explicación principal. Lo determinante es el ángulo del bronquio respecto de la tráquea."
+        }
+      ],
+      "correctOptionId": "vertical",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "an-11",
+      "conceptId": "mat-anatomia:an-11",
+      "category": "mat-anatomia",
+      "topic": "Sistema respiratorio",
+      "competency": "Relacionar la ubicación de los lóbulos pulmonares con la auscultación",
+      "difficulty": "integracion",
+      "format": "caso",
+      "stem": "Un paciente tiene diagnóstico de neumonía del lóbulo inferior derecho. Para auscultar la zona afectada, ¿dónde apoyás principalmente el estetoscopio?",
+      "rationale": "El pulmón derecho tiene tres lóbulos y el izquierdo dos. Las cisuras hacen que los lóbulos inferiores se proyecten sobre todo en la cara posterior, el lóbulo medio derecho en la cara anterior y lateral, y los superiores en los vértices y la parte anterior alta. Por eso la auscultación sistemática incluye las caras anterior, lateral y posterior, comparando ambos lados.",
+      "transferPrinciple": "Auscultá siempre de forma sistemática y comparando ambos lados: la anatomía te dice dónde buscar cada lóbulo.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-anatomia",
+          "section": "Tórax: lóbulos y cisuras pulmonares"
+        },
+        {
+          "ref": "libro-fundamentos",
+          "section": "Valoración del tórax y los pulmones"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "posterior-base",
+          "text": "En la cara posterior del tórax, en la base derecha, por debajo de la escápula.",
+          "feedback": "Correcto. Los lóbulos inferiores ocupan sobre todo la cara posterior y las bases del tórax."
+        },
+        {
+          "id": "anterior-alto",
+          "text": "En la cara anterior, por debajo de la clavícula derecha, que es donde el pulmón está más cerca de la pared torácica.",
+          "feedback": "Debajo de la clavícula se proyectan los lóbulos superiores, no el inferior."
+        },
+        {
+          "id": "anterior-medio",
+          "text": "En la cara anterior, en el cuarto espacio intercostal derecho, junto al esternón.",
+          "feedback": "En esa zona anterior se proyecta principalmente el lóbulo medio derecho."
+        },
+        {
+          "id": "axila-izq",
+          "text": "En la axila izquierda, porque el sonido se transmite mejor del lado opuesto.",
+          "feedback": "Los ruidos se auscultan sobre la zona afectada, no del lado contrario."
+        }
+      ],
+      "correctOptionId": "posterior-base",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "an-12",
+      "conceptId": "mat-anatomia:an-12",
+      "category": "mat-anatomia",
+      "topic": "Abdomen y aparato digestivo",
+      "competency": "Relacionar los cuadrantes abdominales con los órganos subyacentes",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "Un paciente refiere dolor localizado en la fosa ilíaca derecha (cuadrante inferior derecho). ¿Con qué órgano puede relacionarse con mayor probabilidad?",
+      "rationale": "La división en cuadrantes (o en nueve regiones) permite relacionar los síntomas con los órganos subyacentes. Cuadrante superior derecho: hígado y vesícula. Superior izquierdo: estómago y bazo. Inferior derecho: ciego y apéndice. Inferior izquierdo: colon sigmoides. La ubicación orienta, pero no reemplaza la evaluación médica.",
+      "transferPrinciple": "Registrá el dolor con su ubicación anatómica exacta: ayuda al equipo a orientar el diagnóstico.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-anatomia",
+          "section": "Abdomen: regiones y proyección de las vísceras"
+        },
+        {
+          "ref": "libro-fundamentos",
+          "section": "Valoración del abdomen"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "apendice",
+          "text": "Con el apéndice cecal.",
+          "feedback": "Correcto. El ciego y el apéndice se ubican habitualmente en el cuadrante inferior derecho."
+        },
+        {
+          "id": "bazo",
+          "text": "Con el bazo, que se encuentra debajo de las últimas costillas y puede doler al inspirar profundamente.",
+          "feedback": "El bazo está en el cuadrante superior izquierdo."
+        },
+        {
+          "id": "vesicula",
+          "text": "Con la vesícula biliar, que se relaciona con dolor después de comidas abundantes en grasas.",
+          "feedback": "La vesícula se ubica en el cuadrante superior derecho, debajo del hígado."
+        },
+        {
+          "id": "sigmoides",
+          "text": "Con el colon sigmoides, la porción final del colon antes del recto.",
+          "feedback": "El colon sigmoides se ubica en el cuadrante inferior izquierdo."
+        }
+      ],
+      "correctOptionId": "apendice",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "an-13",
+      "conceptId": "mat-anatomia:an-13",
+      "category": "mat-anatomia",
+      "topic": "Abdomen y aparato digestivo",
+      "competency": "Estimar la longitud de inserción de una sonda nasogástrica con referencias anatómicas",
+      "difficulty": "integracion",
+      "format": "caso",
+      "stem": "Antes de colocar una sonda nasogástrica en un adulto, ¿qué referencias anatómicas se usan habitualmente para estimar la longitud a introducir?",
+      "rationale": "La medición nariz-lóbulo de la oreja-apófisis xifoides aproxima el trayecto nasofaríngeo y esofágico hasta el estómago. Es una estimación: la posición de la sonda se confirma con el método que indique el protocolo institucional (por ejemplo, pH del aspirado o radiografía) antes de administrar cualquier sustancia.",
+      "transferPrinciple": "Una medida estimada no reemplaza la verificación: antes de usar un dispositivo, confirmá su ubicación con el método indicado.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-anatomia",
+          "section": "Cabeza y cuello: faringe y esófago"
+        },
+        {
+          "ref": "libro-fundamentos",
+          "section": "Intubación nasogástrica: medición y verificación"
+        },
+        {
+          "ref": "protocolo-institucional",
+          "section": "Verificación de la posición de sondas"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "nex",
+          "text": "De la punta de la nariz al lóbulo de la oreja y de ahí a la apófisis xifoides.",
+          "feedback": "Correcto. La medición nariz-oreja-xifoides aproxima el recorrido hasta el estómago. La ubicación final se confirma según el protocolo."
+        },
+        {
+          "id": "boca-ombligo",
+          "text": "De la comisura de la boca al mentón y de ahí al ombligo, siguiendo la línea media del cuerpo.",
+          "feedback": "Esa medición no sigue el recorrido de la sonda y sobreestimaría la longitud."
+        },
+        {
+          "id": "nariz-clavicula",
+          "text": "De la punta de la nariz a la clavícula, porque el estómago empieza a la altura del tórax.",
+          "feedback": "Esa longitud dejaría la sonda en el esófago, no en el estómago."
+        },
+        {
+          "id": "estatura",
+          "text": "Un largo fijo según la estatura.",
+          "feedback": "La longitud varía entre personas: por eso se mide con referencias anatómicas individuales."
+        }
+      ],
+      "correctOptionId": "nex",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "an-14",
+      "conceptId": "mat-anatomia:an-14",
+      "category": "mat-anatomia",
+      "topic": "Aparato urinario",
+      "competency": "Localizar una obstrucción en la vía urinaria",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "Un paciente tiene un cálculo que obstruye el uréter izquierdo. ¿Entre qué estructuras está obstruido el paso de la orina?",
+      "rationale": "Recorrido de la orina: nefronas → cálices → pelvis renal → uréter → vejiga → uretra → meato. Una obstrucción ureteral unilateral puede dilatar la vía por encima del obstáculo y producir dolor cólico. La diuresis total puede mantenerse por el riñón contralateral.",
+      "transferPrinciple": "Ubicar el nivel de la obstrucción ayuda a entender los síntomas y por qué la diuresis puede no disminuir.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-anatomia",
+          "section": "Aparato urinario: riñones, uréteres y vejiga"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "rinon-vejiga",
+          "text": "Entre el riñón izquierdo y la vejiga.",
+          "feedback": "Correcto. El uréter conduce la orina desde la pelvis renal hasta la vejiga."
+        },
+        {
+          "id": "vejiga-uretra",
+          "text": "Entre la vejiga y la uretra, en el cuello vesical, donde se encuentra el esfínter.",
+          "feedback": "Ese es otro tramo: la obstrucción del cuello vesical impide vaciar la vejiga, pero no es ureteral."
+        },
+        {
+          "id": "glomerulo",
+          "text": "Dentro del glomérulo renal.",
+          "feedback": "Esa es una estructura microscópica de la nefrona, no el uréter."
+        },
+        {
+          "id": "uretra-exterior",
+          "text": "Entre la uretra y el meato urinario externo.",
+          "feedback": "Ese es el tramo final de la uretra, no el uréter."
+        }
+      ],
+      "correctOptionId": "rinon-vejiga",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "an-15",
+      "conceptId": "mat-anatomia:an-15",
+      "category": "mat-anatomia",
+      "topic": "Aparato urinario",
+      "competency": "Relacionar la anatomía uretral con el riesgo de infección urinaria",
+      "difficulty": "aplicacion",
+      "format": "concepto",
+      "stem": "¿Qué característica anatómica explica en gran parte que las mujeres tengan más infecciones urinarias ascendentes?",
+      "rationale": "La uretra femenina mide alrededor de 3 a 5 cm y se abre cerca de la vagina y el ano. Esto facilita la colonización y el ascenso de microorganismos. Por eso la higiene perineal en dirección de adelante hacia atrás y la técnica aséptica en el sondaje son medidas preventivas clave.",
+      "transferPrinciple": "Cuando la anatomía facilita una infección, la técnica (higiene, asepsia, indicación justificada del sondaje) compensa ese riesgo.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-anatomia",
+          "section": "Aparato urinario: uretra femenina y masculina"
+        },
+        {
+          "ref": "cdc-cauti-2009",
+          "section": "Técnica aséptica de inserción"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "uretra-corta",
+          "text": "Una uretra más corta y cercana a la región perianal.",
+          "feedback": "Correcto. La menor distancia facilita que los microorganismos asciendan hasta la vejiga."
+        },
+        {
+          "id": "vejiga-grande",
+          "text": "Una vejiga de mayor capacidad que retiene la orina durante más tiempo y en mayor volumen.",
+          "feedback": "La capacidad vesical no explica la diferencia principal entre sexos."
+        },
+        {
+          "id": "ureter-largo",
+          "text": "Uréteres más largos que favorecen el estancamiento de la orina en su recorrido.",
+          "feedback": "La longitud de los uréteres no es la causa principal de las infecciones ascendentes."
+        },
+        {
+          "id": "rinon-bajo",
+          "text": "Riñones ubicados más abajo.",
+          "feedback": "La posición renal no explica las infecciones ascendentes de la vía urinaria baja."
+        }
+      ],
+      "correctOptionId": "uretra-corta",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "an-16",
+      "conceptId": "mat-anatomia:an-16",
+      "category": "mat-anatomia",
+      "topic": "Aparato urinario",
+      "competency": "Aplicar la anatomía uretral masculina en el sondaje vesical",
+      "difficulty": "integracion",
+      "format": "caso",
+      "stem": "Durante el sondaje vesical de un varón adulto, ¿por qué se sostiene el pene en posición perpendicular al cuerpo al introducir la sonda?",
+      "rationale": "La uretra masculina mide unos 18 a 22 cm y tiene curvaturas. Mantener el pene perpendicular al cuerpo durante la inserción reduce la curvatura prepúbica. Ante una resistencia, la sonda no se fuerza, porque puede causar una falsa vía o un traumatismo: se detiene el procedimiento y se consulta.",
+      "transferPrinciple": "Conocer el trayecto anatómico de un dispositivo te permite anticipar dónde puede haber resistencia y no forzarlo.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-anatomia",
+          "section": "Aparato urinario: uretra masculina"
+        },
+        {
+          "ref": "libro-fundamentos",
+          "section": "Cateterismo vesical"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "curvatura",
+          "text": "Para enderezar la curvatura de la uretra y facilitar el paso de la sonda.",
+          "feedback": "Correcto. La uretra masculina tiene curvaturas; la posición perpendicular reduce una de ellas y disminuye la resistencia."
+        },
+        {
+          "id": "anestesia",
+          "text": "Para que el gel anestésico actúe en toda la uretra antes de introducir la sonda.",
+          "feedback": "El tiempo de acción del gel no depende de la posición. La posición busca alinear el trayecto uretral."
+        },
+        {
+          "id": "reflujo",
+          "text": "Para evitar el reflujo de orina.",
+          "feedback": "La posición del pene no influye en el reflujo hacia los uréteres."
+        },
+        {
+          "id": "prostata",
+          "text": "Para comprimir la próstata y abrir el cuello de la vejiga con mayor facilidad.",
+          "feedback": "La posición no comprime la próstata. Si hay resistencia, no se fuerza: se detiene y se consulta."
+        }
+      ],
+      "correctOptionId": "curvatura",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "an-17",
+      "conceptId": "mat-anatomia:an-17",
+      "category": "mat-anatomia",
+      "topic": "Sistema nervioso",
+      "competency": "Diferenciar sistema nervioso central y periférico",
+      "difficulty": "conceptual",
+      "format": "concepto",
+      "stem": "¿Qué estructuras forman el sistema nervioso central?",
+      "rationale": "El sistema nervioso central (encéfalo y médula espinal) integra la información; el periférico (nervios craneales, espinales y ganglios) la conduce desde y hacia los órganos. El sistema autónomo tiene componentes centrales y periféricos.",
+      "transferPrinciple": "Distinguir central de periférico ayuda a interpretar dónde puede estar una lesión cuando valorás sensibilidad y movilidad.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-anatomia",
+          "section": "Sistema nervioso: organización general"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "encefalo-medula",
+          "text": "El encéfalo y la médula espinal.",
+          "feedback": "Correcto. El sistema nervioso central está formado por el encéfalo y la médula espinal, protegidos por el cráneo y la columna."
+        },
+        {
+          "id": "nervios",
+          "text": "Los nervios craneales y espinales, que conectan el cerebro con el resto del cuerpo.",
+          "feedback": "Los nervios craneales y espinales forman parte del sistema nervioso periférico."
+        },
+        {
+          "id": "ganglios",
+          "text": "Los ganglios simpáticos y parasimpáticos que regulan los órganos internos.",
+          "feedback": "Los ganglios autónomos pertenecen al sistema nervioso periférico."
+        },
+        {
+          "id": "cerebro-nervios",
+          "text": "Los nervios ópticos.",
+          "feedback": "Los nervios ópticos son nervios craneales: forman parte del sistema nervioso periférico."
+        }
+      ],
+      "correctOptionId": "encefalo-medula",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "an-18",
+      "conceptId": "mat-anatomia:an-18",
+      "category": "mat-anatomia",
+      "topic": "Sistema nervioso",
+      "competency": "Relacionar la anatomía de la columna con el sitio de la punción lumbar",
+      "difficulty": "integracion",
+      "format": "caso",
+      "stem": "Vas a asistir una punción lumbar en un adulto. ¿Por qué se realiza habitualmente entre L3-L4 o L4-L5?",
+      "rationale": "En el adulto, la médula espinal termina a nivel de L1-L2 (cono medular). Por debajo, el conducto contiene las raíces de la cola de caballo y líquido cefalorraquídeo. Una referencia práctica es la línea que une las crestas ilíacas, que pasa aproximadamente por L4. Enfermería colabora con la posición (flexión), la asepsia y la vigilancia posterior.",
+      "transferPrinciple": "Saber qué estructura se quiere evitar te ayuda a entender por qué la posición del paciente es tan importante durante el procedimiento.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-anatomia",
+          "section": "Columna vertebral y médula espinal"
+        },
+        {
+          "ref": "libro-fundamentos",
+          "section": "Asistencia en procedimientos: punción lumbar"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "cono-medular",
+          "text": "Porque en el adulto la médula espinal termina alrededor de L1-L2, y por debajo se reduce el riesgo de lesionarla.",
+          "feedback": "Correcto. Por debajo del cono medular hay raíces nerviosas (cola de caballo) que suelen desplazarse ante la aguja."
+        },
+        {
+          "id": "mas-liquido",
+          "text": "Porque en esa zona hay mayor cantidad de líquido cefalorraquídeo que en cualquier otro punto de la columna.",
+          "feedback": "No es la cantidad de líquido lo que define el nivel, sino evitar la médula espinal."
+        },
+        {
+          "id": "menos-dolor",
+          "text": "Porque a ese nivel la piel tiene menos terminaciones nerviosas y el procedimiento duele menos.",
+          "feedback": "La sensibilidad cutánea no es el criterio. El nivel se elige por la terminación de la médula."
+        },
+        {
+          "id": "vertebras-grandes",
+          "text": "Porque las vértebras lumbares son las más grandes y la aguja atraviesa el hueso con más facilidad.",
+          "feedback": "La aguja no atraviesa el hueso: pasa por el espacio entre las apófisis espinosas."
+        }
+      ],
+      "correctOptionId": "cono-medular",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "an-19",
+      "conceptId": "mat-anatomia:an-19",
+      "category": "mat-anatomia",
+      "topic": "Piel y sitios de inyección",
+      "competency": "Relacionar las capas de la piel con las vías de administración",
+      "difficulty": "aplicacion",
+      "format": "concepto",
+      "stem": "La prueba de tuberculina (PPD) se aplica por vía intradérmica. ¿En qué capa queda depositado el líquido?",
+      "rationale": "Capas de la piel y vías: epidermis (sin vasos), dermis (vía intradérmica, para pruebas cutáneas), tejido celular subcutáneo (vía subcutánea) y, por debajo, músculo (vía intramuscular). El ángulo y la longitud de la aguja se eligen según la capa a la que se quiere llegar.",
+      "transferPrinciple": "Antes de una inyección, preguntate a qué capa tiene que llegar el medicamento: eso define ángulo, aguja y técnica.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-anatomia",
+          "section": "Piel y anexos"
+        },
+        {
+          "ref": "libro-fundamentos",
+          "section": "Inyecciones intradérmicas, subcutáneas e intramusculares"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "dermis",
+          "text": "En la dermis, por debajo de la epidermis.",
+          "feedback": "Correcto. La vía intradérmica deposita un volumen muy pequeño en la dermis, formando una pápula."
+        },
+        {
+          "id": "epidermis",
+          "text": "En la epidermis, la capa más superficial, que no tiene vasos sanguíneos.",
+          "feedback": "La epidermis es demasiado delgada y avascular: la inyección intradérmica llega a la dermis."
+        },
+        {
+          "id": "subcutaneo",
+          "text": "En el tejido celular subcutáneo, debajo de la dermis.",
+          "feedback": "Esa es la vía subcutánea, usada por ejemplo para heparinas o insulina."
+        },
+        {
+          "id": "musculo",
+          "text": "En el músculo.",
+          "feedback": "Esa es la vía intramuscular."
+        }
+      ],
+      "correctOptionId": "dermis",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "an-20",
+      "conceptId": "mat-anatomia:an-20",
+      "category": "mat-anatomia",
+      "topic": "Piel y sitios de inyección",
+      "competency": "Identificar las prominencias óseas con riesgo de lesión por presión según la posición",
+      "difficulty": "integracion",
+      "format": "caso",
+      "stem": "Un paciente permanece en decúbito dorsal (boca arriba) la mayor parte del día. ¿Qué zonas priorizás al valorar el riesgo de lesiones por presión?",
+      "rationale": "Las lesiones por presión se producen sobre prominencias óseas que soportan peso. La posición determina qué zonas están en riesgo: en decúbito dorsal, sacro, talones, occipucio, escápulas y codos. La valoración sistemática, los cambios de posición programados y las superficies de apoyo adecuadas son la base de la prevención.",
+      "transferPrinciple": "Cada vez que cambiás de posición a un paciente, cambian las zonas en riesgo: valoralas en cada rotación.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-anatomia",
+          "section": "Generalidades: relieves óseos"
+        },
+        {
+          "ref": "libro-fundamentos",
+          "section": "Prevención de lesiones por presión"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "dorsal",
+          "text": "Sacro, talones, occipucio, escápulas y codos.",
+          "feedback": "Correcto. En decúbito dorsal, el peso se apoya sobre estas prominencias óseas."
+        },
+        {
+          "id": "lateral",
+          "text": "Trocánter mayor, maléolo externo, hombro y pabellón de la oreja del lado de apoyo.",
+          "feedback": "Esas zonas corresponden al decúbito lateral."
+        },
+        {
+          "id": "prono",
+          "text": "Rodillas, crestas ilíacas anteriores, mamas o genitales, mejillas y dedos de los pies.",
+          "feedback": "Esas zonas corresponden al decúbito prono (boca abajo)."
+        },
+        {
+          "id": "sentado",
+          "text": "Tuberosidades isquiáticas.",
+          "feedback": "Esas zonas son las de mayor riesgo en posición sentada."
+        }
+      ],
+      "correctOptionId": "dorsal",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    }
+  ]
+}

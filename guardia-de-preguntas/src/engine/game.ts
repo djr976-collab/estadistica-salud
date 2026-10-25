@@ -3,7 +3,6 @@
 
 import { isPlayable, type Bank } from '../content/bank';
 import {
-  CATEGORY_IDS,
   type Attempt,
   type AttemptContext,
   type CategoryId,
@@ -117,6 +116,7 @@ export function pendingCriticalConcepts(state: GameState): ConceptRecord[] {
 
 /** El desafío final exige las seis insignias y ninguna recuperación crítica pendiente. */
 export function finalUnlocked(state: GameState, bank: Bank): boolean {
+  if (bank.final.stepQuestionIds.length === 0) return false;
   if (state.badges.length < bank.categories.length) return false;
   return pendingCriticalConcepts(state).filter((c) => !c.finalChallenge).length === 0;
 }
@@ -208,6 +208,14 @@ export function presentFromSpin(state: GameState, bank: Bank): PresentOutcome {
   }
   const s1 = { ...state, rngState, spins: [...state.spins, sp], pendingSpin: null };
   return { ok: true, state: present(s1, bank, q.id, 'guardia', null) };
+}
+
+/** Repaso por materia: presenta la próxima pregunta nueva del área, sin ruleta. */
+export function presentNext(state: GameState, bank: Bank, cat: CategoryId): PresentOutcome {
+  if (state.current) return { ok: false, reason: 'no_spin' };
+  const [q, rngState] = withRng(state, (rng) => selectQuestion(state, bank, cat, rng));
+  if (!q) return { ok: false, reason: 'exhausted', category: cat };
+  return { ok: true, state: present({ ...state, rngState }, bank, q.id, 'guardia', null) };
 }
 
 // ───────────────────────── Presentación y respuesta ─────────────────────────
@@ -326,7 +334,7 @@ export function answer(state: GameState, bank: Bank, input: AnswerInput): Answer
 
 function awardBadges(state: GameState, bank: Bank): GameState {
   let s = state;
-  for (const id of CATEGORY_IDS) {
+  for (const { id } of bank.categories) {
     if (s.badges.some((b) => b.category === id)) continue;
     if (categoryStats(s, bank, id).completed) {
       s = { ...s, badges: [...s.badges, { category: id, at: nowIso() }], celebration: { kind: 'badge', category: id } };
@@ -401,7 +409,7 @@ export interface ReviewItem {
 }
 
 export function anyNewQuestionLeft(state: GameState, bank: Bank): boolean {
-  return CATEGORY_IDS.some((c) => availableQuestions(state, bank, c).length > 0);
+  return bank.categories.some((c) => availableQuestions(state, bank, c.id).length > 0);
 }
 
 export function reviewQueue(state: GameState, bank: Bank): ReviewItem[] {

@@ -4,7 +4,7 @@
 
 Juego web de preguntas y desafíos para estudiantes de 2.º año de Enfermería (Práctica Profesional II). Está diseñado primero para celulares, funciona sin conexión una vez preparado y guarda el progreso solo en el dispositivo.
 
-> **Estado del contenido:** las 36 preguntas, sus 9 variantes de recuperación y el desafío final son **borradores generados con asistencia de IA**. Están marcados `draft` y pendientes de revisión docente. Por eso el juego funciona en **modo demostración**, y el **modo académico** queda bloqueado hasta que la cátedra apruebe contenido. Ver [docs/GUIA-DOCENTE.md](docs/GUIA-DOCENTE.md).
+> **Estado del contenido:** las 36 preguntas de «Mi guardia» (PP2), sus 9 variantes de recuperación, el desafío final y las 160 preguntas del «Repaso por materia» (con 7 variantes) son **borradores generados con asistencia de IA**. Están marcados `draft` y pendientes de revisión docente. Por eso el juego funciona en **modo demostración**, y el **modo académico** queda bloqueado hasta que la cátedra apruebe contenido. Ver [docs/GUIA-DOCENTE.md](docs/GUIA-DOCENTE.md).
 
 ---
 
@@ -32,7 +32,7 @@ Abrí la dirección que aparece (por ejemplo, `http://localhost:5173`). Para pro
 
 ### Pruebas y compilación
 ```powershell
-npm test                 # reglas del juego, banco de contenidos, CSV y guardado (41 pruebas)
+npm test                 # reglas del juego, bancos de contenido, CSV y guardado (84 pruebas)
 npm run validate:content # solo valida el banco de preguntas
 npm run typecheck        # verificación de tipos TypeScript
 npm run build            # valida el contenido, compila y genera la carpeta dist\
@@ -42,7 +42,7 @@ npm run preview          # sirve dist\ en http://localhost:4173 para probar la v
 Verificación visual automatizada (opcional, requiere Playwright con Chromium: `npm i -D playwright` y `npx playwright install chromium`):
 ```powershell
 npm run build
-npm run verify:ui        # 73 a 75 comprobaciones (según el sorteo) en 320, 360, 390 y 430 px; capturas en test-results\screens\
+npm run verify:ui        # 93 a 95 comprobaciones (según el sorteo) en 320, 360, 390 y 430 px; capturas en test-results\screens\
 ```
 
 ---
@@ -108,6 +108,13 @@ Primero abrilo **una vez con conexión** y esperá a que en el inicio aparezca *
 - Resumen de aprendizaje con denominadores explícitos, críticos y su estado, pendientes y recomendaciones basadas en los errores. Copiar el informe y exportar CSV (UTF-8 con BOM, separador `;`, comillas y saltos de línea escapados, neutralización de fórmulas).
 - Guardado continuo (IndexedDB → localStorage → memoria, con aviso), pausa y continuación tras cerrar, reinicio con confirmación.
 
+**Repaso por materia (para estudiar)**
+- 8 materias con 20 preguntas cada una (160 en total): Anatomía, Fisiología, Bioquímica, Farmacología, Infectología, Epidemiología, Enfermería Comunitaria e Inglés técnico de Enfermería (textos breves en inglés, preguntas en español).
+- Cada materia tiene tablero propio: «Siguiente pregunta» (sin ruleta), avance por tema, repaso de errores, resumen y CSV propios, e insignia al resolver 12 conceptos distintos (al menos uno de aplicación) sin críticas pendientes.
+- Se usa el mismo motor que «Mi guardia»: opciones mezcladas por ID, cálculos con recálculo independiente, preguntas críticas con «Acción detenida» y variante de recuperación (7 en total), devoluciones con fuentes.
+- El progreso de cada materia se guarda aparte y no modifica «Mi guardia». Cada materia se puede reiniciar por separado.
+- Distribución por materia: 4 conceptuales, 10 de aplicación y 6 de integración. Contenidos estándar de la carrera: deben contrastarse con el programa de cada cátedra.
+
 **Fase 2 (parcial) — Repasar mis errores**
 - Los conceptos con error vuelven con una **pregunta equivalente** cuando existe. Si no, se repite la misma y se indica *«el banco todavía no tiene otra variante»*. El repaso se espacia: los no críticos se habilitan después de 2 respuestas.
 
@@ -118,11 +125,12 @@ Primero abrilo **una vez con conexión** y esperá a que en el inicio aparezca *
 
 | Verificación | Cómo | Resultado |
 |---|---|---|
-| Reglas del juego (ruleta, mezcla, cálculos, críticos, compensación, insignias, repaso, puntaje, recorrido completo al final) | `npm test` (Vitest) | 41/41 |
+| Reglas del juego (ruleta, mezcla, cálculos, críticos, compensación, insignias, repaso, puntaje, recorrido completo al final) | `npm test` (Vitest) | 84/84 |
 | Banco: IDs, claves, variantes, fuentes, distribución, pistas por extensión, cálculo independiente | `npm run validate:content` | sin errores |
 | 320/360/390/430 px: sin desplazamiento horizontal, objetivos ≥ 48 px, la ruleta coincide con la categoría, la consigna sigue visible y elegir no desplaza | `npm run verify:ui` (Chromium) | OK |
 | Recorrido completo por la interfaz hasta el desafío final, con error crítico y recuperación | `verify:ui` | OK |
 | Teclado, validación numérica en la interfaz, persistencia tras recargar, reinicio confirmado, CSV | `verify:ui` | OK |
+| Repaso por materia en 320 y 390 px: lista, pregunta de la materia elegida, devolución, repaso, resumen propio, persistencia e independencia de «Mi guardia» | `verify:ui` | OK |
 | Inicio y juego **sin conexión** con el Service Worker real (emulación offline de Chromium) | `verify:ui` | OK |
 | Actualización de versión conservando la pregunta en curso | `verify:ui` | OK |
 
@@ -130,7 +138,8 @@ Primero abrilo **una vez con conexión** y esperá a que en el inicio aparezca *
 
 ## 6. Pendientes y límites reales
 - **Contenido:** todo en borrador. Falta la revisión y aprobación docente, ajustar las ediciones de los libros, reemplazar el «protocolo institucional» genérico por el protocolo local y confirmar los apartados citados.
-- **Banco:** 36 preguntas base (objetivo: 180). Solo las 9 críticas tienen variante equivalente; el resto se repite en el repaso, avisándolo. Temas sin cobertura todavía: reconstitución y dilución, bombas de infusión, curaciones (parcial), preparación de materiales, sistema nervioso.
+- **Repaso por materia:** 20 preguntas por materia basadas en contenidos estándar, no en los programas oficiales; solo las 7 críticas tienen variante. El modo académico todavía no aplica a las materias (todo se muestra como borrador).
+- **Banco de PP2:** 36 preguntas base (objetivo: 180). Solo las 9 críticas tienen variante equivalente; el resto se repite en el repaso, avisándolo. Temas sin cobertura todavía: reconstitución y dilución, bombas de infusión, curaciones (parcial), preparación de materiales, sistema nervioso.
 - **Duelo local:** no implementado (aparece como «próxima etapa»). No hay ni se ofrece juego en línea.
 - **Tipos futuros:** ordenamiento, asociación, selección sobre imagen y respuesta breve (sin corrección automática) están previstos en el esquema, pero sin interfaz.
 - **Sin panel docente ni seguimiento centralizado:** los datos quedan en cada celular. El docente recibe los resultados solo si el estudiante exporta o comparte el CSV o el informe.

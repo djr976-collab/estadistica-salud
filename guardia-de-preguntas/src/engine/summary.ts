@@ -136,7 +136,8 @@ export function buildRecommendations(state: GameState, bank: Bank): string[] {
 
 export function summaryToText(s: Summary, bank: Bank, generatedAt = new Date()): string {
   const lines: string[] = [];
-  lines.push('GUARDIA DE PREGUNTAS — Resumen de aprendizaje');
+  const single = bank.categories.length === 1 ? bank.categories[0] : null;
+  lines.push(single ? `GUARDIA DE PREGUNTAS — Repaso por materia: ${single.name}` : 'GUARDIA DE PREGUNTAS — Resumen de aprendizaje');
   lines.push(`Práctica Profesional II · Generado: ${generatedAt.toLocaleString('es-AR')}`);
   lines.push(`Alias: ${s.alias || '(sin alias)'} · Modo: ${s.contentMode === 'academic' ? 'académico (solo preguntas aprobadas)' : 'demostración (incluye borradores)'}`);
   lines.push('');
@@ -145,7 +146,7 @@ export function summaryToText(s: Summary, bank: Bank, generatedAt = new Date()):
   lines.push(`Preguntas distintas respondidas: ${s.distinctAnswered} (intentos totales: ${s.totalAttempts})`);
   lines.push(`Aciertos en primer intento: ${ratioText(s.firstTryCorrect)} — denominador: conceptos respondidos por primera vez`);
   lines.push(`Recuperaciones completadas: ${ratioText(s.recoveries)} — denominador: conceptos con al menos un error`);
-  lines.push(`Desafío final: ${finalLabel(s.finalStatus)}`);
+  if (bank.final.stepQuestionIds.length > 0) lines.push(`Desafío final: ${finalLabel(s.finalStatus)}`);
   lines.push('');
   lines.push('Por categoría (resueltas / presentadas):');
   for (const c of s.perCategory) {

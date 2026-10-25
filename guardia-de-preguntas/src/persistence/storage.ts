@@ -122,4 +122,4 @@ export async function openBestStore(env: { indexedDB?: IDBFactory; localStorage?
   return memoryStore();
 }
 
-export const KEYS = { game: 'current-game', settings: 'settings' } as const;
+export const KEYS = { game: 'current-game', settings: 'settings', study: 'study-games' } as const;

@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { bank, DIFFICULTY_LABEL, FORMAT_LABEL, REVIEW_STATUS_LABEL } from '../../content/bank';
+import { areaById } from '../../content/subjects';
 import type { CategoryId, Question } from '../../types';
 import { CategoryIcon, Icon } from './Icons';
 
@@ -18,7 +19,7 @@ export function ScreenTitle({ children, className }: { children: React.ReactNode
 }
 
 export function CategoryChip({ category, short = false }: { category: CategoryId; short?: boolean }) {
-  const c = bank.categoryById[category];
+  const c = areaById(category);
   return (
     <span className="chip chip-cat" style={{ '--cat': c.color, '--cat-soft': c.colorSoft } as React.CSSProperties}>
       <CategoryIcon category={category} size={16} />
@@ -31,6 +32,7 @@ export function QuestionMeta({ q }: { q: Question }) {
   return (
     <div className="meta-row">
       <CategoryChip category={q.category} short />
+      {q.topic ? <span className="chip">{q.topic}</span> : null}
       <span className="chip">{DIFFICULTY_LABEL[q.difficulty]}</span>
       <span className="chip">{FORMAT_LABEL[q.format]}</span>
       {q.criticalSafety ? (
@@ -51,7 +53,7 @@ export function ReviewStatusNote({ q }: { q: Question }) {
 }
 
 export function BadgeMedal({ category, earned, size = 56 }: { category: CategoryId; earned: boolean; size?: number }) {
-  const c = bank.categoryById[category];
+  const c = areaById(category);
   return (
     <svg width={size} height={size} viewBox="0 0 64 64" role="img" aria-label={`${c.badgeName}${earned ? ' (obtenida)' : ' (pendiente)'}`}>
       <path

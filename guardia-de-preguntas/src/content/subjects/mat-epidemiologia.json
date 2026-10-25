@@ -1,0 +1,1017 @@
+{
+  "subject": "mat-epidemiologia",
+  "bankVersion": "1.0",
+  "note": "Contenido en borrador generado con asistencia de IA a partir de contenidos estándar. Casos y datos ficticios. Pendiente de revisión docente y de contraste con el programa vigente.",
+  "questions": [
+    {
+      "id": "ep-01",
+      "conceptId": "mat-epidemiologia:ep-01",
+      "category": "mat-epidemiologia",
+      "topic": "Medidas de frecuencia",
+      "competency": "Diferenciar incidencia y prevalencia",
+      "difficulty": "conceptual",
+      "format": "concepto",
+      "stem": "¿Qué mide la incidencia de una enfermedad?",
+      "rationale": "La incidencia cuenta casos nuevos en un período en una población en riesgo; la prevalencia cuenta todos los casos existentes (nuevos y antiguos) en un momento o período. Prevalencia ≈ incidencia × duración de la enfermedad, en condiciones estables.",
+      "transferPrinciple": "Para saber si un problema está creciendo, mirá la incidencia; para planificar recursos de atención, la prevalencia.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "ops-mopece",
+          "section": "Unidad 3: Medición de las condiciones de salud: incidencia y prevalencia"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "nuevos",
+          "text": "Los casos nuevos que aparecen en una población durante un período.",
+          "feedback": "Correcto. La incidencia mide la aparición de casos nuevos: refleja el riesgo de enfermar."
+        },
+        {
+          "id": "existentes",
+          "text": "Todos los casos existentes, nuevos y antiguos, en una población en un momento determinado del tiempo.",
+          "feedback": "Eso es la prevalencia, que mide la carga de enfermedad en un momento."
+        },
+        {
+          "id": "muertes",
+          "text": "Las muertes producidas por la enfermedad entre todas las personas enfermas de esa población.",
+          "feedback": "Eso se relaciona con la letalidad."
+        },
+        {
+          "id": "gravedad",
+          "text": "La gravedad de los casos.",
+          "feedback": "La incidencia no mide gravedad sino frecuencia de casos nuevos."
+        }
+      ],
+      "correctOptionId": "nuevos",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "ep-02",
+      "conceptId": "mat-epidemiologia:ep-02",
+      "category": "mat-epidemiologia",
+      "topic": "Medidas de frecuencia",
+      "competency": "Relacionar la duración de la enfermedad con la prevalencia",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "Se introduce un tratamiento que prolonga la sobrevida de una enfermedad crónica, pero no la cura. Si la incidencia no cambia, ¿qué ocurre con la prevalencia?",
+      "rationale": "En condiciones estables, la prevalencia es aproximadamente el producto de la incidencia por la duración media de la enfermedad. Un tratamiento que prolonga la vida sin curar aumenta la duración y, por lo tanto, la prevalencia. Una prevalencia en aumento no siempre significa un problema que empeora.",
+      "transferPrinciple": "Antes de interpretar un cambio en un indicador, preguntate qué componentes lo forman.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "ops-mopece",
+          "section": "Unidad 3: Relación entre incidencia, prevalencia y duración"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "aumenta",
+          "text": "Aumenta.",
+          "feedback": "Correcto. Si las personas viven más tiempo con la enfermedad, se acumulan más casos existentes."
+        },
+        {
+          "id": "disminuye",
+          "text": "Disminuye, porque el tratamiento hace que la enfermedad sea cada vez menos frecuente en la población general.",
+          "feedback": "Sin curar ni prevenir, el tratamiento no reduce los casos: los mantiene por más tiempo."
+        },
+        {
+          "id": "igual",
+          "text": "Se mantiene igual, porque la prevalencia depende solo de la cantidad de casos nuevos que aparecen cada año.",
+          "feedback": "La prevalencia depende de la incidencia y también de la duración de la enfermedad."
+        },
+        {
+          "id": "incidencia",
+          "text": "Disminuye junto con la incidencia, porque ambas medidas siempre se mueven en la misma dirección.",
+          "feedback": "La consigna indica que la incidencia no cambia."
+        }
+      ],
+      "correctOptionId": "aumenta",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "ep-03",
+      "conceptId": "mat-epidemiologia:ep-03",
+      "category": "mat-epidemiologia",
+      "topic": "Medidas de frecuencia",
+      "competency": "Calcular una tasa de incidencia",
+      "difficulty": "aplicacion",
+      "format": "calculo",
+      "stem": "En una localidad de 6000 habitantes se registraron 30 casos nuevos de una enfermedad durante un año. Calculá la tasa de incidencia por 1000 habitantes.",
+      "rationale": "Tasa de incidencia = (casos nuevos / población en riesgo) × 10ⁿ = (30 / 6000) × 1000 = 5 casos por 1000 habitantes por año. Expresar la tasa con una base permite comparar poblaciones de distinto tamaño.",
+      "transferPrinciple": "Una tasa siempre necesita tres datos: numerador, denominador y período. Si falta alguno, no se puede comparar.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "ops-mopece",
+          "section": "Unidad 3: Tasas: construcción e interpretación"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "numeric",
+      "options": [],
+      "correctOptionId": null,
+      "numericAnswer": 5,
+      "unit": "casos por 1000 habitantes",
+      "tolerance": 0,
+      "rounding": "Número entero.",
+      "numericCheck": {
+        "formula": "tasa",
+        "inputs": {
+          "casos": 30,
+          "poblacion": 6000,
+          "base": 1000
+        }
+      },
+      "numericFeedback": "Tasa = casos / población × 1000 = 30 / 6000 × 1000 = 5 por 1000. Si obtuviste 0,005, te faltó multiplicar por la base (1000)."
+    },
+    {
+      "id": "ep-04",
+      "conceptId": "mat-epidemiologia:ep-04",
+      "category": "mat-epidemiologia",
+      "topic": "Indicadores de salud",
+      "competency": "Calcular e interpretar la letalidad",
+      "difficulty": "aplicacion",
+      "format": "calculo",
+      "stem": "Durante un brote se confirmaron 200 casos de una enfermedad y 10 de esas personas fallecieron por ella. Calculá la letalidad en porcentaje.",
+      "rationale": "Letalidad = (muertes por la enfermedad / casos de la enfermedad) × 100 = 10 / 200 × 100 = 5 %. Mide la gravedad entre los enfermos. La tasa de mortalidad, en cambio, usa como denominador a toda la población.",
+      "transferPrinciple": "Mirá siempre el denominador: entre los enfermos (letalidad) o en toda la población (mortalidad) cuentan historias distintas.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "ops-mopece",
+          "section": "Unidad 3: Mortalidad y letalidad"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "numeric",
+      "options": [],
+      "correctOptionId": null,
+      "numericAnswer": 5,
+      "unit": "%",
+      "tolerance": 0,
+      "rounding": "Número entero, sin decimales.",
+      "numericCheck": {
+        "formula": "porcentaje",
+        "inputs": {
+          "parte": 10,
+          "total": 200
+        }
+      },
+      "numericFeedback": "Letalidad = fallecidos por la enfermedad / casos × 100 = 10 / 200 × 100 = 5 %. Si dividiste por la población total, calculaste una tasa de mortalidad, no la letalidad."
+    },
+    {
+      "id": "ep-05",
+      "conceptId": "mat-epidemiologia:ep-05",
+      "category": "mat-epidemiologia",
+      "topic": "Indicadores de salud",
+      "competency": "Definir la tasa de mortalidad infantil",
+      "difficulty": "conceptual",
+      "format": "concepto",
+      "stem": "¿Cómo se define la tasa de mortalidad infantil?",
+      "rationale": "La tasa de mortalidad infantil relaciona las defunciones de menores de 1 año con los nacidos vivos del mismo período, por 1000. Se divide en neonatal (menos de 28 días) y posneonatal (28 días a 11 meses). Es sensible a las condiciones sanitarias, sociales y de acceso a la atención.",
+      "transferPrinciple": "Los indicadores tienen una definición exacta: conocerla evita comparar números que no son comparables.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "ops-mopece",
+          "section": "Unidad 3: Indicadores de mortalidad"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "menores-1",
+          "text": "Defunciones de menores de 1 año por cada 1000 nacidos vivos en el mismo período.",
+          "feedback": "Correcto. Es un indicador clave de las condiciones de vida y de la calidad de la atención."
+        },
+        {
+          "id": "menores-5",
+          "text": "Defunciones de niñas y niños menores de 5 años por cada 1000 habitantes del país en un año.",
+          "feedback": "Esa sería otra medida (con otro grupo de edad y otro denominador)."
+        },
+        {
+          "id": "neonatal",
+          "text": "Defunciones ocurridas en los primeros 7 días de vida por cada 100 partos atendidos en los hospitales públicos.",
+          "feedback": "Esa definición no corresponde a la mortalidad infantil."
+        },
+        {
+          "id": "embarazo",
+          "text": "Muertes maternas por cada 1000 nacidos vivos.",
+          "feedback": "Eso se relaciona con la mortalidad materna, que usa otra base."
+        }
+      ],
+      "correctOptionId": "menores-1",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "ep-06",
+      "conceptId": "mat-epidemiologia:ep-06",
+      "category": "mat-epidemiologia",
+      "topic": "Pruebas diagnósticas",
+      "competency": "Definir sensibilidad de una prueba",
+      "difficulty": "aplicacion",
+      "format": "concepto",
+      "stem": "¿Qué indica una sensibilidad del 95 % en una prueba diagnóstica?",
+      "rationale": "Sensibilidad = verdaderos positivos / (verdaderos positivos + falsos negativos). Especificidad = verdaderos negativos / (verdaderos negativos + falsos positivos). Una prueba muy sensible deja escapar pocos enfermos (pocos falsos negativos).",
+      "transferPrinciple": "Sensibilidad mira a los enfermos y especificidad a los sanos: empezá siempre por preguntar de qué grupo hablás.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "ops-mopece",
+          "section": "Unidad 3: Evaluación de pruebas diagnósticas"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "enfermos",
+          "text": "Que detecta como positivos al 95 % de las personas que tienen la enfermedad.",
+          "feedback": "Correcto. La sensibilidad es la capacidad de identificar a los enfermos."
+        },
+        {
+          "id": "sanos",
+          "text": "Que el 95 % de las personas sin la enfermedad obtienen un resultado negativo en la prueba.",
+          "feedback": "Esa es la especificidad: la capacidad de identificar a los sanos."
+        },
+        {
+          "id": "positivos",
+          "text": "Que el 95 % de las personas con resultado positivo realmente tienen la enfermedad.",
+          "feedback": "Eso es el valor predictivo positivo, que depende también de la prevalencia."
+        },
+        {
+          "id": "error",
+          "text": "Que se equivoca en el 5 % de los análisis.",
+          "feedback": "La sensibilidad no mide fallas técnicas: se refiere a los enfermos detectados."
+        }
+      ],
+      "correctOptionId": "enfermos",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "ep-07",
+      "conceptId": "mat-epidemiologia:ep-07",
+      "category": "mat-epidemiologia",
+      "topic": "Pruebas diagnósticas",
+      "competency": "Elegir el tipo de prueba según el objetivo del tamizaje",
+      "difficulty": "integracion",
+      "format": "caso",
+      "stem": "Un programa de tamizaje busca detectar precozmente una enfermedad grave y tratable. ¿Qué característica se prioriza en la prueba inicial y qué se hace con los positivos?",
+      "rationale": "En el tamizaje se priorizan pruebas sensibles para identificar a la mayor cantidad posible de personas enfermas. Como esto produce falsos positivos, los resultados positivos se confirman con pruebas más específicas antes de iniciar un tratamiento. Enfermería informa a la persona que un positivo de tamizaje requiere confirmación.",
+      "transferPrinciple": "Al comunicar un resultado de tamizaje, explicá que es una alerta que se confirma: así evitás alarma innecesaria y abandono del seguimiento.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "ops-mopece",
+          "section": "Unidad 3: Evaluación de pruebas diagnósticas: tamizaje"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "sensible",
+          "text": "Alta sensibilidad; los positivos se confirman con una prueba más específica.",
+          "feedback": "Correcto. Se busca no perder casos y luego descartar los falsos positivos con una confirmación."
+        },
+        {
+          "id": "especifica",
+          "text": "Alta especificidad, para que todos los positivos sean enfermos y se los trate de inmediato sin estudios adicionales.",
+          "feedback": "Una prueba inicial muy específica pero poco sensible dejaría escapar enfermos; además, los positivos se confirman."
+        },
+        {
+          "id": "barata",
+          "text": "Solo el bajo costo.",
+          "feedback": "El costo importa, pero la exactitud es esencial en un tamizaje."
+        },
+        {
+          "id": "tratar",
+          "text": "Que sea rápida, y tratar a todos los positivos sin confirmación para no perder tiempo.",
+          "feedback": "Tratar sin confirmar expone a tratamientos innecesarios a quienes tienen falsos positivos."
+        }
+      ],
+      "correctOptionId": "sensible",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "ep-08",
+      "conceptId": "mat-epidemiologia:ep-08",
+      "category": "mat-epidemiologia",
+      "topic": "Pruebas diagnósticas",
+      "competency": "Calcular la sensibilidad de una prueba",
+      "difficulty": "integracion",
+      "format": "calculo",
+      "stem": "En un estudio, 90 personas tenían la enfermedad confirmada. La prueba en evaluación dio positivo en 81 de ellas. Calculá la sensibilidad en porcentaje.",
+      "rationale": "Sensibilidad = VP / (VP + FN) × 100 = 81 / (81 + 9) × 100 = 90 %. Una de cada diez personas enfermas tendría un resultado falsamente negativo.",
+      "transferPrinciple": "Traducí el porcentaje en personas: «1 de cada 10 enfermos no sería detectado» se entiende mejor que «90 % de sensibilidad».",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "ops-mopece",
+          "section": "Unidad 3: Evaluación de pruebas diagnósticas"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "numeric",
+      "options": [],
+      "correctOptionId": null,
+      "numericAnswer": 90,
+      "unit": "%",
+      "tolerance": 0,
+      "rounding": "Número entero.",
+      "numericCheck": {
+        "formula": "porcentaje",
+        "inputs": {
+          "parte": 81,
+          "total": 90
+        }
+      },
+      "numericFeedback": "Sensibilidad = verdaderos positivos / total de enfermos × 100 = 81 / 90 × 100 = 90 %. Los 9 restantes son falsos negativos."
+    },
+    {
+      "id": "ep-09",
+      "conceptId": "mat-epidemiologia:ep-09",
+      "category": "mat-epidemiologia",
+      "topic": "Pruebas diagnósticas",
+      "competency": "Relacionar el valor predictivo positivo con la prevalencia",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "Una misma prueba, con igual sensibilidad y especificidad, se aplica en una población donde la enfermedad es muy poco frecuente. ¿Qué ocurre con su valor predictivo positivo?",
+      "rationale": "El valor predictivo positivo es la probabilidad de estar enfermo con un resultado positivo. Depende de la sensibilidad, de la especificidad y de la prevalencia: cuanto menos frecuente es la enfermedad, mayor es la proporción de falsos positivos. Por eso los resultados se interpretan en el contexto de cada población.",
+      "transferPrinciple": "Un mismo resultado puede significar cosas distintas según quién se hizo la prueba: el contexto es parte de la interpretación.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "ops-mopece",
+          "section": "Unidad 3: Valores predictivos y prevalencia"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "baja",
+          "text": "Disminuye: aumenta la proporción de falsos positivos.",
+          "feedback": "Correcto. Con baja prevalencia, muchos positivos provienen de personas sanas."
+        },
+        {
+          "id": "sube",
+          "text": "Aumenta, porque al haber pocos enfermos cada resultado positivo es todavía más confiable que en otras poblaciones.",
+          "feedback": "Es al revés: la baja prevalencia reduce el valor predictivo positivo."
+        },
+        {
+          "id": "igual",
+          "text": "No cambia, porque el valor predictivo depende solo de la calidad de la prueba y no de la población estudiada.",
+          "feedback": "Los valores predictivos dependen de la prevalencia; la sensibilidad y la especificidad no."
+        },
+        {
+          "id": "cero",
+          "text": "Se vuelve cero.",
+          "feedback": "Puede haber verdaderos positivos; lo que cambia es su proporción respecto de los falsos."
+        }
+      ],
+      "correctOptionId": "baja",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "ep-10",
+      "conceptId": "mat-epidemiologia:ep-10",
+      "category": "mat-epidemiologia",
+      "topic": "Diseños de estudio",
+      "competency": "Describir el diseño de cohorte",
+      "difficulty": "conceptual",
+      "format": "concepto",
+      "stem": "¿Qué caracteriza a un estudio de cohorte?",
+      "rationale": "En los estudios de cohorte se define la exposición al inicio y se sigue a los participantes en el tiempo. Permiten calcular la incidencia en expuestos y no expuestos y el riesgo relativo. Pueden ser prospectivos o retrospectivos.",
+      "transferPrinciple": "Para identificar un diseño, preguntate desde dónde parte: la exposición (cohorte), la enfermedad (casos y controles) o un momento único (transversal).",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "ops-mopece",
+          "section": "Unidad 5: Diseños de investigación epidemiológica"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "cohorte",
+          "text": "Sigue en el tiempo a personas expuestas y no expuestas para ver quiénes enferman.",
+          "feedback": "Correcto. Parte de la exposición y observa la aparición de la enfermedad (incidencia)."
+        },
+        {
+          "id": "casos",
+          "text": "Parte de personas que ya tienen la enfermedad y de personas sanas, y busca qué exposiciones tuvieron en el pasado.",
+          "feedback": "Ese es el diseño de casos y controles."
+        },
+        {
+          "id": "transversal",
+          "text": "Mide la exposición y la enfermedad en un único momento, como una fotografía de la población estudiada.",
+          "feedback": "Ese es un estudio transversal."
+        },
+        {
+          "id": "ensayo",
+          "text": "Asigna una intervención al azar.",
+          "feedback": "Eso describe un ensayo clínico aleatorizado."
+        }
+      ],
+      "correctOptionId": "cohorte",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "ep-11",
+      "conceptId": "mat-epidemiologia:ep-11",
+      "category": "mat-epidemiologia",
+      "topic": "Diseños de estudio",
+      "competency": "Reconocer un estudio de casos y controles",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "Para estudiar una infección poco frecuente, se seleccionan 40 pacientes que la tuvieron y 80 que no, y se compara qué procedimientos recibieron antes. ¿Qué diseño es?",
+      "rationale": "Los estudios de casos y controles son útiles para enfermedades poco frecuentes: se parte de personas con la enfermedad (casos) y sin ella (controles) y se compara la frecuencia de exposiciones previas. Se calcula el odds ratio. Son sensibles a sesgos de selección y de memoria.",
+      "transferPrinciple": "Cuando la enfermedad es rara, empezar por los enfermos es más eficiente que esperar a que aparezcan en una cohorte.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "ops-mopece",
+          "section": "Unidad 5: Diseños de investigación epidemiológica: casos y controles"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "casos-controles",
+          "text": "Un estudio de casos y controles.",
+          "feedback": "Correcto. Parte de la enfermedad (casos) y de su ausencia (controles) y busca exposiciones previas."
+        },
+        {
+          "id": "cohorte",
+          "text": "Un estudio de cohorte, porque se analiza lo que ocurrió con los pacientes a lo largo de su internación en el hospital.",
+          "feedback": "En una cohorte se parte de la exposición, no de la enfermedad."
+        },
+        {
+          "id": "ensayo",
+          "text": "Un ensayo clínico, porque se comparan dos grupos de pacientes internados que recibieron procedimientos distintos.",
+          "feedback": "En un ensayo clínico el investigador asigna la intervención; aquí solo se observa."
+        },
+        {
+          "id": "serie",
+          "text": "Una serie de casos, porque se describen 40 pacientes con la misma infección y sus características.",
+          "feedback": "La serie de casos no tiene grupo control; aquí sí lo hay."
+        }
+      ],
+      "correctOptionId": "casos-controles",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "ep-12",
+      "conceptId": "mat-epidemiologia:ep-12",
+      "category": "mat-epidemiologia",
+      "topic": "Diseños de estudio",
+      "competency": "Explicar el propósito de la aleatorización",
+      "difficulty": "aplicacion",
+      "format": "concepto",
+      "stem": "En un ensayo clínico, ¿para qué se asigna la intervención al azar (aleatorización)?",
+      "rationale": "La asignación aleatoria hace que, en promedio, los grupos sean similares en todas las características excepto la intervención, lo que controla la confusión. El enmascaramiento (ciego) reduce además los sesgos de medición. Por eso el ensayo clínico aleatorizado es el diseño de referencia para evaluar intervenciones.",
+      "transferPrinciple": "Al leer un estudio, verificá cómo se formaron los grupos: de eso depende cuánto podés confiar en la comparación.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "ops-mopece",
+          "section": "Unidad 5: Diseños experimentales"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "comparables",
+          "text": "Para que los grupos sean comparables y las diferencias se atribuyan a la intervención.",
+          "feedback": "Correcto. El azar distribuye de forma equilibrada los factores conocidos y desconocidos."
+        },
+        {
+          "id": "rapido",
+          "text": "Para terminar el estudio más rápido.",
+          "feedback": "La aleatorización no busca acelerar el estudio sino evitar sesgos."
+        },
+        {
+          "id": "etica",
+          "text": "Para que los participantes no sepan que están participando de una investigación clínica.",
+          "feedback": "Eso no es aleatorización: los participantes dan su consentimiento informado."
+        },
+        {
+          "id": "elegir",
+          "text": "Para que el investigador elija a los pacientes que más se beneficiarán con el tratamiento nuevo.",
+          "feedback": "Eso introduciría un sesgo: la aleatorización impide justamente esa elección."
+        }
+      ],
+      "correctOptionId": "comparables",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "ep-13",
+      "conceptId": "mat-epidemiologia:ep-13",
+      "category": "mat-epidemiologia",
+      "topic": "Sesgos y confusión",
+      "competency": "Identificar una variable de confusión",
+      "difficulty": "integracion",
+      "format": "caso",
+      "stem": "Un estudio encuentra que las personas que toman mucho café tienen más cáncer de pulmón. Se sabe que, en esa población, los grandes consumidores de café también fuman más. ¿Cómo se interpreta?",
+      "rationale": "Una variable de confusión se asocia tanto con la exposición como con el resultado y puede crear, ocultar o exagerar una asociación. Se controla en el diseño (aleatorización, restricción, apareamiento) o en el análisis (estratificación, ajuste).",
+      "transferPrinciple": "Ante una asociación sorprendente, preguntate si hay un tercer factor que acompaña a la exposición y que también causa el resultado.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "ops-mopece",
+          "section": "Unidad 5: Validez: sesgos y confusión"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "confusion",
+          "text": "El tabaco podría ser una variable de confusión: la asociación con el café podría deberse al cigarrillo.",
+          "feedback": "Correcto. Para controlarla, se analiza por separado a fumadores y no fumadores o se ajusta estadísticamente."
+        },
+        {
+          "id": "causa",
+          "text": "El café causa cáncer de pulmón, porque el estudio muestra una asociación estadísticamente significativa entre ambos.",
+          "feedback": "Una asociación no prueba causalidad, en especial si hay un factor asociado a ambos."
+        },
+        {
+          "id": "azar",
+          "text": "Es un resultado debido al azar, porque el café y el pulmón no tienen ninguna relación anatómica.",
+          "feedback": "El razonamiento anatómico no descarta la asociación; la explicación más probable es la confusión."
+        },
+        {
+          "id": "sesgo-memoria",
+          "text": "Es un sesgo de memoria, porque las personas no recuerdan cuánto café tomaron en su vida.",
+          "feedback": "Puede existir, pero el dato clave del enunciado es la relación del café con el tabaco."
+        }
+      ],
+      "correctOptionId": "confusion",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "ep-14",
+      "conceptId": "mat-epidemiologia:ep-14",
+      "category": "mat-epidemiologia",
+      "topic": "Sesgos y confusión",
+      "competency": "Reconocer el sesgo de memoria",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "En un estudio de casos y controles sobre malformaciones congénitas, las madres de niños afectados recuerdan con más detalle los medicamentos que tomaron en el embarazo que las madres de niños sanos. ¿Qué sesgo puede producirse?",
+      "rationale": "El sesgo de memoria es un sesgo de información frecuente en los estudios de casos y controles: quienes tienen la enfermedad suelen buscar causas y recordar más exposiciones. Se reduce usando registros objetivos (historias clínicas) o preguntas estandarizadas aplicadas igual a ambos grupos.",
+      "transferPrinciple": "Cuando la información depende del recuerdo, preferí registros escritos y preguntas iguales para todos.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "ops-mopece",
+          "section": "Unidad 5: Sesgos de información"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "memoria",
+          "text": "Un sesgo de memoria (de recuerdo).",
+          "feedback": "Correcto. Los casos tienden a recordar más las exposiciones, lo que puede exagerar la asociación."
+        },
+        {
+          "id": "seleccion",
+          "text": "Un sesgo de selección, porque las madres eligieron libremente participar en el estudio de investigación.",
+          "feedback": "El problema descripto es la diferencia en el recuerdo, no la forma de selección."
+        },
+        {
+          "id": "confusion",
+          "text": "Una confusión por la edad de las madres, que siempre explica todas las malformaciones congénitas.",
+          "feedback": "La confusión es otro fenómeno; el enunciado describe diferencias en el recuerdo."
+        },
+        {
+          "id": "ninguno",
+          "text": "Ningún sesgo.",
+          "feedback": "Si el recuerdo difiere entre grupos, la comparación deja de ser equitativa."
+        }
+      ],
+      "correctOptionId": "memoria",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "ep-15",
+      "conceptId": "mat-epidemiologia:ep-15",
+      "category": "mat-epidemiologia",
+      "topic": "Brotes y vigilancia",
+      "competency": "Reconocer un brote",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "En una sala de internación donde habitualmente no hay casos, aparecen 6 pacientes con diarrea en 48 horas. ¿Cómo se denomina esta situación?",
+      "rationale": "Brote (o epidemia localizada): aparición de casos por encima de lo esperado en un lugar y período determinados, con posible relación entre ellos. Endemia: presencia habitual de una enfermedad en un área. Pandemia: epidemia extendida a varios países o continentes. Ante un posible brote intrahospitalario se notifica según el protocolo y se refuerzan las medidas de prevención.",
+      "transferPrinciple": "Para saber si algo es «mucho», necesitás conocer lo habitual: por eso los registros de rutina son la base de la vigilancia.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "ops-mopece",
+          "section": "Unidad 5: Investigación de brotes"
+        },
+        {
+          "ref": "ops-mopece",
+          "section": "Unidad 4: Vigilancia en salud pública"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "brote",
+          "text": "Un brote: más casos de los esperados, agrupados en un lugar y un tiempo.",
+          "feedback": "Correcto. Requiere notificación según el protocolo y una investigación para identificar la fuente."
+        },
+        {
+          "id": "endemia",
+          "text": "Una endemia, porque la diarrea es una enfermedad que está siempre presente en los hospitales.",
+          "feedback": "La endemia es la presencia habitual de una enfermedad; aquí hay un aumento sobre lo esperado."
+        },
+        {
+          "id": "pandemia",
+          "text": "Una pandemia, porque afecta a varios pacientes al mismo tiempo dentro del mismo establecimiento.",
+          "feedback": "La pandemia implica una extensión a varios países o continentes."
+        },
+        {
+          "id": "azar",
+          "text": "Una coincidencia sin importancia.",
+          "feedback": "La magnitud se evalúa respecto de lo esperado: si lo habitual es cero, 6 casos es un aumento significativo."
+        }
+      ],
+      "correctOptionId": "brote",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "ep-16",
+      "conceptId": "mat-epidemiologia:ep-16",
+      "category": "mat-epidemiologia",
+      "topic": "Brotes y vigilancia",
+      "competency": "Interpretar una curva epidémica de fuente común",
+      "difficulty": "integracion",
+      "format": "caso",
+      "stem": "Después de una comida compartida, todos los casos de una intoxicación aparecen en un lapso corto, con un pico abrupto y un descenso rápido. ¿Qué sugiere esta curva epidémica?",
+      "rationale": "La curva epidémica representa los casos según la fecha de inicio de síntomas. En una fuente común puntual (una comida contaminada), los casos aparecen en un período breve, con un pico agudo. En una epidemia propagada (persona a persona), aparecen olas sucesivas. La forma de la curva orienta la investigación y las medidas de control.",
+      "transferPrinciple": "Registrar con precisión la fecha y hora de inicio de los síntomas permite construir la curva epidémica.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "ops-mopece",
+          "section": "Unidad 5: Investigación de brotes: curva epidémica"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "fuente-comun",
+          "text": "Una fuente común puntual: las personas se expusieron al mismo agente en un mismo momento.",
+          "feedback": "Correcto. Los casos se concentran dentro de un período de incubación."
+        },
+        {
+          "id": "propagada",
+          "text": "Una transmisión de persona a persona, con varias olas sucesivas de casos separadas por el período de incubación.",
+          "feedback": "Ese patrón, con olas sucesivas, es el de una epidemia propagada."
+        },
+        {
+          "id": "endemica",
+          "text": "Una situación endémica, porque los casos se distribuyen en forma pareja a lo largo de todo el año.",
+          "feedback": "Un pico abrupto y breve no corresponde a una distribución endémica."
+        },
+        {
+          "id": "estacional",
+          "text": "Una variación estacional.",
+          "feedback": "La estacionalidad se observa en series largas de tiempo, no en un único pico después de una comida."
+        }
+      ],
+      "correctOptionId": "fuente-comun",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "ep-17",
+      "conceptId": "mat-epidemiologia:ep-17",
+      "category": "mat-epidemiologia",
+      "topic": "Brotes y vigilancia",
+      "competency": "Notificar un caso sospechoso de una enfermedad de notificación obligatoria",
+      "difficulty": "integracion",
+      "format": "caso",
+      "stem": "En la guardia se atiende a un niño con fiebre, exantema y tos, con sospecha clínica de sarampión. Además de las precauciones de aislamiento, ¿qué corresponde?",
+      "rationale": "La vigilancia epidemiológica es la recolección sistemática, el análisis y la difusión de información para la acción. Para ciertas enfermedades se notifican los casos sospechosos de forma inmediata, ya que la oportunidad permite el control de foco (vacunación o profilaxis de contactos). En la Argentina, la notificación sigue la normativa nacional y el circuito de cada institución.",
+      "transferPrinciple": "La vigilancia sirve si es oportuna: un caso sospechoso notificado a tiempo puede evitar muchos casos nuevos.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "ops-mopece",
+          "section": "Unidad 4: Vigilancia en salud pública"
+        },
+        {
+          "ref": "protocolo-institucional",
+          "section": "Circuito de notificación epidemiológica"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "notificar",
+          "text": "Notificar el caso sospechoso de inmediato por el circuito de vigilancia, sin esperar la confirmación.",
+          "feedback": "Correcto. En las enfermedades de notificación inmediata se notifica la sospecha para iniciar el control de foco a tiempo."
+        },
+        {
+          "id": "esperar",
+          "text": "Esperar el resultado de laboratorio que confirme el diagnóstico antes de notificar cualquier dato a las autoridades sanitarias.",
+          "feedback": "Esperar la confirmación demora las acciones de control sobre los contactos."
+        },
+        {
+          "id": "familia",
+          "text": "Pedirle a la familia que avise a la escuela y no notificar al sistema de salud para proteger la privacidad.",
+          "feedback": "La notificación al sistema de vigilancia es obligatoria y se maneja con confidencialidad."
+        },
+        {
+          "id": "nada",
+          "text": "No hacer nada más, porque la vigilancia epidemiológica es tarea exclusiva del Ministerio de Salud.",
+          "feedback": "La vigilancia empieza en el efector que detecta el caso."
+        }
+      ],
+      "correctOptionId": "notificar",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "ep-18",
+      "conceptId": "mat-epidemiologia:ep-18",
+      "category": "mat-epidemiologia",
+      "topic": "Estadística descriptiva",
+      "competency": "Elegir la medida de tendencia central adecuada",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "Los días de internación de cinco pacientes fueron 2, 3, 3, 4 y 30. ¿Qué medida describe mejor el valor típico?",
+      "rationale": "La media se calcula sumando los valores y dividiendo por su cantidad: (2 + 3 + 3 + 4 + 30) / 5 = 8,4. La mediana es el valor central de los datos ordenados: 3. Con distribuciones asimétricas o valores extremos, la mediana representa mejor el valor típico.",
+      "transferPrinciple": "Antes de resumir datos con un promedio, mirá si hay valores extremos que lo distorsionen.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "ops-mopece",
+          "section": "Unidad 3: Medidas de resumen: tendencia central y dispersión"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "mediana",
+          "text": "La mediana (3 días).",
+          "feedback": "Correcto. La mediana no se ve afectada por el valor extremo de 30 días."
+        },
+        {
+          "id": "media",
+          "text": "La media aritmética (8,4 días), porque usa todos los valores del grupo y por eso siempre es la más representativa.",
+          "feedback": "La media está muy influida por el valor extremo y no representa al paciente típico."
+        },
+        {
+          "id": "maximo",
+          "text": "El valor máximo (30 días), porque muestra el peor escenario y es el dato más útil para planificar.",
+          "feedback": "El valor máximo describe un caso extremo, no el valor típico."
+        },
+        {
+          "id": "rango",
+          "text": "El rango.",
+          "feedback": "El rango es una medida de dispersión, no de tendencia central."
+        }
+      ],
+      "correctOptionId": "mediana",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "ep-19",
+      "conceptId": "mat-epidemiologia:ep-19",
+      "category": "mat-epidemiologia",
+      "topic": "Estadística descriptiva",
+      "competency": "Clasificar variables",
+      "difficulty": "conceptual",
+      "format": "concepto",
+      "stem": "La intensidad del dolor registrada como «leve», «moderado» o «intenso» es una variable:",
+      "rationale": "Las variables cualitativas pueden ser nominales (sin orden: grupo sanguíneo) u ordinales (con orden: estadio de una lesión, nivel de dolor en categorías). Las cuantitativas pueden ser discretas (conteos) o continuas (peso, temperatura). El tipo de variable define cómo se resume y se representa.",
+      "transferPrinciple": "Antes de calcular un promedio, verificá que la variable sea cuantitativa: no se promedian categorías.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "ops-mopece",
+          "section": "Unidad 3: Tipos de variables"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "ordinal",
+          "text": "Cualitativa ordinal.",
+          "feedback": "Correcto. Sus categorías tienen un orden, pero la distancia entre ellas no es necesariamente igual."
+        },
+        {
+          "id": "nominal",
+          "text": "Cualitativa nominal, porque sus categorías son nombres sin ningún orden entre ellas.",
+          "feedback": "Las categorías «leve, moderado, intenso» sí tienen un orden."
+        },
+        {
+          "id": "continua",
+          "text": "Cuantitativa continua, porque el dolor puede tomar cualquier valor entre un mínimo y un máximo.",
+          "feedback": "Registrado en esas tres categorías, el dolor es una variable cualitativa ordinal."
+        },
+        {
+          "id": "discreta",
+          "text": "Cuantitativa discreta, porque se cuenta la cantidad de pacientes con dolor en cada turno.",
+          "feedback": "El conteo de pacientes es otra variable; la intensidad en categorías es ordinal."
+        }
+      ],
+      "correctOptionId": "ordinal",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "ep-20",
+      "conceptId": "mat-epidemiologia:ep-20",
+      "category": "mat-epidemiologia",
+      "topic": "Indicadores de salud",
+      "competency": "Comparar tasas entre poblaciones con distinta estructura de edad",
+      "difficulty": "integracion",
+      "format": "caso",
+      "stem": "Una localidad con mucha población adulta mayor tiene una tasa bruta de mortalidad más alta que otra con población joven. ¿Qué conclusión es la adecuada?",
+      "rationale": "Las tasas brutas dependen de la estructura de la población. Para comparar poblaciones con distinta composición por edad se usan tasas específicas por grupo de edad o tasas ajustadas (estandarizadas). Sin ese ajuste, las diferencias pueden atribuirse erróneamente a la calidad de la atención o al riesgo.",
+      "transferPrinciple": "Antes de concluir que una población «está peor», verificá que la comparación sea justa: misma definición, mismo período y estructuras comparables.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "ops-mopece",
+          "section": "Unidad 3: Comparación de tasas: ajuste por edad"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "ajustar",
+          "text": "Para compararlas hay que ajustar las tasas por edad: la diferencia puede deberse a la estructura poblacional.",
+          "feedback": "Correcto. La edad influye mucho en la mortalidad; el ajuste permite una comparación justa."
+        },
+        {
+          "id": "peor-atencion",
+          "text": "La localidad con más adultos mayores tiene necesariamente peor atención de la salud que la otra localidad.",
+          "feedback": "Esa conclusión no se puede sacar de tasas brutas con estructuras de edad distintas."
+        },
+        {
+          "id": "iguales",
+          "text": "Las tasas brutas permiten comparar directamente cualquier par de poblaciones sin necesidad de otros datos.",
+          "feedback": "Las tasas brutas están influidas por la composición por edad de cada población."
+        },
+        {
+          "id": "error",
+          "text": "Hay un error en los datos, porque dos poblaciones del mismo país deberían tener la misma tasa de mortalidad.",
+          "feedback": "Las diferencias son esperables; el problema es interpretarlas sin ajustar."
+        }
+      ],
+      "correctOptionId": "ajustar",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    }
+  ]
+}

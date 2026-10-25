@@ -1,0 +1,1258 @@
+{
+  "subject": "mat-farmacologia",
+  "bankVersion": "1.0",
+  "note": "Contenido en borrador generado con asistencia de IA a partir de contenidos estándar. Casos y datos ficticios. Pendiente de revisión docente y de contraste con el programa vigente.",
+  "questions": [
+    {
+      "id": "fa-01",
+      "conceptId": "mat-farmacologia:fa-01",
+      "category": "mat-farmacologia",
+      "topic": "Farmacodinamia",
+      "competency": "Diferenciar agonistas y antagonistas",
+      "difficulty": "conceptual",
+      "format": "concepto",
+      "stem": "¿Qué hace un fármaco antagonista sobre su receptor?",
+      "rationale": "Los agonistas se unen al receptor y lo activan; los antagonistas se unen sin activarlo y bloquean la respuesta. Ejemplo clínico: la naloxona es un antagonista de los receptores opioides y revierte sus efectos, incluida la depresión respiratoria.",
+      "transferPrinciple": "Conocer si un fármaco es agonista o antagonista te ayuda a anticipar qué efecto esperar y cuál podría revertirlo.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-farmacologia",
+          "section": "Farmacodinamia: receptores, agonistas y antagonistas"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "bloquea",
+          "text": "Se une al receptor sin activarlo e impide que el agonista lo active.",
+          "feedback": "Correcto. El antagonista ocupa el receptor y bloquea la acción del agonista (endógeno o fármaco)."
+        },
+        {
+          "id": "activa",
+          "text": "Se une al receptor y produce la misma respuesta que la sustancia natural del organismo, con mayor intensidad.",
+          "feedback": "Eso describe a un agonista."
+        },
+        {
+          "id": "destruye",
+          "text": "Destruye el receptor de forma permanente para que la célula fabrique uno nuevo.",
+          "feedback": "Los antagonistas habituales no destruyen receptores; los ocupan."
+        },
+        {
+          "id": "aumenta",
+          "text": "Aumenta la cantidad de receptores en la célula para potenciar la respuesta.",
+          "feedback": "Ese no es el mecanismo de un antagonista."
+        }
+      ],
+      "correctOptionId": "bloquea",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "fa-02",
+      "conceptId": "mat-farmacologia:fa-02",
+      "category": "mat-farmacologia",
+      "topic": "Farmacocinética",
+      "competency": "Definir biodisponibilidad",
+      "difficulty": "conceptual",
+      "format": "concepto",
+      "stem": "¿Por qué vía de administración la biodisponibilidad de un fármaco es, por definición, del 100 %?",
+      "rationale": "La biodisponibilidad es la fracción de la dosis que llega inalterada a la circulación sistémica. Por vía endovenosa es del 100 %; por otras vías depende de la absorción y del metabolismo de primer paso. Por eso la dosis oral y la endovenosa de un mismo fármaco pueden ser distintas.",
+      "transferPrinciple": "Si cambia la vía de un medicamento, la dosis puede cambiar: nunca se asume que la misma dosis sirve para otra vía.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-farmacologia",
+          "section": "Farmacocinética: absorción y biodisponibilidad"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "ev",
+          "text": "Por vía endovenosa.",
+          "feedback": "Correcto. Todo el fármaco llega directamente a la circulación sistémica."
+        },
+        {
+          "id": "oral",
+          "text": "Por vía oral, porque el tubo digestivo absorbe la totalidad de la dosis ingerida.",
+          "feedback": "La absorción oral suele ser incompleta y parte del fármaco se metaboliza antes de llegar a la circulación."
+        },
+        {
+          "id": "im",
+          "text": "Por vía intramuscular, porque el músculo está muy irrigado.",
+          "feedback": "La absorción intramuscular es rápida para muchos fármacos, pero no garantiza el 100 % por definición."
+        },
+        {
+          "id": "topica",
+          "text": "Por vía tópica, porque el fármaco actúa directamente sobre la piel.",
+          "feedback": "La vía tópica busca un efecto local y la absorción sistémica suele ser baja."
+        }
+      ],
+      "correctOptionId": "ev",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "fa-03",
+      "conceptId": "mat-farmacologia:fa-03",
+      "category": "mat-farmacologia",
+      "topic": "Farmacocinética",
+      "competency": "Relacionar el efecto de primer paso con la vía sublingual",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "¿Por qué algunos fármacos, como la nitroglicerina, se administran por vía sublingual en lugar de tragarse?",
+      "rationale": "Lo que se absorbe en el tubo digestivo llega por la vena porta al hígado, donde una parte se metaboliza antes de alcanzar la circulación general (efecto de primer paso). La mucosa sublingual drena a la circulación sistémica directamente. El paciente debe dejar que el comprimido se disuelva bajo la lengua, sin tragarlo ni masticarlo.",
+      "transferPrinciple": "Cada vía tiene su técnica: explicale al paciente cómo tomarlo, porque una toma incorrecta cambia el efecto.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-farmacologia",
+          "section": "Farmacocinética: metabolismo de primer paso"
+        },
+        {
+          "ref": "libro-fundamentos",
+          "section": "Administración sublingual y bucal"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "primer-paso",
+          "text": "Porque se absorben por la mucosa y llegan a la circulación sin pasar primero por el hígado.",
+          "feedback": "Correcto. Se evita el metabolismo de primer paso hepático y el efecto es rápido."
+        },
+        {
+          "id": "estomago",
+          "text": "Porque el ácido del estómago los activa y la vía sublingual retrasa ese proceso para prolongar el efecto.",
+          "feedback": "La vía sublingual busca un inicio rápido y evitar el primer paso, no retrasar el efecto."
+        },
+        {
+          "id": "sabor",
+          "text": "Porque tienen un sabor que provoca náuseas si se tragan.",
+          "feedback": "El motivo es farmacocinético, no el sabor."
+        },
+        {
+          "id": "lento",
+          "text": "Porque la mucosa bucal absorbe más lentamente y así el efecto dura todo el día.",
+          "feedback": "La absorción sublingual suele ser rápida."
+        }
+      ],
+      "correctOptionId": "primer-paso",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "fa-04",
+      "conceptId": "mat-farmacologia:fa-04",
+      "category": "mat-farmacologia",
+      "topic": "Farmacocinética",
+      "competency": "Anticipar la acumulación de fármacos en la insuficiencia renal",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "Un paciente con insuficiencia renal recibe un fármaco que se elimina principalmente por el riñón. ¿Qué riesgo aumenta?",
+      "rationale": "La eliminación de muchos fármacos depende de la filtración glomerular. En la insuficiencia renal, su vida media se prolonga y la concentración aumenta, con riesgo de toxicidad. El ajuste de dosis o de intervalo lo define el equipo médico; enfermería vigila signos de toxicidad y comunica los valores de función renal.",
+      "transferPrinciple": "Cuando cambia la función de un órgano que elimina fármacos, revisá con el equipo si la medicación sigue siendo segura.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-farmacologia",
+          "section": "Farmacocinética: excreción renal"
+        },
+        {
+          "ref": "kdigo-ira-2012",
+          "section": "Manejo de fármacos en la lesión renal aguda"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "acumulacion",
+          "text": "Que el fármaco se acumule y aparezcan efectos tóxicos, por lo que puede requerir ajuste de dosis.",
+          "feedback": "Correcto. Con menor eliminación, la concentración sube; el ajuste lo indica el médico según la función renal."
+        },
+        {
+          "id": "ineficaz",
+          "text": "Que el fármaco se elimine más rápido y pierda su efecto, por lo que hay que darlo con más frecuencia.",
+          "feedback": "Con insuficiencia renal la eliminación es más lenta, no más rápida."
+        },
+        {
+          "id": "ninguno",
+          "text": "Ningún riesgo particular, porque el hígado compensa siempre la eliminación renal de cualquier fármaco.",
+          "feedback": "El hígado no compensa la eliminación de los fármacos que dependen del riñón."
+        },
+        {
+          "id": "alergia",
+          "text": "Que el paciente desarrolle una alergia al fármaco por el daño renal.",
+          "feedback": "La insuficiencia renal no causa alergias; modifica la eliminación."
+        }
+      ],
+      "correctOptionId": "acumulacion",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "fa-05",
+      "conceptId": "mat-farmacologia:fa-05",
+      "category": "mat-farmacologia",
+      "topic": "Farmacodinamia",
+      "competency": "Aplicar el concepto de índice terapéutico estrecho",
+      "difficulty": "integracion",
+      "format": "caso",
+      "stem": "Un paciente recibe digoxina, un fármaco de índice terapéutico estrecho. Refiere náuseas y su frecuencia cardíaca es de 48/min antes de la dosis. ¿Qué corresponde?",
+      "rationale": "El índice terapéutico relaciona la dosis tóxica con la eficaz. En los fármacos de índice estrecho (digoxina, litio, algunos anticonvulsivantes), la diferencia es pequeña y la vigilancia es clave. Para la digoxina se controla la frecuencia cardíaca antes de cada dosis según el protocolo y se vigilan signos de toxicidad (náuseas, vómitos, alteraciones visuales, arritmias).",
+      "transferPrinciple": "En los fármacos de margen estrecho, el control previo a la dosis es parte de la administración: si el valor está fuera de lo esperado, no se administra sin consultar.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-farmacologia",
+          "section": "Glucósidos cardíacos: digoxina"
+        },
+        {
+          "ref": "libro-farmacologia",
+          "section": "Farmacodinamia: índice terapéutico"
+        },
+        {
+          "ref": "protocolo-institucional",
+          "section": "Administración de medicamentos con control previo"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "no-dar",
+          "text": "No administrar la dosis, comunicar de inmediato al médico y registrar la frecuencia y los síntomas.",
+          "feedback": "Correcto. Con índice estrecho, pequeñas variaciones pueden ser tóxicas; la bradicardia y las náuseas pueden indicar toxicidad."
+        },
+        {
+          "id": "dar-mitad",
+          "text": "Administrar la mitad de la dosis indicada para disminuir el riesgo y volver a controlar en una hora.",
+          "feedback": "Modificar la dosis por cuenta propia no corresponde. Se suspende la administración y se consulta."
+        },
+        {
+          "id": "dar-con-comida",
+          "text": "Administrar la dosis con comida para que las náuseas disminuyan y la absorción sea más lenta.",
+          "feedback": "Las náuseas pueden ser un signo de toxicidad: administrar la dosis podría empeorar el cuadro."
+        },
+        {
+          "id": "dar-normal",
+          "text": "Administrar la dosis indicada, porque la frecuencia cardíaca baja es el efecto esperado del fármaco.",
+          "feedback": "La digoxina puede bajar la frecuencia, pero una bradicardia marcada con síntomas requiere suspender y consultar."
+        }
+      ],
+      "correctOptionId": "no-dar",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "fa-06",
+      "conceptId": "mat-farmacologia:fa-06",
+      "category": "mat-farmacologia",
+      "topic": "Vías de administración",
+      "competency": "Enseñar la técnica de la vía sublingual",
+      "difficulty": "conceptual",
+      "format": "concepto",
+      "stem": "¿Cuál es la indicación correcta para un comprimido de administración sublingual?",
+      "rationale": "En la vía sublingual el comprimido se disuelve bajo la lengua; en la bucal, entre la mejilla y la encía. En ambas no se traga, no se mastica y se evita comer o beber hasta que se disuelva por completo.",
+      "transferPrinciple": "Verificá que el paciente sepa usar la vía: una técnica incorrecta equivale a una dosis distinta.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-fundamentos",
+          "section": "Administración sublingual y bucal"
+        },
+        {
+          "ref": "libro-farmacologia",
+          "section": "Vías de administración"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "disolver",
+          "text": "Colocarlo debajo de la lengua y dejar que se disuelva sin tragarlo ni masticarlo.",
+          "feedback": "Correcto. Así se absorbe por la mucosa y llega rápido a la circulación."
+        },
+        {
+          "id": "tragar-agua",
+          "text": "Tragarlo entero con un vaso de agua para que se absorba en el estómago.",
+          "feedback": "Tragarlo convierte la vía en oral y modifica la absorción y el efecto."
+        },
+        {
+          "id": "masticar",
+          "text": "Masticarlo bien antes de tragar para que haga efecto más rápido.",
+          "feedback": "Masticar y tragar envía el fármaco al tubo digestivo, con efecto de primer paso."
+        },
+        {
+          "id": "mejilla-comida",
+          "text": "Colocarlo entre la mejilla y la encía y comer enseguida para que no moleste.",
+          "feedback": "Comer o beber durante la disolución puede arrastrar el comprimido y modificar la absorción."
+        }
+      ],
+      "correctOptionId": "disolver",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "fa-07",
+      "conceptId": "mat-farmacologia:fa-07",
+      "category": "mat-farmacologia",
+      "topic": "Vías de administración",
+      "competency": "Identificar formas farmacéuticas que no deben triturarse",
+      "difficulty": "aplicacion",
+      "format": "error_seguridad",
+      "stem": "Un paciente tiene dificultad para tragar y un compañero propone triturar su comprimido de liberación prolongada para darlo con puré. ¿Qué corresponde?",
+      "rationale": "Las formas de liberación prolongada, modificada o con cubierta entérica están diseñadas para liberar el fármaco de manera gradual o en un sitio determinado. Triturarlas puede causar una sobredosis inicial o la pérdida del efecto. Ante dificultad para tragar, se consulta al prescriptor o a farmacia por otra presentación.",
+      "transferPrinciple": "Antes de modificar una forma farmacéutica, preguntate si fue diseñada para liberar el fármaco de un modo particular. Ante la duda, se consulta.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-farmacologia",
+          "section": "Formas farmacéuticas de liberación modificada"
+        },
+        {
+          "ref": "oms-medicacion-sin-danio-2017",
+          "section": "Prácticas de medicación seguras"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "no-triturar",
+          "text": "No triturarlo y consultar al médico o al farmacéutico por una alternativa adecuada.",
+          "feedback": "Correcto. Triturar una forma de liberación prolongada puede liberar toda la dosis de golpe."
+        },
+        {
+          "id": "triturar",
+          "text": "Triturarlo, porque el principio activo es el mismo y solo cambia la forma de tragarlo.",
+          "feedback": "La forma farmacéutica controla la velocidad de liberación: triturarla cambia la dosis que se absorbe por unidad de tiempo."
+        },
+        {
+          "id": "partir",
+          "text": "Partirlo en dos mitades, porque así se mantiene la liberación prolongada y es más fácil de tragar.",
+          "feedback": "Muchas formas de liberación prolongada tampoco deben partirse; depende del producto y debe consultarse."
+        },
+        {
+          "id": "disolver",
+          "text": "Disolverlo en agua caliente durante varios minutos para que el paciente lo tome como un jarabe.",
+          "feedback": "Disolverlo destruye igual el sistema de liberación controlada."
+        }
+      ],
+      "correctOptionId": "no-triturar",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "fa-08",
+      "conceptId": "mat-farmacologia:fa-08",
+      "category": "mat-farmacologia",
+      "topic": "Vías de administración",
+      "competency": "Administrar medicamentos por sonda nasogástrica con seguridad",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "Tenés que administrar varios medicamentos indicados por sonda nasogástrica. ¿Qué práctica es la adecuada?",
+      "rationale": "Por sonda se administran preferentemente formas líquidas o comprimidos que pueden triturarse según la ficha técnica. Cada medicamento se prepara y administra por separado, lavando la sonda con agua antes, entre fármacos y al finalizar. Antes se verifica la posición de la sonda según el protocolo.",
+      "transferPrinciple": "Un dispositivo cambia la forma de administrar: verificá que cada medicamento sea compatible con esa vía antes de prepararlo.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-fundamentos",
+          "section": "Administración de medicamentos por sonda enteral"
+        },
+        {
+          "ref": "protocolo-institucional",
+          "section": "Administración de medicación por sonda"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "por-separado",
+          "text": "Administrarlos por separado, lavando la sonda con agua antes, entre cada uno y al final.",
+          "feedback": "Correcto. Así se evitan interacciones físicas entre fármacos y la obstrucción de la sonda."
+        },
+        {
+          "id": "mezclar",
+          "text": "Mezclar todos los comprimidos triturados en una misma jeringa para hacer una sola administración más rápida.",
+          "feedback": "Mezclar puede provocar incompatibilidades y obstruir la sonda."
+        },
+        {
+          "id": "sin-lavar",
+          "text": "Administrarlos sin lavar la sonda para no sumar líquido al paciente.",
+          "feedback": "Los lavados previenen la obstrucción y aseguran que el medicamento llegue. El volumen se ajusta si hay restricción de líquidos."
+        },
+        {
+          "id": "con-formula",
+          "text": "Agregarlos directamente a la bolsa de alimentación enteral para que se administren junto con ella.",
+          "feedback": "Agregar fármacos a la fórmula puede causar incompatibilidades y dosis irregulares."
+        }
+      ],
+      "correctOptionId": "por-separado",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "fa-09",
+      "conceptId": "mat-farmacologia:fa-09",
+      "category": "mat-farmacologia",
+      "topic": "Cálculo de dosis",
+      "competency": "Calcular una dosis según el peso",
+      "difficulty": "aplicacion",
+      "format": "calculo",
+      "stem": "Indicación (datos ficticios): 15 mg/kg de un medicamento para un niño que pesa 18 kg. ¿Qué dosis total en mg corresponde?",
+      "rationale": "Dosis total = 15 mg/kg × 18 kg = 270 mg. En pediatría, la dosis se calcula sobre el peso actual registrado, y antes de administrar se verifica que no supere la dosis máxima indicada para la persona.",
+      "transferPrinciple": "Usá siempre el peso actual y registrado del paciente, no uno estimado, y verificá el cálculo con un segundo método o con otra persona.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-farmacologia",
+          "section": "Principios de posología pediátrica"
+        },
+        {
+          "ref": "oms-medicacion-sin-danio-2017",
+          "section": "Prácticas de medicación seguras"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "numeric",
+      "options": [],
+      "correctOptionId": null,
+      "numericAnswer": 270,
+      "unit": "mg",
+      "tolerance": 0,
+      "rounding": "Número entero, sin redondeo.",
+      "numericCheck": {
+        "formula": "dosis_por_peso",
+        "inputs": {
+          "dosis_por_kg": 15,
+          "peso_kg": 18
+        }
+      },
+      "numericFeedback": "Dosis = dosis por kilo × peso = 15 mg/kg × 18 kg = 270 mg. Si sumaste en lugar de multiplicar, o usaste el peso en libras, el resultado cambia."
+    },
+    {
+      "id": "fa-10",
+      "conceptId": "mat-farmacologia:fa-10",
+      "category": "mat-farmacologia",
+      "topic": "Cálculo de dosis",
+      "competency": "Calcular el volumen de una dosis pediátrica por peso",
+      "difficulty": "integracion",
+      "format": "calculo",
+      "stem": "Indicación (datos ficticios): 10 mg/kg por vía oral para un niño de 22 kg. La suspensión disponible tiene 250 mg en 5 mL. ¿Cuántos mL corresponden?",
+      "rationale": "Paso 1, dosis: 10 × 22 = 220 mg. Paso 2, concentración: 250 mg / 5 mL = 50 mg/mL. Paso 3, volumen: 220 / 50 = 4,4 mL. Se usa una jeringa dosificadora oral para medir con precisión.",
+      "transferPrinciple": "En los cálculos de dos pasos, verificá cada paso por separado y que el resultado final sea razonable para la presentación.",
+      "criticalSafety": true,
+      "riskNote": "Un error de cálculo en pediatría puede significar administrar varias veces la dosis indicada.",
+      "recoveryQuestionId": "fa-10r",
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-farmacologia",
+          "section": "Principios de posología pediátrica"
+        },
+        {
+          "ref": "oms-medicacion-sin-danio-2017",
+          "section": "Prácticas de medicación seguras"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "numeric",
+      "options": [],
+      "correctOptionId": null,
+      "numericAnswer": 4.4,
+      "unit": "mL",
+      "tolerance": 0.01,
+      "rounding": "Expresá el resultado en mL con un decimal. No se redondea: el resultado es exacto.",
+      "numericCheck": {
+        "formula": "volumen_dosis",
+        "inputs": {
+          "dosis_mg": 220,
+          "presentacion_mg": 250,
+          "presentacion_ml": 5
+        }
+      },
+      "numericFeedback": "Primero la dosis: 10 mg/kg × 22 kg = 220 mg. Después el volumen: la suspensión tiene 250 mg / 5 mL = 50 mg/mL; 220 mg / 50 mg/mL = 4,4 mL."
+    },
+    {
+      "id": "fa-10r",
+      "conceptId": "mat-farmacologia:fa-10",
+      "category": "mat-farmacologia",
+      "topic": "Cálculo de dosis",
+      "competency": "Calcular el volumen de una dosis pediátrica por peso",
+      "difficulty": "integracion",
+      "format": "calculo",
+      "stem": "Indicación (datos ficticios): 20 mg/kg por vía oral para un niño de 12 kg. La suspensión disponible tiene 200 mg en 5 mL. ¿Cuántos mL corresponden?",
+      "rationale": "Dosis: 20 mg/kg × 12 kg = 240 mg. Concentración: 40 mg/mL. Volumen: 240 / 40 = 6,0 mL.",
+      "transferPrinciple": "Un cálculo pediátrico se verifica antes de cargar la jeringa, idealmente con otra persona.",
+      "criticalSafety": true,
+      "riskNote": "Un error de cálculo en pediatría puede significar administrar varias veces la dosis indicada.",
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": true,
+      "sources": [
+        {
+          "ref": "libro-farmacologia",
+          "section": "Principios de posología pediátrica"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "numeric",
+      "options": [],
+      "correctOptionId": null,
+      "numericAnswer": 6.0,
+      "unit": "mL",
+      "tolerance": 0.01,
+      "rounding": "Expresá el resultado en mL con un decimal. No se redondea: el resultado es exacto.",
+      "numericCheck": {
+        "formula": "volumen_dosis",
+        "inputs": {
+          "dosis_mg": 240,
+          "presentacion_mg": 200,
+          "presentacion_ml": 5
+        }
+      },
+      "numericFeedback": "Dosis: 20 × 12 = 240 mg. Concentración: 200 mg / 5 mL = 40 mg/mL. Volumen: 240 / 40 = 6 mL."
+    },
+    {
+      "id": "fa-11",
+      "conceptId": "mat-farmacologia:fa-11",
+      "category": "mat-farmacologia",
+      "topic": "Medicamentos de alto riesgo",
+      "competency": "Reconocer los medicamentos de alto riesgo",
+      "difficulty": "aplicacion",
+      "format": "concepto",
+      "stem": "¿Qué grupo de medicamentos se considera «de alto riesgo» y suele requerir barreras adicionales, como el doble control independiente?",
+      "rationale": "Los medicamentos de alto riesgo son aquellos con alta probabilidad de causar daño grave cuando se usan con error. Las listas de referencia incluyen insulinas, anticoagulantes, opioides, electrolitos concentrados, quimioterápicos y sedantes, entre otros. Las instituciones implementan barreras: almacenamiento separado, rótulos, doble control y protocolos.",
+      "transferPrinciple": "Con un medicamento de alto riesgo, la pregunta no es si confiás en tu cálculo, sino qué barrera adicional del sistema estás usando.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "ismp-alto-riesgo-2024",
+          "section": "Lista de medicamentos de alto riesgo"
+        },
+        {
+          "ref": "oms-medicacion-sin-danio-2017",
+          "section": "Situaciones de alto riesgo"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "alto-riesgo",
+          "text": "Insulinas, anticoagulantes, opioides y electrolitos concentrados, como el cloruro de potasio.",
+          "feedback": "Correcto. Un error con estos medicamentos tiene alta probabilidad de causar daño grave."
+        },
+        {
+          "id": "vitaminas",
+          "text": "Vitaminas, suplementos de hierro y antiácidos, porque se usan en muchos pacientes al mismo tiempo.",
+          "feedback": "Son de uso frecuente, pero no figuran entre los de mayor riesgo de daño grave."
+        },
+        {
+          "id": "topicos",
+          "text": "Cremas, colirios y protectores de piel, porque se aplican sin indicación médica.",
+          "feedback": "Los tópicos requieren indicación y cuidado, pero no son el grupo de alto riesgo típico."
+        },
+        {
+          "id": "antibioticos",
+          "text": "Todos los antibióticos orales, porque generan resistencia bacteriana cuando se usan mal.",
+          "feedback": "El uso inadecuado de antibióticos es un problema importante, pero no define el grupo de alto riesgo."
+        }
+      ],
+      "correctOptionId": "alto-riesgo",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "fa-12",
+      "conceptId": "mat-farmacologia:fa-12",
+      "category": "mat-farmacologia",
+      "topic": "Medicamentos de alto riesgo",
+      "competency": "Prevenir la administración directa de potasio concentrado",
+      "difficulty": "integracion",
+      "format": "error_seguridad",
+      "stem": "Hay una indicación de cloruro de potasio endovenoso. Un compañero carga la ampolla concentrada en una jeringa para pasarla directo por el catéter. ¿Qué hacés?",
+      "rationale": "El cloruro de potasio concentrado es un medicamento de alto riesgo: su administración directa puede provocar arritmias graves y paro cardíaco. Se administra siempre diluido, a la velocidad indicada y según el protocolo institucional, que suele incluir doble control y bomba de infusión. Muchas instituciones retiran las ampollas concentradas de las salas.",
+      "transferPrinciple": "Si ves que alguien está por administrar un medicamento de alto riesgo de forma insegura, detenerlo es tu responsabilidad, aunque seas estudiante.",
+      "criticalSafety": true,
+      "riskNote": "La administración directa de potasio concentrado puede causar arritmias graves y paro cardíaco.",
+      "recoveryQuestionId": "fa-12r",
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "ismp-alto-riesgo-2024",
+          "section": "Electrolitos concentrados"
+        },
+        {
+          "ref": "oms-medicacion-sin-danio-2017",
+          "section": "Situaciones de alto riesgo"
+        },
+        {
+          "ref": "protocolo-institucional",
+          "section": "Preparación y administración de potasio endovenoso"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "detener",
+          "text": "Lo detengo: el potasio concentrado nunca se administra directo. Se prepara diluido según la indicación y el protocolo, con supervisión.",
+          "feedback": "Correcto. La administración directa de potasio concentrado puede causar un paro cardíaco."
+        },
+        {
+          "id": "lento",
+          "text": "Le digo que lo pase muy lento, en unos cinco minutos, para que no le arda la vena al paciente.",
+          "feedback": "Aun lento, el potasio concentrado administrado directo es potencialmente letal."
+        },
+        {
+          "id": "otra-vena",
+          "text": "Le sugiero que use una vena más grande del brazo para evitar la flebitis por el potasio.",
+          "feedback": "El problema no es la vena sino el riesgo cardíaco de la administración directa."
+        },
+        {
+          "id": "confiar",
+          "text": "Lo dejo seguir, porque si la indicación dice «endovenoso», cualquier forma de pasarlo es correcta.",
+          "feedback": "Una indicación EV no autoriza la administración directa de un electrolito concentrado."
+        }
+      ],
+      "correctOptionId": "detener",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "fa-12r",
+      "conceptId": "mat-farmacologia:fa-12",
+      "category": "mat-farmacologia",
+      "topic": "Medicamentos de alto riesgo",
+      "competency": "Prevenir la administración directa de potasio concentrado",
+      "difficulty": "integracion",
+      "format": "error_seguridad",
+      "stem": "En el office de enfermería encontrás ampollas de cloruro de potasio concentrado guardadas en la misma caja que las ampollas de solución fisiológica, con rótulos parecidos. ¿Qué corresponde?",
+      "rationale": "Las ampollas parecidas y el almacenamiento conjunto son factores de error. Las recomendaciones incluyen separar o retirar los electrolitos concentrados de las áreas de atención, usar rótulos de advertencia y comunicar el problema para corregir el sistema.",
+      "transferPrinciple": "Los errores se previenen también en el diseño del lugar de trabajo: detectar y comunicar un riesgo del entorno es parte de la seguridad.",
+      "criticalSafety": true,
+      "riskNote": "Confundir una ampolla de potasio concentrado con solución fisiológica puede ser mortal.",
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": true,
+      "sources": [
+        {
+          "ref": "ismp-alto-riesgo-2024",
+          "section": "Electrolitos concentrados: estrategias de almacenamiento"
+        },
+        {
+          "ref": "oms-medicacion-sin-danio-2017",
+          "section": "Situaciones de alto riesgo"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "separar-comunicar",
+          "text": "Separarlas y comunicarlo a supervisión, porque el almacenamiento conjunto puede provocar una confusión grave.",
+          "feedback": "Correcto. El almacenamiento seguro es una barrera clave para los medicamentos de alto riesgo."
+        },
+        {
+          "id": "dejar",
+          "text": "Dejarlas como están, porque cada profesional lee el rótulo antes de usar una ampolla.",
+          "feedback": "Confiar solo en la lectura del rótulo no es suficiente: los errores por confusión de ampollas están descriptos."
+        },
+        {
+          "id": "marcar",
+          "text": "Marcar las de potasio con lapicera para diferenciarlas, sin avisar a nadie.",
+          "feedback": "La marca individual no reemplaza el almacenamiento seguro ni la comunicación al servicio."
+        },
+        {
+          "id": "usar",
+          "text": "Usar primero las de potasio para que se terminen y el problema desaparezca solo.",
+          "feedback": "Esto no resuelve el riesgo y podría llevar a usar potasio sin indicación."
+        }
+      ],
+      "correctOptionId": "separar-comunicar",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "fa-13",
+      "conceptId": "mat-farmacologia:fa-13",
+      "category": "mat-farmacologia",
+      "topic": "Antimicrobianos",
+      "competency": "Educar sobre el cumplimiento del esquema antibiótico",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "Un paciente con alta y antibiótico oral te dice: «cuando me sienta mejor, lo dejo». ¿Qué le explicás?",
+      "rationale": "Cumplir la dosis, el intervalo y la duración indicados mantiene concentraciones eficaces y reduce el riesgo de fracaso del tratamiento y de selección de bacterias resistentes. La educación incluye horarios, relación con las comidas, efectos adversos frecuentes y signos de alarma.",
+      "transferPrinciple": "La educación al alta es parte del tratamiento: verificá que la persona entendió con preguntas abiertas («¿cómo lo va a tomar?»).",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-farmacologia",
+          "section": "Principios del tratamiento antimicrobiano"
+        },
+        {
+          "ref": "libro-microbiologia",
+          "section": "Resistencia antimicrobiana"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "completar",
+          "text": "Que lo tome en los horarios y durante el tiempo indicados por el médico, aunque se sienta mejor antes.",
+          "feedback": "Correcto. Suspender por cuenta propia puede dejar la infección sin tratar y favorecer la resistencia."
+        },
+        {
+          "id": "dejar",
+          "text": "Que está bien suspenderlo apenas desaparezcan los síntomas para evitar efectos adversos.",
+          "feedback": "La duración la indica el médico; la mejoría no significa que la infección se haya resuelto."
+        },
+        {
+          "id": "guardar",
+          "text": "Que guarde los comprimidos que le sobren para usarlos la próxima vez que tenga síntomas parecidos, así evita una nueva consulta médica.",
+          "feedback": "La automedicación con antibióticos sobrantes favorece la resistencia y puede ser inadecuada para otra infección."
+        },
+        {
+          "id": "doble",
+          "text": "Que si se olvida una dosis, tome el doble en la toma siguiente para compensar.",
+          "feedback": "Duplicar dosis por cuenta propia no es seguro. Se le indica qué hacer según el prospecto o la consulta."
+        }
+      ],
+      "correctOptionId": "completar",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "fa-14",
+      "conceptId": "mat-farmacologia:fa-14",
+      "category": "mat-farmacologia",
+      "topic": "Antimicrobianos",
+      "competency": "Ordenar la toma de cultivos y la primera dosis de antibiótico",
+      "difficulty": "integracion",
+      "format": "caso",
+      "stem": "A un paciente con sospecha de infección se le indican hemocultivos e inicio de antibiótico endovenoso. ¿Qué orden corresponde, salvo otra indicación del equipo?",
+      "rationale": "Los cultivos se toman antes del primer antimicrobiano siempre que eso no implique una demora relevante, porque el antibiótico puede impedir el crecimiento bacteriano en el cultivo. En la sepsis, el tratamiento precoz es prioritario. La técnica de extracción (antisepsia, sitios, volúmenes) sigue el protocolo institucional.",
+      "transferPrinciple": "Cuando dos indicaciones son urgentes, pensá en qué orden preserva la información sin demorar el tratamiento.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-farmacologia",
+          "section": "Principios del tratamiento antimicrobiano"
+        },
+        {
+          "ref": "sepsis3-2016",
+          "section": "Reconocimiento precoz"
+        },
+        {
+          "ref": "protocolo-institucional",
+          "section": "Toma de hemocultivos"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "cultivo-primero",
+          "text": "Extraer los hemocultivos antes de la primera dosis, sin demorar el antibiótico más de lo necesario.",
+          "feedback": "Correcto. Así se aumenta la probabilidad de identificar el microorganismo sin retrasar el tratamiento."
+        },
+        {
+          "id": "antibiotico-primero",
+          "text": "Administrar primero el antibiótico y extraer los hemocultivos al día siguiente, cuando el paciente esté más estable.",
+          "feedback": "Con el antibiótico ya administrado, los cultivos pueden negativizarse y perderse información diagnóstica."
+        },
+        {
+          "id": "esperar",
+          "text": "Esperar el resultado de los hemocultivos para saber qué antibiótico conviene antes de administrar cualquier dosis.",
+          "feedback": "Los resultados tardan días; en una infección grave, demorar el antibiótico es peligroso."
+        },
+        {
+          "id": "mismo-cateter",
+          "text": "Extraer los hemocultivos por el mismo catéter por el que se acaba de pasar el antibiótico.",
+          "feedback": "Extraer por la vía donde pasó el antibiótico altera el resultado. La técnica la define el protocolo."
+        }
+      ],
+      "correctOptionId": "cultivo-primero",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "fa-15",
+      "conceptId": "mat-farmacologia:fa-15",
+      "category": "mat-farmacologia",
+      "topic": "Analgésicos",
+      "competency": "Reconocer efectos adversos de los antiinflamatorios no esteroides",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "Un paciente adulto mayor con antecedente de úlcera gástrica tiene indicado un antiinflamatorio no esteroide (AINE). ¿Qué efecto adverso debés vigilar especialmente?",
+      "rationale": "Los AINE inhiben la ciclooxigenasa y la síntesis de prostaglandinas, que protegen la mucosa gástrica y mantienen el flujo renal. Por eso pueden causar gastritis, úlceras, sangrado digestivo, deterioro renal y retención de líquidos. El riesgo aumenta con la edad, los antecedentes de úlcera y el uso de anticoagulantes.",
+      "transferPrinciple": "Ante un antecedente de riesgo, comunicalo antes de administrar: el equipo puede elegir una alternativa más segura.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-farmacologia",
+          "section": "Antiinflamatorios no esteroides: efectos adversos"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "gi-renal",
+          "text": "Sangrado digestivo y deterioro de la función renal.",
+          "feedback": "Correcto. Los AINE pueden lesionar la mucosa gástrica y reducir el flujo renal; el riesgo aumenta en adultos mayores."
+        },
+        {
+          "id": "respiratoria",
+          "text": "Depresión respiratoria y somnolencia profunda, como la que producen los opioides.",
+          "feedback": "La depresión respiratoria es característica de los opioides, no de los AINE."
+        },
+        {
+          "id": "hipoglucemia",
+          "text": "Hipoglucemia grave, porque los AINE aumentan la secreción de insulina en el páncreas.",
+          "feedback": "Ese no es un efecto adverso típico de los AINE."
+        },
+        {
+          "id": "adiccion",
+          "text": "Adicción, porque los AINE actúan sobre los receptores opioides del cerebro.",
+          "feedback": "Los AINE no actúan sobre receptores opioides."
+        }
+      ],
+      "correctOptionId": "gi-renal",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "fa-16",
+      "conceptId": "mat-farmacologia:fa-16",
+      "category": "mat-farmacologia",
+      "topic": "Analgésicos",
+      "competency": "Reconocer la depresión respiratoria por opioides y actuar dentro del rol",
+      "difficulty": "integracion",
+      "format": "error_seguridad",
+      "stem": "Un paciente que recibe morfina está muy somnoliento, cuesta despertarlo y respira 8 veces por minuto. Tiene indicada una nueva dosis ahora. ¿Qué corresponde?",
+      "rationale": "Los opioides deprimen el centro respiratorio. La sedación excesiva suele preceder a la depresión respiratoria, por lo que se valora con escalas de sedación además de la frecuencia respiratoria. Ante signos de depresión respiratoria, se suspende la dosis, se estimula al paciente, se pide ayuda, se mantiene la vía aérea y se comunica; la naloxona la indica el médico según el protocolo.",
+      "transferPrinciple": "Antes de administrar un opioide, valorá sedación y respiración: si el paciente no está en condiciones, la dosis no se administra.",
+      "criticalSafety": true,
+      "riskNote": "Administrar otro opioide a un paciente con depresión respiratoria puede causar un paro respiratorio.",
+      "recoveryQuestionId": "fa-16r",
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-farmacologia",
+          "section": "Analgésicos opioides: efectos adversos"
+        },
+        {
+          "ref": "ismp-alto-riesgo-2024",
+          "section": "Opioides"
+        },
+        {
+          "ref": "protocolo-institucional",
+          "section": "Vigilancia del paciente con opioides"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "no-dar-avisar",
+          "text": "No administrar la dosis, estimularlo, pedir ayuda de inmediato y comunicar al médico, que puede indicar un antagonista.",
+          "feedback": "Correcto. Son signos de depresión respiratoria por opioides: se suspende la dosis y se activa la respuesta del equipo."
+        },
+        {
+          "id": "dar",
+          "text": "Administrar la dosis indicada, porque el dolor posoperatorio debe controlarse a horario.",
+          "feedback": "Con sedación profunda y bradipnea, otra dosis puede agravar la depresión respiratoria."
+        },
+        {
+          "id": "dejar-dormir",
+          "text": "Dejarlo dormir, porque el sueño es un signo de que el dolor está bien controlado.",
+          "feedback": "Una sedación profunda con respiración lenta no es un buen control del dolor: es un signo de alarma."
+        },
+        {
+          "id": "naloxona-sola",
+          "text": "Administrar por mi cuenta la naloxona que hay en el carro de paro, sin esperar indicación.",
+          "feedback": "Los antagonistas se administran con indicación y según el protocolo: corresponde avisar de inmediato."
+        }
+      ],
+      "correctOptionId": "no-dar-avisar",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "fa-16r",
+      "conceptId": "mat-farmacologia:fa-16",
+      "category": "mat-farmacologia",
+      "topic": "Analgésicos",
+      "competency": "Reconocer la depresión respiratoria por opioides y actuar dentro del rol",
+      "difficulty": "integracion",
+      "format": "error_seguridad",
+      "stem": "Antes de la dosis de horario de un opioide, el paciente se duerme mientras le hablás y su frecuencia respiratoria es de 10 por minuto. Antes respondía bien y respiraba 16 por minuto. ¿Qué hacés?",
+      "rationale": "La sedación creciente suele preceder a la depresión respiratoria. Por eso, antes de cada dosis de opioide se valora el nivel de sedación, la frecuencia y la profundidad respiratoria y, si está indicado, la saturación. Un cambio respecto de la valoración previa se comunica antes de administrar.",
+      "transferPrinciple": "La comparación con la valoración anterior es tu mejor detector de riesgo: un cambio de tendencia vale más que un valor aislado.",
+      "criticalSafety": true,
+      "riskNote": "Continuar con opioides ante una sedación progresiva puede llevar a una depresión respiratoria grave.",
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": true,
+      "sources": [
+        {
+          "ref": "libro-farmacologia",
+          "section": "Analgésicos opioides: efectos adversos"
+        },
+        {
+          "ref": "protocolo-institucional",
+          "section": "Vigilancia del paciente con opioides"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "valorar-comunicar",
+          "text": "Postergar la dosis, valorar sedación y saturación, despertarlo y comunicar el cambio al médico de inmediato.",
+          "feedback": "Correcto. La sedación progresiva es un signo temprano de toxicidad por opioides."
+        },
+        {
+          "id": "dar-menos",
+          "text": "Administrar la mitad de la dosis, para no dejarlo con dolor y a la vez reducir el riesgo.",
+          "feedback": "Reducir la dosis por cuenta propia no corresponde; con sedación progresiva se posterga y se consulta."
+        },
+        {
+          "id": "oxigeno-dar",
+          "text": "Colocarle oxígeno y administrar la dosis completa, porque así la saturación se mantiene normal.",
+          "feedback": "El oxígeno puede mantener la saturación mientras el CO₂ se acumula: no hace segura una nueva dosis."
+        },
+        {
+          "id": "registrar",
+          "text": "Registrar que el paciente está tranquilo y descansando, y administrar la dosis como está indicada.",
+          "feedback": "Registrar «tranquilo» oculta un signo de alarma."
+        }
+      ],
+      "correctOptionId": "valorar-comunicar",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "fa-17",
+      "conceptId": "mat-farmacologia:fa-17",
+      "category": "mat-farmacologia",
+      "topic": "Analgésicos",
+      "competency": "Prevenir la sobredosis de paracetamol por duplicación",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "Una persona toma paracetamol cada 8 horas por dolor y además compra un antigripal de venta libre. ¿Qué le recomendás?",
+      "rationale": "El paracetamol es seguro a las dosis indicadas, pero su exceso produce un metabolito tóxico para el hígado. El riesgo aumenta con la duplicación inadvertida (varios productos con el mismo principio activo), el consumo de alcohol y la enfermedad hepática. La educación incluye leer la composición de cada producto.",
+      "transferPrinciple": "Enseñá a leer el principio activo, no la marca: dos nombres comerciales distintos pueden contener el mismo fármaco.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-farmacologia",
+          "section": "Paracetamol: toxicidad hepática"
+        },
+        {
+          "ref": "oms-medicacion-sin-danio-2017",
+          "section": "Pacientes y público: medicamentos de venta libre"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "leer-prospecto",
+          "text": "Revisar si el antigripal también contiene paracetamol antes de tomarlo, para no superar la dosis máxima diaria.",
+          "feedback": "Correcto. Muchos antigripales contienen paracetamol y la duplicación puede causar daño hepático."
+        },
+        {
+          "id": "libre",
+          "text": "Tomarlos juntos sin problema, porque los medicamentos de venta libre no tienen riesgo.",
+          "feedback": "Los medicamentos de venta libre también pueden causar daño, especialmente si se duplican principios activos."
+        },
+        {
+          "id": "alcohol",
+          "text": "Acompañar las tomas con una bebida alcohólica caliente para potenciar el efecto contra la gripe.",
+          "feedback": "El alcohol aumenta el riesgo de daño hepático con paracetamol."
+        },
+        {
+          "id": "aumentar",
+          "text": "Aumentar la dosis de paracetamol si la fiebre no baja, sin límite de tomas por día, porque es un medicamento de venta libre y muy seguro.",
+          "feedback": "El paracetamol tiene una dosis máxima diaria; superarla puede causar insuficiencia hepática."
+        }
+      ],
+      "correctOptionId": "leer-prospecto",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "fa-18",
+      "conceptId": "mat-farmacologia:fa-18",
+      "category": "mat-farmacologia",
+      "topic": "Farmacovigilancia",
+      "competency": "Definir reacción adversa a medicamentos",
+      "difficulty": "conceptual",
+      "format": "concepto",
+      "stem": "¿Qué se entiende por reacción adversa a un medicamento?",
+      "rationale": "La farmacovigilancia detecta, evalúa y previene los efectos adversos de los medicamentos. Una reacción adversa es una respuesta nociva y no intencionada a dosis habituales; un error de medicación es una falla en el proceso. Ambos se registran y notifican por los canales correspondientes.",
+      "transferPrinciple": "Diferenciar reacción adversa de error de medicación te permite notificar por el circuito correcto y aprender de cada caso.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-farmacologia",
+          "section": "Reacciones adversas a medicamentos"
+        },
+        {
+          "ref": "anmat-farmacovigilancia",
+          "section": "Definiciones y notificación"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "nociva",
+          "text": "Una respuesta nociva y no intencionada que aparece con las dosis habitualmente usadas.",
+          "feedback": "Correcto. Se diferencia del error de medicación porque ocurre aun cuando el fármaco se usa correctamente."
+        },
+        {
+          "id": "error",
+          "text": "Cualquier error en la preparación o en la administración de un medicamento.",
+          "feedback": "Eso es un error de medicación, que puede causar o no un evento adverso."
+        },
+        {
+          "id": "esperado",
+          "text": "El efecto terapéutico buscado cuando se indica un medicamento.",
+          "feedback": "El efecto buscado es el efecto terapéutico, no una reacción adversa."
+        },
+        {
+          "id": "sobredosis",
+          "text": "Solo los efectos que aparecen cuando el paciente toma dosis mucho mayores a las indicadas.",
+          "feedback": "Las reacciones adversas pueden aparecer con dosis habituales; la intoxicación por sobredosis es otro concepto."
+        }
+      ],
+      "correctOptionId": "nociva",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "fa-19",
+      "conceptId": "mat-farmacologia:fa-19",
+      "category": "mat-farmacologia",
+      "topic": "Farmacovigilancia",
+      "competency": "Notificar una sospecha de reacción adversa",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "Detectás una erupción en un paciente que recibió un fármaco nuevo hace dos días. Ya lo comunicaste al médico. ¿Qué más corresponde?",
+      "rationale": "En la Argentina funciona el Sistema Nacional de Farmacovigilancia de la ANMAT, que recibe notificaciones de profesionales por la «hoja amarilla», correo electrónico o formulario en línea. Se notifican sospechas de reacciones adversas, falta de eficacia y problemas de calidad. Cada institución define su circuito interno.",
+      "transferPrinciple": "Notificar una sospecha no es acusar a nadie: es aportar un dato para que el sistema aprenda.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "anmat-farmacovigilancia",
+          "section": "Vías de notificación"
+        },
+        {
+          "ref": "protocolo-institucional",
+          "section": "Circuito de farmacovigilancia"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "notificar",
+          "text": "Registrarlo en la historia clínica y notificarlo al sistema de farmacovigilancia según el circuito institucional.",
+          "feedback": "Correcto. La notificación permite detectar reacciones poco conocidas y mejorar la seguridad."
+        },
+        {
+          "id": "nada",
+          "text": "Nada más: la notificación de reacciones adversas es responsabilidad exclusiva del laboratorio que fabrica el medicamento.",
+          "feedback": "Los profesionales de la salud también pueden y deben notificar sospechas de reacciones adversas."
+        },
+        {
+          "id": "confirmar",
+          "text": "Esperar a tener la certeza absoluta de que el fármaco la causó antes de registrar o notificar algo.",
+          "feedback": "Se notifican sospechas: no hace falta certeza para notificar."
+        },
+        {
+          "id": "suspender",
+          "text": "Suspender todos los medicamentos del paciente hasta que se aclare la causa de la erupción.",
+          "feedback": "Suspender medicación es una decisión del equipo tratante, no una medida de notificación."
+        }
+      ],
+      "correctOptionId": "notificar",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "fa-20",
+      "conceptId": "mat-farmacologia:fa-20",
+      "category": "mat-farmacologia",
+      "topic": "Farmacodinamia",
+      "competency": "Reconocer una interacción farmacodinámica de riesgo",
+      "difficulty": "integracion",
+      "format": "caso",
+      "stem": "Un paciente anticoagulado tiene indicado además un antiinflamatorio no esteroide por dolor. ¿Qué riesgo aumenta y qué corresponde?",
+      "rationale": "Las interacciones farmacodinámicas ocurren cuando dos fármacos actúan sobre el mismo sistema fisiológico. Los AINE inhiben la agregación plaquetaria y pueden dañar la mucosa gástrica; con anticoagulantes, el riesgo de sangrado aumenta. Enfermería detecta la combinación, la comunica y vigila signos de sangrado (melena, hematuria, hematomas, gingivorragia).",
+      "transferPrinciple": "Antes de administrar, revisá la lista completa de medicamentos del paciente: el riesgo puede estar en la combinación y no en cada fármaco por separado.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-farmacologia",
+          "section": "Interacciones farmacológicas"
+        },
+        {
+          "ref": "ismp-alto-riesgo-2024",
+          "section": "Anticoagulantes"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "sangrado",
+          "text": "Aumenta el riesgo de sangrado; se comunica al médico antes de administrar y se vigilan signos de hemorragia.",
+          "feedback": "Correcto. Los AINE afectan la función plaquetaria y la mucosa gástrica, y suman su efecto al del anticoagulante."
+        },
+        {
+          "id": "trombosis",
+          "text": "Aumenta el riesgo de trombosis, porque el antiinflamatorio anula por completo el efecto del anticoagulante.",
+          "feedback": "La combinación aumenta el riesgo de sangrado, no de trombosis."
+        },
+        {
+          "id": "ninguno",
+          "text": "Ningún riesgo, porque actúan sobre órganos distintos y no se relacionan entre sí.",
+          "feedback": "Ambos influyen en la hemostasia: su combinación tiene efectos sumados."
+        },
+        {
+          "id": "menos-dolor",
+          "text": "Solo un mejor control del dolor, por lo que conviene administrarlos juntos siempre que se pueda, sin necesidad de consultar al médico.",
+          "feedback": "La combinación puede ser necesaria en algún caso, pero su riesgo debe evaluarse con el equipo."
+        }
+      ],
+      "correctOptionId": "sangrado",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    }
+  ]
+}

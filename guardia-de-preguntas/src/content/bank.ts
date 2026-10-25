@@ -3,7 +3,7 @@ import configJson from './config.json';
 import finalJson from './final-challenge.json';
 import questionsJson from './questions.json';
 import sourcesJson from './sources.json';
-import type { CategoryDef, CategoryId, ContentMode, GameConfig, Question, Source } from '../types';
+import type { CategoryDef, ContentMode, GameConfig, Question, Source } from '../types';
 
 export interface FinalChallengeDef {
   title: string;
@@ -15,7 +15,7 @@ export interface FinalChallengeDef {
 
 export interface Bank {
   categories: CategoryDef[];
-  categoryById: Record<CategoryId, CategoryDef>;
+  categoryById: Record<string, CategoryDef>;
   questions: Question[];
   byId: Map<string, Question>;
   sources: Map<string, Source>;
@@ -44,7 +44,7 @@ export function buildBank(input: {
 }): Bank {
   const questions = [...input.questions, ...input.finalQuestions];
   const byId = new Map(questions.map((q) => [q.id, q] as const));
-  const categoryById = Object.fromEntries(input.categories.map((c) => [c.id, c])) as Record<CategoryId, CategoryDef>;
+  const categoryById = Object.fromEntries(input.categories.map((c) => [c.id, c])) as Record<string, CategoryDef>;
   const stepQuestionIds = input.finalQuestions.filter((q) => !q.isRecoveryVariant).map((q) => q.id);
   return {
     categories: input.categories,

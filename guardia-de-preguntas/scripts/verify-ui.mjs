@@ -17,6 +17,9 @@ const bankQs = [
   ...JSON.parse(readFileSync(`${root}src/content/questions.json`, 'utf8')).questions,
   ...JSON.parse(readFileSync(`${root}src/content/final-challenge.json`, 'utf8')).questions,
 ];
+for (const f of ['anatomia', 'fisiologia', 'bioquimica', 'farmacologia', 'infectologia', 'epidemiologia', 'comunitaria', 'ingles']) {
+  bankQs.push(...JSON.parse(readFileSync(`${root}src/content/subjects/mat-${f}.json`, 'utf8')).questions);
+}
 const cats = JSON.parse(readFileSync(`${root}src/content/categories.json`, 'utf8')).categories;
 const byStem = new Map(bankQs.map((q) => [q.stem, q]));
 
@@ -80,6 +83,15 @@ async function answerCurrent(page, { correct = true } = {}) {
   await page.getByRole('button', { name: 'Confirmar respuesta' }).click();
   await page.locator('.feedback-screen').waitFor();
   return q;
+}
+
+// La celebración aparece tras cerrar la devolución; se espera un instante por si llega.
+async function dismissDialog(page) {
+  const dialog = page.getByRole('dialog');
+  if (await dialog.waitFor({ timeout: 600 }).then(() => true).catch(() => false)) {
+    await dialog.getByRole('button').first().click();
+    await dialog.waitFor({ state: 'detached' });
+  }
 }
 
 async function sectorUnderPointer(page) {
@@ -200,9 +212,7 @@ for (const width of [320, 360, 390, 430]) {
       await answerCurrent(page, { correct: true });
     }
     await page.getByRole('button', { name: 'Continuar' }).click();
-    if (await page.getByRole('dialog').isVisible().catch(() => false)) {
-      await page.getByRole('dialog').getByRole('button').first().click();
-    }
+    await dismissDialog(page);
   }
   check('error crítico detiene la acción', criticalStopShown);
   check('la recuperación crítica usa una variante distinta del mismo concepto', recoveryVariantDifferent);
@@ -273,6 +283,8 @@ for (const width of [320, 360, 390, 430]) {
     return false;
   };
   const steps = [];
+  // Se espera a que termine la carga inicial (lectura del guardado local) antes de tabular.
+  await page.getByRole('button', { name: /Empezar «Mi guardia»/ }).waitFor();
   steps.push(['inicio', await tabTo('Empezar «Mi guardia»')]);
   await page.keyboard.press('Enter');
   steps.push(['preparar', await tabTo('Empezar la guardia', 40)]);
@@ -280,6 +292,11 @@ for (const width of [320, 360, 390, 430]) {
   steps.push(['sin animación', await tabTo('Elegir desafío sin animación')]);
   await page.keyboard.press('Enter');
   // Al detenerse la ruleta el foco pasa solo a «Responder el desafío».
+  const landed = await page.getByRole('button', { name: 'Responder el desafío' }).waitFor({ timeout: 8000 }).then(() => true).catch(() => false);
+  if (!landed) {
+    console.log('pasos de teclado hasta aquí:', JSON.stringify(steps), 'foco:', await page.evaluate(() => document.activeElement?.outerHTML.slice(0, 160)));
+    await page.screenshot({ path: `${shots}/debug-teclado.png` });
+  }
   const focused = await page.evaluate(() => (document.activeElement?.textContent || '').trim());
   steps.push(['foco en el resultado', focused.includes('Responder el desafío')]);
   await page.keyboard.press('Enter');
@@ -334,7 +351,7 @@ for (const width of [320, 360, 390, 430]) {
     } else {
       await answerCurrent(page, { correct: true });
       await page.getByRole('button', { name: 'Continuar' }).click();
-      if (await page.getByRole('dialog').isVisible().catch(() => false)) await page.getByRole('dialog').getByRole('button').first().click();
+      await dismissDialog(page);
     }
   }
   await ctx.close();
@@ -360,6 +377,48 @@ for (const width of [320, 360, 390, 430]) {
     const playable = await page.locator('.stem').waitFor({ timeout: 4000 }).then(() => true).catch(() => false);
     check('se puede jugar sin conexión', playable);
   }
+  await ctx.close();
+}
+
+// ───────────── 5b. Repaso por materia ─────────────
+for (const width of [320, 390]) {
+  const ctx = await browser.newContext({ viewport: { width, height: 760 }, hasTouch: true, isMobile: true, deviceScaleFactor: 2 });
+  const page = await ctx.newPage();
+  await page.goto(BASE);
+  await page.getByRole('button', { name: 'Repaso por materia' }).click();
+  await page.getByRole('heading', { name: 'Repaso por materia' }).waitFor();
+  await page.screenshot({ path: `${shots}/${width}-12-materias.png`, fullPage: true });
+  check(`${width}px lista de materias sin desplazamiento horizontal`, await noHorizontalOverflow(page));
+  const small = await smallTargets(page);
+  check(`${width}px materias: objetivos táctiles ≥ 48 px`, small.length === 0, small.join(' | '));
+  check(`${width}px se muestran las 8 materias`, (await page.locator('.subject-card').count()) === 8);
+  await page.locator('.subject-card', { hasText: 'Inglés técnico' }).click();
+  await page.getByRole('button', { name: 'Siguiente pregunta' }).click();
+  await page.locator('.stem').waitFor();
+  const stem = (await page.locator('.stem').innerText()).trim();
+  const q = byStem.get(stem);
+  check(`${width}px la pregunta pertenece a la materia elegida`, q?.category === 'mat-ingles', q?.id);
+  await page.screenshot({ path: `${shots}/${width}-13-materia-pregunta.png`, fullPage: false });
+  check(`${width}px pregunta de materia sin desplazamiento horizontal`, await noHorizontalOverflow(page));
+  await answerCurrent(page, { correct: false });
+  check(`${width}px devolución de materia con fuentes`, await page.getByRole('heading', { name: 'Fuentes' }).isVisible());
+  const critical = await page.getByRole('heading', { name: 'Acción detenida' }).isVisible();
+  if (critical) await page.getByRole('button', { name: 'Volver al tablero (queda pendiente)' }).click();
+  else await page.getByRole('button', { name: 'Continuar' }).click();
+  await page.getByRole('heading', { name: 'Inglés técnico de Enfermería' }).waitFor();
+  await page.screenshot({ path: `${shots}/${width}-14-materia-tablero.png`, fullPage: true });
+  check(`${width}px tablero de materia sin desplazamiento horizontal`, await noHorizontalOverflow(page));
+  await page.getByRole('button', { name: /Repasar mis errores \(1\)/ }).click();
+  check(`${width}px el error de la materia aparece en su repaso`, (await page.locator('.review-item').count()) === 1);
+  await page.getByRole('button', { name: 'Volver a la materia' }).click();
+  await page.getByRole('button', { name: 'Resumen de la materia' }).click();
+  check(`${width}px resumen propio de la materia`, await page.getByRole('heading', { name: 'Resumen · Inglés técnico de Enfermería' }).isVisible());
+  // La guardia de PP2 no se ve afectada.
+  await page.getByRole('button', { name: 'Ir al inicio' }).click();
+  check(`${width}px la materia no crea una «Mi guardia»`, await page.getByRole('button', { name: /Empezar «Mi guardia»/ }).isVisible());
+  await page.reload();
+  await page.getByRole('button', { name: 'Repaso por materia' }).click();
+  check(`${width}px el progreso de la materia persiste`, (await page.locator('.subject-card', { hasText: '1 de 20 respondidas' }).count()) === 1);
   await ctx.close();
 }
 

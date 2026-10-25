@@ -3,7 +3,7 @@
 // orientan la revisión docente.
 
 import type { Bank } from './bank';
-import { CATEGORY_IDS, type Question } from '../types';
+import type { Question } from '../types';
 import { recomputeNumeric } from '../engine/evaluate';
 
 export interface ValidationReport {
@@ -13,7 +13,9 @@ export interface ValidationReport {
 
 const BANNED = [/todas las anteriores/i, /ninguna de las anteriores/i, /ninguna es correcta/i];
 
-export function validateBank(bank: Bank): ValidationReport {
+/** `requireFinal`: el banco de PP2 debe traer el desafío final; las materias no. */
+export function validateBank(bank: Bank, opts: { requireFinal?: boolean } = { requireFinal: true }): ValidationReport {
+  const areaIds = bank.categories.map((c) => c.id);
   const errors: string[] = [];
   const warnings: string[] = [];
   const ids = new Set<string>();
@@ -22,7 +24,7 @@ export function validateBank(bank: Bank): ValidationReport {
     const where = `[${q.id}]`;
     if (ids.has(q.id)) errors.push(`${where} id duplicado`);
     ids.add(q.id);
-    if (!(CATEGORY_IDS as readonly string[]).includes(q.category)) errors.push(`${where} categoría inválida: ${q.category}`);
+    if (!areaIds.includes(q.category)) errors.push(`${where} categoría inválida: ${q.category}`);
     if (!q.stem.trim()) errors.push(`${where} consigna vacía`);
     if (!q.rationale.trim()) errors.push(`${where} sin fundamento`);
     if (!q.transferPrinciple?.trim()) errors.push(`${where} sin principio trasladable`);
@@ -52,14 +54,16 @@ export function validateBank(bank: Bank): ValidationReport {
 
   // Cobertura y distribución.
   const base = bank.questions.filter((q) => !q.isRecoveryVariant && !q.finalChallenge);
-  for (const c of CATEGORY_IDS) {
+  for (const c of areaIds) {
     const inCat = base.filter((q) => q.category === c);
     if (inCat.length < bank.config.completion.distinctResolved) errors.push(`Categoría ${c}: menos preguntas que las necesarias para la insignia`);
     if (!inCat.some((q) => q.difficulty !== 'conceptual')) errors.push(`Categoría ${c}: no tiene preguntas de aplicación`);
     if (!inCat.some((q) => q.format === 'error_seguridad' || q.criticalSafety)) warnings.push(`Categoría ${c}: sin situación de seguridad`);
   }
-  for (const id of bank.final.stepQuestionIds) if (!bank.byId.get(id)?.finalChallenge) errors.push(`Paso final ${id} inexistente`);
-  if (bank.final.stepQuestionIds.length !== 3) errors.push('El desafío final debe tener tres decisiones');
+  if (opts.requireFinal) {
+    for (const id of bank.final.stepQuestionIds) if (!bank.byId.get(id)?.finalChallenge) errors.push(`Paso final ${id} inexistente`);
+    if (bank.final.stepQuestionIds.length !== 3) errors.push('El desafío final debe tener tres decisiones');
+  }
 
   // Pista sistemática: si la correcta suele ser la más larga, el jugador aprende a elegir por extensión.
   const choice = bank.questions.filter((q) => q.type === 'single_choice');
@@ -69,6 +73,14 @@ export function validateBank(bank: Bank): ValidationReport {
   });
   if (choice.length > 0 && longest.length / choice.length > 0.4) {
     errors.push(`La opción correcta es la más larga en ${longest.length} de ${choice.length} preguntas (máximo admitido: 40 %)`);
+  }
+  // La pista inversa también existe: si la correcta suele ser la más breve.
+  const shortest = choice.filter((q) => {
+    const min = Math.min(...q.options.map((o) => o.text.length));
+    return q.options.find((o) => o.id === q.correctOptionId)?.text.length === min;
+  });
+  if (choice.length > 0 && shortest.length / choice.length > 0.4) {
+    errors.push(`La opción correcta es la más corta en ${shortest.length} de ${choice.length} preguntas (máximo admitido: 40 %)`);
   }
   return { errors, warnings };
 }
