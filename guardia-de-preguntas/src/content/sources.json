@@ -1,0 +1,385 @@
+{
+  "note": "Catálogo de fuentes. 'verification' indica qué se comprobó automáticamente (existencia del documento y su identificador). No reemplaza la lectura y revisión docente del apartado citado. Los libros de texto deben ajustarse a la edición disponible en la cátedra.",
+  "sources": [
+    {
+      "id": "oms-higiene-manos-2009",
+      "title": "WHO Guidelines on Hand Hygiene in Health Care: First Global Patient Safety Challenge. Clean Care is Safer Care",
+      "organization": "Organización Mundial de la Salud",
+      "year": 2009,
+      "url": "https://www.who.int/publications/i/item/9789241597906",
+      "doi": null,
+      "kind": "guia",
+      "verification": "Existencia, título e ISBN 9789241597906 comprobados por búsqueda web el 2026-10-24."
+    },
+    {
+      "id": "oms-cirugia-segura-2009",
+      "title": "WHO Guidelines for Safe Surgery 2009: Safe Surgery Saves Lives",
+      "organization": "Organización Mundial de la Salud",
+      "year": 2009,
+      "url": "https://www.who.int/publications/i/item/9789241598552",
+      "doi": null,
+      "kind": "guia",
+      "verification": "Existencia, título e ISBN 9789241598552 comprobados por búsqueda web el 2026-10-24."
+    },
+    {
+      "id": "oms-lista-cirugia-2009",
+      "title": "Implementation Manual: WHO Surgical Safety Checklist 2009",
+      "organization": "Organización Mundial de la Salud",
+      "year": 2009,
+      "url": "https://www.who.int/publications/i/item/9789241598590",
+      "doi": null,
+      "kind": "manual",
+      "verification": "Existencia, título e ISBN 9789241598590 comprobados por búsqueda web el 2026-10-24."
+    },
+    {
+      "id": "oms-plan-seguridad-2021",
+      "title": "Global Patient Safety Action Plan 2021–2030: Towards Eliminating Avoidable Harm in Health Care",
+      "organization": "Organización Mundial de la Salud",
+      "year": 2021,
+      "url": "https://www.who.int/publications/i/item/9789240032705",
+      "doi": null,
+      "kind": "guia",
+      "verification": "Existencia, título e ISBN 9789240032705 comprobados por búsqueda web el 2026-10-24."
+    },
+    {
+      "id": "oms-medicacion-sin-danio-2017",
+      "title": "Medication Without Harm: WHO Global Patient Safety Challenge (WHO/HIS/SDS/2017.6)",
+      "organization": "Organización Mundial de la Salud",
+      "year": 2017,
+      "url": "https://iris.who.int/handle/10665/255263",
+      "doi": null,
+      "kind": "guia",
+      "verification": "Existencia y código WHO/HIS/SDS/2017.6 comprobados por búsqueda web el 2026-10-24."
+    },
+    {
+      "id": "oms-soluciones-2007",
+      "title": "Nueve soluciones para la seguridad del paciente (Patient Safety Solutions): identificación del paciente; comunicación durante el traspaso de pacientes, entre otras",
+      "organization": "Organización Mundial de la Salud y Joint Commission International (Centro Colaborador)",
+      "year": 2007,
+      "url": "https://www.who.int/news/item/02-05-2007-who-launches-nine-patient-safety-solutions",
+      "doi": null,
+      "kind": "guia",
+      "verification": "Existencia del lanzamiento y de las soluciones citadas comprobada por búsqueda web el 2026-10-24. El enlace corresponde al comunicado oficial; la cátedra puede reemplazarlo por el documento completo."
+    },
+    {
+      "id": "oms-isq-2018",
+      "title": "Global Guidelines for the Prevention of Surgical Site Infection, 2nd ed.",
+      "organization": "Organización Mundial de la Salud",
+      "year": 2018,
+      "url": "https://www.who.int/publications/i/item/9789241550475",
+      "doi": null,
+      "kind": "guia",
+      "verification": "Existencia, título e ISBN 9789241550475 comprobados por búsqueda web el 2026-10-24."
+    },
+    {
+      "id": "oms-ops-descontaminacion-2016",
+      "title": "Decontamination and Reprocessing of Medical Devices for Health-care Facilities",
+      "organization": "Organización Mundial de la Salud y Organización Panamericana de la Salud",
+      "year": 2016,
+      "url": "https://www.who.int/publications/i/item/9789241549851",
+      "doi": null,
+      "kind": "manual",
+      "verification": "Existencia, título e ISBN 9789241549851 comprobados por búsqueda web el 2026-10-24."
+    },
+    {
+      "id": "cdc-aislamiento-2007",
+      "title": "2007 Guideline for Isolation Precautions: Preventing Transmission of Infectious Agents in Healthcare Settings",
+      "organization": "Centers for Disease Control and Prevention (CDC) / HICPAC",
+      "year": 2007,
+      "url": "https://www.cdc.gov/infection-control/hcp/isolation-precautions/index.html",
+      "doi": null,
+      "kind": "guia",
+      "verification": "Existencia y URL comprobadas por búsqueda web el 2026-10-24 (el CDC indica actualizaciones posteriores del documento)."
+    },
+    {
+      "id": "cdc-cateteres-2011",
+      "title": "Guidelines for the Prevention of Intravascular Catheter-Related Infections, 2011",
+      "organization": "Centers for Disease Control and Prevention (CDC) / HICPAC",
+      "year": 2011,
+      "url": "https://www.cdc.gov/infection-control/hcp/intravascular-catheter-related-infections/summary-recommendations.html",
+      "doi": null,
+      "kind": "guia",
+      "verification": "Existencia y URL del resumen de recomendaciones comprobadas por búsqueda web el 2026-10-24."
+    },
+    {
+      "id": "ihi-sbar",
+      "title": "SBAR Tool: Situation-Background-Assessment-Recommendation",
+      "organization": "Institute for Healthcare Improvement (IHI)",
+      "year": null,
+      "url": "https://www.ihi.org/resources/Pages/Tools/sbartoolkit.aspx",
+      "doi": null,
+      "kind": "herramienta",
+      "verification": "Existencia comprobada por búsqueda web el 2026-10-24. En castellano suele usarse SAER (Situación, Antecedentes, Evaluación, Recomendación)."
+    },
+    {
+      "id": "ahrq-caidas-2013",
+      "title": "Preventing Falls in Hospitals: A Toolkit for Improving Quality of Care (AHRQ Publication No. 13-0015-EF)",
+      "organization": "Agency for Healthcare Research and Quality (AHRQ)",
+      "year": 2013,
+      "url": "https://www.ahrq.gov/patient-safety/settings/hospital/fall-prevention/toolkit/index.html",
+      "doi": null,
+      "kind": "herramienta",
+      "verification": "Existencia y número de publicación comprobados por búsqueda web el 2026-10-24. Verificar el enlace directo antes de distribuir."
+    },
+    {
+      "id": "aha-ecg-2007",
+      "title": "Recommendations for the standardization and interpretation of the electrocardiogram. Part I: The electrocardiogram and its technology",
+      "organization": "Kligfield P, et al. American Heart Association / ACCF / HRS. Circulation 2007;115(10):1306-24",
+      "year": 2007,
+      "url": "https://doi.org/10.1161/CIRCULATIONAHA.106.180200",
+      "doi": "10.1161/CIRCULATIONAHA.106.180200",
+      "kind": "articulo",
+      "verification": "Metadatos y DOI comprobados en PubMed (PMID 17322457) el 2026-10-24."
+    },
+    {
+      "id": "aha-presion-2019",
+      "title": "Measurement of Blood Pressure in Humans: A Scientific Statement From the American Heart Association",
+      "organization": "Muntner P, et al. American Heart Association. Hypertension 2019;73(5):e35-e66",
+      "year": 2019,
+      "url": "https://doi.org/10.1161/HYP.0000000000000087",
+      "doi": "10.1161/HYP.0000000000000087",
+      "kind": "articulo",
+      "verification": "Metadatos y DOI comprobados en PubMed (PMID 30827125) el 2026-10-24."
+    },
+    {
+      "id": "iasp-dolor-2020",
+      "title": "The revised International Association for the Study of Pain definition of pain: concepts, challenges, and compromises",
+      "organization": "Raja SN, et al. IASP. Pain 2020;161(9):1976-1982",
+      "year": 2020,
+      "url": "https://doi.org/10.1097/j.pain.0000000000001939",
+      "doi": "10.1097/j.pain.0000000000001939",
+      "kind": "articulo",
+      "verification": "Metadatos y DOI comprobados en PubMed (PMID 32694387) el 2026-10-24."
+    },
+    {
+      "id": "aha-rcp-2020",
+      "title": "Part 3: Adult Basic and Advanced Life Support. 2020 American Heart Association Guidelines for CPR and Emergency Cardiovascular Care",
+      "organization": "Panchal AR, et al. American Heart Association. Circulation 2020;142(16 Suppl 2):S366-S468",
+      "year": 2020,
+      "url": "https://doi.org/10.1161/CIR.0000000000000916",
+      "doi": "10.1161/CIR.0000000000000916",
+      "kind": "guia",
+      "verification": "Metadatos y DOI comprobados en PubMed (PMID 33081529) el 2026-10-24. Verificar si existe una actualización posterior adoptada por la institución."
+    },
+    {
+      "id": "kdigo-ira-2012",
+      "title": "KDIGO Clinical Practice Guideline for Acute Kidney Injury",
+      "organization": "Kidney Disease: Improving Global Outcomes (KDIGO). Kidney International Supplements 2012;2(1)",
+      "year": 2012,
+      "url": "https://kdigo.org/guidelines/acute-kidney-injury/",
+      "doi": null,
+      "kind": "guia",
+      "verification": "Existencia y criterio de diuresis < 0,5 mL/kg/h comprobados por búsqueda web en fuentes secundarias el 2026-10-24. Verificar el enlace directo."
+    },
+    {
+      "id": "ada-hipoglucemia-2025",
+      "title": "6. Glycemic Goals and Hypoglycemia: Standards of Care in Diabetes—2025",
+      "organization": "American Diabetes Association Professional Practice Committee. Diabetes Care 2025;48(Suppl 1):S128-S145",
+      "year": 2025,
+      "url": "https://doi.org/10.2337/dc25-S006",
+      "doi": "10.2337/dc25-S006",
+      "kind": "guia",
+      "verification": "Registro bibliográfico y DOI comprobados por búsqueda web (PubMed 39651981) el 2026-10-24. Se actualiza anualmente: verificar la edición vigente."
+    },
+    {
+      "id": "ins-infusion-2024",
+      "title": "Infusion Therapy Standards of Practice, 9th Edition",
+      "organization": "Infusion Nurses Society. Journal of Infusion Nursing 2024;47(1S):S1-S285",
+      "year": 2024,
+      "url": "https://doi.org/10.1097/NAN.0000000000000532",
+      "doi": "10.1097/NAN.0000000000000532",
+      "kind": "guia",
+      "verification": "Registro bibliográfico y DOI comprobados por búsqueda web el 2026-10-24. Acceso completo restringido: la cátedra debe confirmar el apartado."
+    },
+    {
+      "id": "libro-fisiologia",
+      "title": "Guyton y Hall. Tratado de fisiología médica",
+      "organization": "Hall JE, Hall ME. Elsevier",
+      "year": null,
+      "url": null,
+      "doi": null,
+      "kind": "libro",
+      "verification": "Libro de referencia existente. Pendiente: la cátedra debe indicar la edición y el capítulo disponibles."
+    },
+    {
+      "id": "libro-farmacologia",
+      "title": "Goodman & Gilman. Las bases farmacológicas de la terapéutica",
+      "organization": "McGraw-Hill",
+      "year": null,
+      "url": null,
+      "doi": null,
+      "kind": "libro",
+      "verification": "Libro de referencia existente. Pendiente: la cátedra debe indicar la edición y el capítulo disponibles."
+    },
+    {
+      "id": "libro-fundamentos",
+      "title": "Potter & Perry. Fundamentos de enfermería",
+      "organization": "Potter PA, Perry AG, et al. Elsevier",
+      "year": null,
+      "url": null,
+      "doi": null,
+      "kind": "libro",
+      "verification": "Libro de referencia existente. Pendiente: la cátedra debe indicar la edición y el capítulo disponibles."
+    },
+    {
+      "id": "protocolo-institucional",
+      "title": "Protocolo institucional vigente (a cargo de la cátedra o del servicio)",
+      "organization": "Institución de práctica",
+      "year": null,
+      "url": null,
+      "doi": null,
+      "kind": "manual",
+      "verification": "Marcador: la cátedra debe reemplazarlo por el protocolo local correspondiente."
+    },
+    {
+      "id": "libro-anatomia",
+      "title": "Latarjet M, Ruiz Liard A. Anatomía humana",
+      "organization": "Editorial Médica Panamericana",
+      "year": null,
+      "url": null,
+      "doi": null,
+      "kind": "libro",
+      "verification": "Libro de referencia existente. Pendiente: la cátedra debe indicar la edición y el capítulo disponibles."
+    },
+    {
+      "id": "libro-bioquimica",
+      "title": "Blanco A, Blanco G. Química biológica",
+      "organization": "Editorial El Ateneo",
+      "year": null,
+      "url": null,
+      "doi": null,
+      "kind": "libro",
+      "verification": "Libro de referencia existente. Pendiente: la cátedra debe indicar la edición y el capítulo disponibles."
+    },
+    {
+      "id": "libro-microbiologia",
+      "title": "Murray PR, Rosenthal KS, Pfaller MA. Microbiología médica",
+      "organization": "Elsevier",
+      "year": null,
+      "url": null,
+      "doi": null,
+      "kind": "libro",
+      "verification": "Libro de referencia existente. Pendiente: la cátedra debe indicar la edición y el capítulo disponibles."
+    },
+    {
+      "id": "ops-mopece",
+      "title": "Módulos de Principios de Epidemiología para el Control de Enfermedades (MOPECE), 2.ª ed. revisada",
+      "organization": "Organización Panamericana de la Salud",
+      "year": 2011,
+      "url": "https://www3.paho.org/col/dmdocuments/MOPECE1.pdf",
+      "doi": null,
+      "kind": "manual",
+      "verification": "Existencia, autores y estructura en 5 unidades comprobado por búsqueda web el 2026-10-24. El enlace corresponde a la unidad 1 (las demás: MOPECE2…MOPECE5)."
+    },
+    {
+      "id": "oms-alma-ata-1978",
+      "title": "Declaración de Alma-Ata. Conferencia Internacional sobre Atención Primaria de Salud",
+      "organization": "OMS y UNICEF",
+      "year": 1978,
+      "url": "https://www.paho.org/hq/dmdocuments/2012/Alma-Ata-1978Declaracion.pdf",
+      "doi": null,
+      "kind": "guia",
+      "verification": "Texto oficial en español alojado por la OPS, comprobado por búsqueda web el 2026-10-24."
+    },
+    {
+      "id": "oms-ottawa-1986",
+      "title": "Carta de Ottawa para la Promoción de la Salud",
+      "organization": "Organización Mundial de la Salud",
+      "year": 1986,
+      "url": null,
+      "doi": null,
+      "kind": "guia",
+      "verification": "Existencia, fecha (21/11/1986) y cinco áreas de acción comprobado por búsqueda web el 2026-10-24. Pendiente: enlazar la copia oficial de OMS/OPS."
+    },
+    {
+      "id": "oms-determinantes-2008",
+      "title": "Subsanar las desigualdades en una generación. Comisión sobre Determinantes Sociales de la Salud",
+      "organization": "Organización Mundial de la Salud",
+      "year": 2008,
+      "url": "https://iris.who.int/handle/10665/43943",
+      "doi": null,
+      "kind": "guia",
+      "verification": "Registro en el repositorio IRIS de la OMS comprobado por búsqueda web el 2026-10-24."
+    },
+    {
+      "id": "ops-aps-renovada-2007",
+      "title": "La renovación de la atención primaria de salud en las Américas. Documento de posición de la OPS/OMS",
+      "organization": "Organización Panamericana de la Salud",
+      "year": 2007,
+      "url": "https://www3.paho.org/els/dmdocuments/Renovacion_Atencion_Primaria_Salud_Americas-OPS.pdf",
+      "doi": null,
+      "kind": "guia",
+      "verification": "Existencia y PDF oficial comprobado por búsqueda web el 2026-10-24."
+    },
+    {
+      "id": "ismp-alto-riesgo-2024",
+      "title": "ISMP List of High-Alert Medications in Acute Care Settings",
+      "organization": "Institute for Safe Medication Practices (ISMP)",
+      "year": 2024,
+      "url": "https://home.ecri.org/blogs/ismp-resources/high-alert-medications-in-acute-care-settings",
+      "doi": null,
+      "kind": "herramienta",
+      "verification": "Existencia y edición 2024 comprobado por búsqueda web el 2026-10-24."
+    },
+    {
+      "id": "ismp-abreviaturas-2024",
+      "title": "ISMP List of Error-Prone Abbreviations, Symbols, and Dose Designations",
+      "organization": "Institute for Safe Medication Practices (ISMP)",
+      "year": 2024,
+      "url": "https://online.ecri.org/hubfs/ISMP/Resources/ISMP_ErrorProneAbbreviation_List.pdf",
+      "doi": null,
+      "kind": "herramienta",
+      "verification": "Existencia y edición 2024 comprobado por búsqueda web el 2026-10-24."
+    },
+    {
+      "id": "anmat-farmacovigilancia",
+      "title": "Sistema Nacional de Farmacovigilancia (Resolución 706/1993)",
+      "organization": "ANMAT, Argentina",
+      "year": null,
+      "url": "https://www.argentina.gob.ar/anmat",
+      "doi": null,
+      "kind": "guia",
+      "verification": "Existencia del sistema y vías de notificación (hoja amarilla, correo electrónico, formulario en línea) comprobado por búsqueda web el 2026-10-24. Verificar el formulario vigente en el sitio de la ANMAT."
+    },
+    {
+      "id": "sepsis3-2016",
+      "title": "The Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3)",
+      "organization": "Singer M, et al. JAMA 2016;315(8):801-10",
+      "year": 2016,
+      "url": "https://doi.org/10.1001/jama.2016.0287",
+      "doi": "10.1001/jama.2016.0287",
+      "kind": "articulo",
+      "verification": "Metadatos y DOI comprobados en PubMed (PMID 26903338) el 2026-10-24."
+    },
+    {
+      "id": "cdc-pep-2013",
+      "title": "Updated US Public Health Service guidelines for the management of occupational exposures to HIV and recommendations for postexposure prophylaxis",
+      "organization": "Kuhar DT, et al. Infect Control Hosp Epidemiol 2013;34(9):875-92",
+      "year": 2013,
+      "url": "https://doi.org/10.1086/672271",
+      "doi": "10.1086/672271",
+      "kind": "guia",
+      "verification": "Metadatos y DOI comprobados en PubMed (PMID 23917901) el 2026-10-24."
+    },
+    {
+      "id": "cdc-cauti-2009",
+      "title": "Guideline for prevention of catheter-associated urinary tract infections 2009",
+      "organization": "Gould CV, et al. CDC/HICPAC. Infect Control Hosp Epidemiol 2010;31(4):319-26",
+      "year": 2010,
+      "url": "https://doi.org/10.1086/651091",
+      "doi": "10.1086/651091",
+      "kind": "guia",
+      "verification": "Metadatos y DOI comprobados en PubMed (PMID 20156062) el 2026-10-24."
+    },
+    {
+      "id": "material-original",
+      "title": "Texto original redactado para el ejercicio",
+      "organization": "Guardia de Preguntas (contenido propio, ficticio)",
+      "year": null,
+      "url": null,
+      "doi": null,
+      "kind": "manual",
+      "verification": "Texto breve en inglés escrito para el juego; no reproduce documentos de terceros. Revisar con la cátedra de Inglés."
+    }
+  ]
+}

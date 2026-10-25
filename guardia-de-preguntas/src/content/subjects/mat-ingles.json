@@ -1,0 +1,1147 @@
+{
+  "subject": "mat-ingles",
+  "bankVersion": "1.0",
+  "note": "Contenido en borrador generado con asistencia de IA a partir de contenidos estándar. Casos y datos ficticios. Pendiente de revisión docente y de contraste con el programa vigente.",
+  "questions": [
+    {
+      "id": "en-01",
+      "conceptId": "mat-ingles:en-01",
+      "category": "mat-ingles",
+      "topic": "Vocabulario clínico",
+      "competency": "Comprender vocabulario de síntomas respiratorios",
+      "difficulty": "conceptual",
+      "format": "concepto",
+      "stem": "En un registro en inglés figura: «The patient reports shortness of breath». ¿Qué refiere el paciente?",
+      "rationale": "«Shortness of breath» (a veces abreviado SOB en registros informales) equivale a disnea o falta de aire. Otras expresiones frecuentes: «wheezing» (sibilancias), «cough» (tos), «chest tightness» (opresión en el pecho).",
+      "transferPrinciple": "En inglés clínico, muchas sensaciones se expresan con frases cotidianas: aprendelas como bloques y no palabra por palabra.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "material-original",
+          "section": "Texto breve redactado para el ejercicio"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "disnea",
+          "text": "Falta de aire (disnea).",
+          "feedback": "Correcto. «Shortness of breath» es la expresión habitual para la sensación de falta de aire."
+        },
+        {
+          "id": "respiracion-corta",
+          "text": "Que su respiración es breve y superficial, aunque no siente ninguna molestia al respirar.",
+          "feedback": "«Shortness of breath» describe una sensación de falta de aire, no un patrón respiratorio sin molestia."
+        },
+        {
+          "id": "aliento",
+          "text": "Mal aliento (halitosis) desde hace varios días, sobre todo por la mañana.",
+          "feedback": "El mal aliento se dice «bad breath»."
+        },
+        {
+          "id": "tos",
+          "text": "Tos seca.",
+          "feedback": "La tos se dice «cough»."
+        }
+      ],
+      "correctOptionId": "disnea",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "en-02",
+      "conceptId": "mat-ingles:en-02",
+      "category": "mat-ingles",
+      "topic": "Vocabulario clínico",
+      "competency": "Comprender vocabulario de síntomas neurológicos",
+      "difficulty": "conceptual",
+      "format": "concepto",
+      "stem": "¿Qué significa «dizziness» en un registro clínico?",
+      "rationale": "«Dizziness» es un término amplio para el mareo. «Lightheadedness» describe la sensación de cabeza liviana o de estar por desmayarse; «vertigo», la sensación de giro. «Fainting» o «syncope» es la pérdida transitoria del conocimiento.",
+      "transferPrinciple": "Cuando traduzcas un síntoma, buscá el término más preciso: en clínica, mareo, vértigo y síncope no son lo mismo.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "material-original",
+          "section": "Texto breve redactado para el ejercicio"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "mareo",
+          "text": "Mareo o sensación de inestabilidad.",
+          "feedback": "Correcto. «Dizziness» describe mareo o sensación de inestabilidad."
+        },
+        {
+          "id": "somnolencia",
+          "text": "Somnolencia excesiva durante el día, con dificultad para mantenerse despierto.",
+          "feedback": "La somnolencia se dice «drowsiness» o «sleepiness»."
+        },
+        {
+          "id": "confusion",
+          "text": "Confusión mental y desorientación en tiempo y espacio.",
+          "feedback": "La confusión se dice «confusion» y la desorientación, «disorientation»."
+        },
+        {
+          "id": "desmayo",
+          "text": "Desmayo.",
+          "feedback": "El desmayo se dice «fainting» o «syncope»."
+        }
+      ],
+      "correctOptionId": "mareo",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "en-03",
+      "conceptId": "mat-ingles:en-03",
+      "category": "mat-ingles",
+      "topic": "Falsos amigos",
+      "competency": "Evitar errores por falsos amigos",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "Un registro dice: «The patient has been constipated for three days». ¿Qué le pasa al paciente?",
+      "rationale": "Los falsos amigos son palabras parecidas en dos idiomas con significados distintos. «Constipated» significa estreñido; «to have a cold», estar resfriado. Una mala traducción puede llevar a cuidados equivocados.",
+      "transferPrinciple": "Si una palabra en inglés «se parece» al español, verificá su significado antes de registrarla o actuar.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "material-original",
+          "section": "Texto breve redactado para el ejercicio"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "estrenido",
+          "text": "Está estreñido desde hace tres días.",
+          "feedback": "Correcto. «Constipated» significa estreñido; es un falso amigo frecuente."
+        },
+        {
+          "id": "resfriado",
+          "text": "Está resfriado desde hace tres días, con congestión nasal y estornudos.",
+          "feedback": "Resfriado se dice «has a cold». «Constipated» es un falso amigo."
+        },
+        {
+          "id": "diarrea",
+          "text": "Tiene diarrea.",
+          "feedback": "Diarrea se dice «diarrhea» (o «diarrhoea» en inglés británico)."
+        },
+        {
+          "id": "nauseas",
+          "text": "Tiene náuseas desde hace tres días, sobre todo después de comer.",
+          "feedback": "Náuseas se dice «nausea»."
+        }
+      ],
+      "correctOptionId": "estrenido",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "en-04",
+      "conceptId": "mat-ingles:en-04",
+      "category": "mat-ingles",
+      "topic": "Falsos amigos",
+      "competency": "Evitar errores por falsos amigos",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "Una nota de enfermería en inglés dice: «The patient felt embarrassed during the physical examination». ¿Cómo se interpreta?",
+      "rationale": "«Embarrassed» significa avergonzado o incómodo; «pregnant», embarazada. El dato es relevante para el cuidado: indica la necesidad de resguardar la intimidad del paciente durante los procedimientos.",
+      "transferPrinciple": "Un dato emocional en un registro también orienta el cuidado: respetar la intimidad es parte de la técnica.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "material-original",
+          "section": "Texto breve redactado para el ejercicio"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "avergonzado",
+          "text": "Que el paciente se sintió avergonzado durante el examen físico.",
+          "feedback": "Correcto. «Embarrassed» significa avergonzado; no tiene relación con el embarazo."
+        },
+        {
+          "id": "embarazada",
+          "text": "Que la paciente reveló estar embarazada durante el examen físico.",
+          "feedback": "Embarazada se dice «pregnant». «Embarrassed» es un falso amigo."
+        },
+        {
+          "id": "dolor",
+          "text": "Que el paciente sintió un dolor intenso durante el examen físico, especialmente en el abdomen.",
+          "feedback": "Dolor se dice «pain». La frase no habla de dolor."
+        },
+        {
+          "id": "mareo",
+          "text": "Que se mareó.",
+          "feedback": "Mareo se dice «dizziness»."
+        }
+      ],
+      "correctOptionId": "avergonzado",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "en-05",
+      "conceptId": "mat-ingles:en-05",
+      "category": "mat-ingles",
+      "topic": "Falsos amigos",
+      "competency": "Evitar errores por falsos amigos",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "Un registro dice: «The patient said he would take the medication. Actually, he refused it». ¿Qué ocurrió?",
+      "rationale": "«Actually» = en realidad, de hecho. «Currently» o «at present» = actualmente. «To refuse» = rechazar o negarse. El rechazo de una medicación es un dato que se registra y se comunica.",
+      "transferPrinciple": "En un registro, una palabra mal traducida puede cambiar el sentido completo: leé la oración entera antes de interpretarla.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "material-original",
+          "section": "Texto breve redactado para el ejercicio"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "rechazo",
+          "text": "En realidad, el paciente rechazó la medicación.",
+          "feedback": "Correcto. «Actually» significa «en realidad», no «actualmente»."
+        },
+        {
+          "id": "actualmente",
+          "text": "Actualmente el paciente la está tomando, aunque al principio la había rechazado.",
+          "feedback": "«Actually» no significa «actualmente» (que se dice «currently»)."
+        },
+        {
+          "id": "acepto",
+          "text": "El paciente aceptó tomar la medicación después de una explicación de la enfermera.",
+          "feedback": "La frase dice lo contrario: «he refused it», la rechazó."
+        },
+        {
+          "id": "pidio",
+          "text": "Pidió más dosis.",
+          "feedback": "La frase no menciona ningún pedido de aumento de dosis."
+        }
+      ],
+      "correctOptionId": "rechazo",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "en-06",
+      "conceptId": "mat-ingles:en-06",
+      "category": "mat-ingles",
+      "topic": "Abreviaturas",
+      "competency": "Interpretar abreviaturas frecuentes en indicaciones",
+      "difficulty": "conceptual",
+      "format": "concepto",
+      "stem": "En una indicación en inglés figura «NPO after midnight». ¿Qué significa?",
+      "rationale": "NPO (nil per os) indica ayuno: no administrar alimentos ni líquidos por boca. Suele indicarse antes de cirugías o estudios. La medicación oral durante el ayuno se consulta con el equipo. Muchas instituciones prefieren escribir «nothing by mouth» completo.",
+      "transferPrinciple": "Ante una abreviatura, confirmá su significado en el contexto: si queda alguna duda, se consulta.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "material-original",
+          "section": "Texto breve redactado para el ejercicio"
+        },
+        {
+          "ref": "ismp-abreviaturas-2024",
+          "section": "Recomendación general: escribir los términos completos"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "ayuno",
+          "text": "Nada por boca (ayuno) a partir de la medianoche.",
+          "feedback": "Correcto. NPO viene del latín «nil per os»: nada por vía oral."
+        },
+        {
+          "id": "oral",
+          "text": "Medicación por vía oral a partir de la medianoche, cada cuatro horas.",
+          "feedback": "NPO indica lo contrario: no administrar nada por boca."
+        },
+        {
+          "id": "control",
+          "text": "Control de signos vitales a partir de la medianoche, hasta la mañana siguiente.",
+          "feedback": "NPO no se refiere al control de signos vitales."
+        },
+        {
+          "id": "oxigeno",
+          "text": "Oxígeno nocturno.",
+          "feedback": "NPO no se refiere a la oxigenoterapia."
+        }
+      ],
+      "correctOptionId": "ayuno",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "en-07",
+      "conceptId": "mat-ingles:en-07",
+      "category": "mat-ingles",
+      "topic": "Abreviaturas",
+      "competency": "Interpretar abreviaturas frecuentes en indicaciones",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "Una indicación dice: «Acetaminophen 500 mg PO PRN for pain». ¿Qué indica «PRN»?",
+      "rationale": "PRN (del latín «pro re nata») significa «según necesidad». La indicación debe incluir el motivo (por ejemplo, dolor), la dosis, la vía, el intervalo mínimo y, idealmente, la dosis máxima diaria. «Acetaminophen» es el nombre en inglés estadounidense del paracetamol; «PO» significa por vía oral.",
+      "transferPrinciple": "Una indicación «según necesidad» necesita un criterio claro: si falta el motivo o el intervalo, se consulta.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "material-original",
+          "section": "Texto breve redactado para el ejercicio"
+        },
+        {
+          "ref": "libro-fundamentos",
+          "section": "Tipos de indicaciones de medicación"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "necesidad",
+          "text": "Que se administra según necesidad (si hay dolor), respetando el intervalo indicado.",
+          "feedback": "Correcto. PRN (pro re nata) significa «según necesidad»."
+        },
+        {
+          "id": "fijo",
+          "text": "Que se administra a horario fijo, cada ocho horas, aunque el paciente no tenga dolor.",
+          "feedback": "Eso sería una indicación pautada; PRN es según necesidad."
+        },
+        {
+          "id": "noche",
+          "text": "Que se administra solo por la noche, antes de dormir, para el dolor.",
+          "feedback": "PRN no indica un horario nocturno."
+        },
+        {
+          "id": "urgente",
+          "text": "Que se administra una única vez, de forma urgente, en este mismo momento.",
+          "feedback": "Una dosis única urgente se indica como «STAT» o «once»."
+        }
+      ],
+      "correctOptionId": "necesidad",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "en-08",
+      "conceptId": "mat-ingles:en-08",
+      "category": "mat-ingles",
+      "topic": "Abreviaturas",
+      "competency": "Reconocer abreviaturas propensas a error",
+      "difficulty": "integracion",
+      "format": "error_seguridad",
+      "stem": "Una indicación manuscrita dice: «Digoxin 0.125 mg q.d.». La lista de abreviaturas propensas a error del ISMP desaconseja «q.d.». ¿Por qué?",
+      "rationale": "El ISMP publica una lista de abreviaturas, símbolos y designaciones de dosis que se interpretaron mal y causaron errores. Recomienda escribir «daily» en lugar de «q.d.», que puede confundirse con «q.i.d.» (cuatro veces al día). Ante una indicación con abreviaturas propensas a error o ilegible, se consulta al prescriptor antes de administrar.",
+      "transferPrinciple": "Si una abreviatura admite dos lecturas, no la interpretes: consultá. La claridad de una indicación es parte de su seguridad.",
+      "criticalSafety": true,
+      "riskNote": "Interpretar mal una frecuencia de administración puede multiplicar la dosis de un medicamento.",
+      "recoveryQuestionId": "en-08r",
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "ismp-abreviaturas-2024",
+          "section": "Abreviaturas de frecuencia de administración"
+        },
+        {
+          "ref": "material-original",
+          "section": "Texto breve redactado para el ejercicio"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "qid",
+          "text": "Porque «q.d.» (una vez al día) puede leerse como «q.i.d.» (cuatro veces al día); se recomienda escribir «daily».",
+          "feedback": "Correcto. La confusión podría cuadruplicar la dosis de un fármaco de margen estrecho."
+        },
+        {
+          "id": "latin",
+          "text": "Porque es una abreviatura en latín y en inglés solo se aceptan abreviaturas que provengan de palabras inglesas.",
+          "feedback": "El problema no es el origen latino sino el riesgo de confusión."
+        },
+        {
+          "id": "larga",
+          "text": "Porque es demasiado larga y hace perder tiempo al escribir indicaciones en la historia clínica.",
+          "feedback": "Al contrario: se recomienda escribir la palabra completa aunque sea más larga."
+        },
+        {
+          "id": "noche",
+          "text": "Porque «q.d.» significa «cada noche» y suele confundirse con «cada mañana».",
+          "feedback": "«q.d.» significa «una vez al día»; la confusión frecuente es con «q.i.d.»."
+        }
+      ],
+      "correctOptionId": "qid",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "en-08r",
+      "conceptId": "mat-ingles:en-08",
+      "category": "mat-ingles",
+      "topic": "Abreviaturas",
+      "competency": "Reconocer abreviaturas propensas a error",
+      "difficulty": "integracion",
+      "format": "error_seguridad",
+      "stem": "Una indicación de insulina dice: «Regular insulin 10U before lunch». La U está escrita muy cerca del número. Según el ISMP, ¿qué riesgo tiene escribir «U» en lugar de «units»?",
+      "rationale": "La abreviatura «U» (o «IU») para unidades figura en las listas de «no usar»: escrita a mano puede confundirse con un 0 o un 4. Con la insulina, un medicamento de alto riesgo, el error puede ser grave. Se escribe «units» o «unidades» completo y, ante la duda, se consulta.",
+      "transferPrinciple": "Con medicamentos de alto riesgo, una indicación ambigua no se interpreta: se aclara antes de preparar.",
+      "criticalSafety": true,
+      "riskNote": "Leer «10U» como «100» implica administrar diez veces la dosis de insulina.",
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": true,
+      "sources": [
+        {
+          "ref": "ismp-abreviaturas-2024",
+          "section": "Abreviaturas de dosis: U, IU"
+        },
+        {
+          "ref": "ismp-alto-riesgo-2024",
+          "section": "Insulinas"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "cero",
+          "text": "Que la «U» se lea como un cero y se administren 100 unidades en lugar de 10.",
+          "feedback": "Correcto. Por eso se recomienda escribir «units» completo, en especial con insulinas."
+        },
+        {
+          "id": "idioma",
+          "text": "Que la «U» se confunda con la palabra «use» y el personal crea que es una instrucción de uso.",
+          "feedback": "El riesgo descripto con más frecuencia es la confusión de la U con un cero o un cuatro."
+        },
+        {
+          "id": "mililitros",
+          "text": "Que la «U» signifique mililitros en algunos países y se administren 10 mL de insulina.",
+          "feedback": "La U no significa mililitros; el riesgo es su lectura como número."
+        },
+        {
+          "id": "ninguno",
+          "text": "Ninguno, porque todo el personal de salud conoce la abreviatura «U» de unidades.",
+          "feedback": "Conocer la abreviatura no evita que, manuscrita, se lea como un número."
+        }
+      ],
+      "correctOptionId": "cero",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "en-09",
+      "conceptId": "mat-ingles:en-09",
+      "category": "mat-ingles",
+      "topic": "Instrucciones y rótulos",
+      "competency": "Interpretar instrucciones de administración",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "El rótulo de un medicamento dice: «Take with food». ¿Qué le indicás al paciente?",
+      "rationale": "«Take with food» = tomar con alimentos (por ejemplo, para reducir la irritación gástrica o mejorar la absorción). «Take on an empty stomach» = en ayunas. «Before meals» = antes de las comidas; «after meals» = después de las comidas.",
+      "transferPrinciple": "Las instrucciones de un rótulo forman parte de la indicación: traducilas con exactitud al educar al paciente.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "material-original",
+          "section": "Texto breve redactado para el ejercicio"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "con-comida",
+          "text": "Que lo tome junto con las comidas.",
+          "feedback": "Correcto. «Take with food» significa tomarlo con alimentos."
+        },
+        {
+          "id": "ayunas",
+          "text": "Que lo tome en ayunas, por lo menos una hora antes de comer.",
+          "feedback": "En ayunas se diría «take on an empty stomach»."
+        },
+        {
+          "id": "sin-comer",
+          "text": "Que no coma nada durante el día en que toma el medicamento.",
+          "feedback": "El rótulo no indica ayuno: indica tomarlo con comida."
+        },
+        {
+          "id": "mezclar",
+          "text": "Que lo mezcle con la comida.",
+          "feedback": "«Take with food» no indica triturar ni mezclar el medicamento."
+        }
+      ],
+      "correctOptionId": "con-comida",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "en-10",
+      "conceptId": "mat-ingles:en-10",
+      "category": "mat-ingles",
+      "topic": "Instrucciones y rótulos",
+      "competency": "Interpretar límites de dosis en un prospecto",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "El prospecto en inglés de un analgésico de venta libre dice: «Do not exceed 4 doses in 24 hours». ¿Qué significa?",
+      "rationale": "«Do not exceed» = no superar. Los límites de dosis protegen contra la toxicidad; por ejemplo, superar la dosis máxima diaria de paracetamol puede dañar el hígado. Otras expresiones: «every 6 hours as needed» (cada 6 horas según necesidad), «maximum daily dose» (dosis máxima diaria).",
+      "transferPrinciple": "Cuando eduques sobre un medicamento de venta libre, destacá siempre la dosis máxima diaria.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "material-original",
+          "section": "Texto breve redactado para el ejercicio"
+        },
+        {
+          "ref": "libro-farmacologia",
+          "section": "Paracetamol: dosis máxima"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "maximo",
+          "text": "Que no deben tomarse más de 4 dosis en 24 horas.",
+          "feedback": "Correcto. «Do not exceed» indica un límite máximo."
+        },
+        {
+          "id": "minimo",
+          "text": "Que hay que tomar al menos 4 dosis.",
+          "feedback": "«Do not exceed» indica un máximo, no un mínimo."
+        },
+        {
+          "id": "cada-4",
+          "text": "Que el analgésico debe tomarse cada 4 horas durante todo el día y la noche.",
+          "feedback": "La frase habla de cantidad de dosis en 24 horas, no del intervalo."
+        },
+        {
+          "id": "cuatro-dias",
+          "text": "Que el tratamiento no debe durar más de 4 días seguidos sin consultar al médico.",
+          "feedback": "La frase dice «4 doses in 24 hours», no «4 days»."
+        }
+      ],
+      "correctOptionId": "maximo",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "en-11",
+      "conceptId": "mat-ingles:en-11",
+      "category": "mat-ingles",
+      "topic": "Instrucciones y rótulos",
+      "competency": "Interpretar la vía de administración en un rótulo",
+      "difficulty": "integracion",
+      "format": "error_seguridad",
+      "stem": "La ampolla de un medicamento dice: «For intramuscular use only. Do not administer intravenously». La indicación médica dice «por vía endovenosa». ¿Qué corresponde?",
+      "rationale": "«For intramuscular use only» = solo para uso intramuscular; «do not administer intravenously» = no administrar por vía endovenosa. Una discrepancia entre la indicación y el rótulo del producto se resuelve consultando antes de administrar.",
+      "transferPrinciple": "Leé el rótulo completo, incluidas las advertencias en inglés: muchas presentaciones importadas solo las traen en ese idioma.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "material-original",
+          "section": "Texto breve redactado para el ejercicio"
+        },
+        {
+          "ref": "oms-medicacion-sin-danio-2017",
+          "section": "Prácticas de medicación seguras"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "consultar",
+          "text": "No administrar y consultar al prescriptor y a farmacia, porque el producto es solo para uso intramuscular.",
+          "feedback": "Correcto. Hay una discrepancia entre la indicación y la vía autorizada del producto: se detiene y se consulta."
+        },
+        {
+          "id": "ev",
+          "text": "Administrarlo por vía endovenosa, porque la indicación médica prevalece sobre el rótulo del producto.",
+          "feedback": "Administrar por una vía contraindicada en el rótulo puede causar daño grave."
+        },
+        {
+          "id": "im",
+          "text": "Administrarlo por vía intramuscular por cuenta propia, ya que es la vía que indica el rótulo.",
+          "feedback": "Cambiar la vía sin consultar también es modificar la indicación."
+        },
+        {
+          "id": "diluir",
+          "text": "Diluirlo en más solución para que pueda pasarse por vía endovenosa con seguridad.",
+          "feedback": "Diluir no convierte en seguro un producto contraindicado por vía endovenosa."
+        }
+      ],
+      "correctOptionId": "consultar",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "en-12",
+      "conceptId": "mat-ingles:en-12",
+      "category": "mat-ingles",
+      "topic": "Instrucciones y rótulos",
+      "competency": "Interpretar condiciones de conservación",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "Un rótulo indica: «Store in a refrigerator (2 °C to 8 °C). Do not freeze». ¿Cómo se conserva el producto?",
+      "rationale": "«Store in a refrigerator» = conservar en heladera; «do not freeze» = no congelar; «protect from light» = proteger de la luz; «room temperature» = temperatura ambiente. Insulinas y vacunas suelen requerir cadena de frío; los detalles los establece el fabricante y el protocolo institucional.",
+      "transferPrinciple": "Las condiciones de conservación son parte de la eficacia del medicamento: verificá la temperatura y registrala si el protocolo lo indica.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "material-original",
+          "section": "Texto breve redactado para el ejercicio"
+        },
+        {
+          "ref": "protocolo-institucional",
+          "section": "Conservación de medicamentos y cadena de frío"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "heladera",
+          "text": "En la heladera, entre 2 y 8 °C, sin congelar.",
+          "feedback": "Correcto. Refrigerar sin congelar; la congelación puede inactivar el producto."
+        },
+        {
+          "id": "freezer",
+          "text": "En el freezer, para que se conserve más tiempo y no pierda su efecto.",
+          "feedback": "«Do not freeze» indica que no debe congelarse."
+        },
+        {
+          "id": "ambiente",
+          "text": "A temperatura ambiente, entre 2 y 8 horas después de abierto el envase.",
+          "feedback": "Las cifras indican grados Celsius, no horas."
+        },
+        {
+          "id": "sol",
+          "text": "Al sol, antes de usarlo.",
+          "feedback": "El rótulo no menciona exposición a la luz."
+        }
+      ],
+      "correctOptionId": "heladera",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "en-13",
+      "conceptId": "mat-ingles:en-13",
+      "category": "mat-ingles",
+      "topic": "Vocabulario clínico",
+      "competency": "Comprender identificadores de riesgo en inglés",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "Un paciente trasladado desde otro país tiene una pulsera amarilla que dice «Fall risk». ¿Qué indica?",
+      "rationale": "«Fall risk» = riesgo de caídas. Los colores y significados de las pulseras varían entre instituciones y países, por lo que se verifican con la historia clínica y el pase. Otros identificadores: «Allergy» (alergia), «DNR» (orden de no reanimar, cuyo uso depende de la normativa local).",
+      "transferPrinciple": "Un identificador visual no reemplaza la valoración: confirmá siempre su significado con la historia clínica y el equipo.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "material-original",
+          "section": "Texto breve redactado para el ejercicio"
+        },
+        {
+          "ref": "ahrq-caidas-2013",
+          "section": "Identificación de pacientes con riesgo de caídas"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "caidas",
+          "text": "Que tiene riesgo de caídas.",
+          "feedback": "Correcto. Indica que se identificó un riesgo de caídas y deben aplicarse medidas de prevención."
+        },
+        {
+          "id": "alergia",
+          "text": "Que es alérgico a algún medicamento y debe revisarse la historia clínica antes de administrar.",
+          "feedback": "Las alergias suelen indicarse como «Allergy»; esta pulsera habla de caídas."
+        },
+        {
+          "id": "otono",
+          "text": "Que fue internado durante el otoño, cuando aumentan las infecciones respiratorias.",
+          "feedback": "«Fall» significa otoño en otro contexto, pero «fall risk» es riesgo de caídas."
+        },
+        {
+          "id": "aislamiento",
+          "text": "Que requiere aislamiento respiratorio por una infección transmisible.",
+          "feedback": "El aislamiento se indicaría como «Isolation» o con el tipo de precaución."
+        }
+      ],
+      "correctOptionId": "caidas",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "en-14",
+      "conceptId": "mat-ingles:en-14",
+      "category": "mat-ingles",
+      "topic": "Comprensión de textos",
+      "competency": "Comprender una comunicación SBAR en inglés",
+      "difficulty": "integracion",
+      "format": "caso",
+      "stem": "Leé el mensaje: «Mr. Smith in bed 4 has had chest pain for 20 minutes. His blood pressure is 90/60. I am concerned he is getting worse. I would like you to come and see him now». ¿Qué solicita la enfermera?",
+      "rationale": "Estructura SBAR del mensaje: Situation (dolor torácico de 20 minutos), Background (cama 4, presión 90/60), Assessment («I am concerned he is getting worse»), Recommendation («come and see him now»). Reconocer cada parte ayuda a comunicar con claridad en cualquier idioma.",
+      "transferPrinciple": "En cualquier idioma, un buen mensaje termina con un pedido claro: qué necesitás y cuándo.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "material-original",
+          "section": "Texto breve redactado para el ejercicio"
+        },
+        {
+          "ref": "ihi-sbar",
+          "section": "Estructura SBAR"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "evaluar-ahora",
+          "text": "Que el médico venga a evaluar al paciente ahora.",
+          "feedback": "Correcto. «I would like you to come and see him now» es la recomendación del SBAR."
+        },
+        {
+          "id": "analgesico",
+          "text": "Que el médico indique un analgésico por teléfono para aliviar el dolor torácico del paciente.",
+          "feedback": "El mensaje pide una evaluación presencial inmediata, no una indicación telefónica."
+        },
+        {
+          "id": "traslado",
+          "text": "Un traslado de cama.",
+          "feedback": "El mensaje no menciona ningún traslado."
+        },
+        {
+          "id": "control",
+          "text": "Que se controle la presión arterial dentro de 20 minutos para ver cómo evoluciona.",
+          "feedback": "Los 20 minutos se refieren a la duración del dolor, no a un control futuro."
+        }
+      ],
+      "correctOptionId": "evaluar-ahora",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "en-15",
+      "conceptId": "mat-ingles:en-15",
+      "category": "mat-ingles",
+      "topic": "Comprensión de textos",
+      "competency": "Identificar los componentes de un mensaje SBAR",
+      "difficulty": "integracion",
+      "format": "caso",
+      "stem": "En el mismo mensaje («Mr. Smith in bed 4 has had chest pain for 20 minutes. His blood pressure is 90/60. I am concerned he is getting worse. I would like you to come and see him now»), ¿qué frase corresponde a la evaluación (Assessment)?",
+      "rationale": "En SBAR, la evaluación (Assessment) es lo que el profesional interpreta a partir de los datos: «I think the problem is…», «I am concerned that…». Distinguir datos, interpretación y pedido mejora la calidad de la comunicación.",
+      "transferPrinciple": "Animate a decir lo que pensás: tu evaluación orienta al equipo, aunque no sea un diagnóstico.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "material-original",
+          "section": "Texto breve redactado para el ejercicio"
+        },
+        {
+          "ref": "ihi-sbar",
+          "section": "Estructura SBAR"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "concerned",
+          "text": "«I am concerned he is getting worse».",
+          "feedback": "Correcto. Es la interpretación de la enfermera sobre la situación."
+        },
+        {
+          "id": "chest-pain",
+          "text": "«Mr. Smith in bed 4 has had chest pain for 20 minutes», porque describe lo que el paciente siente.",
+          "feedback": "Esa frase describe la situación (Situation)."
+        },
+        {
+          "id": "bp",
+          "text": "«His blood pressure is 90/60», porque es un dato medido por la enfermera.",
+          "feedback": "Es un dato objetivo que aporta contexto; la evaluación es la interpretación."
+        },
+        {
+          "id": "come",
+          "text": "«I would like you to come and see him now», porque expresa la opinión de la enfermera.",
+          "feedback": "Esa frase es la recomendación o el pedido (Recommendation)."
+        }
+      ],
+      "correctOptionId": "concerned",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "en-16",
+      "conceptId": "mat-ingles:en-16",
+      "category": "mat-ingles",
+      "topic": "Comprensión de textos",
+      "competency": "Comprender un síntoma expresado por el paciente",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "Un paciente angloparlante dice: «I feel lightheaded when I stand up». ¿Qué refiere?",
+      "rationale": "«Lightheaded» describe la sensación de mareo o de estar por desmayarse. «When I stand up» = al ponerse de pie. Ese síntoma, junto con la medición de la presión acostado y de pie, ayuda a valorar una hipotensión ortostática y el riesgo de caídas.",
+      "transferPrinciple": "Cuando un paciente describe un síntoma en otro idioma, repetí lo que entendiste para confirmarlo.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "material-original",
+          "section": "Texto breve redactado para el ejercicio"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "mareo-parado",
+          "text": "Que siente mareo, como de cabeza liviana, al ponerse de pie.",
+          "feedback": "Correcto. Puede orientar a una hipotensión ortostática: se valora la presión en distintas posiciones."
+        },
+        {
+          "id": "dolor-cabeza",
+          "text": "Que siente un dolor de cabeza intenso cada vez que se levanta de la cama por la mañana.",
+          "feedback": "Dolor de cabeza se dice «headache»."
+        },
+        {
+          "id": "luz",
+          "text": "Que le molesta la luz.",
+          "feedback": "«Lightheaded» no se relaciona con la luz, aunque contenga la palabra «light»."
+        },
+        {
+          "id": "liviano",
+          "text": "Que siente que bajó de peso y está más liviano desde la internación.",
+          "feedback": "«Lightheaded» describe una sensación de mareo, no un cambio de peso."
+        }
+      ],
+      "correctOptionId": "mareo-parado",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "en-17",
+      "conceptId": "mat-ingles:en-17",
+      "category": "mat-ingles",
+      "topic": "Lectura de artículos",
+      "competency": "Comprender términos de diseño de investigación",
+      "difficulty": "conceptual",
+      "format": "concepto",
+      "stem": "En un artículo científico en inglés leés: «This was a randomized controlled trial». ¿Qué tipo de estudio es?",
+      "rationale": "«Randomized controlled trial» (RCT) = ensayo controlado aleatorizado. Otros términos frecuentes: «cohort study» (estudio de cohorte), «case-control study» (casos y controles), «cross-sectional study» (transversal), «systematic review» (revisión sistemática), «meta-analysis» (metaanálisis).",
+      "transferPrinciple": "Identificar el diseño del estudio en el resumen te ayuda a valorar cuánto peso darle a sus conclusiones.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "material-original",
+          "section": "Texto breve redactado para el ejercicio"
+        },
+        {
+          "ref": "ops-mopece",
+          "section": "Unidad 5: diseños de investigación"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "eca",
+          "text": "Un ensayo controlado aleatorizado.",
+          "feedback": "Correcto. Los participantes se asignaron al azar a un grupo de intervención y a uno de control."
+        },
+        {
+          "id": "cohorte",
+          "text": "Un estudio de cohorte que sigue a un grupo de personas durante un período de tiempo prolongado.",
+          "feedback": "Un estudio de cohorte se denomina «cohort study»."
+        },
+        {
+          "id": "revision",
+          "text": "Una revisión bibliográfica que resume otros artículos publicados sobre el tema.",
+          "feedback": "Una revisión se denomina «review» o «systematic review»."
+        },
+        {
+          "id": "caso",
+          "text": "Un reporte de caso.",
+          "feedback": "Eso se denomina «case report»."
+        }
+      ],
+      "correctOptionId": "eca",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "en-18",
+      "conceptId": "mat-ingles:en-18",
+      "category": "mat-ingles",
+      "topic": "Lectura de artículos",
+      "competency": "Interpretar resultados de un resumen en inglés",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "Un resumen dice: «Results: Patients in the intervention group had fewer falls than those in the control group (12% vs 20%)». ¿Qué grupo tuvo menos caídas?",
+      "rationale": "«Fewer» = menos (para cosas contables); «more» = más. «Intervention group» = grupo de intervención; «control group» = grupo control. Los resultados se leen junto con los métodos y las limitaciones antes de sacar conclusiones.",
+      "transferPrinciple": "Leé los números del resumen y traducilos a una frase simple: «de cada 100 pacientes, se cayeron 12 frente a 20».",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "material-original",
+          "section": "Texto breve redactado para el ejercicio"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "intervencion",
+          "text": "El grupo de intervención (12 %).",
+          "feedback": "Correcto. «Fewer falls» significa menos caídas; el grupo de intervención tuvo 12 % frente a 20 %."
+        },
+        {
+          "id": "control",
+          "text": "El grupo control (20 %), porque es el grupo que no recibió ninguna intervención del estudio.",
+          "feedback": "El grupo control tuvo más caídas: 20 %."
+        },
+        {
+          "id": "iguales",
+          "text": "Ninguno, porque los dos grupos tuvieron la misma proporción de caídas durante el estudio.",
+          "feedback": "Las proporciones son distintas: 12 % y 20 %."
+        },
+        {
+          "id": "no-dice",
+          "text": "No se puede saber.",
+          "feedback": "El resumen sí los informa entre paréntesis."
+        }
+      ],
+      "correctOptionId": "intervencion",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "en-19",
+      "conceptId": "mat-ingles:en-19",
+      "category": "mat-ingles",
+      "topic": "Lectura de artículos",
+      "competency": "Interpretar el alcance de una conclusión",
+      "difficulty": "integracion",
+      "format": "caso",
+      "stem": "Un artículo concluye: «This intervention may reduce falls; however, further research is needed». ¿Cómo se interpreta?",
+      "rationale": "Los verbos modales indican el grado de certeza: «may» o «might» (podría), «suggests» (sugiere), «demonstrates» (demuestra). «However» introduce una limitación. Interpretar bien el lenguaje de las conclusiones evita sobrestimar la evidencia.",
+      "transferPrinciple": "Prestá atención a las palabras que expresan certeza: «may», «suggest» y «demonstrate» no dicen lo mismo.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "material-original",
+          "section": "Texto breve redactado para el ejercicio"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "prometedor",
+          "text": "Que la intervención podría reducir las caídas, pero los resultados todavía no son definitivos.",
+          "feedback": "Correcto. «May» indica posibilidad y «further research is needed», que hacen falta más estudios."
+        },
+        {
+          "id": "demostrado",
+          "text": "Que la intervención reduce las caídas con total seguridad y debe aplicarse en todos los hospitales.",
+          "feedback": "«May» expresa posibilidad, no certeza."
+        },
+        {
+          "id": "no-sirve",
+          "text": "Que la intervención no sirve para reducir las caídas y debería abandonarse.",
+          "feedback": "La conclusión no dice que no sirva; dice que podría servir."
+        },
+        {
+          "id": "aumenta",
+          "text": "Que la intervención aumenta las caídas y se necesita investigar por qué ocurre.",
+          "feedback": "«Reduce» significa disminuir, no aumentar."
+        }
+      ],
+      "correctOptionId": "prometedor",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "en-20",
+      "conceptId": "mat-ingles:en-20",
+      "category": "mat-ingles",
+      "topic": "Lectura de artículos",
+      "competency": "Reconocer las limitaciones de un estudio",
+      "difficulty": "integracion",
+      "format": "caso",
+      "stem": "En un artículo leés: «Limitations: the sample size was small and the study was conducted in a single hospital». ¿Qué implica?",
+      "rationale": "«Sample size» = tamaño de la muestra; «single hospital» o «single center» = un solo centro. Toda investigación tiene limitaciones; reconocerlas permite usar la evidencia con criterio, considerando si la población estudiada se parece a la propia.",
+      "transferPrinciple": "Antes de aplicar un resultado en tu servicio, preguntate si los pacientes del estudio se parecen a los tuyos.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "material-original",
+          "section": "Texto breve redactado para el ejercicio"
+        },
+        {
+          "ref": "ops-mopece",
+          "section": "Unidad 5: validez de los estudios"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "generalizar",
+          "text": "Que hay que tener cautela al aplicar los resultados a otras poblaciones o instituciones.",
+          "feedback": "Correcto. Una muestra pequeña y un único centro limitan la generalización."
+        },
+        {
+          "id": "invalido",
+          "text": "Que el estudio es inválido y sus resultados deben descartarse por completo.",
+          "feedback": "Las limitaciones no invalidan automáticamente un estudio: indican cómo interpretarlo."
+        },
+        {
+          "id": "mejor",
+          "text": "Que el estudio es más confiable porque se hizo con pocos pacientes y en un solo lugar controlado.",
+          "feedback": "Una muestra pequeña reduce la precisión de los resultados."
+        },
+        {
+          "id": "etica",
+          "text": "Que el estudio tuvo problemas éticos porque no pidió el consentimiento de los pacientes.",
+          "feedback": "La frase no menciona problemas éticos."
+        }
+      ],
+      "correctOptionId": "generalizar",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    }
+  ]
+}

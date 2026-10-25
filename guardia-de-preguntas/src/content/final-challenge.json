@@ -1,0 +1,144 @@
+{
+  "title": "La última pregunta de la guardia",
+  "contentVersion": "1.0",
+  "reviewStatus": "draft",
+  "caseTitle": "Sala de cirugía general, 18:00 h",
+  "caseIntro": [
+    "Caso ficticio. Sr. R., 62 años, en el posoperatorio inmediato de una cirugía abdominal. Ingresó a la sala a las 14:00 h. Tiene un catéter venoso periférico con plan de hidratación por bomba, sonda vesical y un drenaje aspirativo. Antecedente: hipertensión arterial.",
+    "Control de las 14:00 h: FC 82/min, TA 132/78 mmHg, FR 16/min, SpO2 97 %, drenaje 20 mL serohemático, diuresis 60 mL/h.",
+    "Control de las 18:00 h: FC 116/min, TA 94/60 mmHg, FR 24/min, SpO2 95 %, piel pálida y fría, relleno capilar enlentecido, drenaje 220 mL de contenido hemático en la última hora, diuresis 15 mL en la última hora. Refiere mareo y sed."
+  ],
+  "steps": [
+    {
+      "label": "Reconocer",
+      "narrative": "Mirás los dos controles uno al lado del otro.",
+      "after": "Con el problema identificado, decidís qué hacer."
+    },
+    {
+      "label": "Actuar con seguridad",
+      "narrative": "Reconociste signos de hipoperfusión con un drenaje hemático en aumento. Estás en tu práctica, con supervisión.",
+      "after": "El médico de guardia atiende el teléfono."
+    },
+    {
+      "label": "Comunicar y registrar",
+      "narrative": "El médico de guardia atiende tu llamado. Tenés los datos a mano.",
+      "after": null
+    }
+  ],
+  "questions": [
+    {
+      "id": "final-1",
+      "conceptId": "final-reconocer-hipoperfusion",
+      "category": "fisiologia",
+      "relatedCategories": ["fisiologia", "quirurgicos", "procedimientos"],
+      "competency": "Integrar la tendencia de signos vitales, diuresis y débito del drenaje para reconocer el problema prioritario",
+      "difficulty": "integracion",
+      "type": "single_choice",
+      "format": "caso",
+      "finalChallenge": true,
+      "stem": "¿Cuál es el problema prioritario que reconocés en el Sr. R.?",
+      "options": [
+        { "id": "hipoperfusion", "text": "Signos de hipoperfusión compatibles con hipovolemia por un posible sangrado activo.", "feedback": "Correcto. Taquicardia, hipotensión, piel fría, oliguria y un drenaje hemático de 220 mL en una hora forman un patrón de pérdida de volumen." },
+        { "id": "dolor", "text": "Dolor posoperatorio no controlado como causa principal de la taquicardia.", "feedback": "El dolor puede aumentar la frecuencia cardíaca, pero no explica la hipotensión, la oliguria ni el drenaje hemático en aumento." },
+        { "id": "retencion", "text": "Retención urinaria por obstrucción de la sonda vesical, que explica la diuresis baja.", "feedback": "Verificar la sonda es correcto, pero la diuresis baja aparece junto con hipotensión y taquicardia: el problema es la perfusión, no solo la sonda." },
+        { "id": "anestesia", "text": "Respuesta esperable a la anestesia, sin cambios relevantes respecto del ingreso.", "feedback": "Los cambios respecto de las 14:00 h son marcados. Interpretarlos como esperables demora una situación urgente." }
+      ],
+      "correctOptionId": "hipoperfusion",
+      "numericAnswer": null, "unit": null, "tolerance": null, "rounding": null,
+      "rationale": "Comparando los controles: la FC pasa de 82 a 116/min y la TA de 132/78 a 94/60 mmHg; la PAM estimada baja de alrededor de 96 a alrededor de 71 mmHg. La diuresis cae de 60 a 15 mL/h (por debajo de 0,5 mL/kg/h para un adulto promedio) y el drenaje pasa a 220 mL de contenido hemático en una hora. La taquicardia y la vasoconstricción periférica (piel pálida y fría, relleno enlentecido) son mecanismos compensatorios ante la pérdida de volumen.",
+      "transferPrinciple": "La tendencia entre controles, más que un valor aislado, es lo que revela el problema. Compará siempre con el control anterior.",
+      "criticalSafety": false, "riskNote": null, "recoveryQuestionId": null,
+      "sources": [
+        { "ref": "libro-fisiologia", "section": "Shock circulatorio: mecanismos compensatorios" },
+        { "ref": "libro-fundamentos", "section": "Cuidados posoperatorios: valoración y signos de alarma" }
+      ],
+      "reviewStatus": "draft", "contentVersion": "1.0"
+    },
+    {
+      "id": "final-2",
+      "conceptId": "final-accion-segura",
+      "category": "seguridad",
+      "relatedCategories": ["seguridad", "quirurgicos", "valoracion", "farmacologia"],
+      "competency": "Seleccionar una acción segura, dentro del rol, ante un posible sangrado posoperatorio",
+      "difficulty": "integracion",
+      "type": "single_choice",
+      "format": "error_seguridad",
+      "finalChallenge": true,
+      "stem": "¿Cuál es la acción segura que corresponde ahora, dentro de tu rol?",
+      "options": [
+        { "id": "comunicar-vigilar", "text": "Comunicar de inmediato al equipo tratante y a tu docente, quedarte con el paciente, controlar con frecuencia y verificar que el acceso venoso funcione.", "feedback": "Correcto. Activás la respuesta del equipo sin dejar solo al paciente, mantenés la vigilancia y te asegurás de que el acceso venoso esté disponible para lo que se indique." },
+        { "id": "subir-bomba", "text": "Aumentar por tu cuenta la velocidad de la bomba al máximo para reponer volumen hasta que llegue el médico.", "feedback": "Modificar la velocidad de una infusión sin indicación es actuar fuera de tu rol y puede causar daño. La reposición la decide el equipo médico." },
+        { "id": "pinzar-drenaje", "text": "Pinzar el drenaje para frenar la pérdida de sangre por el tubo.", "feedback": "Pinzar el drenaje no detiene el sangrado: oculta la pérdida y puede favorecer una acumulación interna. Nunca se pinza un drenaje sin indicación." },
+        { "id": "esperar-control", "text": "Registrar los valores y esperar al próximo control programado de las 20:00 h.", "feedback": "Esperar dos horas ante signos de hipoperfusión puede permitir que el cuadro progrese. Corresponde comunicar ya." }
+      ],
+      "correctOptionId": "comunicar-vigilar",
+      "numericAnswer": null, "unit": null, "tolerance": null, "rounding": null,
+      "rationale": "Ante un posible sangrado activo, la intervención de enfermería prioritaria es activar la respuesta del equipo de inmediato, mantener la vigilancia estrecha, sostener un acceso venoso funcionante y preparar lo necesario según las indicaciones. Las decisiones de reposición o de reintervención corresponden al equipo médico.",
+      "transferPrinciple": "Actuar con seguridad no es hacer «algo» rápido: es activar a quien puede decidir y mantener al paciente vigilado mientras tanto.",
+      "criticalSafety": true,
+      "riskNote": "Modificar la infusión, pinzar el drenaje o demorar la comunicación puede ocultar o agravar un sangrado activo.",
+      "recoveryQuestionId": "final-2-r",
+      "sources": [
+        { "ref": "oms-cirugia-segura-2009", "section": "Prevención de complicaciones: hemorragia" },
+        { "ref": "protocolo-institucional", "section": "Respuesta ante deterioro clínico del paciente" }
+      ],
+      "reviewStatus": "draft", "contentVersion": "1.0"
+    },
+    {
+      "id": "final-2-r",
+      "conceptId": "final-accion-segura",
+      "category": "seguridad",
+      "relatedCategories": ["seguridad", "quirurgicos", "valoracion"],
+      "competency": "Seleccionar una acción segura, dentro del rol, ante un posible sangrado posoperatorio",
+      "difficulty": "integracion",
+      "type": "single_choice",
+      "format": "error_seguridad",
+      "finalChallenge": true,
+      "isRecoveryVariant": true,
+      "stem": "Pasaron unos minutos. El Sr. R. sigue pálido, ahora con FC 120/min, y el frasco del drenaje sigue llenándose de contenido hemático. Volvé a decidir: ¿qué hacés?",
+      "options": [
+        { "id": "llamar-quedarse", "text": "Llamar ya al equipo tratante y a tu docente sin dejar al paciente, mantener controles frecuentes y confirmar que la vía esté permeable.", "feedback": "Correcto. Pedís ayuda sin abandonar al paciente, sostenés la vigilancia y dejás preparado el acceso venoso." },
+        { "id": "vaciar-drenaje", "text": "Vaciar el frasco del drenaje sin medirlo para que el débito se vea menor y no alarmar a la familia ni al paciente.", "feedback": "Vaciar sin medir ni registrar oculta la pérdida. El débito se mide, se registra y se comunica." },
+        { "id": "piernas-esperar", "text": "Elevarle las piernas, abrigarlo y esperar a que mejore la presión antes de molestar al equipo de guardia.", "feedback": "Una medida postural no reemplaza la comunicación urgente. Esperar puede costar un tiempo valioso." },
+        { "id": "abrir-suero", "text": "Abrir al máximo un segundo frasco de solución por la misma vía para reponer volumen hasta que llegue alguien.", "feedback": "Indicar y administrar volumen es una decisión médica. Hacerlo por tu cuenta excede tu rol." }
+      ],
+      "correctOptionId": "llamar-quedarse",
+      "numericAnswer": null, "unit": null, "tolerance": null, "rounding": null,
+      "rationale": "El deterioro continúa: la prioridad sigue siendo activar al equipo sin abandonar al paciente, mantener la vigilancia y asegurar el acceso venoso. Ocultar el débito o actuar fuera del rol aumenta el riesgo.",
+      "transferPrinciple": "Si una situación empeora, la respuesta segura se repite con más urgencia: pedir ayuda, vigilar, preparar.",
+      "criticalSafety": true,
+      "riskNote": "Ocultar el débito o administrar volumen sin indicación puede agravar el cuadro y retrasar el tratamiento.",
+      "recoveryQuestionId": null,
+      "sources": [{ "ref": "protocolo-institucional", "section": "Respuesta ante deterioro clínico del paciente" }],
+      "reviewStatus": "draft", "contentVersion": "1.0"
+    },
+    {
+      "id": "final-3",
+      "conceptId": "final-comunicar-registrar",
+      "category": "valoracion",
+      "relatedCategories": ["valoracion", "seguridad"],
+      "competency": "Comunicar con estructura SBAR y registrar los hechos de forma fiel",
+      "difficulty": "integracion",
+      "type": "single_choice",
+      "format": "caso",
+      "finalChallenge": true,
+      "stem": "¿Qué comunicación y qué registro corresponden?",
+      "options": [
+        { "id": "sbar-registro", "text": "SBAR con datos (FC 116, TA 94/60, drenaje 220 mL en 1 h, control previo estable), pedido de evaluación inmediata y registro de hora, persona y respuesta.", "feedback": "Correcto. Comunicás con estructura y datos, hacés un pedido concreto y dejás registrado qué se comunicó, a quién, a qué hora y qué se indicó." },
+        { "id": "vago", "text": "«El paciente de la 8 está un poco raro, ¿podés pasar cuando termines con lo tuyo?», y registrar «se avisa al médico».", "feedback": "Un mensaje vago no transmite la urgencia, y el registro no permite saber qué se comunicó ni a qué hora." },
+        { "id": "antecedentes", "text": "Contar en detalle sus antecedentes de hipertensión, la cirugía de hoy y que la familia está preocupada, y registrar todo junto en la hoja al final del turno.", "feedback": "La situación actual y los datos críticos tienen que ir primero, y el registro debe hacerse en el momento." },
+        { "id": "sin-pedido", "text": "«FC 116 y TA 94/60 en la cama 8, lo dejo anotado y lo vemos en el pase», y registrar los valores con la hora.", "feedback": "Aporta datos, pero no hay pedido de evaluación ni sentido de urgencia: posterga lo que necesita respuesta ahora." }
+      ],
+      "correctOptionId": "sbar-registro",
+      "numericAnswer": null, "unit": null, "tolerance": null, "rounding": null,
+      "rationale": "Ejemplo de SBAR: S — «Sr. R., cama 8, posoperatorio de cirugía abdominal: FC 116/min, TA 94/60 mmHg, drenaje hemático de 220 mL en la última hora». A — «A las 14:00 h estaba estable (FC 82, TA 132/78)». E — «Impresiona hipoperfusión con posible sangrado». R — «Solicito evaluación inmediata». En el registro se consignan los valores con la hora, la comunicación (a quién y cuándo), las indicaciones recibidas y las acciones realizadas.",
+      "transferPrinciple": "Comunicar y registrar cierran el cuidado: si no quedó claro para el equipo ni quedó escrito, para el siguiente turno no ocurrió.",
+      "criticalSafety": false, "riskNote": null, "recoveryQuestionId": null,
+      "sources": [
+        { "ref": "ihi-sbar", "section": "Guía y hoja de trabajo SBAR" },
+        { "ref": "libro-fundamentos", "section": "Documentación y registros de enfermería" }
+      ],
+      "reviewStatus": "draft", "contentVersion": "1.0"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "points": { "conceptual": 10, "aplicacion": 20, "integracion": 30 },
+  "recoveryFactor": 0.5,
+  "completion": { "distinctResolved": 3, "requireNonConceptual": true },
+  "maxSameCategoryInARow": 2,
+  "reviewSpacing": 2,
+  "guardian": {
+    "name": "Docente guardián",
+    "title": "Personaje provisional: la cátedra puede reemplazar nombre, avatar y frases",
+    "phrases": {
+      "intro": "Llegaste al cierre de la guardia. Te espera un caso que reúne lo que trabajaste. Tomate tu tiempo: acá no gana el más rápido, gana quien cuida con fundamento.",
+      "stop": "Detengo esta acción antes de que llegue al paciente. Revisemos juntos qué pasó y volvé a decidir.",
+      "closing": "Cerraste la guardia. Reconociste el problema, actuaste dentro de tu rol y comunicaste a tiempo. Eso es cuidar."
+    }
+  },
+  "emblem": { "src": null, "alt": "Espacio para el emblema institucional autorizado" }
+}

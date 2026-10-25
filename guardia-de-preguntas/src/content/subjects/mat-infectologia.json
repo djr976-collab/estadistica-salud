@@ -1,0 +1,1159 @@
+{
+  "subject": "mat-infectologia",
+  "bankVersion": "1.0",
+  "note": "Contenido en borrador generado con asistencia de IA a partir de contenidos estándar. Casos y datos ficticios. Pendiente de revisión docente y de contraste con el programa vigente.",
+  "questions": [
+    {
+      "id": "in-01",
+      "conceptId": "mat-infectologia:in-01",
+      "category": "mat-infectologia",
+      "topic": "Cadena de transmisión",
+      "competency": "Definir portador asintomático",
+      "difficulty": "conceptual",
+      "format": "concepto",
+      "stem": "¿Qué es un portador asintomático?",
+      "rationale": "Un portador alberga un agente infeccioso sin enfermedad clínica y puede actuar como reservorio y fuente de transmisión. Esto explica por qué las precauciones estándar (higiene de manos y elementos de protección según el riesgo) se aplican con todos los pacientes.",
+      "transferPrinciple": "No podés saber quién es portador mirando al paciente: por eso las medidas de prevención son universales.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-microbiologia",
+          "section": "Epidemiología de las enfermedades infecciosas"
+        },
+        {
+          "ref": "cdc-aislamiento-2007",
+          "section": "Precauciones estándar: fundamento"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "portador",
+          "text": "Una persona que alberga un microorganismo y puede transmitirlo sin presentar síntomas.",
+          "feedback": "Correcto. Por eso las precauciones estándar se aplican a todos los pacientes, tengan o no síntomas."
+        },
+        {
+          "id": "inmune",
+          "text": "Una persona inmune que no puede contagiarse ni contagiar la enfermedad.",
+          "feedback": "Ser inmune protege de enfermar, pero no es lo mismo que ser portador."
+        },
+        {
+          "id": "enfermo",
+          "text": "Una persona enferma con síntomas leves, que solo contagia cuando tose o estornuda.",
+          "feedback": "El portador asintomático no tiene síntomas, aunque puede transmitir."
+        },
+        {
+          "id": "vacunado",
+          "text": "Una persona vacunada que lleva en la sangre el microorganismo debilitado de la vacuna.",
+          "feedback": "Eso no define a un portador asintomático."
+        }
+      ],
+      "correctOptionId": "portador",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "in-02",
+      "conceptId": "mat-infectologia:in-02",
+      "category": "mat-infectologia",
+      "topic": "Cadena de transmisión",
+      "competency": "Relacionar la higiene de manos con la cadena de transmisión",
+      "difficulty": "aplicacion",
+      "format": "concepto",
+      "stem": "¿Qué eslabón de la cadena de transmisión se interrumpe principalmente con la higiene de manos?",
+      "rationale": "La cadena incluye agente, reservorio, puerta de salida, vía de transmisión, puerta de entrada y huésped susceptible. Las medidas de prevención actúan sobre distintos eslabones: la higiene de manos y los elementos de protección cortan la vía; la vacunación protege al huésped; la limpieza actúa sobre el reservorio ambiental.",
+      "transferPrinciple": "Para cada medida de prevención, preguntate qué eslabón corta: así entendés por qué no se puede omitir ninguna.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "oms-higiene-manos-2009",
+          "section": "Transmisión de patógenos por las manos"
+        },
+        {
+          "ref": "libro-microbiologia",
+          "section": "Cadena epidemiológica"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "via",
+          "text": "La vía de transmisión: las manos del personal llevan microorganismos de un paciente a otro.",
+          "feedback": "Correcto. La transmisión por contacto, a través de las manos, es la vía más frecuente de las infecciones asociadas a la atención."
+        },
+        {
+          "id": "agente",
+          "text": "El agente infeccioso, porque el alcohol elimina todos los microorganismos presentes en el cuerpo del paciente.",
+          "feedback": "La higiene de manos actúa sobre las manos del operador, no sobre el agente en el paciente."
+        },
+        {
+          "id": "huesped",
+          "text": "El huésped susceptible, porque lo vuelve inmune a la infección.",
+          "feedback": "La higiene de manos no genera inmunidad."
+        },
+        {
+          "id": "reservorio",
+          "text": "El reservorio, porque elimina el microorganismo de su lugar natural en el ambiente.",
+          "feedback": "El reservorio se aborda con limpieza y desinfección ambiental, entre otras medidas."
+        }
+      ],
+      "correctOptionId": "via",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "in-03",
+      "conceptId": "mat-infectologia:in-03",
+      "category": "mat-infectologia",
+      "topic": "Microorganismos",
+      "competency": "Diferenciar infecciones bacterianas y virales en relación con los antibióticos",
+      "difficulty": "conceptual",
+      "format": "concepto",
+      "stem": "¿Por qué los antibióticos no son eficaces contra un resfrío común?",
+      "rationale": "Las bacterias tienen pared celular, ribosomas propios y metabolismo independiente: ahí actúan los antibióticos. Los virus se replican dentro de las células del huésped y no tienen esas estructuras. El uso de antibióticos en infecciones virales no ayuda y favorece la resistencia.",
+      "transferPrinciple": "Explicar el «por qué» del no uso de antibióticos ayuda a las personas a no pedirlos ni automedicarse.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-microbiologia",
+          "section": "Bacterias y virus: estructura"
+        },
+        {
+          "ref": "libro-farmacologia",
+          "section": "Mecanismos de acción de los antibióticos"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "virus",
+          "text": "Porque el resfrío es causado por virus y los antibióticos actúan sobre bacterias.",
+          "feedback": "Correcto. Los antibióticos actúan sobre estructuras o procesos bacterianos que los virus no tienen."
+        },
+        {
+          "id": "dosis",
+          "text": "Porque el resfrío requiere dosis de antibiótico mucho más altas que las habituales.",
+          "feedback": "Aumentar la dosis no cambia la falta de efecto sobre los virus."
+        },
+        {
+          "id": "corto",
+          "text": "Porque el resfrío dura poco y el antibiótico no llega a hacer efecto en tan pocos días.",
+          "feedback": "El problema no es el tiempo: los antibióticos no actúan sobre los virus."
+        },
+        {
+          "id": "hongos",
+          "text": "Porque el resfrío es causado por hongos y requiere antifúngicos.",
+          "feedback": "El resfrío común es de causa viral."
+        }
+      ],
+      "correctOptionId": "virus",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "in-04",
+      "conceptId": "mat-infectologia:in-04",
+      "category": "mat-infectologia",
+      "topic": "Precauciones por transmisión",
+      "competency": "Aplicar precauciones de transmisión aérea",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "Ingresa un paciente con sospecha de tuberculosis pulmonar. ¿Qué precauciones corresponden, además de las estándar?",
+      "rationale": "Las enfermedades de transmisión aérea (tuberculosis pulmonar o laríngea, sarampión, varicela) se diseminan por partículas pequeñas que quedan suspendidas en el aire. Requieren habitación individual con puerta cerrada, idealmente con presión negativa, y respirador de alta eficiencia para el personal. El paciente usa barbijo quirúrgico si debe trasladarse.",
+      "transferPrinciple": "El tipo de precaución depende de cómo viaja el microorganismo: contacto, gotas o aire. Identificá primero la vía.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "cdc-aislamiento-2007",
+          "section": "Precauciones de transmisión aérea"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "aerea",
+          "text": "Precauciones aéreas: habitación individual con puerta cerrada y respirador N95 o equivalente para el personal.",
+          "feedback": "Correcto. El bacilo se transmite por núcleos de gotitas que permanecen en el aire."
+        },
+        {
+          "id": "gotas",
+          "text": "Precauciones de gotas: barbijo quirúrgico al acercarse al paciente y la puerta de la habitación abierta para que se ventile el ambiente.",
+          "feedback": "Para la tuberculosis se necesitan precauciones aéreas: el barbijo quirúrgico no protege lo suficiente al personal."
+        },
+        {
+          "id": "contacto",
+          "text": "Solo precauciones de contacto: guantes y camisolín al tocar al paciente o su entorno.",
+          "feedback": "La tuberculosis pulmonar se transmite por vía aérea, no principalmente por contacto."
+        },
+        {
+          "id": "ninguna",
+          "text": "Ninguna precaución adicional, porque la tuberculosis se transmite solo por compartir vajilla.",
+          "feedback": "Esa no es la vía de transmisión de la tuberculosis pulmonar."
+        }
+      ],
+      "correctOptionId": "aerea",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "in-05",
+      "conceptId": "mat-infectologia:in-05",
+      "category": "mat-infectologia",
+      "topic": "Precauciones por transmisión",
+      "competency": "Aplicar precauciones de transmisión por gotas",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "Un paciente tiene diagnóstico confirmado de influenza. ¿Qué medida corresponde para el personal, según las precauciones por gotas?",
+      "rationale": "Las precauciones por gotas se aplican a infecciones que se transmiten por gotas respiratorias grandes (influenza, algunas neumonías bacterianas, tos convulsa). Incluyen barbijo quirúrgico para el personal en contacto cercano, habitación individual o cohorte, y barbijo para el paciente en los traslados. Si se realizan procedimientos que generan aerosoles, el protocolo puede indicar respirador.",
+      "transferPrinciple": "Ajustá la protección al riesgo real: ni de menos (te exponés) ni de más sin motivo (se agotan recursos).",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "cdc-aislamiento-2007",
+          "section": "Precauciones de transmisión por gotas"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "barbijo",
+          "text": "Usar barbijo quirúrgico al ingresar a la habitación o al acercarse al paciente.",
+          "feedback": "Correcto. Las gotas grandes recorren distancias cortas y caen; el barbijo quirúrgico protege las mucosas."
+        },
+        {
+          "id": "n95-siempre",
+          "text": "Usar siempre un respirador N95, aun en el pasillo, durante toda la jornada laboral.",
+          "feedback": "El N95 se reserva para transmisión aérea o procedimientos que generan aerosoles, según el protocolo."
+        },
+        {
+          "id": "guantes-solo",
+          "text": "Usar solo guantes, porque la influenza se transmite únicamente al tocar superficies.",
+          "feedback": "La influenza se transmite principalmente por gotas; los guantes solos no alcanzan."
+        },
+        {
+          "id": "sin-medidas",
+          "text": "No tomar medidas, porque la influenza es una enfermedad leve.",
+          "feedback": "La influenza puede ser grave, sobre todo en personas internadas: se aplican precauciones por gotas."
+        }
+      ],
+      "correctOptionId": "barbijo",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "in-06",
+      "conceptId": "mat-infectologia:in-06",
+      "category": "mat-infectologia",
+      "topic": "Precauciones por transmisión",
+      "competency": "Aplicar las medidas específicas ante Clostridioides difficile",
+      "difficulty": "integracion",
+      "format": "caso",
+      "stem": "Un paciente tiene diarrea por Clostridioides difficile. ¿Qué medida de higiene de manos corresponde al salir de la habitación?",
+      "rationale": "Clostridioides difficile forma esporas resistentes al alcohol y a muchos desinfectantes. Se aplican precauciones de contacto (guantes y camisolín), higiene de manos con agua y jabón al retirar los guantes, equipos de uso exclusivo y limpieza ambiental con productos esporicidas según el protocolo.",
+      "transferPrinciple": "La elección del método de higiene de manos depende del microorganismo: conocer su forma de resistencia te dice qué medida funciona.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "oms-higiene-manos-2009",
+          "section": "Lavado con agua y jabón: indicaciones"
+        },
+        {
+          "ref": "cdc-aislamiento-2007",
+          "section": "Precauciones de contacto"
+        },
+        {
+          "ref": "libro-microbiologia",
+          "section": "Clostridioides difficile"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "agua-jabon",
+          "text": "Lavado con agua y jabón, porque el alcohol no elimina las esporas de este microorganismo.",
+          "feedback": "Correcto. Las esporas resisten el alcohol; el lavado arrastra mecánicamente las esporas de las manos."
+        },
+        {
+          "id": "alcohol",
+          "text": "Solución alcohólica, porque elimina todos los microorganismos, incluidas las esporas bacterianas.",
+          "feedback": "El alcohol no es eficaz contra las esporas: en este caso se indica lavado con agua y jabón."
+        },
+        {
+          "id": "guantes",
+          "text": "Ninguna higiene de manos, porque usó guantes durante toda la atención.",
+          "feedback": "Los guantes no reemplazan la higiene de manos, que se hace al retirarlos."
+        },
+        {
+          "id": "lavandina",
+          "text": "Lavarse las manos con lavandina diluida para eliminar las esporas de la piel.",
+          "feedback": "La lavandina se usa para el ambiente según el protocolo, no sobre la piel."
+        }
+      ],
+      "correctOptionId": "agua-jabon",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "in-07",
+      "conceptId": "mat-infectologia:in-07",
+      "category": "mat-infectologia",
+      "topic": "Precauciones por transmisión",
+      "competency": "Retirar los elementos de protección personal en el orden correcto",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "Al retirarte guantes, antiparras, camisolín y barbijo después de atender a un paciente con precauciones de contacto y gotas, ¿qué elemento se retira último?",
+      "rationale": "Una secuencia habitual de retiro es: guantes, antiparras o protector facial, camisolín y barbijo o respirador, con higiene de manos al final (y entre pasos si las manos se contaminan). La lógica es retirar primero lo más contaminado y sin tocar la parte externa. Cada institución puede adaptar la secuencia en su protocolo.",
+      "transferPrinciple": "Al retirar los EPP, el objetivo es no contaminarte con lo que te protegió: seguí la secuencia y no te apures.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "cdc-aislamiento-2007",
+          "section": "Secuencia de colocación y retiro de los EPP"
+        },
+        {
+          "ref": "protocolo-institucional",
+          "section": "Uso de elementos de protección personal"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "barbijo",
+          "text": "El barbijo, tomándolo por las tiras y fuera de la habitación o en la antesala, seguido de higiene de manos.",
+          "feedback": "Correcto. Se retira último para proteger las mucosas hasta salir de la zona de riesgo."
+        },
+        {
+          "id": "guantes",
+          "text": "Los guantes, porque así las manos quedan protegidas mientras se quitan los demás elementos contaminados del equipo.",
+          "feedback": "Los guantes se retiran primero, porque son el elemento más contaminado."
+        },
+        {
+          "id": "camison",
+          "text": "El camisolín, para no contaminar la ropa al retirar el barbijo.",
+          "feedback": "En la secuencia recomendada el camisolín se retira antes que el barbijo."
+        },
+        {
+          "id": "antiparras",
+          "text": "Las antiparras, porque son el elemento más limpio y pueden reutilizarse sin limpieza.",
+          "feedback": "Las antiparras se retiran antes que el barbijo y, si son reutilizables, se limpian según el protocolo."
+        }
+      ],
+      "correctOptionId": "barbijo",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "in-08",
+      "conceptId": "mat-infectologia:in-08",
+      "category": "mat-infectologia",
+      "topic": "Infecciones asociadas a la atención",
+      "competency": "Prevenir la infección urinaria asociada a sonda vesical",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "¿Qué medida contribuye a prevenir la infección urinaria en un paciente con sonda vesical permanente?",
+      "rationale": "Las guías de prevención recomiendan insertar la sonda solo con indicación adecuada, con técnica aséptica, mantener un sistema de drenaje cerrado y estéril, conservar el flujo libre con la bolsa por debajo de la vejiga y sin contacto con el piso, y retirar la sonda en cuanto deja de ser necesaria.",
+      "transferPrinciple": "El mejor modo de prevenir la infección de un dispositivo es que no esté colocado más tiempo del necesario: preguntá todos los días si sigue haciendo falta.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "cdc-cauti-2009",
+          "section": "Mantenimiento de la sonda y del sistema de drenaje"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "sistema-cerrado",
+          "text": "Mantener el sistema cerrado, con la bolsa debajo de la vejiga y sin tocar el piso, y evaluar a diario si sigue siendo necesaria.",
+          "feedback": "Correcto. El sistema cerrado, el flujo libre y el retiro precoz son pilares de la prevención."
+        },
+        {
+          "id": "desconectar",
+          "text": "Desconectar la bolsa de la sonda cada vez que se vacía, lavarla con agua y jabón y volver a conectarla para mantenerla limpia y sin olor.",
+          "feedback": "Abrir el sistema aumenta el riesgo de contaminación."
+        },
+        {
+          "id": "elevar",
+          "text": "Colocar la bolsa colectora sobre la cama, junto al paciente, para que no se caiga.",
+          "feedback": "La bolsa sobre el nivel de la vejiga favorece el reflujo de orina."
+        },
+        {
+          "id": "antibiotico",
+          "text": "Indicar antibiótico preventivo a todos los pacientes con sonda vesical desde el primer día.",
+          "feedback": "No se recomienda la profilaxis antibiótica rutinaria, y la indicación no corresponde a enfermería."
+        }
+      ],
+      "correctOptionId": "sistema-cerrado",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "in-09",
+      "conceptId": "mat-infectologia:in-09",
+      "category": "mat-infectologia",
+      "topic": "Infecciones asociadas a la atención",
+      "competency": "Prevenir la neumonía por aspiración en la alimentación enteral",
+      "difficulty": "integracion",
+      "format": "caso",
+      "stem": "Un paciente recibe alimentación por sonda nasogástrica de forma continua. ¿Qué medida reduce el riesgo de neumonía por aspiración?",
+      "rationale": "La aspiración del contenido gástrico hacia la vía aérea puede causar neumonía. Las medidas incluyen elevar la cabecera entre 30 y 45 grados durante la alimentación y un tiempo posterior (si no hay contraindicación), verificar la posición de la sonda según el protocolo, vigilar la tolerancia y la higiene bucal.",
+      "transferPrinciple": "Cuando un paciente recibe alimentación por sonda, la posición del cuerpo es parte de la indicación de cuidado.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-fundamentos",
+          "section": "Alimentación enteral: prevención de la aspiración"
+        },
+        {
+          "ref": "protocolo-institucional",
+          "section": "Alimentación enteral"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "cabecera",
+          "text": "Mantener la cabecera elevada entre 30 y 45 grados, salvo contraindicación, y verificar la posición de la sonda según el protocolo.",
+          "feedback": "Correcto. La elevación de la cabecera disminuye el reflujo y la aspiración del contenido gástrico."
+        },
+        {
+          "id": "plano",
+          "text": "Mantener al paciente acostado en posición plana para que la fórmula descienda por gravedad al intestino.",
+          "feedback": "La posición plana aumenta el riesgo de reflujo y aspiración."
+        },
+        {
+          "id": "velocidad",
+          "text": "Aumentar la velocidad de infusión para que el estómago se vacíe más rápido y no acumule fórmula.",
+          "feedback": "Aumentar la velocidad puede favorecer la distensión y el reflujo. La velocidad la indica el equipo."
+        },
+        {
+          "id": "sin-verificar",
+          "text": "Evitar verificar la posición de la sonda para no manipularla y reducir el riesgo de que se desplace.",
+          "feedback": "La verificación de la posición es una medida de seguridad central."
+        }
+      ],
+      "correctOptionId": "cabecera",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "in-10",
+      "conceptId": "mat-infectologia:in-10",
+      "category": "mat-infectologia",
+      "topic": "Infecciones asociadas a la atención",
+      "competency": "Mantener un catéter venoso periférico con criterio de prevención",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "Un paciente tiene un catéter venoso periférico que no se usa desde hace dos días y no tiene medicación endovenosa indicada. ¿Qué corresponde?",
+      "rationale": "Los catéteres vasculares son una puerta de entrada para los microorganismos. Las medidas de prevención incluyen la higiene de manos, la técnica aséptica, la desinfección de los conectores, la valoración diaria del sitio y el retiro del catéter cuando ya no es necesario o hay signos de complicación.",
+      "transferPrinciple": "Cada dispositivo invasivo debe justificar su permanencia todos los días.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "cdc-cateteres-2011",
+          "section": "Retiro de catéteres no necesarios"
+        },
+        {
+          "ref": "ins-infusion-2024",
+          "section": "Valoración y retiro del catéter periférico"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "retirar",
+          "text": "Proponer su retiro al equipo, porque un catéter sin uso aumenta el riesgo de infección sin aportar beneficio.",
+          "feedback": "Correcto. Las guías recomiendan retirar los catéteres que ya no son necesarios."
+        },
+        {
+          "id": "dejar",
+          "text": "Dejarlo colocado por si en algún momento se necesita, aunque no haya indicación.",
+          "feedback": "Mantenerlo «por si acaso» expone al paciente a flebitis e infección sin beneficio."
+        },
+        {
+          "id": "cambiar",
+          "text": "Cambiarlo por uno nuevo en el otro brazo, para que siempre haya una vía disponible.",
+          "feedback": "Colocar un catéter sin indicación agrega riesgo."
+        },
+        {
+          "id": "tapar",
+          "text": "Cubrir el sitio con gasa y algodón adicional para que no se contamine, sin revisarlo hasta que vuelva a ser necesario usarlo.",
+          "feedback": "Un sitio cubierto y no evaluado puede ocultar signos de complicación. Se valora en cada turno."
+        }
+      ],
+      "correctOptionId": "retirar",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "in-11",
+      "conceptId": "mat-infectologia:in-11",
+      "category": "mat-infectologia",
+      "topic": "Exposición ocupacional",
+      "competency": "Actuar ante un accidente con material cortopunzante",
+      "difficulty": "integracion",
+      "format": "error_seguridad",
+      "stem": "Te pinchás con una aguja usada después de una extracción de sangre. ¿Qué corresponde hacer primero?",
+      "rationale": "Ante una exposición percutánea a sangre, se lava la herida con agua y jabón, se notifica de inmediato al servicio responsable y se evalúa el riesgo según el tipo de exposición y la fuente. La profilaxis posexposición para el VIH, cuando está indicada, debe iniciarse lo antes posible; también se evalúan hepatitis B y C. El circuito lo define el protocolo institucional.",
+      "transferPrinciple": "Un accidente laboral es una urgencia médica para vos: avisar de inmediato no es exagerar, es cuidarte.",
+      "criticalSafety": true,
+      "riskNote": "Demorar la notificación de un accidente con riesgo biológico puede reducir la eficacia de la profilaxis.",
+      "recoveryQuestionId": "in-11r",
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "cdc-pep-2013",
+          "section": "Manejo de la exposición y recomendaciones de profilaxis"
+        },
+        {
+          "ref": "protocolo-institucional",
+          "section": "Protocolo de accidentes con riesgo biológico"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "lavar-reportar",
+          "text": "Lavar con agua y jabón y notificar de inmediato según el protocolo, para evaluar el riesgo y la necesidad de profilaxis.",
+          "feedback": "Correcto. La exposición se considera una urgencia: la evaluación y la eventual profilaxis deben iniciarse lo antes posible."
+        },
+        {
+          "id": "exprimir",
+          "text": "Exprimir la herida con fuerza para que salga sangre y desinfectar con lavandina pura sobre la piel.",
+          "feedback": "Exprimir no está recomendado y la lavandina pura daña la piel. Se lava con agua y jabón."
+        },
+        {
+          "id": "esperar",
+          "text": "Terminar la guardia y consultar al día siguiente si aparecen síntomas.",
+          "feedback": "La profilaxis posexposición es más eficaz cuanto antes se inicia: no se espera."
+        },
+        {
+          "id": "no-reportar",
+          "text": "No contarlo para no tener problemas, ya que el paciente parece sano.",
+          "feedback": "El aspecto del paciente no descarta una infección. La notificación protege tu salud."
+        }
+      ],
+      "correctOptionId": "lavar-reportar",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "in-11r",
+      "conceptId": "mat-infectologia:in-11",
+      "category": "mat-infectologia",
+      "topic": "Exposición ocupacional",
+      "competency": "Actuar ante un accidente con material cortopunzante",
+      "difficulty": "integracion",
+      "format": "error_seguridad",
+      "stem": "Durante una curación, te salpica sangre del paciente en los ojos. ¿Qué hacés?",
+      "rationale": "Las salpicaduras de sangre o fluidos sobre mucosas (ojos, boca, nariz) son exposiciones con riesgo biológico. Se irriga con abundante agua o solución fisiológica y se notifica de inmediato para evaluar el riesgo. La prevención incluye el uso de protección ocular cuando se prevén salpicaduras.",
+      "transferPrinciple": "Toda exposición a sangre en piel no intacta o mucosas se notifica, aunque parezca menor.",
+      "criticalSafety": true,
+      "riskNote": "No lavar y no notificar una exposición de mucosas puede demorar la evaluación y la profilaxis.",
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": true,
+      "sources": [
+        {
+          "ref": "cdc-pep-2013",
+          "section": "Manejo de la exposición"
+        },
+        {
+          "ref": "cdc-aislamiento-2007",
+          "section": "Precauciones estándar: protección facial"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "irrigar-reportar",
+          "text": "Irrigar los ojos con abundante agua o solución fisiológica y notificar de inmediato el accidente según el protocolo.",
+          "feedback": "Correcto. Las mucosas también son una vía de exposición: se lava y se notifica como una urgencia."
+        },
+        {
+          "id": "frotar",
+          "text": "Frotarme los ojos con una gasa seca y seguir trabajando, porque es una salpicadura pequeña.",
+          "feedback": "Frotar no limpia y puede irritar. La exposición de mucosas también requiere notificación."
+        },
+        {
+          "id": "gotas",
+          "text": "Aplicarme gotas antibióticas que haya en la sala y no comentarlo.",
+          "feedback": "La automedicación no reemplaza la evaluación del riesgo biológico."
+        },
+        {
+          "id": "lentes",
+          "text": "Ponerme anteojos ahora para evitar otra salpicadura, sin hacer nada más.",
+          "feedback": "La protección ocular previene, pero una vez expuesto corresponde lavar y notificar."
+        }
+      ],
+      "correctOptionId": "irrigar-reportar",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "in-12",
+      "conceptId": "mat-infectologia:in-12",
+      "category": "mat-infectologia",
+      "topic": "Exposición ocupacional",
+      "competency": "Manejar con seguridad el material cortopunzante",
+      "difficulty": "aplicacion",
+      "format": "error_seguridad",
+      "stem": "Terminaste de aplicar una inyección. ¿Qué hacés con la aguja?",
+      "rationale": "Las precauciones estándar incluyen no recapuchar agujas con las dos manos, no doblarlas ni romperlas, y descartarlas inmediatamente en recipientes rígidos, resistentes a la perforación, ubicados cerca del punto de uso. Los descartadores no se llenan por encima de la marca indicada.",
+      "transferPrinciple": "El momento más riesgoso con una aguja es después de usarla: el descartador tiene que estar a tu alcance antes de empezar.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "cdc-aislamiento-2007",
+          "section": "Precauciones estándar: prevención de lesiones por cortopunzantes"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "descartar",
+          "text": "La descarto de inmediato, sin recapuchar, en el descartador ubicado al alcance.",
+          "feedback": "Correcto. No recapuchar y descartar en el punto de uso reduce los accidentes."
+        },
+        {
+          "id": "recapuchar",
+          "text": "La recapucho con las dos manos para trasladarla con seguridad hasta el descartador del office.",
+          "feedback": "Recapuchar con las dos manos es una causa frecuente de pinchazos."
+        },
+        {
+          "id": "bandeja",
+          "text": "La dejo en la bandeja junto con el resto del material para descartarla al final del turno.",
+          "feedback": "Dejar agujas expuestas en bandejas expone a pinchazos a otras personas."
+        },
+        {
+          "id": "bolsa",
+          "text": "La tiro en la bolsa de residuos comunes de la habitación, envuelta en una gasa.",
+          "feedback": "Las agujas se descartan en recipientes rígidos para cortopunzantes, nunca en bolsas."
+        }
+      ],
+      "correctOptionId": "descartar",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "in-13",
+      "conceptId": "mat-infectologia:in-13",
+      "category": "mat-infectologia",
+      "topic": "Inmunización",
+      "competency": "Fundamentar la vacunación del personal de salud contra la hepatitis B",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "¿Por qué se recomienda que el personal de salud esté vacunado contra la hepatitis B y conozca su respuesta a la vacuna, según el protocolo?",
+      "rationale": "El virus de la hepatitis B se transmite por sangre y fluidos y es muy infeccioso en las exposiciones percutáneas. La vacunación del personal de salud lo protege; conocer la respuesta (anticuerpos) orienta la conducta ante un accidente. Los esquemas y controles los establecen las normas y el protocolo vigentes.",
+      "transferPrinciple": "Tu esquema de vacunación es parte de tu equipo de protección: tenelo actualizado y registrado.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-microbiologia",
+          "section": "Virus de la hepatitis B"
+        },
+        {
+          "ref": "protocolo-institucional",
+          "section": "Vacunación del personal de salud"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "riesgo",
+          "text": "Porque tiene riesgo de exposición a sangre y la vacuna previene una infección que puede volverse crónica.",
+          "feedback": "Correcto. La vacunación es una medida de protección del trabajador y forma parte de la evaluación ante un accidente."
+        },
+        {
+          "id": "pacientes",
+          "text": "Porque la vacuna del personal protege directamente a todos los pacientes de contraer hepatitis B por cualquier vía.",
+          "feedback": "La vacuna protege sobre todo a quien la recibe, aunque también reduce la transmisión."
+        },
+        {
+          "id": "obligatoria",
+          "text": "Porque es la única vacuna que existe para adultos y por eso se aplica a todos los trabajadores.",
+          "feedback": "Existen varias vacunas para adultos; la de hepatitis B se prioriza por el riesgo laboral."
+        },
+        {
+          "id": "tratamiento",
+          "text": "Porque la vacuna cura la hepatitis B en las personas ya infectadas.",
+          "feedback": "La vacuna previene la infección; no es un tratamiento."
+        }
+      ],
+      "correctOptionId": "riesgo",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "in-14",
+      "conceptId": "mat-infectologia:in-14",
+      "category": "mat-infectologia",
+      "topic": "Inmunización",
+      "competency": "Diferenciar inmunidad activa y pasiva",
+      "difficulty": "conceptual",
+      "format": "concepto",
+      "stem": "¿Qué tipo de inmunidad genera una vacuna?",
+      "rationale": "La inmunidad activa se adquiere por la infección natural o por vacunación: el organismo produce su propia respuesta, con memoria. La inmunidad pasiva se recibe ya formada (anticuerpos maternos, gammaglobulinas): es inmediata pero transitoria.",
+      "transferPrinciple": "Diferenciar activa y pasiva te ayuda a explicar por qué algunas vacunas necesitan varias dosis y por qué una gammaglobulina protege enseguida pero dura poco.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-microbiologia",
+          "section": "Respuesta inmunitaria y vacunas"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "activa",
+          "text": "Inmunidad activa: el propio organismo produce anticuerpos y células de memoria.",
+          "feedback": "Correcto. La vacuna estimula al sistema inmunitario, que genera memoria duradera."
+        },
+        {
+          "id": "pasiva",
+          "text": "Inmunidad pasiva: la vacuna aporta anticuerpos ya formados que protegen de inmediato.",
+          "feedback": "Eso ocurre con las gammaglobulinas o los anticuerpos maternos, no con las vacunas."
+        },
+        {
+          "id": "innata",
+          "text": "Inmunidad innata: la vacuna fortalece las barreras de la piel y las mucosas.",
+          "feedback": "La inmunidad innata no depende de la vacunación ni genera memoria específica."
+        },
+        {
+          "id": "ninguna",
+          "text": "Ninguna: la vacuna solo previene los síntomas, sin modificar el sistema inmunitario.",
+          "feedback": "La vacuna sí modifica la respuesta inmunitaria y genera memoria."
+        }
+      ],
+      "correctOptionId": "activa",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "in-15",
+      "conceptId": "mat-infectologia:in-15",
+      "category": "mat-infectologia",
+      "topic": "Sepsis",
+      "competency": "Aplicar los criterios clínicos de alerta de sepsis",
+      "difficulty": "aplicacion",
+      "format": "concepto",
+      "stem": "Según Sepsis-3, en un adulto con infección sospechada, ¿qué combinación de criterios clínicos (qSOFA) indica mayor riesgo de evolución desfavorable?",
+      "rationale": "Sepsis-3 define la sepsis como una disfunción orgánica potencialmente mortal causada por una respuesta desregulada a la infección. El qSOFA (frecuencia respiratoria ≥ 22/min, alteración del estado mental, presión sistólica ≤ 100 mmHg) permite identificar al lado de la cama a pacientes con mayor riesgo. Su presencia obliga a comunicar y a una evaluación urgente.",
+      "transferPrinciple": "Los signos vitales básicos bien controlados y registrados son tu principal herramienta para detectar una sepsis a tiempo.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "sepsis3-2016",
+          "section": "Criterios clínicos: quickSOFA"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "qsofa",
+          "text": "Frecuencia respiratoria de 22/min o más, alteración del estado mental y presión sistólica de 100 mmHg o menos (al menos dos).",
+          "feedback": "Correcto. Son los tres criterios del qSOFA; dos o más alertan sobre un mayor riesgo."
+        },
+        {
+          "id": "fiebre",
+          "text": "Fiebre mayor de 38 °C, escalofríos y dolor en el sitio de la infección.",
+          "feedback": "Son signos de infección, pero no forman parte del qSOFA."
+        },
+        {
+          "id": "laboratorio",
+          "text": "Leucocitosis, proteína C reactiva alta y cultivo positivo.",
+          "feedback": "El qSOFA se basa en criterios clínicos al lado de la cama, sin laboratorio."
+        },
+        {
+          "id": "saturacion",
+          "text": "Saturación menor de 95 %, frecuencia cardíaca mayor de 90/min y diuresis normal.",
+          "feedback": "Esos datos pueden ser relevantes, pero no son los criterios del qSOFA."
+        }
+      ],
+      "correctOptionId": "qsofa",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "in-16",
+      "conceptId": "mat-infectologia:in-16",
+      "category": "mat-infectologia",
+      "topic": "Sepsis",
+      "competency": "Reconocer y comunicar una posible sepsis",
+      "difficulty": "integracion",
+      "format": "caso",
+      "stem": "Una paciente internada por infección urinaria está ahora confusa, con FR 24/min, TA 95/60 mmHg y FC 112/min. Al ingreso estaba lúcida y estable. ¿Qué corresponde?",
+      "rationale": "La paciente presenta tres criterios de qSOFA (alteración mental, FR ≥ 22, PAS ≤ 100) en un contexto infeccioso. La sepsis es una emergencia tiempo-dependiente: la comunicación inmediata y estructurada permite iniciar la evaluación y el tratamiento. Mientras tanto, se mantiene la vigilancia y se preparan los elementos que el equipo indique.",
+      "transferPrinciple": "Compará con el estado previo: el cambio agudo es el dato que más alerta.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "sepsis3-2016",
+          "section": "Definiciones y criterios clínicos"
+        },
+        {
+          "ref": "ihi-sbar",
+          "section": "Guía SBAR"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "comunicar-ya",
+          "text": "Reconocer signos de alarma de sepsis y comunicarlos de inmediato al médico con datos concretos (SBAR).",
+          "feedback": "Correcto. Cumple criterios de alerta de qSOFA: la comunicación urgente permite iniciar el tratamiento a tiempo."
+        },
+        {
+          "id": "confusion-edad",
+          "text": "Atribuir la confusión a la edad o al cambio de ambiente y volver a controlar en el próximo turno.",
+          "feedback": "Una confusión nueva junto con otros signos alterados es un signo de alarma, no algo esperable."
+        },
+        {
+          "id": "antitermico",
+          "text": "Administrar un antitérmico indicado «si fiebre» y esperar una hora para ver si mejora antes de comunicar los cambios.",
+          "feedback": "Esperar demora la evaluación. El problema principal es la posible disfunción orgánica."
+        },
+        {
+          "id": "registrar",
+          "text": "Registrar los valores en la hoja de enfermería y mencionarlos en el pase de guardia.",
+          "feedback": "Registrar es necesario, pero estos hallazgos requieren comunicación inmediata."
+        }
+      ],
+      "correctOptionId": "comunicar-ya",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "in-17",
+      "conceptId": "mat-infectologia:in-17",
+      "category": "mat-infectologia",
+      "topic": "Resistencia antimicrobiana",
+      "competency": "Aplicar precauciones de contacto ante microorganismos multirresistentes",
+      "difficulty": "aplicacion",
+      "format": "caso",
+      "stem": "Un paciente está colonizado por una bacteria multirresistente, sin signos de infección. ¿Qué medida corresponde?",
+      "rationale": "Los microorganismos multirresistentes se diseminan sobre todo por contacto directo e indirecto (manos, equipos, superficies). Las medidas incluyen precauciones de contacto, higiene de manos estricta, equipos de uso exclusivo, limpieza ambiental y comunicación del estado del paciente en los traslados y pases.",
+      "transferPrinciple": "Colonizado no es lo mismo que infectado, pero ambos pueden transmitir: las medidas protegen al resto de los pacientes.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "cdc-aislamiento-2007",
+          "section": "Precauciones de contacto: organismos multirresistentes"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "contacto",
+          "text": "Aplicar precauciones de contacto: guantes y camisolín al tocar al paciente o su entorno, además de las estándar.",
+          "feedback": "Correcto. Aunque no esté infectado, puede transmitir la bacteria a otros pacientes a través de las manos y las superficies."
+        },
+        {
+          "id": "nada",
+          "text": "No aplicar medidas especiales, porque si no tiene síntomas de infección no puede transmitir la bacteria a otros pacientes.",
+          "feedback": "La colonización también permite la transmisión: por eso se aplican precauciones de contacto."
+        },
+        {
+          "id": "aerea",
+          "text": "Indicar precauciones de transmisión aérea con respirador N95 para todo el personal.",
+          "feedback": "Las bacterias multirresistentes habituales se transmiten por contacto, no por vía aérea."
+        },
+        {
+          "id": "antibiotico",
+          "text": "Indicar antibióticos para eliminar la colonización antes de que se transmita.",
+          "feedback": "El tratamiento de una colonización no está indicado de rutina y no corresponde a enfermería indicarlo."
+        }
+      ],
+      "correctOptionId": "contacto",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "in-18",
+      "conceptId": "mat-infectologia:in-18",
+      "category": "mat-infectologia",
+      "topic": "Microorganismos",
+      "competency": "Definir período de incubación",
+      "difficulty": "conceptual",
+      "format": "concepto",
+      "stem": "¿Qué es el período de incubación de una enfermedad infecciosa?",
+      "rationale": "La historia natural de una infección incluye el período de incubación, el período de estado y la convalecencia. El período de transmisibilidad puede empezar antes de los síntomas. Conocer el período de incubación sirve para estudiar contactos y definir el tiempo de vigilancia en un brote.",
+      "transferPrinciple": "Si una infección puede transmitirse antes de los síntomas, las medidas de prevención no pueden esperar a que alguien se enferme.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-microbiologia",
+          "section": "Historia natural de las enfermedades infecciosas"
+        },
+        {
+          "ref": "ops-mopece",
+          "section": "Unidad 2: salud y enfermedad en la población"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "incubacion",
+          "text": "El tiempo entre la entrada del agente al organismo y la aparición de los primeros síntomas.",
+          "feedback": "Correcto. Durante ese período la persona puede no tener síntomas y, en algunas infecciones, ya transmitir."
+        },
+        {
+          "id": "contagio",
+          "text": "El período en que la persona ya tiene síntomas y puede contagiar a otras personas de su entorno.",
+          "feedback": "Ese es el período de transmisibilidad, que puede superponerse o no con los síntomas."
+        },
+        {
+          "id": "tratamiento",
+          "text": "El tiempo que tarda el tratamiento antibiótico en curar la infección.",
+          "feedback": "El período de incubación no se relaciona con el tratamiento."
+        },
+        {
+          "id": "convalecencia",
+          "text": "El tiempo de recuperación después de que desaparecen los síntomas.",
+          "feedback": "Ese es el período de convalecencia."
+        }
+      ],
+      "correctOptionId": "incubacion",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "in-19",
+      "conceptId": "mat-infectologia:in-19",
+      "category": "mat-infectologia",
+      "topic": "Resistencia antimicrobiana",
+      "competency": "Educar sobre el uso responsable de antibióticos",
+      "difficulty": "integracion",
+      "format": "caso",
+      "stem": "Un familiar te pide que «le den un antibiótico» al paciente por un resfrío, porque «siempre le hace bien». ¿Qué respuesta es la adecuada?",
+      "rationale": "La resistencia antimicrobiana es una amenaza para la salud pública. Enfermería contribuye al uso responsable con educación, administración en dosis y horarios correctos, registro de la duración del tratamiento y comunicación de la evolución para que el equipo revise la indicación.",
+      "transferPrinciple": "Educar no es decir «no»: es explicar por qué y ofrecer lo que sí ayuda (hidratación, descanso, consulta si aparecen signos de alarma).",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "libro-farmacologia",
+          "section": "Principios del tratamiento antimicrobiano"
+        },
+        {
+          "ref": "libro-microbiologia",
+          "section": "Resistencia antimicrobiana"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "explicar",
+          "text": "Explicarle que los antibióticos no actúan sobre virus, que su uso innecesario genera resistencia y que la indicación es médica.",
+          "feedback": "Correcto. Es una oportunidad de educación sobre el uso responsable, sin desautorizar al equipo médico."
+        },
+        {
+          "id": "conseguir",
+          "text": "Decirle que vas a conseguir un antibiótico de la farmacia del hospital para que se quede tranquilo y el paciente mejore más rápido.",
+          "feedback": "Conseguir medicación sin indicación es inseguro y está fuera de tu rol."
+        },
+        {
+          "id": "casa",
+          "text": "Recomendarle que traiga un antibiótico de su casa para que el paciente lo tome a escondidas.",
+          "feedback": "Promover la automedicación es inseguro y oculta información al equipo."
+        },
+        {
+          "id": "ignorar",
+          "text": "No responderle y cambiar de tema, porque no es tarea de enfermería hablar de medicamentos.",
+          "feedback": "La educación sanitaria es una función de enfermería."
+        }
+      ],
+      "correctOptionId": "explicar",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    },
+    {
+      "id": "in-20",
+      "conceptId": "mat-infectologia:in-20",
+      "category": "mat-infectologia",
+      "topic": "Microorganismos",
+      "competency": "Tomar una muestra de orina de un paciente sondado sin contaminarla",
+      "difficulty": "integracion",
+      "format": "caso",
+      "stem": "Se indicó un urocultivo a un paciente con sonda vesical. ¿Cómo se obtiene la muestra?",
+      "rationale": "Las guías indican obtener las muestras pequeñas de orina para cultivo del puerto de muestreo, previa desinfección, y las grandes de la bolsa solo para análisis que no sean cultivos, siempre con técnica aséptica. La muestra se rotula, se registra la hora y se envía rápidamente al laboratorio o se conserva según el protocolo.",
+      "transferPrinciple": "La calidad de la muestra define la calidad del resultado: un cultivo contaminado puede llevar a tratamientos innecesarios.",
+      "criticalSafety": false,
+      "riskNote": null,
+      "recoveryQuestionId": null,
+      "isRecoveryVariant": false,
+      "sources": [
+        {
+          "ref": "cdc-cauti-2009",
+          "section": "Obtención de muestras de orina"
+        },
+        {
+          "ref": "protocolo-institucional",
+          "section": "Toma de muestras microbiológicas"
+        }
+      ],
+      "reviewStatus": "draft",
+      "contentVersion": "1.0",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "puerto",
+          "text": "Del puerto de toma de muestras del sistema, con técnica aséptica, desinfectándolo antes de aspirar.",
+          "feedback": "Correcto. Así se obtiene orina reciente sin abrir el sistema cerrado."
+        },
+        {
+          "id": "bolsa",
+          "text": "De la bolsa colectora, abriendo el grifo inferior y recogiendo en el frasco la orina que se acumuló durante el turno.",
+          "feedback": "La orina de la bolsa estuvo estancada y puede estar contaminada: no es válida para cultivo."
+        },
+        {
+          "id": "desconectar",
+          "text": "Desconectando la sonda de la bolsa y dejando gotear la orina en el frasco estéril.",
+          "feedback": "Desconectar el sistema rompe el circuito cerrado y aumenta el riesgo de infección."
+        },
+        {
+          "id": "punzar",
+          "text": "Punzando la pared de la sonda con una aguja en cualquier sector del tubo.",
+          "feedback": "Punzar la sonda puede dañarla; se usa el puerto diseñado para eso."
+        }
+      ],
+      "correctOptionId": "puerto",
+      "numericAnswer": null,
+      "unit": null,
+      "tolerance": null,
+      "rounding": null
+    }
+  ]
+}

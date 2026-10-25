@@ -1,0 +1,8 @@
+# Configuración para publicar en Netlify desde el repositorio.
+# En Netlify: «Base directory» = guardia-de-preguntas (este archivo se lee desde ahí).
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"

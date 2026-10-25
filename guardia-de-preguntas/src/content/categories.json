@@ -1,0 +1,71 @@
+{
+  "note": "Listado base configurable. No representa el programa oficial de PP2 hasta que la cátedra lo valide.",
+  "categories": [
+    {
+      "id": "fisiologia",
+      "letter": "A",
+      "name": "Fisiología en acción",
+      "shortName": "Fisiología",
+      "color": "#D9364A",
+      "colorSoft": "#FDE8EB",
+      "ink": "#FFFFFF",
+      "badgeName": "Insignia Pulso",
+      "topics": ["Homeostasis", "Sistema cardiovascular", "Sistema respiratorio", "Sistema renal", "Sistema nervioso", "Sistema endocrino", "Equilibrio hidroelectrolítico", "Relación entre función orgánica y signos clínicos"]
+    },
+    {
+      "id": "farmacologia",
+      "letter": "B",
+      "name": "Farmacología segura",
+      "shortName": "Farmacología",
+      "color": "#7B3FC4",
+      "colorSoft": "#F1E9FB",
+      "ink": "#FFFFFF",
+      "badgeName": "Insignia Dosis Justa",
+      "topics": ["Farmacocinética y farmacodinamia", "Vías de administración", "Cálculos de dosis", "Unidades y conversiones", "Reconstitución y dilución según fuentes verificables", "Efectos adversos", "Verificaciones de administración", "Indicaciones incompletas o inconsistentes", "Cuándo detenerse y consultar"]
+    },
+    {
+      "id": "procedimientos",
+      "letter": "C",
+      "name": "Procedimientos de PP2",
+      "shortName": "Procedimientos",
+      "color": "#0B72C9",
+      "colorSoft": "#E3F0FB",
+      "ink": "#FFFFFF",
+      "badgeName": "Insignia Manos Expertas",
+      "topics": ["Preparación de materiales", "Control de signos vitales", "Venoclisis y accesos periféricos", "Equipos y bombas de infusión", "ECG y colocación de electrodos", "Curaciones", "Balance hídrico", "Asepsia, antisepsia y esterilización", "Reconocimiento de complicaciones"]
+    },
+    {
+      "id": "quirurgicos",
+      "letter": "D",
+      "name": "Cuidados quirúrgicos",
+      "shortName": "Quirúrgicos",
+      "color": "#0E8C7E",
+      "colorSoft": "#E0F4F1",
+      "ink": "#FFFFFF",
+      "badgeName": "Insignia Pausa Segura",
+      "topics": ["Valoración preoperatoria", "Educación prequirúrgica", "Verificaciones de seguridad", "Recepción postoperatoria", "Valoración del dolor", "Drenajes", "Signos de alarma", "Comunicación oportuna con el equipo"]
+    },
+    {
+      "id": "seguridad",
+      "letter": "E",
+      "name": "Seguridad y prevención",
+      "shortName": "Seguridad",
+      "color": "#D9620B",
+      "colorSoft": "#FCEBDD",
+      "ink": "#FFFFFF",
+      "badgeName": "Insignia Escudo",
+      "topics": ["Identificación del paciente", "Higiene de manos", "Precauciones estándar", "Prevención de caídas", "Prevención de infecciones", "Elementos de protección", "Errores de medicación", "Comunicación de incidentes"]
+    },
+    {
+      "id": "valoracion",
+      "letter": "F",
+      "name": "Valoración, registro y priorización",
+      "shortName": "Valoración",
+      "color": "#9A6A00",
+      "colorSoft": "#FBF1D9",
+      "ink": "#FFFFFF",
+      "badgeName": "Insignia Brújula",
+      "topics": ["Datos observados y referidos", "Registros claros y fieles", "Pase de guardia", "Comunicación estructurada (SBAR)", "Priorización entre pacientes", "Límites del rol", "Solicitud de supervisión"]
+    }
+  ]
+}
