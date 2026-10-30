@@ -1,172 +1,172 @@
 # ¡NO, CARAJO! — Academia de Enfermería
 
-This is an educational game for nursing students. **El Jefe de Guardia**, an animated virtual instructor, asks questions aloud, listens to answers through the microphone, grades them, explains every mistake and reacts with Argentine humour. The humour is always aimed at the mistake, never at the person.
+Juego educativo para estudiantes de enfermería con un instructor virtual animado, **El Jefe de Guardia**, que pregunta en voz alta, escucha por micrófono, corrige, explica cada error y reacciona con humor argentino. El humor siempre apunta al error, nunca a la persona.
 
-> **Pedagogical principle:** students can laugh at their mistake, but they never finish a question without understanding why they got it wrong.
+> **Principio pedagógico:** el estudiante puede reírse de su error, pero nunca termina una pregunta sin comprender por qué se equivocó.
 >
-> This is an educational simulator. It does not replace real clinical supervision, medical orders or institutional protocols. Teaching staff must review the question bank against local regulations before institutional use.
+> Simulador educativo: no reemplaza la supervisión clínica real, la indicación médica ni los protocolos institucionales. El banco de preguntas debe ser revisado por el equipo docente y contrastado con la normativa local antes de su uso institucional.
 
 ---
 
-## 1. What this version includes (functional prototype)
+## 1. Qué incluye esta versión (prototipo funcional)
 
-| Feature | Status |
+| Funcionalidad | Estado |
 |---|---|
-| Welcome screen, game mode, module (12), personality, difficulty, number of questions, spoken/written mode | ✅ |
-| Animated Jefe de Guardia (original SVG): idle, talking, celebration, hand on forehead, surprise, alarm with siren, thinking | ✅ |
-| Speech synthesis (prefers an `es-AR` voice) and speech recognition (`es-AR`), with a fallback to typing or buttons | ✅ |
-| 36 starter questions: multiple choice, true/false, open answer, calculations and a progressive clinical case | ✅ |
-| Game modes: **Duelo**, **Guardia** (progressive case), **Código rojo** (timed), **Examen final** (no hints or retries), **Revancha** (your mistakes, rephrased) | ✅ |
-| 3 personalities; "sin filtro" requires 18+ confirmation and the teacher can turn it off | ✅ |
-| Serious safety error: red alert, simulation stopped, risk explained, **mandatory recovery question** | ✅ |
-| Correction with a hint and a second attempt before the explanation | ✅ |
-| **Deterministic** dose and drip calculations (never done by AI), unit-error detection, reworded numbers in Revancha | ✅ |
-| Open-question grading by key concepts and synonyms, tolerant of dictation errors | ✅ |
-| XP that rewards reasoning, 6 levels, 10 badges, streaks, per-module stats, frequent mistakes, recommendations | ✅ |
-| Teacher panel: bank, editor, CSV/Excel import, AI drafts with review, results, CSV/PDF export, spicy-language switch | ✅ (demo PIN, local storage) |
-| **Demo with no external API** | ✅ |
-| Optional AI (Claude) **from the server only**, with per-IP and daily limits | ✅ |
-| Installable PWA with offline play using the local bank | ✅ |
-| Original sound effects synthesised with Web Audio (no copyrighted files) | ✅ |
+| Bienvenida, modalidad, módulo (12), personalidad, dificultad, cantidad de preguntas, modo oral/escrito | ✅ |
+| Jefe de Guardia animado (SVG original): reposo, habla, festejo, mano en la frente, sorpresa, alarma con sirena, pensando | ✅ |
+| Síntesis de voz (prioriza voz `es-AR`) y reconocimiento de voz (`es-AR`), con alternativa escrita o por botones | ✅ |
+| 41 preguntas iniciales: opción múltiple, V/F, abiertas, cálculos y un caso clínico progresivo | ✅ |
+| Modalidades: **Duelo**, **Guardia** (caso progresivo), **Código rojo** (contrarreloj), **Examen final** (sin pistas ni reintento), **Revancha** (tus errores, reformulados) | ✅ |
+| 3 personalidades; «sin filtro» exige confirmación +18 y el docente puede desactivarlo | ✅ |
+| Error grave de seguridad: alerta roja, simulación detenida, explicación del riesgo y **pregunta de recuperación obligatoria** | ✅ |
+| Corrección con pista y segundo intento antes de mostrar la explicación | ✅ |
+| Cálculos de dosis y goteo **deterministas** (nunca por IA), con detección de errores de unidades y números nuevos en Revancha | ✅ |
+| Corrección de abiertas por conceptos clave y sinónimos, tolerante a errores de dictado | ✅ |
+| XP que premia el razonamiento, 6 niveles, 10 insignias, rachas, estadísticas por módulo, errores frecuentes y recomendaciones | ✅ |
+| Panel docente: banco, editor, importación CSV/Excel, borradores de IA con revisión, resultados, exportación CSV/PDF, interruptor del lenguaje fuerte | ✅ (PIN demo, almacenamiento local) |
+| **Demo sin API externa** | ✅ |
+| IA opcional (Claude) **sólo desde el servidor**, con límites por IP y por día | ✅ |
+| PWA instalable, con juego sin conexión usando el banco local | ✅ |
+| Efectos de sonido originales sintetizados con Web Audio (sin archivos con derechos de autor) | ✅ |
 
 ---
 
-## 2. Folder structure
+## 2. Estructura de carpetas
 
 ```
 no-carajo/
 ├── public/
 │   ├── manifest.webmanifest        # PWA
-│   ├── sw.js                       # Service worker (offline)
-│   └── icons/                      # Icons 192/512/maskable + SVG
+│   ├── sw.js                       # Service worker (modo sin conexión)
+│   └── icons/                      # Íconos 192/512/maskable + SVG
 ├── src/
 │   ├── app/
-│   │   ├── layout.tsx              # Fonts, metadata, PWA
-│   │   ├── page.tsx                # Game
-│   │   ├── globals.css             # Neon theme + character animations
-│   │   ├── docente/page.tsx        # Teacher panel
+│   │   ├── layout.tsx              # Tipografía, metadatos, PWA
+│   │   ├── page.tsx                # Juego
+│   │   ├── globals.css             # Tema neón + animaciones del personaje
+│   │   ├── docente/page.tsx        # Panel docente
 │   │   └── api/ai/
-│   │       ├── status/route.ts     # Is AI on? How many calls are left today?
-│   │       ├── evaluate/route.ts   # AI grading of open answers
-│   │       └── generate/route.ts   # Generates question drafts (teacher)
+│   │       ├── status/route.ts     # ¿Hay IA? ¿Cuántas llamadas quedan hoy?
+│   │       ├── evaluate/route.ts   # Corrección de abiertas con IA
+│   │       └── generate/route.ts   # Borradores de preguntas (docente)
 │   ├── components/
-│   │   ├── Jefe.tsx                # Animated character
-│   │   ├── Game.tsx                # Screen flow + top bar
-│   │   ├── Setup.tsx               # Game options
-│   │   ├── Play.tsx                # Game engine (questions, voice, timer, serious errors)
-│   │   ├── Summary.tsx             # End-of-session summary
-│   │   ├── Stats.tsx               # Student progress
+│   │   ├── Jefe.tsx                # Personaje animado
+│   │   ├── Game.tsx                # Flujo de pantallas + barra superior
+│   │   ├── Setup.tsx               # Opciones de juego
+│   │   ├── Play.tsx                # Motor de juego (preguntas, voz, temporizador, errores graves)
+│   │   ├── Summary.tsx             # Resumen final
+│   │   ├── Stats.tsx               # Progreso del estudiante
 │   │   └── PwaRegister.tsx
 │   ├── data/
-│   │   ├── modules.ts              # The 12 modules
-│   │   └── questions.ts            # Official starter bank (editable)
+│   │   ├── modules.ts              # Los 12 módulos
+│   │   └── questions.ts            # Banco oficial inicial (editable)
 │   └── lib/
 │       ├── types.ts
 │       ├── engine/
-│       │   ├── calc.ts             # Deterministic calculation engine
-│       │   ├── grade.ts            # Local grading (MC, T/F, open, calculation)
-│       │   ├── text.ts             # Normalisation, spoken numbers, fuzzy matching
-│       │   ├── session.ts          # Builds the session for each mode
-│       │   └── *.test.ts           # Tests
-│       ├── personality.ts          # Jefe's phrase banks (editorial rules)
-│       ├── speech.ts               # TTS / STT with fallbacks
-│       ├── sfx.ts                  # Original sounds (Web Audio)
-│       ├── progress.ts             # XP, levels, badges, recommendations
-│       ├── settings.ts             # Teacher settings and local bank
-│       ├── csv.ts                  # CSV import/export (Excel-compatible)
-│       ├── ai-client.ts            # Browser calls to /api/ai
-│       └── server/                 # Server only (API key, limits)
-├── supabase/schema.sql             # Phase 2: accounts, roles, RLS, group stats
+│       │   ├── calc.ts             # Motor determinista de cálculos
+│       │   ├── grade.ts            # Corrección local (MC, V/F, abiertas, cálculos)
+│       │   ├── text.ts             # Normalización, números hablados, coincidencia aproximada
+│       │   ├── session.ts          # Arma la sesión según la modalidad
+│       │   └── *.test.ts           # Pruebas
+│       ├── personality.ts          # Frases del Jefe (reglas editoriales)
+│       ├── speech.ts               # Voz (TTS/STT) con alternativas
+│       ├── sfx.ts                  # Sonidos originales (Web Audio)
+│       ├── progress.ts             # XP, niveles, insignias, recomendaciones
+│       ├── settings.ts             # Configuración docente y banco local
+│       ├── csv.ts                  # Importar/exportar CSV (compatible con Excel)
+│       ├── ai-client.ts            # Llamadas del navegador a /api/ai
+│       └── server/                 # Sólo servidor (clave de API, límites)
+├── supabase/schema.sql             # Fase 2: cuentas, roles, RLS, estadísticas grupales
 ├── .env.example
 └── netlify.toml
 ```
 
 ---
 
-## 3. Running it locally
+## 3. Ejecutar localmente
 
-Requirements: **Node.js 20 or later** (22 recommended).
+Requisito: **Node.js 20 o superior** (recomendado 22).
 
 ```bash
 cd no-carajo
 npm install
-cp .env.example .env.local     # optional: works without editing anything (DEMO mode)
+cp .env.example .env.local     # opcional: funciona sin tocar nada (modo DEMO)
 npm run dev
 ```
 
-Open <http://localhost:3000>. To test on your Android phone on the same Wi-Fi network:
+Abrí <http://localhost:3000>. Para probar en tu teléfono Android dentro de la misma red Wi-Fi:
 
 ```bash
 npm run dev -- -H 0.0.0.0
-# on the phone: http://<your-pc-ip>:3000
+# en el teléfono: http://<ip-de-tu-pc>:3000
 ```
 
-> The microphone and PWA installation need **HTTPS** (or `localhost`). On the phone over the local network they may be blocked. The deployed version on Vercel or Netlify already uses HTTPS.
+> El micrófono y la instalación como app requieren **HTTPS** (o `localhost`); por red local el navegador puede bloquearlos. En Vercel o Netlify ya viene con HTTPS.
 
-Other commands:
+Otros comandos:
 
 ```bash
-npm test          # calculation, spoken-number and grading tests
+npm test          # pruebas de cálculos, números hablados y corrección
 npm run typecheck
-npm run build && npm start   # production mode (enables the offline service worker)
+npm run build && npm start   # modo producción (activa el service worker sin conexión)
 ```
 
-**Teacher panel:** `/docente`, demo PIN `1234` (set with `NEXT_PUBLIC_DEMO_ADMIN_PIN`). This PIN is *not* real security; it is only for the prototype.
+**Panel docente:** `/docente`, PIN demo `1234` (se cambia con `NEXT_PUBLIC_DEMO_ADMIN_PIN`). Este PIN **no** es seguridad real: es sólo para el prototipo.
 
 ---
 
-## 4. Turning on the real AI (optional)
+## 4. Activar la IA real (opcional)
 
-1. Create an API key at <https://console.anthropic.com>.
-2. In `.env.local` (locally) or in the hosting environment variables:
+1. Creá una clave en <https://console.anthropic.com>.
+2. En `.env.local` (local) o en las variables de entorno del hosting:
    ```
    ANTHROPIC_API_KEY=sk-ant-...
-   AI_MODEL=claude-opus-5-5        # cheaper option: claude-haiku-5-5
+   AI_MODEL=claude-opus-5-5        # opción más económica: claude-haiku-5-5
    AI_DAILY_LIMIT=300
    AI_RATE_LIMIT_PER_IP=20
    ```
-3. Restart. The top bar will show **IA ON** instead of **DEMO**.
+3. Reiniciá. La barra superior mostrará **IA ON** en lugar de **DEMO**.
 
-How the AI is used:
-- **Only from the server.** The key never reaches the browser.
-- It grades the **reasoning** in open answers: partially correct answers, synonyms and dictation errors versus conceptual errors. It returns structured output: verdict, feedback, concepts found and missing, and a follow-up question.
-- It generates **question drafts** in the teacher panel. They go into a **review queue** and only reach the official bank once a teacher approves them. You can paste validated reading material so the AI uses it as its main source.
-- **It does not calculate doses.** Calculations are always solved by `engine/calc.ts`.
-- If the AI fails, runs out of quota or is offline, grading falls back to the local engine automatically.
-- Cost controls: per-IP limit, daily limit, cap on the length of the student's answer, low reasoning effort for grading, and AI used only for open questions.
-- Server-side *fallback* is enabled (`fallbacks: "default"`). If the main model declines a request, the API retries automatically with a compatible model.
+Cómo se usa la IA:
+- **Sólo desde el servidor**: la clave nunca llega al navegador.
+- Evalúa el **razonamiento** de las respuestas abiertas (parcialmente correctas, sinónimos, errores de dictado frente a errores conceptuales) y devuelve una salida estructurada: veredicto, devolución, conceptos logrados y faltantes, y una pregunta de seguimiento.
+- Genera **borradores de preguntas** en el panel docente. Quedan en una **cola de revisión** y sólo pasan al banco cuando un docente los aprueba. Se puede pegar bibliografía validada para que la IA la use como fuente principal.
+- **No calcula dosis**: los cálculos siempre los resuelve `engine/calc.ts`.
+- Si la IA falla, se queda sin cupo o no hay conexión, la corrección vuelve automáticamente al motor local.
+- Control de costos: límite por IP, límite diario, tope de longitud de la respuesta enviada, esfuerzo de razonamiento bajo para corregir y uso de IA sólo en preguntas abiertas.
+- Está activado el *fallback* del lado del servidor (`fallbacks: "default"`): si el modelo principal rechaza una solicitud, la API reintenta automáticamente con un modelo compatible.
 
 ---
 
-## 5. Deployment
+## 5. Despliegue
 
-### Option A — Vercel (recommended for Next.js)
+### Opción A — Vercel (recomendada para Next.js)
 
-1. Push the repository to GitHub.
-2. At <https://vercel.com/new>, import the repo.
-3. **Root Directory:** `no-carajo`. The framework is detected as Next.js automatically.
-4. *Environment Variables* (optional): `ANTHROPIC_API_KEY`, `AI_MODEL`, `AI_DAILY_LIMIT`, `AI_RATE_LIMIT_PER_IP`, `NEXT_PUBLIC_DEMO_ADMIN_PIN`, `NEXT_PUBLIC_ALLOW_SPICY`.
-5. Deploy. You get an HTTPS URL that can be installed as an app on Android ("Add to home screen" / "Install app").
+1. Subí el repositorio a GitHub.
+2. En <https://vercel.com/new>, importá el repo.
+3. **Root Directory:** `no-carajo`. Vercel detecta Next.js solo.
+4. *Environment Variables* (opcionales): `ANTHROPIC_API_KEY`, `AI_MODEL`, `AI_DAILY_LIMIT`, `AI_RATE_LIMIT_PER_IP`, `NEXT_PUBLIC_DEMO_ADMIN_PIN`, `NEXT_PUBLIC_ALLOW_SPICY`.
+5. Deploy. Obtenés una URL HTTPS que se puede instalar como app en Android («Agregar a pantalla de inicio» / «Instalar app»).
 
-### Option B — Netlify
+### Opción B — Netlify
 
-1. At <https://app.netlify.com>, choose *Add new site → Import from Git*.
-2. **Base directory:** `no-carajo`. The build command (`npm run build`) and publish directory (`.next`) come from `netlify.toml`. Netlify applies its Next.js runtime automatically, including the `/api` routes.
-3. Add the same environment variables under *Site configuration → Environment variables*.
+1. En <https://app.netlify.com>, elegí *Add new site → Import from Git*.
+2. **Base directory:** `no-carajo`. El comando de build (`npm run build`) y la carpeta de publicación (`.next`) salen de `netlify.toml`. Netlify aplica su runtime de Next.js automáticamente, incluidas las rutas `/api`.
+3. Cargá las mismas variables en *Site configuration → Environment variables*.
 4. Deploy.
 
-> The rate limits in this version are kept in memory for each server instance. On serverless platforms they are approximate. For strict control, move the counter to the `ai_usage` table in Supabase (phase 2).
+> En esta versión los límites de uso se guardan en memoria por instancia del servidor; en plataformas serverless son aproximados. Para un control estricto, mover el contador a la tabla `ai_usage` de Supabase (fase 2).
 
 ---
 
-## 6. Content and editorial rules
+## 6. Contenidos y reglas editoriales
 
-- **Official bank** in `src/data/questions.ts`. Each question has an explanation and, where relevant, a reference with the note "validate against local protocol".
-- **Calculations:** in `calc.template` with `base` and `variants`. The engine solves them, shows the steps and detects unit mistakes.
-- **Serious errors:** `critical` field with the dangerous options, the risk for the patient and the recovery question.
-- **Personality:** `src/lib/personality.ts`. Humour targets the mistake or the situation, never the person's intelligence, identity, body or origin. No discriminatory insults, threats or humiliation. For serious errors the tone is always professional, in every mode.
+- **Banco oficial** en `src/data/questions.ts`. Cada pregunta tiene explicación y, cuando corresponde, una referencia con la aclaración «validar con protocolo local».
+- **Cálculos:** en `calc.template`, con `base` y `variants`. El motor los resuelve, muestra los pasos y detecta errores de unidades.
+- **Errores graves:** campo `critical`, con las opciones riesgosas, el riesgo para el paciente y la pregunta de recuperación.
+- **Personalidad:** `src/lib/personality.ts`. El humor apunta al error o a la situación, nunca a la inteligencia, identidad, cuerpo u origen de la persona. Sin insultos discriminatorios, amenazas ni humillación. En errores graves el tono es siempre profesional, en todos los modos.
 
-CSV format for importing (Excel → *Save as CSV UTF-8*; separator `,` or `;`). Download the template from the panel:
+Formato CSV para importar (Excel → *Guardar como CSV UTF-8*; separador `,` o `;`). La plantilla se descarga desde el panel:
 
 ```
 modulo;nivel;tipo;enunciado;opcion_a;opcion_b;opcion_c;opcion_d;correcta;explicacion;referencia;conceptos_clave
@@ -177,11 +177,11 @@ pae;intermedio;abierta;¿Qué es un dato subjetivo?;;;;;;Lo que refiere...;;refi
 
 ---
 
-## 7. Roadmap (next phases)
+## 7. Hoja de ruta (próximas fases)
 
-1. **Accounts and roles (Supabase Auth):** admin, teacher and student. Apply `supabase/schema.sql` (it already includes RLS: students' results are private and only visible to their authorised teacher).
-2. Move `settings.ts` and `progress.ts` from `localStorage` to Supabase. The functions are already isolated for this.
-3. Group statistics by course (`course_module_stats` view) and Excel/PDF export per course.
-4. Store AI usage per user (`ai_usage`) with quotas per course.
-5. More clinical cases for the Guardia mode, and AI-generated follow-up questions.
-6. Spaced repetition with review dates (SM-2) in Revancha.
+1. **Cuentas y roles (Supabase Auth):** administrador, docente y estudiante. Aplicar `supabase/schema.sql` (ya incluye RLS: los resultados de cada estudiante son privados y sólo los ve su docente autorizado).
+2. Pasar `settings.ts` y `progress.ts` de `localStorage` a Supabase. Las funciones ya están aisladas para eso.
+3. Estadísticas grupales por curso (vista `course_module_stats`) y exportación Excel/PDF por curso.
+4. Registro de uso de IA por usuario (`ai_usage`) con cupos por curso.
+5. Más casos clínicos para la modalidad Guardia y preguntas de seguimiento generadas por IA.
+6. Repetición espaciada con fechas de repaso (SM-2) en Revancha.
