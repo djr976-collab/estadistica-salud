@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  background: #050a1a;
+  color: #f8fafc;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-image:
+    radial-gradient(ellipse at 20% -10%, rgba(34, 228, 255, 0.12), transparent 50%),
+    radial-gradient(ellipse at 110% 30%, rgba(255, 46, 77, 0.12), transparent 45%),
+    linear-gradient(rgba(34, 228, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 228, 255, 0.035) 1px, transparent 1px);
+  background-size: auto, auto, 32px 32px, 32px 32px;
+  min-height: 100dvh;
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl border border-white/10 bg-noche-900/80 p-4 shadow-xl backdrop-blur;
+  }
+  .btn {
+    @apply inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl px-5 py-3 font-bold tracking-wide transition active:scale-[.97] disabled:cursor-not-allowed disabled:opacity-40;
+  }
+  .btn-primary {
+    @apply btn bg-guardia text-white shadow-rojo hover:bg-guardia-dark;
+  }
+  .btn-neon {
+    @apply btn border border-neon-cyan/60 bg-noche-800 text-neon-cyan hover:shadow-neon;
+  }
+  .btn-ghost {
+    @apply btn border border-white/15 bg-white/5 text-white hover:bg-white/10;
+  }
+  .chip {
+    @apply rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-semibold;
+  }
+  .neon-title {
+    text-shadow: 0 0 6px rgba(255, 46, 77, 0.9), 0 0 24px rgba(255, 46, 77, 0.6), 0 0 48px rgba(255, 46, 77, 0.35);
+  }
+  .input {
+    @apply w-full rounded-xl border border-white/15 bg-noche-950/80 px-4 py-3 text-base text-white placeholder:text-white/40 focus:border-neon-cyan focus:outline-none focus:ring-2 focus:ring-neon-cyan/30;
+  }
+}
+
+/* ── Animaciones del Jefe ── */
+@keyframes bob { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-4px) } }
+@keyframes jump { 0%,100% { transform: translateY(0) scale(1) } 30% { transform: translateY(-14px) scale(1.04) } 60% { transform: translateY(0) scale(.98) } }
+@keyframes shake { 0%,100% { transform: translateX(0) } 20%,60% { transform: translateX(-5px) rotate(-1deg) } 40%,80% { transform: translateX(5px) rotate(1deg) } }
+@keyframes tilt { 0% { transform: rotate(0) } 100% { transform: rotate(-4deg) translateY(3px) } }
+@keyframes pop { 0% { transform: scale(1) } 40% { transform: scale(1.08) } 100% { transform: scale(1) } }
+@keyframes blink { 0%,92%,100% { transform: scaleY(1) } 95% { transform: scaleY(.1) } }
+@keyframes talk { 0%,100% { transform: scaleY(.35) } 50% { transform: scaleY(1.1) } }
+@keyframes siren { 0%,100% { opacity: 1; filter: drop-shadow(0 0 8px #ff2e4d) } 50% { opacity: .4; filter: none } }
+@keyframes rise { 0% { opacity: 0; transform: translateY(10px) } 100% { opacity: 1; transform: translateY(0) } }
+@keyframes floatUp { 0% { opacity: 1; transform: translateY(0) } 100% { opacity: 0; transform: translateY(-40px) } }
+@keyframes flashRed { 0%,100% { background: rgba(255,46,77,.0) } 50% { background: rgba(255,46,77,.25) } }
+
+.jefe-bob { animation: bob 3.2s ease-in-out infinite; }
+.jefe-jump { animation: jump .7s ease-out 2; }
+.jefe-shake { animation: shake .4s ease-in-out infinite; }
+.jefe-tilt { animation: tilt .4s ease-out forwards; }
+.jefe-pop { animation: pop .5s ease-out; }
+.jefe-blink { animation: blink 4.5s infinite; }
+.jefe-talk { animation: talk .22s ease-in-out infinite; }
+.jefe-siren { animation: siren .6s infinite; }
+.jefe-sparkles { animation: pop .8s ease-out infinite; transform-origin: 100px 100px; }
+.jefe-dots { animation: bob 1s ease-in-out infinite; }
+.jefe-facepalm { animation: rise .25s ease-out; }
+.rise { animation: rise .35s ease-out both; }
+.xp-float { animation: floatUp 1.2s ease-out forwards; }
+.flash-red { animation: flashRed .8s ease-in-out 3; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+}
