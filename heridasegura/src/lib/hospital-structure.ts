@@ -4,7 +4,7 @@
 import type { Location, LocationType, Room, Sector, Service } from './types';
 
 interface RoomSpec { rooms: (number | string)[]; beds: string[] }
-interface AreaSpec { key: string; code: string; name: string; prefix: string; count: number; type: LocationType; label: string; codeFmt: (i: number) => string; provisional?: boolean }
+interface AreaSpec { key: string; code: string; name: string; prefix: string; count: number; type: LocationType; label: string; codeFmt: (i: number) => string; provisional?: boolean; keyFor?: (i: number) => string }
 
 interface SectorSpec {
   key: string; service: string; code: string; name: string; order: number;
@@ -46,8 +46,9 @@ export const SECTOR_SPECS: SectorSpec[] = [
   { key: 'sec_emg', service: 'svc_emergencias', code: 'EMG', name: 'Emergencias', order: 51,
     areas: [
       { key: 'sec_emg:area:shock', code: 'SHOCKROOM', name: 'Shockroom', prefix: 'sec_emg:shock:', count: 4, type: 'shockroom', label: 'Puesto shockroom ', codeFmt: (i) => `EMG-SHK-${pad(i)}` },
-      { key: 'sec_emg:area:obs', code: 'OBSERVACION', name: 'Observación', prefix: 'sec_emg:obs:', count: 8, type: 'observacion', label: 'Puesto observación ', codeFmt: (i) => `EMG-OBS-${pad(i)}` },
-      { key: 'sec_emg:area:cam', code: 'CAMILLAS', name: 'Camillas', prefix: 'sec_emg:cam:', count: 4, type: 'camilla', label: 'Camilla ', codeFmt: (i) => `EMG-CAM-${pad(i)}` },
+      // Observación: 12 puestos. Los puestos 9–12 eran las ex camillas COVID (migración 0007): conservan su clave interna.
+      { key: 'sec_emg:area:obs', code: 'OBSERVACION', name: 'Observación', prefix: 'sec_emg:obs:', count: 12, type: 'observacion', label: 'Puesto observación ', codeFmt: (i) => `EMG-OBS-${pad(i)}`,
+        keyFor: (i) => (i <= 8 ? `sec_emg:obs:${i}` : `sec_emg:cam:${i - 8}`) },
     ] },
   { key: 'sec_uco', service: 'svc_unidad_coronaria', code: 'UCO', name: 'Unidad Coronaria', order: 61,
     areas: [
@@ -87,7 +88,7 @@ export function buildStructure(): Structure {
       rooms.push({ id: idFor(a.key), sector_id: sectorId, code: a.code, name: a.name, kind: 'area', sort_order: ai + 1, active: true });
       for (let i = 1; i <= a.count; i++) {
         locations.push({
-          id: idFor(`${a.prefix}${i}`), sector_id: sectorId, room_id: idFor(a.key), code: a.codeFmt(i),
+          id: idFor(a.keyFor ? a.keyFor(i) : `${a.prefix}${i}`), sector_id: sectorId, room_id: idFor(a.key), code: a.codeFmt(i),
           label: `${a.label}${i}`, location_type: a.type, is_provisional_code: a.provisional ?? true,
           operational_status: 'disponible', status_reason: null, sort_order: (a.type === 'box_uti' ? 100 : 0) + i, active: true,
         });

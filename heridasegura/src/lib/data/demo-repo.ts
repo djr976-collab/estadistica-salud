@@ -170,6 +170,15 @@ export class DemoRepo implements Repo {
       const l = db.locations.find((x) => x.id === idFor(`sec_uco:cama:${i}`));
       if (l && l.code === `UCO-C${String(i).padStart(2, '0')}`) { l.code = String(i); l.label = `Cama ${i}`; l.is_provisional_code = false; }
     }
+    // Emergencias: ex camillas COVID → puestos de observación 9 a 12 (espejo de la migración 0007)
+    for (let i = 1; i <= 4; i++) {
+      const l = db.locations.find((x) => x.id === idFor(`sec_emg:cam:${i}`));
+      if (l && l.location_type === 'camilla' && l.code === `EMG-CAM-${String(i).padStart(2, '0')}`) {
+        Object.assign(l, { location_type: 'observacion', room_id: idFor('sec_emg:area:obs'), code: `EMG-OBS-${String(i + 8).padStart(2, '0')}`, label: `Puesto observación ${i + 8}`, sort_order: i + 8 });
+      }
+    }
+    const camRoom = db.rooms.find((r) => r.id === idFor('sec_emg:area:cam'));
+    if (camRoom && !db.locations.some((l) => l.room_id === camRoom.id && l.active)) camRoom.active = false;
   }
 
   static reset() {

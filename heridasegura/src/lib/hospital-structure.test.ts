@@ -28,6 +28,12 @@ describe('Estructura hospitalaria precargada', () => {
     expect(l.map((x) => x.code)).toEqual(['1', '2', '3', '4', '5', '6', '7', '8', '9']);
     expect(l.every((x) => !x.is_provisional_code)).toBe(true);
   });
+  it('Emergencias: 4 shockroom y 12 observación, sin camillas', () => {
+    const l = bySector('EMG');
+    expect(l.filter((x) => x.location_type === 'shockroom').length).toBe(4);
+    expect(l.filter((x) => x.location_type === 'observacion').map((x) => x.code)).toEqual(Array.from({ length: 12 }, (_, i) => `EMG-OBS-${String(i + 1).padStart(2, '0')}`));
+    expect(l.some((x) => x.location_type === 'camilla')).toBe(false);
+  });
   it('camillas no son camas de internación', () => {
     expect(countsAsBed('camilla')).toBe(false);
     expect(countsAsBed('shockroom')).toBe(false);

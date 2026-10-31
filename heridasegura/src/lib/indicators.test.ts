@@ -14,7 +14,7 @@ function ds(): IndicatorDataset {
     { id: 'b1', admission_id: 'ap1', patient_id: 'p1', location_id: loc('30B').id, movement: 'ingreso', started_at: D('2026-10-01'), ended_at: null, notes: null },
     { id: 'b2', admission_id: 'ap2', patient_id: 'p2', location_id: loc('28A').id, movement: 'ingreso', started_at: D('2026-10-01'), ended_at: null, notes: null },
     { id: 'b3', admission_id: 'ap3', patient_id: 'p3', location_id: loc('1A').id, movement: 'ingreso', started_at: D('2026-10-01'), ended_at: D('2026-10-11'), notes: null },
-    { id: 'b4', admission_id: 'ap4', patient_id: 'p4', location_id: loc('EMG-CAM-01').id, movement: 'ingreso', started_at: D('2026-10-05'), ended_at: null, notes: null },
+    { id: 'b4', admission_id: 'ap4', patient_id: 'p4', location_id: loc('EMG-OBS-01').id, movement: 'ingreso', started_at: D('2026-10-05'), ended_at: null, notes: null },
   ];
   const w = (o: Partial<Wound>): Wound => ({ etiology: 'lesion_por_presion', status: 'activa', closed_at: null, body_region: 'Sacro', current_pu_category: 'estadio_2', ...o } as Wound);
   const wounds = [
@@ -31,16 +31,16 @@ const f = { from: new Date('2026-10-01'), to: new Date('2026-10-20'), onlyInpati
 describe('Indicadores', () => {
   it('prevalencia puntual usa internados en la fecha de corte como denominador', () => {
     const r = computeIndicators(ds(), f);
-    // internados al 20/10 en camas: p1, p2 (p3 egresó; p4 en camilla excluida)
+    // internados al 20/10 en camas: p1, p2 (p3 egresó; p4 en observación de Emergencias, excluida)
     expect(r.prevalence).toEqual({ num: 2, den: 2, pct: 100 });
     expect(r.prevalenceAcquired.num).toBe(1);
   });
   it('incidencia acumulada excluye del denominador episodios con LPP presente al ingreso', () => {
     const r = computeIndicators(ds(), f);
-    // en riesgo: ap1, ap3 (ap2 tenía LPP al ingreso; ap4 en camilla)
+    // en riesgo: ap1, ap3 (ap2 tenía LPP al ingreso; ap4 en observación)
     expect(r.cumulativeIncidence).toEqual({ num: 2, den: 2, pct: 100 });
   });
-  it('camillas excluidas salvo indicación explícita', () => {
+  it('puestos de Emergencias excluidos salvo indicación explícita', () => {
     const r = computeIndicators(ds(), { ...f, onlyInpatientBeds: false });
     expect(r.prevalence.den).toBe(3);
     expect(r.warnings.join()).toMatch(/camillas/);

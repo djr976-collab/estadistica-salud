@@ -14,7 +14,7 @@ Implementación: `src/lib/indicators.ts` (probada en `indicators.test.ts`). **Va
 
 Criterios:
 - **Alcance:** servicio/sector filtrado. La lesión se atribuye al sector donde estaba el paciente al **detectarse**.
-- **Tipos de puesto:** por defecto solo camas de internación (sala, UTI, box UTI, coronaria). Shockroom, observación y camillas se excluyen; si se incluyen, se advierte que no es comparable.
+- **Tipos de puesto:** por defecto solo camas de internación (sala, UTI, box UTI, coronaria). Shockroom y observación de Emergencias (y camillas, si se crean) se excluyen; si se incluyen, se advierte que no es comparable.
 - **Origen desconocido:** las LPP sin dato verificable de presencia al ingreso se excluyen del numerador de incidencia y se informan como advertencia (posible subestimación).
 - **Datos incompletos:** se advierte LPP sin categoría, lesiones sin valoración y denominadores < 30.
 - Los indicadores usan solo los registros visibles para el usuario (RLS).
