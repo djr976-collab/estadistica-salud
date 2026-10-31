@@ -2,16 +2,18 @@
 import { useEffect, useRef, useState } from 'react';
 import { Icon } from './Icon';
 import { Field, Notice } from './ui';
-import { analyzePixels, calibrate, pxToCm } from '@/lib/image-quality';
+import { analyzePixels, calibrate, polygonAreaCm2, pxToCm } from '@/lib/image-quality';
 import type { PhotoQuality } from '@/lib/types';
 
 export interface CapturedPhoto {
   original: File; edited: Blob | null; quality: PhotoQuality; width: number; height: number;
   has_scale_reference: boolean; px_per_cm: number | null; identifiers_excluded: boolean; taken_at: string;
+  /** Superficie planimétrica por trazado (solo con calibración). */
+  traced_area_cm2: number | null; trace_polygon: { x: number; y: number }[] | null;
 }
 
 type Pt = { x: number; y: number };
-type Mode = 'none' | 'crop' | 'calibrate' | 'measure';
+type Mode = 'none' | 'crop' | 'calibrate' | 'measure' | 'trace';
 
 export const PHOTO_GUIDE = [
   'Solicite consentimiento/explique el procedimiento y preserve la intimidad del paciente.',
@@ -69,6 +71,9 @@ export function PhotoCapture({ onChange }: { onChange: (p: CapturedPhoto | null)
   const [refCm, setRefCm] = useState('1');
   const [pxPerCm, setPxPerCm] = useState<number | null>(null);
   const [measure, setMeasure] = useState<number | null>(null);
+  const [trace, setTrace] = useState<Pt[]>([]);
+  const [traceClosed, setTraceClosed] = useState(false);
+  const resetTrace = () => { setTrace([]); setTraceClosed(false); };
   const [noIds, setNoIds] = useState(false);
   const [err, setErr] = useState<string | null>(null);
   const [showGuide, setShowGuide] = useState(true);
@@ -80,7 +85,7 @@ export function PhotoCapture({ onChange }: { onChange: (p: CapturedPhoto | null)
     if (f.size > 15 * 1024 * 1024) return setErr('La imagen supera 15 MB.');
     try {
       const i = await loadImage(f);
-      setFile(f); setImg(i); setRot(0); setCrop(null); setPxPerCm(null); setMeasure(null); setPts([]); setMode('none'); setShowGuide(false);
+      resetTrace(); setFile(f); setImg(i); setRot(0); setCrop(null); setPxPerCm(null); setMeasure(null); setPts([]); setMode('none'); setShowGuide(false);
     } catch (e) { setErr(e instanceof Error ? e.message : 'Error al leer la imagen'); }
   }
 
@@ -102,15 +107,18 @@ export function PhotoCapture({ onChange }: { onChange: (p: CapturedPhoto | null)
       original: file, edited: blob, quality: q, width: canvas.width, height: canvas.height,
       has_scale_reference: hasScale, px_per_cm: hasScale ? pxPerCm : null, identifiers_excluded: noIds,
       taken_at: new Date(file.lastModified || Date.now()).toISOString(),
+      traced_area_cm2: traceClosed && hasScale ? polygonAreaCm2(trace, pxPerCm) : null,
+      trace_polygon: traceClosed && hasScale && pxPerCm ? trace.map((p) => ({ x: Math.round(p.x), y: Math.round(p.y) })) : null,
     });
     if (edited) canvas.toBlob((b) => emit(b), 'image/jpeg', 0.92); else emit(null);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [file, canvas, q, hasScale, pxPerCm, noIds]);
+  }, [file, canvas, q, hasScale, pxPerCm, noIds, traceClosed, trace]);
 
   function onImgClick(e: React.MouseEvent<HTMLImageElement>) {
     if (mode === 'none' || !canvas) return;
     const r = e.currentTarget.getBoundingClientRect();
     const p = { x: ((e.clientX - r.left) / r.width) * canvas.width, y: ((e.clientY - r.top) / r.height) * canvas.height };
+    if (mode === 'trace') { setTrace((t) => [...t, p]); return; }
     const next = [...pts, p];
     if (next.length < 2) return setPts(next);
     const [a, b] = next;
@@ -120,11 +128,11 @@ export function PhotoCapture({ onChange }: { onChange: (p: CapturedPhoto | null)
       const w = Math.abs(b.x - a.x), h = Math.abs(b.y - a.y);
       if (w < 50 || h < 50) { setErr('Recorte demasiado pequeño.'); setMode('none'); return; }
       setCrop({ x: base.x + Math.min(a.x, b.x), y: base.y + Math.min(a.y, b.y), w, h });
-      setPxPerCm(null); setMeasure(null);
+      setPxPerCm(null); setMeasure(null); resetTrace();
     } else if (mode === 'calibrate') {
       const k = calibrate(a, b, Number(refCm.replace(',', '.')));
       if (!k) setErr('Calibración inválida: marque los extremos de una longitud conocida de la escala (mínimo 20 px).');
-      else { setPxPerCm(k); setErr(null); }
+      else { setPxPerCm(k); setErr(null); resetTrace(); }
     } else if (mode === 'measure') {
       setMeasure(pxToCm(Math.hypot(b.x - a.x, b.y - a.y), pxPerCm));
     }
@@ -135,6 +143,7 @@ export function PhotoCapture({ onChange }: { onChange: (p: CapturedPhoto | null)
     none: '', crop: 'Toque la esquina superior izquierda y luego la inferior derecha del área a conservar.',
     calibrate: `Toque los dos extremos de ${refCm} cm sobre la regla ubicada en el plano de la herida.`,
     measure: 'Toque los dos extremos de la longitud a medir.',
+    trace: 'Toque puntos sucesivos sobre el borde de la herida (mínimo 3) y luego «Cerrar contorno».',
   };
 
   return (
@@ -154,16 +163,26 @@ export function PhotoCapture({ onChange }: { onChange: (p: CapturedPhoto | null)
 
       {preview && canvas && (
         <div className="space-y-3">
+          {mode !== 'none' && <div role="status" className="rounded-xl bg-petrol-900 p-2 text-center text-sm font-semibold text-white">{modeHelp[mode]} ({mode === 'trace' ? `${trace.length} puntos` : `${pts.length}/2`})</div>}
           <div className="relative overflow-hidden rounded-xl border border-slate-300 bg-slate-900 dark:border-petrol-700">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={preview} alt="Vista previa de la fotografía clínica" onClick={onImgClick}
-              className={`mx-auto max-h-[60vh] w-auto ${mode !== 'none' ? 'cursor-crosshair' : ''}`} />
-            {mode !== 'none' && <div className="absolute inset-x-0 top-0 bg-petrol-900/90 p-2 text-center text-sm font-semibold text-white">{modeHelp[mode]} ({pts.length}/2)</div>}
+            <div className="relative mx-auto w-fit">
+              <img src={preview} alt="Vista previa de la fotografía clínica" onClick={onImgClick}
+                className={`block max-h-[60vh] w-auto ${mode !== 'none' ? 'cursor-crosshair' : ''}`} />
+              {(trace.length > 0 || pts.length > 0) && (
+                <svg viewBox={`0 0 ${canvas.width} ${canvas.height}`} className="pointer-events-none absolute inset-0 h-full w-full" aria-hidden>
+                  {trace.length > 1 && (traceClosed
+                    ? <polygon points={trace.map((p) => `${p.x},${p.y}`).join(' ')} fill="rgba(44,200,182,0.25)" stroke="#2cc8b6" strokeWidth={canvas.width / 250} />
+                    : <polyline points={trace.map((p) => `${p.x},${p.y}`).join(' ')} fill="none" stroke="#2cc8b6" strokeWidth={canvas.width / 250} />)}
+                  {[...trace, ...pts].map((p, i) => <circle key={i} cx={p.x} cy={p.y} r={canvas.width / 150} fill="#facc15" stroke="#0f3d48" strokeWidth={canvas.width / 600} />)}
+                </svg>
+              )}
+            </div>
           </div>
           <div className="flex flex-wrap gap-2">
-            <button type="button" className="btn-secondary" onClick={() => { setRot((r) => (r + 90) % 360); setCrop(null); setPxPerCm(null); setMeasure(null); }}><Icon name="rotate" />Rotar 90°</button>
+            <button type="button" className="btn-secondary" onClick={() => { setRot((r) => (r + 90) % 360); setCrop(null); setPxPerCm(null); setMeasure(null); resetTrace(); }}><Icon name="rotate" />Rotar 90°</button>
             <button type="button" className={mode === 'crop' ? 'btn-accent' : 'btn-secondary'} onClick={() => { setMode(mode === 'crop' ? 'none' : 'crop'); setPts([]); }}><Icon name="crop" />Recortar</button>
-            {crop && <button type="button" className="btn-ghost" onClick={() => { setCrop(null); setPxPerCm(null); }}>Quitar recorte</button>}
+            {crop && <button type="button" className="btn-ghost" onClick={() => { setCrop(null); setPxPerCm(null); resetTrace(); }}>Quitar recorte</button>}
           </div>
 
           {q && (
@@ -176,7 +195,7 @@ export function PhotoCapture({ onChange }: { onChange: (p: CapturedPhoto | null)
 
           <div className="rounded-xl border border-slate-200 p-3 dark:border-petrol-700">
             <label className="flex min-h-[44px] items-center gap-3 font-semibold">
-              <input type="checkbox" className="h-5 w-5" checked={hasScale} onChange={(e) => { setHasScale(e.target.checked); if (!e.target.checked) { setPxPerCm(null); setMeasure(null); } }} />
+              <input type="checkbox" className="h-5 w-5" checked={hasScale} onChange={(e) => { setHasScale(e.target.checked); if (!e.target.checked) { setPxPerCm(null); setMeasure(null); resetTrace(); } }} />
               La imagen incluye una referencia de escala válida en el plano de la herida
             </label>
             {hasScale && (
@@ -185,8 +204,15 @@ export function PhotoCapture({ onChange }: { onChange: (p: CapturedPhoto | null)
                   <div className="w-36"><Field label="Longitud de referencia (cm)">{(id) => <input id={id} className="input" inputMode="decimal" value={refCm} onChange={(e) => setRefCm(e.target.value)} />}</Field></div>
                   <button type="button" className={mode === 'calibrate' ? 'btn-accent' : 'btn-secondary'} onClick={() => { setMode('calibrate'); setPts([]); }}><Icon name="ruler" />Calibrar</button>
                   {pxPerCm && <button type="button" className={mode === 'measure' ? 'btn-accent' : 'btn-secondary'} onClick={() => { setMode('measure'); setPts([]); }}>Medir longitud</button>}
+                  {pxPerCm && mode !== 'trace' && <button type="button" className="btn-secondary" onClick={() => { resetTrace(); setMode('trace'); }}>Trazar contorno</button>}
+                  {mode === 'trace' && <>
+                    <button type="button" className="btn-accent" disabled={trace.length < 3} onClick={() => { setTraceClosed(true); setMode('none'); }}>Cerrar contorno ({trace.length})</button>
+                    <button type="button" className="btn-ghost" disabled={!trace.length} onClick={() => setTrace((t) => t.slice(0, -1))}>Deshacer punto</button>
+                    <button type="button" className="btn-ghost" onClick={() => { resetTrace(); setMode('none'); }}>Cancelar</button>
+                  </>}
                 </div>
                 <p className="text-sm">{pxPerCm ? `Calibrado: ${pxPerCm.toFixed(1)} px/cm.` : 'Sin calibrar: no se mostrarán medidas en centímetros.'}{measure != null && <b> Longitud medida: {measure} cm.</b>}</p>
+                {traceClosed && pxPerCm && <p className="rounded-lg bg-turq-50 p-2 text-sm font-semibold text-turq-700 dark:bg-petrol-800 dark:text-turq-200">Superficie por trazado (planimetría): {polygonAreaCm2(trace, pxPerCm)} cm² · {trace.length} puntos. <button type="button" className="underline" onClick={resetTrace}>Borrar trazado</button></p>}
                 <p className="hint">La medición fotográfica es una estimación bidimensional válida solo si la escala está en el mismo plano y la cámara es perpendicular. No estima profundidad. Registre las medidas definitivas en la valoración.</p>
               </div>
             )}

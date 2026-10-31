@@ -16,6 +16,7 @@
 4. **Valoración**:
    - **Foto** (opcional, recomendada): siga las recomendaciones en pantalla. Revise el control de calidad, rote/recorte si hace falta y **confirme que no hay rostro, pulsera ni datos**.
    - **Clasificación LPP** (solo LPP): evalúe el blanqueamiento presencialmente. El estadio 1 exige *eritema no blanqueable*. Marque la categoría y **confirme** que surge de su valoración. Si no puede determinarla, déjela vacía.
+   - **Planimetría (opcional)**: si la foto tiene regla en el plano de la herida, *Calibrar* → *Trazar contorno*: toque puntos sobre el borde y *Cerrar contorno*. La app calcula la superficie real del contorno (no mide profundidad).
    - **Dimensiones**: largo (cabeza-pies) × ancho (perpendicular) y profundidad si corresponde, con el método usado. No mezcle métodos para comparar.
    - Lecho (% tejidos), bordes, exudado, piel perilesional, olor, dolor (0–10), signos documentados.
    - Evolución, intervenciones realizadas, observaciones y **próxima valoración**.

@@ -62,11 +62,12 @@ export default function AssessmentPage() {
     if (f.pu_category) s.push(`Categoría propuesta: ${PU_CATEGORIES[f.pu_category].short}${f.confirmed ? ' (confirmada)' : ' (sin confirmar)'}`);
     if (lpp && f.blanching !== 'no_aplica') s.push(BLANCHING_LABEL[f.blanching]);
     if (area) s.push(`Superficie ${area} cm² (${MEASUREMENT_LABEL[f.method]})`);
+    if (photo?.traced_area_cm2 != null) s.push(`Superficie planimétrica por trazado: ${photo.traced_area_cm2} cm² (foto calibrada)`);
     if (f.exudate_amount) s.push(`Exudado ${EXUDATE_LABEL[f.exudate_amount].toLowerCase()}`);
     if (f.pain) s.push(`Dolor ${f.pain}/10`);
     if (f.signs.length) s.push(`Signos: ${f.signs.join(', ')}`);
     return s;
-  }, [f, lpp, area]);
+  }, [f, lpp, area, photo]);
 
   if (wd.loading || !f) return wd.error ? <ErrorBox error={wd.error} onRetry={wd.reload} /> : <Spinner />;
   if (!wd.data || !w) return <ErrorBox error="Lesión no disponible." />;
@@ -107,11 +108,13 @@ export default function AssessmentPage() {
           wound: w!, file: photo.original, assessment_id: a.id, derived_from_id: null, taken_at: photo.taken_at,
           width_px: photo.edited ? null : photo.width, height_px: photo.edited ? null : photo.height, quality: photo.quality,
           has_scale_reference: photo.has_scale_reference, px_per_cm: photo.edited ? null : photo.px_per_cm, identifiers_excluded: photo.identifiers_excluded,
+          traced_area_cm2: photo.edited ? null : photo.traced_area_cm2, trace_polygon: photo.edited ? null : photo.trace_polygon,
         });
         if (photo.edited) await repo.uploadPhoto({
           wound: w!, file: new File([photo.edited], 'editada.jpg', { type: 'image/jpeg' }), assessment_id: a.id, derived_from_id: orig.id,
           taken_at: photo.taken_at, width_px: photo.width, height_px: photo.height, quality: photo.quality,
           has_scale_reference: photo.has_scale_reference, px_per_cm: photo.px_per_cm, identifiers_excluded: photo.identifiers_excluded,
+          traced_area_cm2: photo.traced_area_cm2, trace_polygon: photo.trace_polygon,
         });
       }
       for (const it of f!.interventions)

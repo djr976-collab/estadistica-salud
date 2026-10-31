@@ -164,3 +164,10 @@ select pg_temp.eq((select count(*) from locations l join sectors s on s.id = l.s
 select pg_temp.eq((select count(*) from rooms where seed_key = 'sec_emg:area:cam' and active), 1, 'Área Camillas activa');
 select seed_hospital_structure();
 select pg_temp.eq((select count(*) from locations where location_type = 'camilla'), 4, 'Re-ejecutar la carga no duplica camillas');
+
+-- 11) Planimetría: requiere calibración --------------------------------------
+select pg_temp.expect_error($$insert into wound_photos (wound_id, patient_id, storage_path, mime_type, size_bytes, taken_at, uploaded_by, traced_area_cm2, trace_polygon)
+  values ('00000000-0000-4000-8000-000000000501', '00000000-0000-4000-8000-000000000101', 'x/y/sin-calib.jpg', 'image/jpeg', 10, now(), '22222222-2222-4222-8222-222222222222', 5, '[{"x":0,"y":0},{"x":1,"y":0},{"x":1,"y":1}]')$$, 'trace_requires_calibration');
+insert into wound_photos (wound_id, patient_id, storage_path, mime_type, size_bytes, taken_at, uploaded_by, has_scale_reference, px_per_cm, traced_area_cm2, trace_polygon)
+  values ('00000000-0000-4000-8000-000000000501', '00000000-0000-4000-8000-000000000101', 'x/y/calib.jpg', 'image/jpeg', 10, now(), '22222222-2222-4222-8222-222222222222', true, 100, 2, '[{"x":0,"y":0},{"x":200,"y":0},{"x":200,"y":100}]');
+select pg_temp.eq((select count(*) from wound_photos where traced_area_cm2 = 2), 1, 'Planimetría con foto calibrada');

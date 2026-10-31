@@ -66,6 +66,21 @@ try {
   console.log('5. Valoración inicial con fotografía');
   await page.locator('input[type=file]:not([capture])').setInputFiles(imgPath);
   await page.getByText(/Calidad técnica/).waitFor();
+  // Planimetría: calibración con la regla sintética (1 marca cada 60 px → 300 px = 5 cm) y trazado
+  const preview = page.getByAltText('Vista previa de la fotografía clínica');
+  const tap = async (x, y) => { await preview.scrollIntoViewIfNeeded(); const bb = await preview.boundingBox(); await page.mouse.click(bb.x + (x / 1280) * bb.width, bb.y + (y / 960) * bb.height); };
+  await page.getByText(/incluye una referencia de escala válida/).click();
+  await page.getByLabel('Longitud de referencia (cm)').fill('5');
+  await page.getByRole('button', { name: 'Calibrar' }).click();
+  await tap(100, 840); await tap(400, 840);
+  await page.getByText(/Calibrado: (59|60)\.\d px\/cm/).waitFor();
+  await page.getByRole('button', { name: 'Trazar contorno' }).click();
+  for (let k = 0; k < 8; k++) await tap(640 + 220 * Math.cos((k * Math.PI) / 4), 465 + 165 * Math.sin((k * Math.PI) / 4));
+  await page.getByRole('button', { name: /Cerrar contorno \(8\)/ }).click();
+  const planiTxt = await page.getByText(/Superficie por trazado \(planimetría\)/).innerText();
+  const plani = Number(planiTxt.match(/([\d.]+) cm²/)[1]);
+  if (!(plani > 26 && plani < 31)) throw new Error(`Planimetría fuera de lo esperado (~28,5 cm²): ${plani}`);
+  ok(`planimetría por trazado: ${plani} cm² (esperado ≈ 28,5)`);
   await page.getByText(/NO muestra rostro/).click();
   // Estadio 1 bloqueado sin eritema no blanqueable
   await page.getByRole('radio', { name: 'No aplica (piel no intacta)' }).click();
@@ -81,7 +96,8 @@ try {
   await page.getByRole('button', { name: 'Confirmar valoración' }).click();
   await page.getByText('Línea de tiempo de valoraciones').waitFor();
   await page.getByText(/12 cm²/).first().waitFor();
-  await shot('evolucion-1'); ok('valoración inicial confirmada (12 cm²) con foto');
+  await page.getByText(/Superficie planimétrica \(trazado/).waitFor();
+  await shot('evolucion-1'); ok('valoración inicial confirmada (12 cm²) con foto y planimetría');
 
   console.log('6. Seguimiento: no se permite estadificación inversa');
   await page.getByRole('link', { name: /Nueva valoración de seguimiento/ }).click();

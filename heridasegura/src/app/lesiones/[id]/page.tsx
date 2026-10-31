@@ -87,13 +87,20 @@ export default function WoundPage() {
         <p className="mt-1 text-xs text-slate-500">Superficie = largo × ancho (aproximación). Solo se comparan mediciones obtenidas con el mismo método.</p>
       </Card>
 
+      {photos.some((p) => p.traced_area_cm2 != null) && (
+        <Card title="Superficie planimétrica (trazado sobre foto calibrada, cm²)">
+          <LineChart title="Superficie planimétrica" unit="cm²" points={photos.filter((p) => p.traced_area_cm2 != null).map((p) => ({ x: new Date(p.taken_at), y: Number(p.traced_area_cm2) }))} />
+          <p className="mt-1 text-xs text-slate-500">Área del contorno trazado por el profesional sobre fotografías con referencia de escala calibrada en el plano de la herida. Estimación bidimensional: no mide profundidad; comparable solo con tomas en condiciones equivalentes.</p>
+        </Card>
+      )}
+
       <Card title="Fotografías cronológicas" actions={photos.length >= 2 ? <Link href={`/lesiones/${enc(w.id)}/comparar`} className="btn-ghost text-sm"><Icon name="compare" />Lado a lado</Link> : undefined}>
         {photos.length === 0 ? <Empty title="Sin fotografías" icon="camera" /> : (
           <div className="flex gap-3 overflow-x-auto pb-2">
             {photos.map((p) => (
               <figure key={p.id} className="shrink-0">
                 <PhotoThumb photo={p} onOpen={() => setViewer(p)} className="h-32 w-32" />
-                <figcaption className="mt-1 text-center text-xs">{fmtDateTime(p.taken_at)}</figcaption>
+                <figcaption className="mt-1 text-center text-xs">{fmtDateTime(p.taken_at)}{p.traced_area_cm2 != null && <><br /><b>{Number(p.traced_area_cm2)} cm² (trazado)</b></>}</figcaption>
               </figure>
             ))}
           </div>

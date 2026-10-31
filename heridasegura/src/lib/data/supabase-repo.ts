@@ -288,6 +288,7 @@ export class SupabaseRepo implements Repo {
       storage_path: path, mime_type: p.file.type || 'image/jpeg', size_bytes: p.file.size, width_px: p.width_px, height_px: p.height_px,
       sha256: hash, taken_at: p.taken_at, uploaded_by: u.user?.id, body_region: p.wound.body_region, quality: p.quality,
       has_scale_reference: p.has_scale_reference, px_per_cm: p.px_per_cm, identifiers_excluded: p.identifiers_excluded,
+      traced_area_cm2: p.px_per_cm ? p.traced_area_cm2 : null, trace_polygon: p.px_per_cm ? p.trace_polygon : null,
       legal_basis: settings.photo_legal_basis,
     }).select('*').single()) as WoundPhoto;
   }

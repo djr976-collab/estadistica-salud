@@ -517,6 +517,7 @@ export class DemoRepo implements Repo {
       sha256: [...new Uint8Array(hash)].map((b) => b.toString(16).padStart(2, '0')).join(''), taken_at: p.taken_at, uploaded_by: m.id,
       body_region: p.wound.body_region, quality: p.quality, has_scale_reference: p.has_scale_reference, px_per_cm: p.px_per_cm,
       identifiers_excluded: p.identifiers_excluded, legal_basis: this.db.settings.photo_legal_basis, created_at: iso(new Date()),
+      traced_area_cm2: p.px_per_cm ? p.traced_area_cm2 : null, trace_polygon: p.px_per_cm ? p.trace_polygon : null,
     };
     this.db.photos.push(photo); this.audit('INSERT', 'wound_photos', id); this.persist();
     return photo;

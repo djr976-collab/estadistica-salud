@@ -39,6 +39,7 @@ export interface NewPhoto {
   wound: Wound; file: Blob; assessment_id: string | null; derived_from_id: string | null;
   taken_at: string; width_px: number | null; height_px: number | null; quality: PhotoQuality;
   has_scale_reference: boolean; px_per_cm: number | null; identifiers_excluded: boolean;
+  traced_area_cm2: number | null; trace_polygon: { x: number; y: number }[] | null;
 }
 
 export interface NewBraden {

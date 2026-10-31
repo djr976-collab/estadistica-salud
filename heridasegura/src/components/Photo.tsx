@@ -34,6 +34,7 @@ export function PhotoThumb({ photo, onOpen, className = 'h-24 w-24' }: { photo: 
 export function PhotoViewer({ photo, onClose }: { photo: WoundPhoto | null; onClose: () => void }) {
   const { url, error } = usePhotoUrl(photo);
   const [zoom, setZoom] = useState(1);
+  const [showTrace, setShowTrace] = useState(true);
   useEffect(() => setZoom(1), [photo]);
   if (!photo) return null;
   return (
@@ -42,18 +43,28 @@ export function PhotoViewer({ photo, onClose }: { photo: WoundPhoto | null; onCl
         <button className="btn-secondary" onClick={() => setZoom((z) => Math.max(1, z - 0.5))} aria-label="Alejar">−</button>
         <span className="tabular-nums">{Math.round(zoom * 100)} %</span>
         <button className="btn-secondary" onClick={() => setZoom((z) => Math.min(5, z + 0.5))} aria-label="Acercar"><Icon name="zoom" /></button>
+        {photo.trace_polygon && <label className="flex items-center gap-2 text-sm font-semibold"><input type="checkbox" checked={showTrace} onChange={(e) => setShowTrace(e.target.checked)} />Contorno</label>}
         <span className="flex-1" />
         <button className="btn-primary" onClick={onClose}>Cerrar</button>
       </div>}>
       <div className="max-h-[60vh] overflow-auto rounded-xl bg-slate-900">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        {url ? <img src={url} alt="Fotografía clínica de la lesión" style={{ width: `${zoom * 100}%`, maxWidth: 'none' }} draggable={false} onContextMenu={(e) => e.preventDefault()} />
-          : <p className="p-6 text-center text-white">{error ?? 'Cargando…'}</p>}
+        {url ? (
+          <div className="relative" style={{ width: `${zoom * 100}%` }}>
+            <img src={url} alt="Fotografía clínica de la lesión" className="block w-full" style={{ maxWidth: 'none' }} draggable={false} onContextMenu={(e) => e.preventDefault()} />
+            {showTrace && photo.trace_polygon && photo.width_px && photo.height_px && (
+              <svg viewBox={`0 0 ${photo.width_px} ${photo.height_px}`} className="pointer-events-none absolute inset-0 h-full w-full" aria-hidden>
+                <polygon points={photo.trace_polygon.map((p) => `${p.x},${p.y}`).join(' ')} fill="rgba(44,200,182,0.2)" stroke="#2cc8b6" strokeWidth={photo.width_px / 250} />
+              </svg>
+            )}
+          </div>
+        ) : <p className="p-6 text-center text-white">{error ?? 'Cargando…'}</p>}
       </div>
       <dl className="grid grid-cols-2 gap-2 text-sm">
         <div><dt className="text-slate-500">Región</dt><dd>{photo.body_region ?? '—'}</dd></div>
         <div><dt className="text-slate-500">Resolución</dt><dd>{photo.width_px ? `${photo.width_px}×${photo.height_px}` : 'original'}</dd></div>
         <div><dt className="text-slate-500">Escala</dt><dd>{photo.px_per_cm ? `Calibrada (${Number(photo.px_per_cm).toFixed(1)} px/cm)` : photo.has_scale_reference ? 'Referencia presente, sin calibrar' : 'Sin referencia'}</dd></div>
+        <div><dt className="text-slate-500">Superficie por trazado</dt><dd>{photo.traced_area_cm2 != null ? `${Number(photo.traced_area_cm2)} cm² (${photo.trace_polygon?.length ?? 0} puntos)` : '—'}</dd></div>
         <div><dt className="text-slate-500">Integridad (SHA-256)</dt><dd className="truncate font-mono text-xs" title={photo.sha256 ?? ''}>{photo.sha256?.slice(0, 16) ?? '—'}…</dd></div>
       </dl>
       <p className="text-xs text-slate-500">Acceso registrado en auditoría. Prohibida la descarga o difusión no autorizada.</p>

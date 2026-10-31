@@ -103,6 +103,7 @@ export interface WoundPhoto {
   sha256: string | null; taken_at: string; uploaded_by: string; body_region: string | null;
   quality: Partial<PhotoQuality>; has_scale_reference: boolean; px_per_cm: number | null;
   identifiers_excluded: boolean; legal_basis: string | null; created_at: string;
+  traced_area_cm2: number | null; trace_polygon: { x: number; y: number }[] | null;
 }
 
 export interface BradenAssessment {

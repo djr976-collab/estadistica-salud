@@ -12,6 +12,7 @@
 | Lesiones con esquema corporal, etiologías, origen verificable | ✅ | e2e |
 | Valoración estructurada + clasificación NPIAP con reglas | ✅ | unitarias + SQL + e2e |
 | Fotografía: cámara/carga, calidad, rotar/recortar, calibración, original preservado | ✅ | unitarias + e2e |
+| **Planimetría por trazado** sobre foto calibrada (Fase 2): contorno, superficie en cm², gráfico, contorno en el visor y en el PDF | ✅ | unitarias + SQL + e2e |
 | Línea de tiempo, gráfico de superficie (comparabilidad), comparación lado a lado, zoom | ✅ | e2e |
 | Adendas trazables, revisión de supervisión | ✅ | SQL |
 | Braden (6 dimensiones), historial y gráfico | ✅ | unitarias + e2e |
@@ -33,7 +34,7 @@
 
 ## Limitaciones conocidas / próximos pasos (Fase 2–3)
 - Los indicadores se calculan en el cliente: para volúmenes altos, migrar a vistas/funciones SQL.
-- Superficie = largo × ancho (aproximación rectangular); planimetría por segmentación pendiente.
+- Superficie = largo × ancho (aproximación rectangular) y, desde Fase 2, **planimetría por trazado manual** sobre foto calibrada. La segmentación automática queda para la Fase 3 (IA validada).
 - Sin trabajo offline con sincronización (decisión deliberada de privacidad).
 - MFA, firma digital, notificaciones push y gestión de consentimiento: pendientes institucionales.
 - `exceljs` arrastra dependencias con avisos de `npm audit` de severidad moderada (solo usadas al leer archivos ZIP; la app solo escribe).

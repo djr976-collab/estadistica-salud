@@ -35,3 +35,17 @@ describe('Calibración', () => {
   });
   it('rechaza referencias demasiado cortas', () => expect(calibrate({ x: 0, y: 0 }, { x: 5, y: 0 }, 1)).toBeNull());
 });
+
+import { polygonAreaCm2, polygonAreaPx } from './image-quality';
+describe('Planimetría por trazado', () => {
+  const square = [{ x: 0, y: 0 }, { x: 200, y: 0 }, { x: 200, y: 100 }, { x: 0, y: 100 }];
+  it('área en px² independiente del sentido del trazado', () => {
+    expect(polygonAreaPx(square)).toBe(20000);
+    expect(polygonAreaPx([...square].reverse())).toBe(20000);
+  });
+  it('convierte a cm² solo con calibración', () => {
+    expect(polygonAreaCm2(square, 100)).toBe(2);
+    expect(polygonAreaCm2(square, null)).toBeNull();
+  });
+  it('requiere al menos 3 puntos', () => expect(polygonAreaCm2(square.slice(0, 2), 100)).toBeNull());
+});

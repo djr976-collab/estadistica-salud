@@ -64,3 +64,23 @@ export function pxToCm(px: number, pxPerCm: number | null): number | null {
   if (!pxPerCm || pxPerCm <= 0) return null; // sin calibración no se infieren centímetros
   return Math.round((px / pxPerCm) * 10) / 10;
 }
+
+/** Área de un polígono en px² (fórmula del área de Gauss / "shoelace"). */
+export function polygonAreaPx(pts: { x: number; y: number }[]): number {
+  if (pts.length < 3) return 0;
+  let s = 0;
+  for (let i = 0; i < pts.length; i++) {
+    const a = pts[i], b = pts[(i + 1) % pts.length];
+    s += a.x * b.y - b.x * a.y;
+  }
+  return Math.abs(s) / 2;
+}
+
+/**
+ * Superficie planimétrica (cm²) del contorno trazado sobre una foto CALIBRADA.
+ * Sin calibración devuelve null: nunca se infieren centímetros desde píxeles.
+ */
+export function polygonAreaCm2(pts: { x: number; y: number }[], pxPerCm: number | null): number | null {
+  if (!pxPerCm || pxPerCm <= 0 || pts.length < 3) return null;
+  return Math.round((polygonAreaPx(pts) / (pxPerCm * pxPerCm)) * 100) / 100;
+}

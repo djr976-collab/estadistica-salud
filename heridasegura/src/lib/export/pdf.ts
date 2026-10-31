@@ -81,7 +81,7 @@ export async function exportWoundPdf(repo: Repo, w: WoundDetail, settings: Setti
         const data = url ? await blobToDataUrl(url) : null;
         if (data) {
           try { d.addImage(data, 'JPEG', x, y, 88, 66, undefined, 'MEDIUM'); } catch { /* formato no soportado */ }
-          d.setFontSize(8); d.text(dt(p.taken_at), x, y + 70);
+          d.setFontSize(8); d.text(dt(p.taken_at) + (p.traced_area_cm2 != null ? ` · ${Number(p.traced_area_cm2)} cm² (trazado, foto calibrada)` : ''), x, y + 70);
         }
         if (x > 50) { x = 12; y += 78; } else x = 110;
         if (y > 230) { d.addPage(); y = 16; }

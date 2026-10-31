@@ -9,7 +9,7 @@ export function LineChart({ points, unit, title, height = 200, yMin, yMax, bands
 }) {
   const valid = points.filter((p) => p.y != null) as (Point & { y: number })[];
   if (valid.length === 0) return <p className="text-sm text-slate-500">Sin datos medibles para graficar.</p>;
-  const W = 640, H = height, P = { l: 44, r: 16, t: 14, b: 34 };
+  const W = 420, H = Math.round(height * 0.75), P = { l: 40, r: 14, t: 12, b: 30 };
   const xs = valid.map((p) => p.x.getTime());
   const x0 = Math.min(...xs), x1 = Math.max(...xs) === x0 ? x0 + 86_400_000 : Math.max(...xs);
   const lo = yMin ?? Math.min(0, ...valid.map((p) => p.y));
@@ -20,24 +20,24 @@ export function LineChart({ points, unit, title, height = 200, yMin, yMax, bands
   const path = valid.map((p, i) => `${i ? 'L' : 'M'}${X(p.x.getTime()).toFixed(1)},${Y(p.y).toFixed(1)}`).join(' ');
   return (
     <figure>
+      <div className="mb-1 text-xs font-semibold text-slate-600 dark:text-slate-300">Eje vertical: {unit}</div>
       <svg viewBox={`0 0 ${W} ${H}`} className="w-full" role="img" aria-label={`${title}: ${valid.map((p) => `${p.x.toLocaleDateString('es-AR')} ${p.y} ${unit}`).join('; ')}`}>
         {bands?.map((b) => <rect key={b.label} x={P.l} width={W - P.l - P.r} y={Y(Math.min(b.to, hi))} height={Math.max(0, Y(Math.max(b.from, lo)) - Y(Math.min(b.to, hi)))} className={b.cls} />)}
         {ticks.map((t) => (
           <g key={t}>
             <line x1={P.l} x2={W - P.r} y1={Y(t)} y2={Y(t)} className="stroke-slate-200 dark:stroke-petrol-800" />
-            <text x={P.l - 6} y={Y(t) + 4} textAnchor="end" className="fill-slate-500 text-[11px]">{Math.round(t * 10) / 10}</text>
+            <text x={P.l - 6} y={Y(t) + 4} textAnchor="end" className="fill-slate-600 text-[13px] dark:fill-slate-300">{Math.round(t * 10) / 10}</text>
           </g>
         ))}
-        <path d={path} fill="none" className="stroke-petrol-600 dark:stroke-turq-400" strokeWidth={3} />
+        <path d={path} fill="none" className="stroke-petrol-600 dark:stroke-turq-400" strokeWidth={2.5} />
         {valid.map((p, i) => (
           <g key={i}>
             {p.comparable === false
               ? <rect x={X(p.x.getTime()) - 6} y={Y(p.y) - 6} width={12} height={12} className="fill-amber-400 stroke-amber-800" strokeWidth={1.5}><title>Medición no comparable con la anterior</title></rect>
-              : <circle cx={X(p.x.getTime())} cy={Y(p.y)} r={6} className="fill-white stroke-petrol-700 dark:fill-petrol-950 dark:stroke-turq-300" strokeWidth={3} />}
-            <text x={X(p.x.getTime())} y={H - 12} textAnchor="middle" className="fill-slate-500 text-[11px]">{p.x.toLocaleDateString('es-AR', { day: '2-digit', month: '2-digit' })}</text>
+              : <circle cx={X(p.x.getTime())} cy={Y(p.y)} r={5} className="fill-white stroke-petrol-700 dark:fill-petrol-950 dark:stroke-turq-300" strokeWidth={3} />}
+            <text x={X(p.x.getTime())} y={H - 10} textAnchor="middle" className="fill-slate-600 text-[13px] dark:fill-slate-300">{p.x.toLocaleDateString('es-AR', { day: '2-digit', month: '2-digit' })}</text>
           </g>
         ))}
-        <text x={4} y={12} className="fill-slate-500 text-[11px]">{unit}</text>
       </svg>
       {valid.some((p) => p.comparable === false) && <figcaption className="text-xs text-amber-800 dark:text-amber-300">■ Punto cuadrado: medición obtenida con un método distinto; no comparable con la anterior.</figcaption>}
     </figure>
