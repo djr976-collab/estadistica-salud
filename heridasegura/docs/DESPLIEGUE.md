@@ -11,8 +11,10 @@
    - `supabase/migrations/20261031000001_schema.sql`
    - `…0002_functions.sql`
    - `…0003_rls.sql` (crea el bucket privado `wound-photos` y sus políticas)
-   - `…0004_seed_hospital.sql` (153 ubicaciones; idempotente)
+   - `…0004_seed_hospital.sql` (ubicaciones iniciales; idempotente)
    - `…0005_directory_occupancy.sql`
+   - `…0006_nomenclatura_uco.sql` · `…0007_emergencias_observacion.sql` · `…0008_emergencias_camillas.sql`
+   Resultado: **157 puestos**.
 5. (Opcional, solo prueba) `supabase/seed.sql`: pacientes **ficticios**, incluido el de CQ Sector 4, habitación 30, cama B.
 6. Cree el primer usuario en **Authentication → Users → Add user** y ejecute `scripts/promote-admin.sql` (reemplazando el correo).
 7. Verifique en **Storage** que `wound-photos` figure como **privado**.

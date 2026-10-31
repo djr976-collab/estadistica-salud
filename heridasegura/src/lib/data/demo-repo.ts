@@ -177,8 +177,17 @@ export class DemoRepo implements Repo {
         Object.assign(l, { location_type: 'observacion', room_id: idFor('sec_emg:area:obs'), code: `EMG-OBS-${String(i + 8).padStart(2, '0')}`, label: `Puesto observación ${i + 8}`, sort_order: i + 8 });
       }
     }
+    // Camillas restituidas (espejo de la migración 0008)
     const camRoom = db.rooms.find((r) => r.id === idFor('sec_emg:area:cam'));
-    if (camRoom && !db.locations.some((l) => l.room_id === camRoom.id && l.active)) camRoom.active = false;
+    if (camRoom) camRoom.active = true;
+    for (let i = 1; i <= 4; i++) {
+      const id = idFor(`sec_emg:camilla:${i}`);
+      if (!db.locations.some((l) => l.id === id)) db.locations.push({
+        id, sector_id: idFor('sec_emg'), room_id: idFor('sec_emg:area:cam'), code: `EMG-CAM-${String(i).padStart(2, '0')}`,
+        label: `Camilla ${i}`, location_type: 'camilla', is_provisional_code: true, operational_status: 'disponible',
+        status_reason: null, sort_order: i, active: true,
+      });
+    }
   }
 
   static reset() {

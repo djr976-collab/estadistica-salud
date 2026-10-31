@@ -30,12 +30,12 @@ select pg_temp.eq((select count(*) from locations l join sectors s on s.id = l.s
 select pg_temp.eq((select count(*) from locations l join sectors s on s.id = l.sector_id where s.seed_key = 'sec_s6'), 20, 'Sector 6: 20 camas');
 select pg_temp.eq((select count(*) from locations l join sectors s on s.id = l.sector_id where s.seed_key = 'sec_uti'), 18, 'UTI: 18 puestos');
 select pg_temp.eq((select count(*) from locations where location_type = 'box_uti'), 5, 'UTI: 5 boxes');
-select pg_temp.eq((select count(*) from locations l join sectors s on s.id = l.sector_id where s.seed_key = 'sec_emg'), 16, 'Emergencias: 16 puestos');
-select pg_temp.eq((select count(*) from locations where location_type = 'camilla' and active), 0, 'Emergencias: sin camillas (ex COVID → observación)');
+select pg_temp.eq((select count(*) from locations l join sectors s on s.id = l.sector_id where s.seed_key = 'sec_emg'), 20, 'Emergencias: 20 puestos');
+select pg_temp.eq((select count(*) from locations where location_type = 'camilla' and active), 4, 'Emergencias: 4 camillas');
 select pg_temp.eq((select count(*) from locations where location_type = 'shockroom'), 4, 'Emergencias: 4 shockroom');
 select pg_temp.eq((select count(*) from locations where location_type = 'observacion' and active), 12, 'Emergencias: 12 observación');
 select pg_temp.eq((select count(*) from locations l join sectors s on s.id = l.sector_id where s.seed_key = 'sec_uco'), 9, 'Unidad Coronaria: 9 camas');
-select pg_temp.eq((select count(*) from locations), 153, 'Total 153 ubicaciones');
+select pg_temp.eq((select count(*) from locations), 157, 'Total 157 ubicaciones');
 select pg_temp.eq((select count(*) from rooms r join sectors s on s.id = r.sector_id where s.seed_key = 'sec_cq_4' and r.code in ('36','37')), 0, 'Sector 4 sin habitaciones 36/37');
 select pg_temp.eq((select count(*) from locations l join rooms r on r.id = l.room_id where r.seed_key = 'sec_cq_4:hab:30'), 3, 'Hab. 30: camas A, B, C');
 select pg_temp.eq((select count(*) from locations l join rooms r on r.id = l.room_id where r.seed_key = 'sec_cq_4:hab:35'), 4, 'Hab. 35: camas A-D');
@@ -45,7 +45,7 @@ select pg_temp.eq((select count(*) from bed_assignments ba join locations l on l
 -- 2) Idempotencia y edición de códigos --------------------------------------
 update locations set code = 'UTI-01' where seed_key = 'sec_uti:cama:1';
 select seed_hospital_structure();
-select pg_temp.eq((select count(*) from locations), 153, 'Re-ejecución no duplica');
+select pg_temp.eq((select count(*) from locations), 157, 'Re-ejecución no duplica');
 select pg_temp.eq((select count(*) from locations where seed_key = 'sec_uti:cama:1' and code = 'UTI-01'), 1, 'Código editado se conserva');
 
 -- 3) Usuarios ---------------------------------------------------------------
@@ -67,7 +67,7 @@ set request.jwt.claim.sub = '22222222-2222-4222-8222-222222222222';
 
 select pg_temp.eq((select count(*) from patients where mrn = 'DEMO-0001'), 1, 'RLS: ve paciente de su sector');
 select pg_temp.eq((select count(*) from patients where mrn = 'DEMO-0003'), 0, 'RLS: no ve paciente de otro sector');
-select pg_temp.eq((select count(*) from locations), 153, 'RLS: ve estructura completa');
+select pg_temp.eq((select count(*) from locations), 157, 'RLS: ve estructura completa');
 select pg_temp.expect_error($$update profiles set role = 'admin' where id = auth.uid()$$, 'administrador');
 select pg_temp.expect_error($$insert into services (code, name) values ('X', 'X')$$, 'row-level security');
 select pg_temp.eq((select count(*) from audit_logs), 0, 'RLS: enfermería no lee auditoría');
@@ -161,6 +161,6 @@ select pg_temp.expect_error($$update patients set is_fictitious = false where mr
 -- 10) Nomenclatura confirmada UCO ------------------------------------------
 select pg_temp.eq((select count(*) from locations l join sectors s on s.id = l.sector_id
   where s.seed_key = 'sec_uco' and l.code ~ '^[1-9]$' and not l.is_provisional_code), 9, 'UCO: camas 1 a 9 confirmadas');
-select pg_temp.eq((select count(*) from rooms where seed_key = 'sec_emg:area:cam' and not active), 1, 'Área Camillas desactivada');
+select pg_temp.eq((select count(*) from rooms where seed_key = 'sec_emg:area:cam' and active), 1, 'Área Camillas activa');
 select seed_hospital_structure();
-select pg_temp.eq((select count(*) from locations where location_type = 'camilla'), 0, 'Re-ejecutar la carga no recrea camillas');
+select pg_temp.eq((select count(*) from locations where location_type = 'camilla'), 4, 'Re-ejecutar la carga no duplica camillas');

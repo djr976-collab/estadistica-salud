@@ -10,9 +10,9 @@ const bySector = (code: string) => {
 
 describe('Estructura hospitalaria precargada', () => {
   it.each([
-    ['CM-S1', 16], ['CM-S2', 24], ['CQ-S3', 20], ['CQ-S4', 30], ['S6', 20], ['UTI', 18], ['EMG', 16], ['UCO', 9],
+    ['CM-S1', 16], ['CM-S2', 24], ['CQ-S3', 20], ['CQ-S4', 30], ['S6', 20], ['UTI', 18], ['EMG', 20], ['UCO', 9],
   ])('%s tiene %i puestos', (code, n) => expect(bySector(code as string).length).toBe(n));
-  it('total 153', () => expect(s.locations.length).toBe(153));
+  it('total 157', () => expect(s.locations.length).toBe(157));
   it('sector 4 sin 36 ni 37 y con habitación 30 A/B/C', () => {
     const codes = bySector('CQ-S4').map((l) => l.code);
     expect(codes.some((c) => c.startsWith('36') || c.startsWith('37'))).toBe(false);
@@ -28,11 +28,11 @@ describe('Estructura hospitalaria precargada', () => {
     expect(l.map((x) => x.code)).toEqual(['1', '2', '3', '4', '5', '6', '7', '8', '9']);
     expect(l.every((x) => !x.is_provisional_code)).toBe(true);
   });
-  it('Emergencias: 4 shockroom y 12 observación, sin camillas', () => {
+  it('Emergencias: 4 shockroom, 12 observación y 4 camillas', () => {
     const l = bySector('EMG');
     expect(l.filter((x) => x.location_type === 'shockroom').length).toBe(4);
     expect(l.filter((x) => x.location_type === 'observacion').map((x) => x.code)).toEqual(Array.from({ length: 12 }, (_, i) => `EMG-OBS-${String(i + 1).padStart(2, '0')}`));
-    expect(l.some((x) => x.location_type === 'camilla')).toBe(false);
+    expect(l.filter((x) => x.location_type === 'camilla').map((x) => x.code)).toEqual(['EMG-CAM-01', 'EMG-CAM-02', 'EMG-CAM-03', 'EMG-CAM-04']);
   });
   it('camillas no son camas de internación', () => {
     expect(countsAsBed('camilla')).toBe(false);
@@ -40,7 +40,7 @@ describe('Estructura hospitalaria precargada', () => {
     expect(countsAsBed('box_uti')).toBe(true);
   });
   it('códigos únicos por sector e IDs únicos', () => {
-    expect(new Set(s.locations.map((l) => l.id)).size).toBe(153);
+    expect(new Set(s.locations.map((l) => l.id)).size).toBe(157);
     for (const sec of s.sectors) {
       const c = s.locations.filter((l) => l.sector_id === sec.id).map((l) => l.code);
       expect(new Set(c).size).toBe(c.length);

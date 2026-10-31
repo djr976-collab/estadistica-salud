@@ -4,7 +4,7 @@
 | Módulo | Estado | Verificación |
 |---|---|---|
 | Esquema SQL normalizado, FK, índices, restricciones | ✅ | Pruebas SQL |
-| Carga hospitalaria idempotente (153 puestos) | ✅ | SQL + unitarias + e2e |
+| Carga hospitalaria idempotente (157 puestos) | ✅ | SQL + unitarias + e2e |
 | RLS por rol y sector, Storage privado | ✅ | Pruebas SQL (stub local de auth/storage) |
 | Autenticación (Supabase Auth) y roles | ✅ código · ⚙ requiere proyecto | Modo demo probado e2e |
 | Plano de camas jerárquico, estados, bloqueo | ✅ | e2e |

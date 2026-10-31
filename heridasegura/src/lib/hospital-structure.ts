@@ -49,6 +49,8 @@ export const SECTOR_SPECS: SectorSpec[] = [
       // Observación: 12 puestos. Los puestos 9–12 eran las ex camillas COVID (migración 0007): conservan su clave interna.
       { key: 'sec_emg:area:obs', code: 'OBSERVACION', name: 'Observación', prefix: 'sec_emg:obs:', count: 12, type: 'observacion', label: 'Puesto observación ', codeFmt: (i) => `EMG-OBS-${pad(i)}`,
         keyFor: (i) => (i <= 8 ? `sec_emg:obs:${i}` : `sec_emg:cam:${i - 8}`) },
+      // Camillas: 4 (siguen existiendo; migración 0008). No son camas de internación.
+      { key: 'sec_emg:area:cam', code: 'CAMILLAS', name: 'Camillas', prefix: 'sec_emg:camilla:', count: 4, type: 'camilla', label: 'Camilla ', codeFmt: (i) => `EMG-CAM-${pad(i)}` },
     ] },
   { key: 'sec_uco', service: 'svc_unidad_coronaria', code: 'UCO', name: 'Unidad Coronaria', order: 61,
     areas: [

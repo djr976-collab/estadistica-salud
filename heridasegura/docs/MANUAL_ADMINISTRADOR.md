@@ -20,7 +20,7 @@
 - Códigos **provisorios** (UTI-C01…, UTI-BOX01…, EMG-SHK-01…, EMG-OBS-01…12): reemplácelos por la nomenclatura institucional y desmarque *Código provisorio*.
 - La carga inicial (`seed_hospital_structure()`) es **idempotente**: si se ejecuta otra vez no duplica ni sobrescribe sus cambios.
 
-Estructura precargada (153 puestos): CM S1 hab. 1–8 (A/B) 16 · CM S2 hab. 9–16 (A/B/C) 24 · CQ S3 hab. 18–27 (A/B) 20 · CQ S4 hab. 28–33 (A/B/C), 34–35 (A–D), 38–39 (A/B) 30 · Sector 6 hab. 601–610 (A/B) 20 · UTI 13 camas + 5 boxes · Emergencias 4 shockroom + 12 observación (los puestos 9–12 eran las ex camas COVID; ya no hay camillas) · Unidad Coronaria 9 (camas 1 a 9, nomenclatura confirmada).
+Estructura precargada (157 puestos): CM S1 hab. 1–8 (A/B) 16 · CM S2 hab. 9–16 (A/B/C) 24 · CQ S3 hab. 18–27 (A/B) 20 · CQ S4 hab. 28–33 (A/B/C), 34–35 (A–D), 38–39 (A/B) 30 · Sector 6 hab. 601–610 (A/B) 20 · UTI 13 camas + 5 boxes · Emergencias 4 shockroom + 12 observación (9–12 son las ex camas COVID) + 4 camillas · Unidad Coronaria 9 (camas 1 a 9, nomenclatura confirmada).
 
 ## Configuración
 - Vigencia de Braden, intervalo sugerido de reevaluación, duración de URL firmadas, base legal de fotografías.
