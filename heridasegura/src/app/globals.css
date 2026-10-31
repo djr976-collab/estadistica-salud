@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", system-ui, sans-serif;
+  color-scheme: light;
+}
+.dark { color-scheme: dark; }
+
+html { -webkit-text-size-adjust: 100%; }
+body { @apply bg-slate-50 text-slate-900 antialiased dark:bg-petrol-950 dark:text-slate-100; font-size: 16px; }
+
+@layer components {
+  .card { @apply rounded-2xl border border-slate-200 bg-white shadow-sm dark:border-petrol-800 dark:bg-petrol-900; }
+  .btn { @apply inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl px-4 py-2 text-base font-semibold transition focus:outline-none focus-visible:ring-4 focus-visible:ring-turq-300 disabled:cursor-not-allowed disabled:opacity-50; }
+  .btn-primary { @apply btn bg-petrol-700 text-white hover:bg-petrol-800 active:bg-petrol-900 dark:bg-turq-600 dark:hover:bg-turq-700; }
+  .btn-accent { @apply btn bg-turq-500 text-petrol-950 hover:bg-turq-400; }
+  .btn-secondary { @apply btn border border-slate-300 bg-white text-petrol-800 hover:bg-slate-50 dark:border-petrol-700 dark:bg-petrol-900 dark:text-slate-100 dark:hover:bg-petrol-800; }
+  .btn-danger { @apply btn bg-red-700 text-white hover:bg-red-800; }
+  .btn-ghost { @apply btn min-h-[44px] text-petrol-700 hover:bg-petrol-50 dark:text-turq-200 dark:hover:bg-petrol-800; }
+  .input { @apply block min-h-[48px] w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-base text-slate-900 placeholder:text-slate-400 focus:border-petrol-500 focus:outline-none focus:ring-4 focus:ring-petrol-100 dark:border-petrol-700 dark:bg-petrol-950 dark:text-slate-100 dark:focus:ring-petrol-800; }
+  .label { @apply mb-1 block text-sm font-semibold text-slate-700 dark:text-slate-200; }
+  .hint { @apply mt-1 text-sm text-slate-500 dark:text-slate-400; }
+  .h1 { @apply text-2xl font-bold tracking-tight text-petrol-900 dark:text-white; }
+  .h2 { @apply text-lg font-bold text-petrol-900 dark:text-white; }
+  .chip { @apply inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-semibold; }
+  .tab { @apply min-h-[44px] whitespace-nowrap rounded-xl px-4 text-sm font-semibold text-slate-600 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-petrol-800; }
+  .tab-active { @apply bg-petrol-700 text-white hover:bg-petrol-700 dark:bg-turq-600; }
+}
+
+@media print {
+  .no-print { display: none !important; }
+  body { background: white; }
+}
+
+/* Respeta preferencias de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}

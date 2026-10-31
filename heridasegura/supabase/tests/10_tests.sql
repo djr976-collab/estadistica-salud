@@ -149,3 +149,11 @@ reset role;
 select pg_temp.eq((select count(*) from audit_logs where table_name = 'wound_assessments' and action = 'INSERT'), 2, 'Auditoría de valoraciones');
 select pg_temp.eq((select count(*) from audit_logs where context::text ilike '%sacro%'), 0, 'Auditoría sin datos clínicos');
 select pg_temp.expect_error($$delete from audit_logs$$, null);
+
+-- 9) Directorio y ocupación sin identidad -----------------------------------
+set role authenticated;
+set request.jwt.claim.sub = '33333333-3333-4333-8333-333333333333';
+select pg_temp.eq((select count(*) from location_status_map((select id from sectors where seed_key = 'sec_cq_4')) where occupied), 3, 'Ocupación visible sin acceso al paciente');
+select pg_temp.eq((select count(*) from list_professionals()), 3, 'Directorio de profesionales');
+reset role;
+select pg_temp.expect_error($$update patients set is_fictitious = false where mrn = 'DEMO-0001'$$, 'autorizado');

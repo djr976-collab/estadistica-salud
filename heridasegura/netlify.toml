@@ -1,0 +1,12 @@
+# Despliegue en Netlify (Next.js runtime). Si el repositorio contiene otros
+# archivos en la raíz, configure "Base directory" = heridasegura en Netlify.
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"
+  NEXT_TELEMETRY_DISABLED = "1"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
