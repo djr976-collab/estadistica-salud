@@ -17,10 +17,10 @@
 - Puede **agregar, renombrar, recodificar, reordenar y desactivar** sin perder información clínica: los registros referencian identificadores internos.
 - **No elimine**: desactive. No se puede desactivar una ubicación ocupada.
 - Tipos de puesto: cama de internación, cama UTI, box UTI, cama coronaria, shockroom, observación, camilla. Shockroom, observación y camillas **no cuentan como camas de internación** en los indicadores.
-- Códigos **provisorios** (UTI-C01…, UTI-BOX01…, EMG-SHK-01…, EMG-OBS-01…, EMG-CAM-01…, UCO-C01…): reemplácelos por la nomenclatura institucional y desmarque *Código provisorio*.
+- Códigos **provisorios** (UTI-C01…, UTI-BOX01…, EMG-SHK-01…, EMG-OBS-01…, EMG-CAM-01…): reemplácelos por la nomenclatura institucional y desmarque *Código provisorio*.
 - La carga inicial (`seed_hospital_structure()`) es **idempotente**: si se ejecuta otra vez no duplica ni sobrescribe sus cambios.
 
-Estructura precargada (153 puestos): CM S1 hab. 1–8 (A/B) 16 · CM S2 hab. 9–16 (A/B/C) 24 · CQ S3 hab. 18–27 (A/B) 20 · CQ S4 hab. 28–33 (A/B/C), 34–35 (A–D), 38–39 (A/B) 30 · Sector 6 hab. 601–610 (A/B) 20 · UTI 13 camas + 5 boxes · Emergencias 4 shockroom + 8 observación + 4 camillas · Unidad Coronaria 9.
+Estructura precargada (153 puestos): CM S1 hab. 1–8 (A/B) 16 · CM S2 hab. 9–16 (A/B/C) 24 · CQ S3 hab. 18–27 (A/B) 20 · CQ S4 hab. 28–33 (A/B/C), 34–35 (A–D), 38–39 (A/B) 30 · Sector 6 hab. 601–610 (A/B) 20 · UTI 13 camas + 5 boxes · Emergencias 4 shockroom + 8 observación + 4 camillas · Unidad Coronaria 9 (camas 1 a 9, nomenclatura confirmada).
 
 ## Configuración
 - Vigencia de Braden, intervalo sugerido de reevaluación, duración de URL firmadas, base legal de fotografías.

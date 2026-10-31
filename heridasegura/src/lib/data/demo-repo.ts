@@ -160,7 +160,16 @@ export class DemoRepo implements Repo {
       if (raw) db = JSON.parse(raw) as DB;
     } catch { db = null; }
     this.db = db && db.version === 1 ? db : seed();
+    DemoRepo.applyNomenclature(this.db);
     this.persist();
+  }
+
+  /** Aplica la nomenclatura institucional confirmada (espejo de la migración 0006) sin perder datos. */
+  private static applyNomenclature(db: DB) {
+    for (let i = 1; i <= 9; i++) {
+      const l = db.locations.find((x) => x.id === idFor(`sec_uco:cama:${i}`));
+      if (l && l.code === `UCO-C${String(i).padStart(2, '0')}`) { l.code = String(i); l.label = `Cama ${i}`; l.is_provisional_code = false; }
+    }
   }
 
   static reset() {

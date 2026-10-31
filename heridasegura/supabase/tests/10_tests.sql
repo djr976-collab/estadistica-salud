@@ -157,3 +157,7 @@ select pg_temp.eq((select count(*) from location_status_map((select id from sect
 select pg_temp.eq((select count(*) from list_professionals()), 3, 'Directorio de profesionales');
 reset role;
 select pg_temp.expect_error($$update patients set is_fictitious = false where mrn = 'DEMO-0001'$$, 'autorizado');
+
+-- 10) Nomenclatura confirmada UCO ------------------------------------------
+select pg_temp.eq((select count(*) from locations l join sectors s on s.id = l.sector_id
+  where s.seed_key = 'sec_uco' and l.code ~ '^[1-9]$' and not l.is_provisional_code), 9, 'UCO: camas 1 a 9 confirmadas');

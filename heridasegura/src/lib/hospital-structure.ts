@@ -4,7 +4,7 @@
 import type { Location, LocationType, Room, Sector, Service } from './types';
 
 interface RoomSpec { rooms: (number | string)[]; beds: string[] }
-interface AreaSpec { key: string; code: string; name: string; prefix: string; count: number; type: LocationType; label: string; codeFmt: (i: number) => string }
+interface AreaSpec { key: string; code: string; name: string; prefix: string; count: number; type: LocationType; label: string; codeFmt: (i: number) => string; provisional?: boolean }
 
 interface SectorSpec {
   key: string; service: string; code: string; name: string; order: number;
@@ -51,7 +51,7 @@ export const SECTOR_SPECS: SectorSpec[] = [
     ] },
   { key: 'sec_uco', service: 'svc_unidad_coronaria', code: 'UCO', name: 'Unidad Coronaria', order: 61,
     areas: [
-      { key: 'sec_uco:area:camas', code: 'CAMAS', name: 'Camas de unidad coronaria', prefix: 'sec_uco:cama:', count: 9, type: 'cama_coronaria', label: 'Cama ', codeFmt: (i) => `UCO-C${pad(i)}` },
+      { key: 'sec_uco:area:camas', code: 'CAMAS', name: 'Camas de unidad coronaria', prefix: 'sec_uco:cama:', count: 9, type: 'cama_coronaria', label: 'Cama ', codeFmt: (i) => String(i), provisional: false },
     ] },
 ];
 
@@ -88,7 +88,7 @@ export function buildStructure(): Structure {
       for (let i = 1; i <= a.count; i++) {
         locations.push({
           id: idFor(`${a.prefix}${i}`), sector_id: sectorId, room_id: idFor(a.key), code: a.codeFmt(i),
-          label: `${a.label}${i}`, location_type: a.type, is_provisional_code: true,
+          label: `${a.label}${i}`, location_type: a.type, is_provisional_code: a.provisional ?? true,
           operational_status: 'disponible', status_reason: null, sort_order: (a.type === 'box_uti' ? 100 : 0) + i, active: true,
         });
       }

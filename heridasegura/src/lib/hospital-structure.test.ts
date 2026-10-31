@@ -23,6 +23,11 @@ describe('Estructura hospitalaria precargada', () => {
     const codes = bySector('S6').map((l) => l.code);
     expect(codes[0]).toBe('601A'); expect(codes[codes.length - 1]).toBe('610B');
   });
+  it('Unidad Coronaria con nomenclatura confirmada 1 a 9', () => {
+    const l = bySector('UCO');
+    expect(l.map((x) => x.code)).toEqual(['1', '2', '3', '4', '5', '6', '7', '8', '9']);
+    expect(l.every((x) => !x.is_provisional_code)).toBe(true);
+  });
   it('camillas no son camas de internación', () => {
     expect(countsAsBed('camilla')).toBe(false);
     expect(countsAsBed('shockroom')).toBe(false);
