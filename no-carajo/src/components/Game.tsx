@@ -14,6 +14,7 @@ import { speak, stopSpeaking } from "@/lib/speech";
 import { setMuted } from "@/lib/sfx";
 import { load, save } from "@/lib/storage";
 import type { GameConfig } from "@/lib/types";
+import { useAuth } from "@/lib/auth";
 
 type Screen = "welcome" | "setup" | "play" | "summary" | "stats";
 
@@ -75,9 +76,25 @@ export default function Game() {
     setScreen("play");
   };
 
+  const auth = useAuth();
+  const [online, setOnline] = useState(true);
+  useEffect(() => {
+    const upd = () => setOnline(navigator.onLine);
+    upd();
+    window.addEventListener("online", upd);
+    window.addEventListener("offline", upd);
+    return () => {
+      window.removeEventListener("online", upd);
+      window.removeEventListener("offline", upd);
+    };
+  }, []);
+  // Con cuentas, se juega identificado. Sin conexión se permite jugar igual (lo ya sincronizado queda en el dispositivo).
+  const needLogin = auth.cloud && !auth.loading && !auth.session && online;
+  const isStaff = auth.profile?.role === "docente" || auth.profile?.role === "admin";
+
   const [pendingRevancha, setPendingRevancha] = useState(0);
-  // Se recalcula al volver a cada pantalla (el progreso vive en localStorage).
-  useEffect(() => setPendingRevancha(Object.keys(getProgress().wrong).length), [screen]);
+  // Se recalcula al volver a cada pantalla o al cambiar de usuario (el progreso vive en localStorage).
+  useEffect(() => setPendingRevancha(Object.keys(getProgress().wrong).length), [screen, auth.profile]);
 
   return (
     <main className="mx-auto flex min-h-dvh max-w-3xl flex-col px-4 pb-10 pt-[max(1rem,env(safe-area-inset-top))]">
@@ -90,6 +107,7 @@ export default function Game() {
           setScreen("welcome");
         }}
         showHome={screen !== "welcome"}
+        user={auth.cloud ? (auth.profile ? auth.profile.full_name || "Mi cuenta" : auth.loading ? "…" : null) : undefined}
       />
 
       {screen === "welcome" && (
@@ -104,6 +122,17 @@ export default function Game() {
             </p>
           </div>
           <div className="flex w-full max-w-sm flex-col gap-3">
+            {auth.profile && (
+              <p className="text-sm text-white/70">
+                Hola, <strong className="text-white">{auth.profile.full_name.split(" ")[0] || "colega"}</strong>
+                {auth.profile.course ? ` · ${auth.profile.course.name}` : " · sin curso asignado"}
+              </p>
+            )}
+            {needLogin ? (
+              <Link href="/ingresar" className="btn-primary text-lg">
+                🔑 Ingresar o crear cuenta
+              </Link>
+            ) : (
             <button
               className="btn-primary text-lg"
               onClick={() => {
@@ -113,7 +142,8 @@ export default function Game() {
             >
               🚨 Entrar a la guardia
             </button>
-            {pendingRevancha > 0 && (
+            )}
+            {!needLogin && pendingRevancha > 0 && (
               <button className="btn-neon" onClick={() => start({ ...config, mode: "revancha", count: Math.min(10, pendingRevancha) })}>
                 🥊 Revancha ({pendingRevancha} pendientes)
               </button>
@@ -122,9 +152,15 @@ export default function Game() {
               <button className="btn-ghost" onClick={() => setScreen("stats")}>
                 📊 Mi progreso
               </button>
-              <Link href="/docente" className="btn-ghost">
-                🧑‍🏫 Docente
-              </Link>
+              {!auth.cloud || isStaff ? (
+                <Link href="/docente" className="btn-ghost">
+                  🧑‍🏫 Docente
+                </Link>
+              ) : (
+                <Link href={auth.session ? "/cuenta" : "/ingresar"} className="btn-ghost">
+                  👤 Mi cuenta
+                </Link>
+              )}
             </div>
             {installEvt && (
               <button className="btn-ghost text-sm" onClick={() => installEvt.prompt().then(() => setInstallEvt(null))}>
@@ -177,12 +213,15 @@ function TopBar({
   ai,
   onHome,
   showHome,
+  user,
 }: {
   prefs: Prefs;
   setPrefs: (p: Prefs) => void;
   ai: AIStatus;
   onHome: () => void;
   showHome: boolean;
+  /** undefined = sin cuentas (demo); null = sin sesión; string = nombre */
+  user?: string | null;
 }) {
   return (
     <header className="mb-3 flex items-center justify-between gap-2">
@@ -194,6 +233,11 @@ function TopBar({
         <span />
       )}
       <div className="flex items-center gap-2">
+        {user !== undefined && (
+          <Link href={user ? "/cuenta" : "/ingresar"} className="chip max-w-[110px] truncate" title={user ?? "Ingresar"}>
+            {user ? `👤 ${user.split(" ")[0]}` : "🔑 Ingresar"}
+          </Link>
+        )}
         <span
           className={`chip ${ai.enabled ? (prefs.useAI ? "border-neon-lima/50 text-neon-lima" : "text-white/60") : "text-white/60"}`}
           title={ai.enabled ? `IA conectada (${ai.model})` : "Sin IA: corrección local determinista"}

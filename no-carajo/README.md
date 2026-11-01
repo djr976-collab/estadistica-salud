@@ -15,15 +15,18 @@ Juego educativo para estudiantes de enfermería con un instructor virtual animad
 | Bienvenida, modalidad, módulo (12), personalidad, dificultad, cantidad de preguntas, modo oral/escrito | ✅ |
 | Jefe de Guardia animado (SVG original): reposo, habla, festejo, mano en la frente, sorpresa, alarma con sirena, pensando | ✅ |
 | Síntesis de voz (prioriza voz `es-AR`) y reconocimiento de voz (`es-AR`), con alternativa escrita o por botones | ✅ |
-| 41 preguntas iniciales: opción múltiple, V/F, abiertas, cálculos y un caso clínico progresivo | ✅ |
-| Modalidades: **Duelo**, **Guardia** (caso progresivo), **Código rojo** (contrarreloj), **Examen final** (sin pistas ni reintento), **Revancha** (tus errores, reformulados) | ✅ |
+| 60 preguntas: opción múltiple, V/F, abiertas, cálculos y **7 casos clínicos progresivos** con monitor de signos vitales | ✅ |
+| Modalidades: **Duelo**, **Guardia** (caso clínico a elección o al azar), **Código rojo** (contrarreloj), **Examen final** (sin pistas ni reintento), **Revancha** (tus errores, reformulados) | ✅ |
 | 3 personalidades; «sin filtro» exige confirmación +18 y el docente puede desactivarlo | ✅ |
 | Error grave de seguridad: alerta roja, simulación detenida, explicación del riesgo y **pregunta de recuperación obligatoria** | ✅ |
 | Corrección con pista y segundo intento antes de mostrar la explicación | ✅ |
 | Cálculos de dosis y goteo **deterministas** (nunca por IA), con detección de errores de unidades y números nuevos en Revancha | ✅ |
 | Corrección de abiertas por conceptos clave y sinónimos, tolerante a errores de dictado | ✅ |
 | XP que premia el razonamiento, 6 niveles, 10 insignias, rachas, estadísticas por módulo, errores frecuentes y recomendaciones | ✅ |
-| Panel docente: banco, editor, importación CSV/Excel, borradores de IA con revisión, resultados, exportación CSV/PDF, interruptor del lenguaje fuerte | ✅ (PIN demo, almacenamiento local) |
+| **Cuentas de usuario** (Supabase): registro, ingreso, recuperación de contraseña, roles admin/docente/estudiante, cursos con código de inscripción | ✅ |
+| Progreso sincronizado entre dispositivos, con cola sin conexión | ✅ |
+| Panel docente: banco compartido, editor (incluye casos clínicos), importación CSV/Excel, borradores de IA con revisión, cursos, **resultados por curso y por estudiante**, exportación CSV/PDF, modo +18 por curso, gestión de roles (admin) | ✅ |
+| Seguridad por filas (RLS) probada: cada estudiante ve sólo lo suyo; cada docente, sólo a sus estudiantes | ✅ |
 | **Demo sin API externa** | ✅ |
 | IA opcional (Claude) **sólo desde el servidor**, con límites por IP y por día | ✅ |
 | PWA instalable, con juego sin conexión usando el banco local | ✅ |
@@ -44,7 +47,9 @@ no-carajo/
 │   │   ├── layout.tsx              # Tipografía, metadatos, PWA
 │   │   ├── page.tsx                # Juego
 │   │   ├── globals.css             # Tema neón + animaciones del personaje
-│   │   ├── docente/page.tsx        # Panel docente
+│   │   ├── docente/page.tsx        # Panel docente (banco, cursos, resultados, usuarios)
+│   │   ├── ingresar/page.tsx       # Ingreso, registro y recuperación de contraseña
+│   │   ├── cuenta/page.tsx         # Perfil, inscripción a curso, cerrar sesión
 │   │   └── api/ai/
 │   │       ├── status/route.ts     # ¿Hay IA? ¿Cuántas llamadas quedan hoy?
 │   │       ├── evaluate/route.ts   # Corrección de abiertas con IA
@@ -56,10 +61,12 @@ no-carajo/
 │   │   ├── Play.tsx                # Motor de juego (preguntas, voz, temporizador, errores graves)
 │   │   ├── Summary.tsx             # Resumen final
 │   │   ├── Stats.tsx               # Progreso del estudiante
+│   │   ├── VitalsMonitor.tsx       # Monitor de signos vitales de los casos
 │   │   └── PwaRegister.tsx
 │   ├── data/
 │   │   ├── modules.ts              # Los 12 módulos
-│   │   └── questions.ts            # Banco oficial inicial (editable)
+│   │   ├── questions.ts            # Banco oficial (preguntas sueltas)
+│   │   └── cases.ts                # Casos clínicos progresivos (modo Guardia)
 │   └── lib/
 │       ├── types.ts
 │       ├── engine/
@@ -75,8 +82,14 @@ no-carajo/
 │       ├── settings.ts             # Configuración docente y banco local
 │       ├── csv.ts                  # Importar/exportar CSV (compatible con Excel)
 │       ├── ai-client.ts            # Llamadas del navegador a /api/ai
+│       ├── supabase.ts             # Cliente Supabase (sólo si está configurado)
+│       ├── auth.tsx                # Sesión, perfil, curso, sincronización al ingresar
+│       ├── cloud.ts                # Progreso, intentos (cola sin conexión), banco y consultas docentes
+│       ├── teacher-store.ts        # Panel docente: misma interfaz en modo demo y con cuentas
 │       └── server/                 # Sólo servidor (clave de API, límites)
-├── supabase/schema.sql             # Fase 2: cuentas, roles, RLS, estadísticas grupales
+├── supabase/
+│   ├── schema.sql                  # Tablas, funciones, RLS y vistas (se ejecuta una vez)
+│   └── tests/                      # Pruebas de seguridad por filas contra PostgreSQL local
 ├── .env.example
 └── netlify.toml
 ```
@@ -111,7 +124,48 @@ npm run typecheck
 npm run build && npm start   # modo producción (activa el service worker sin conexión)
 ```
 
-**Panel docente:** `/docente`, PIN demo `1234` (se cambia con `NEXT_PUBLIC_DEMO_ADMIN_PIN`). Este PIN **no** es seguridad real: es sólo para el prototipo.
+**Panel docente en modo demo** (sin Supabase): `/docente`, PIN `1234` (se cambia con `NEXT_PUBLIC_DEMO_ADMIN_PIN`). Ese PIN **no** es seguridad real; con cuentas configuradas el panel exige rol docente.
+
+---
+
+## 3 bis. Activar las cuentas de usuario (Supabase)
+
+Sin estas variables la app funciona en **modo demo** (todo en el dispositivo). Con ellas, cada estudiante tiene su cuenta y sus resultados quedan en la base de datos.
+
+1. **Crear el proyecto:** en <https://supabase.com> → *New project* (el plan gratuito alcanza para empezar).
+2. **Crear las tablas:** *SQL Editor* → *New query* → pegá todo el contenido de `supabase/schema.sql` → *Run*. Se ejecuta **una sola vez**.
+3. **Configurar el correo de acceso:** *Authentication → URL Configuration*:
+   - *Site URL*: la dirección pública de la app (p. ej., `https://no-carajo.vercel.app`).
+   - *Redirect URLs*: agregá `https://TU-DOMINIO/cuenta` y, para pruebas locales, `http://localhost:3000/cuenta`.
+   - Opcional: en *Authentication → Providers → Email* podés desactivar «Confirm email» para pruebas en clase (se recomienda dejarlo activo en producción).
+4. **Variables de entorno** (local en `.env.local`, y también en Vercel/Netlify):
+   ```
+   NEXT_PUBLIC_SUPABASE_URL=https://xxxx.supabase.co
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJ...   # Project Settings → API → clave pública (anon / publishable)
+   ```
+   No cargues la clave `service_role`: la app no la necesita y daría acceso total.
+5. **Primer administrador:** registrate en la app con tu correo y luego ejecutá en el *SQL Editor*:
+   ```sql
+   update public.profiles set role = 'admin'
+   where id = (select id from auth.users where email = 'tu-correo@ejemplo.com');
+   ```
+6. **Docentes:** cada docente se registra; desde *Panel docente → Usuarios* el admin le asigna el rol «Docente».
+7. **Cursos:** el docente crea el curso en *Panel docente → Cursos* y comparte el **código de 6 caracteres**. Los estudiantes lo ingresan al registrarse o desde *Mi cuenta*.
+
+### Qué ve cada rol
+
+| Rol | Puede |
+|---|---|
+| Estudiante | Jugar, ver su propio progreso, inscribirse a un curso con código. Sus resultados son privados. |
+| Docente | Todo lo anterior + gestionar el banco compartido, crear cursos, ver resultados **sólo de sus cursos**, decidir si su curso permite el modo +18. |
+| Admin | Todo lo anterior para todos los cursos + asignar roles. |
+
+### Cómo se protegen los datos
+- Toda la seguridad está en la base de datos (*Row Level Security*). Aunque alguien modifique la app, no puede leer datos ajenos, cambiarse el rol ni cambiarse de curso sin código.
+- Estas reglas tienen pruebas automáticas (`supabase/tests/`) que simulan un admin, dos docentes y dos estudiantes de cursos distintos: **28 comprobaciones**. Para correrlas con un PostgreSQL local: `PGHOST=… PGUSER=postgres ./supabase/tests/run-local.sh`.
+- Sin conexión: las respuestas se guardan en una cola en el dispositivo y se envían solas al recuperar la conexión (sin duplicados).
+- La IA exige sesión válida y descuenta de un cupo diario por usuario (`AI_USER_DAILY_LIMIT`). La generación de preguntas con IA queda restringida a docentes.
+- Limitación conocida: el XP y las insignias los calcula el dispositivo del estudiante; para evaluación formal usá el desempeño por respuestas (tabla de intentos), no el XP.
 
 ---
 
@@ -177,11 +231,28 @@ pae;intermedio;abierta;¿Qué es un dato subjetivo?;;;;;;Lo que refiere...;;refi
 
 ---
 
-## 7. Hoja de ruta (próximas fases)
+## 7. Casos clínicos (modo Guardia)
 
-1. **Cuentas y roles (Supabase Auth):** administrador, docente y estudiante. Aplicar `supabase/schema.sql` (ya incluye RLS: los resultados de cada estudiante son privados y sólo los ve su docente autorizado).
-2. Pasar `settings.ts` y `progress.ts` de `localStorage` a Supabase. Las funciones ya están aisladas para eso.
-3. Estadísticas grupales por curso (vista `course_module_stats`) y exportación Excel/PDF por curso.
-4. Registro de uso de IA por usuario (`ai_usage`) con cupos por curso.
-5. Más casos clínicos para la modalidad Guardia y preguntas de seguimiento generadas por IA.
-6. Repetición espaciada con fechas de repaso (SM-2) en Revancha.
+| Caso | Módulo | Pasos | Qué entrena |
+|---|---|---|---|
+| Guardia nocturna: el postoperado «está raro» | Casos | 3 | Hipoxemia postoperatoria, prevención de atelectasias, SBAR |
+| Madrugada en clínica médica: hipoglucemia | Signos vitales | 3 | Reconocer hipoglucemia, regla 15/15, prevención |
+| Transfusión en curso: escalofríos | Seguridad | 3 | Reacción transfusional, trazabilidad, doble verificación |
+| Primera dosis de antibiótico EV | Farmacología | 4 | Anafilaxia, primera línea, posición, notificación |
+| Tercer día postoperatorio: fiebre y confusión | Urgencias | 3 | Sepsis (qSOFA), hemocultivos y antibiótico, perfusión |
+| 03:00 h: adulto mayor desorientado | Seguridad | 3 | Delirium, causas reversibles, riesgo de caídas (Morse) |
+| El suero «no baja» | Bioseguridad | 3 | Infiltración/extravasación, flebitis (Maddox/VIP), registro |
+
+Cada paso puede mostrar un **monitor de signos vitales** que evoluciona con el caso. Los docentes pueden crear casos nuevos desde el editor (casilla «Es un paso de un caso clínico») o por CSV (columnas `caso_id`, `paso`, `titulo_caso`, `situacion`).
+
+Las pruebas automáticas (`npm test`) verifican la integridad de todo el banco: respuestas válidas, que ninguna opción correcta esté marcada como error grave, que cada caso tenga pasos 1…N con título, y que la explicación modelo de cada pregunta abierta sea reconocida como correcta por el corrector.
+
+---
+
+## 8. Hoja de ruta
+
+1. Revisión del banco y de los casos por el equipo docente y ajuste a protocolos locales.
+2. Más casos clínicos (pediatría, obstetricia, salud mental) y ramificaciones según la decisión tomada.
+3. Preguntas de seguimiento generadas por IA dentro de los casos.
+4. Repetición espaciada con fechas de repaso (SM-2) en Revancha.
+5. XP calculado en el servidor para usos evaluativos.

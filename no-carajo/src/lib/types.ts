@@ -27,6 +27,18 @@ export interface CalcTemplate {
   variants?: CalcSpec[];
 }
 
+export interface Vitals {
+  pa?: string; // "120/80"
+  fc?: number;
+  fr?: number;
+  sat?: number;
+  temp?: number;
+  glu?: number;
+  dolor?: number; // 0-10
+  conciencia?: string; // "Alerta", "Confuso", "Responde a la voz"...
+  o2?: string; // "AA", "CN 2 L/min"...
+}
+
 export interface CriticalInfo {
   /** Índices de opciones (mcq) o valor (tf) que constituyen un error grave de seguridad. */
   options?: number[];
@@ -66,7 +78,12 @@ export interface Question {
   /** Caso clínico progresivo (modo Guardia). */
   caseId?: string;
   caseStep?: number;
+  /** Título del caso (se toma del paso 1). */
+  caseTitle?: string;
+  /** Situación que se presenta antes de la pregunta de este paso. */
   caseIntro?: string;
+  /** Monitor de signos vitales en este paso del caso. */
+  vitals?: Vitals;
   tags?: string[];
   /** Referencia curricular / bibliografía validada por docentes. */
   reference?: string;
@@ -122,4 +139,6 @@ export interface GameConfig {
   answerMode: AnswerMode;
   personality: Personality;
   mode: GameMode;
+  /** Modo Guardia: caso elegido (vacío = al azar). */
+  caseId?: string;
 }

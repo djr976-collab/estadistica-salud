@@ -1,4 +1,5 @@
 import type { Question } from "@/lib/types";
+import { CASES } from "./cases.ts";
 
 /**
  * Banco oficial inicial (prototipo).
@@ -6,7 +7,7 @@ import type { Question } from "@/lib/types";
  * IMPORTANTE: antes del uso institucional, cada ítem debe ser revisado por el
  * equipo docente y contrastado con los protocolos locales vigentes.
  */
-export const QUESTIONS: Question[] = [
+const BASE_QUESTIONS: Question[] = [
   // ───────────── 1. ANATOMÍA Y FISIOLOGÍA ─────────────
   {
     id: "ana-01",
@@ -680,6 +681,8 @@ export const QUESTIONS: Question[] = [
     type: "mcq",
     caseId: "guardia-1",
     caseStep: 1,
+    caseTitle: "Guardia nocturna: el postoperado «está raro»",
+    vitals: { pa: "130/80", fc: 110, fr: 28, sat: 86, o2: "AA", conciencia: "Inquieto" },
     caseIntro:
       "Guardia nocturna. Sr. R., 68 años, postoperatorio día 1 de cirugía abdominal. Te llaman porque «está raro». Lo encontrás inquieto, FR 28 rpm, SatO₂ 86% aire ambiente, FC 110 lpm, PA 130/80.",
     prompt: "¿Cuál es tu primera acción?",
@@ -710,6 +713,7 @@ export const QUESTIONS: Question[] = [
     type: "mcq",
     caseId: "guardia-1",
     caseStep: 2,
+    vitals: { pa: "128/78", fc: 102, fr: 24, sat: 93, o2: "Según indicación", dolor: 8, conciencia: "Alerta" },
     prompt:
       "Con O₂ la SatO₂ sube a 93%. Al auscultar notás hipoventilación en bases. El paciente no se moviliza desde la cirugía por dolor (8/10). ¿Qué intervención de enfermería es más pertinente para el problema de fondo?",
     options: [
@@ -729,6 +733,7 @@ export const QUESTIONS: Question[] = [
     type: "open",
     caseId: "guardia-1",
     caseStep: 3,
+    vitals: { pa: "128/78", fc: 102, fr: 24, sat: 93, dolor: 8, conciencia: "Alerta" },
     prompt: "Tenés que llamar al médico de guardia. Armá la comunicación con estructura SBAR en pocas líneas.",
     keyConcepts: [
       { label: "S: situación (quién y qué pasa ahora)", synonyms: ["saturacion", "sat", "86", "hipoxemia", "inquieto", "situacion", "dificultad respiratoria"] },
@@ -741,3 +746,6 @@ export const QUESTIONS: Question[] = [
       "Ejemplo: «S: Sr. R., cama 4, desaturó a 86% AA, inquieto. B: 68 años, POP día 1 de cirugía abdominal. A: FR 28, FC 110, hipoventilación bibasal, dolor 8/10; con O₂ satura 93%. R: solicito que lo evalúe ahora y revisar la analgesia».",
   },
 ];
+
+/** Banco oficial completo: preguntas sueltas + pasos de los casos clínicos. */
+export const QUESTIONS: Question[] = [...BASE_QUESTIONS, ...CASES];

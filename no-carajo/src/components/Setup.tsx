@@ -7,6 +7,9 @@ import { spicyAvailable } from "@/lib/settings";
 import { sttSupported } from "@/lib/speech";
 import { sfx } from "@/lib/sfx";
 import type { GameConfig, GameMode, Level } from "@/lib/types";
+import { getBank } from "@/lib/settings";
+import { listCases, type CaseInfo } from "@/lib/engine/session";
+import { moduleById } from "@/data/modules";
 
 const MODES: { id: GameMode; name: string; icon: string; desc: string }[] = [
   { id: "duelo", name: "Duelo con el profesor", icon: "⚔️", desc: "Preguntas consecutivas con puntaje y racha." },
@@ -35,10 +38,12 @@ export default function Setup({
   const [adultOk, setAdultOk] = useState(false);
   const [spicyOn, setSpicyOn] = useState(true);
   const [micOk, setMicOk] = useState(true);
+  const [cases, setCases] = useState<CaseInfo[]>([]);
 
   useEffect(() => {
     setSpicyOn(spicyAvailable());
     setMicOk(sttSupported());
+    setCases(listCases(getBank()));
     if (initial.personality === "sinfiltro") setCfg((c) => ({ ...c, personality: "ironico" }));
   }, [initial.personality]);
 
@@ -98,7 +103,41 @@ export default function Setup({
         </Block>
       )}
 
-      <Block title={`${needsModule ? 3 : 2} · Personalidad del Jefe`}>
+      {cfg.mode === "guardia" && (
+        <Block title="2 · Caso clínico">
+          <div className="grid gap-2">
+            <button
+              onClick={() => set({ caseId: undefined })}
+              className={`card flex items-center gap-3 text-left ${!cfg.caseId ? "border-neon-rosa shadow-[0_0_14px_rgba(255,79,216,.4)]" : "hover:border-white/30"}`}
+            >
+              <span className="text-2xl">🎲</span>
+              <span>
+                <span className="block font-bold">Caso al azar</span>
+                <span className="text-sm text-white/60">El Jefe elige un caso de tu nivel. Como en una guardia real.</span>
+              </span>
+            </button>
+            {cases.map((c) => (
+              <button
+                key={c.caseId}
+                onClick={() => set({ caseId: c.caseId })}
+                className={`card flex items-start gap-3 text-left ${cfg.caseId === c.caseId ? "border-neon-rosa shadow-[0_0_14px_rgba(255,79,216,.4)]" : "hover:border-white/30"}`}
+              >
+                <span className="text-2xl">{moduleById(c.moduleId)?.icon ?? "🧩"}</span>
+                <span className="flex-1">
+                  <span className="block font-bold leading-snug">{c.title}</span>
+                  <span className="mt-1 flex flex-wrap gap-1 text-xs">
+                    <span className="chip">{c.steps} pasos</span>
+                    <span className="chip">{LEVELS.find((l) => l.id === c.level)?.name}</span>
+                    {c.critical && <span className="chip border-guardia/50 text-guardia">⚠ decisiones críticas</span>}
+                  </span>
+                </span>
+              </button>
+            ))}
+          </div>
+        </Block>
+      )}
+
+      <Block title={`${needsModule || cfg.mode === "guardia" ? 3 : 2} · Personalidad del Jefe`}>
         <div className="grid gap-2">
           {PERSONALITIES.map((p) => {
             const locked = p.adult && !spicyOn;
@@ -130,7 +169,7 @@ export default function Setup({
         )}
       </Block>
 
-      <Block title={`${needsModule ? 4 : 3} · Ajustes`}>
+      <Block title={`${needsModule || cfg.mode === "guardia" ? 4 : 3} · Ajustes`}>
         <div className="grid gap-4 sm:grid-cols-3">
           <div>
             <p className="mb-2 text-sm text-white/60">Dificultad</p>

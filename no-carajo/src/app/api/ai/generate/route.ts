@@ -4,6 +4,7 @@ import { betaZodOutputFormat } from "@anthropic-ai/sdk/helpers/beta/zod";
 import { z } from "zod";
 import { AI_MODEL, SAFETY_RULES, aiEnabled, getClient } from "@/lib/server/ai";
 import { checkAndConsume, clientIp } from "@/lib/server/limits";
+import { authorizeAI } from "@/lib/server/auth";
 
 export const dynamic = "force-dynamic";
 
@@ -36,6 +37,8 @@ export async function POST(req: Request) {
   if (!parsed.success) return NextResponse.json({ error: "Solicitud inválida" }, { status: 400 });
   const limit = checkAndConsume(clientIp(req));
   if (!limit.ok) return NextResponse.json({ error: limit.reason }, { status: 429 });
+  const auth = await authorizeAI(req, { staffOnly: true });
+  if (!auth.ok) return NextResponse.json({ error: auth.error }, { status: auth.status });
   const b = parsed.data;
 
   try {

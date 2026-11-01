@@ -57,6 +57,10 @@ export const CSV_HEADERS = [
   "explicacion",
   "referencia",
   "conceptos_clave",
+  "caso_id",
+  "paso",
+  "titulo_caso",
+  "situacion",
 ];
 
 export const CSV_EXAMPLE = [
@@ -64,6 +68,7 @@ export const CSV_EXAMPLE = [
   ["bioseguridad", "basico", "mcq", "¿Cuál es el primer momento de higiene de manos?", "Antes del contacto con el paciente", "Al salir del hospital", "Al llegar a casa", "Nunca", "A", "Es el momento 1 de la OMS.", "OMS 5 momentos", ""],
   ["signos", "basico", "vf", "La FC normal del adulto en reposo es 60-100 lpm.", "", "", "", "", "V", "Rango habitual del adulto.", "", ""],
   ["pae", "intermedio", "abierta", "¿Qué es un dato subjetivo?", "", "", "", "", "", "Lo que refiere el paciente.", "", "refiere|dice|expresa; paciente|persona"],
+  ["casos", "intermedio", "mcq", "¿Cuál es tu primera acción?", "Seguir la ronda", "Valorar y avisar al médico", "Esperar al pase", "Registrar y nada más", "B", "Prioridad: valorar y comunicar.", "", "", "caso-ejemplo", "1", "Paciente con dolor torácico", "Sr. de 60 años refiere dolor opresivo..."],
 ];
 
 export interface ImportResult {
@@ -97,7 +102,11 @@ export function importQuestions(text: string): ImportResult {
     if (!type) return errors.push(`Fila ${n}: tipo inválido (mcq, vf o abierta).`);
     if (!prompt || !explanation) return errors.push(`Fila ${n}: falta enunciado o explicación.`);
 
+    const caseId = col(r, "caso_id");
+    const step = Number(col(r, "paso"));
+    if (caseId && !(step >= 1)) return errors.push(`Fila ${n}: caso «${caseId}» sin número de paso válido.`);
     const base: Question = {
+      ...(caseId ? { caseId, caseStep: step, caseTitle: col(r, "titulo_caso") || undefined, caseIntro: col(r, "situacion") || undefined } : {}),
       id: `doc-${Date.now()}-${i}`,
       moduleId,
       level,

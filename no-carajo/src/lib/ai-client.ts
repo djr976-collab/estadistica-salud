@@ -1,5 +1,6 @@
 "use client";
 
+import { currentAccessToken } from "./auth";
 import type { GradeResult, Personality, PlayableQuestion, Question } from "./types";
 
 export interface AIStatus {
@@ -23,7 +24,7 @@ export async function aiEvaluate(q: PlayableQuestion, answer: string, personalit
   try {
     const r = await fetch("/api/ai/evaluate", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: await headers(),
       body: JSON.stringify({
         question: q.renderedPrompt,
         caseIntro: q.caseIntro,
@@ -46,7 +47,7 @@ export async function aiGenerate(moduleTitle: string, moduleId: string, level: s
   try {
     const r = await fetch("/api/ai/generate", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: await headers(),
       body: JSON.stringify({ moduleTitle, moduleId, level, count, reference }),
     });
     const data = await r.json();
@@ -55,4 +56,9 @@ export async function aiGenerate(moduleTitle: string, moduleId: string, level: s
   } catch {
     return { questions: [], error: "Sin conexión con el servidor." };
   }
+}
+
+async function headers(): Promise<Record<string, string>> {
+  const token = await currentAccessToken();
+  return { "Content-Type": "application/json", ...(token ? { Authorization: `Bearer ${token}` } : {}) };
 }

@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Bungee } from "next/font/google";
 import "./globals.css";
 import PwaRegister from "@/components/PwaRegister";
+import { AuthProvider } from "@/lib/auth";
 
 const display = Bungee({ weight: "400", subsets: ["latin"], variable: "--font-display", display: "swap" });
 
@@ -24,7 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="es-AR" className={display.variable}>
       <body className="font-sans antialiased">
-        {children}
+        <AuthProvider>{children}</AuthProvider>
         <PwaRegister />
       </body>
     </html>

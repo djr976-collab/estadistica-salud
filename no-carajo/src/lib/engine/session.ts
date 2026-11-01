@@ -47,8 +47,8 @@ export function buildSession(cfg: GameConfig, { bank, wrongIds = [] }: BuildOpti
   const maxLevel = LEVEL_ORDER[cfg.level];
 
   if (cfg.mode === "guardia") {
-    const cases = [...new Set(active.filter((q) => q.caseId).map((q) => q.caseId!))];
-    const caseId = shuffle(cases)[0];
+    const cases = listCases(active).filter((c) => LEVEL_ORDER[c.level] <= maxLevel);
+    const caseId = cfg.caseId && active.some((q) => q.caseId === cfg.caseId) ? cfg.caseId : shuffle(cases.length ? cases : listCases(active))[0]?.caseId;
     return active
       .filter((q) => q.caseId === caseId)
       .sort((a, b) => (a.caseStep ?? 0) - (b.caseStep ?? 0))
@@ -75,4 +75,30 @@ export function buildSession(cfg: GameConfig, { bank, wrongIds = [] }: BuildOpti
     chosen.push(...extra.slice(0, cfg.count - chosen.length));
   }
   return chosen.map((q) => toPlayable(q));
+}
+
+export interface CaseInfo {
+  caseId: string;
+  title: string;
+  moduleId: string;
+  level: Question["level"];
+  steps: number;
+  critical: boolean;
+}
+
+/** Catálogo de casos clínicos del banco (el nivel del caso es el del paso más exigente). */
+export function listCases(bank: Question[]): CaseInfo[] {
+  const map = new Map<string, Question[]>();
+  for (const q of bank) if (q.caseId && q.active !== false) map.set(q.caseId, [...(map.get(q.caseId) ?? []), q]);
+  return [...map.entries()].map(([caseId, steps]) => {
+    const sorted = [...steps].sort((a, b) => (a.caseStep ?? 0) - (b.caseStep ?? 0));
+    return {
+      caseId,
+      title: sorted.find((s) => s.caseTitle)?.caseTitle ?? caseId,
+      moduleId: sorted[0].moduleId,
+      level: sorted.reduce<Question["level"]>((lv, s) => (LEVEL_ORDER[s.level] > LEVEL_ORDER[lv] ? s.level : lv), "basico"),
+      steps: sorted.length,
+      critical: sorted.some((s) => s.critical),
+    };
+  });
 }

@@ -15,13 +15,35 @@ export interface Progress {
   wrong: Record<string, number>;
   badges: string[];
   graveCount: number;
+  /** Última modificación (ms). Se usa para resolver conflictos al sincronizar entre dispositivos. */
+  updatedAt?: number;
 }
 
 const EMPTY: Progress = { xp: 0, bestStreak: 0, sessions: 0, history: [], wrong: {}, badges: [], graveCount: 0 };
 
-export const getProgress = (): Progress => ({ ...EMPTY, ...load<Progress>(KEY, EMPTY) });
-export const setProgress = (p: Progress) => save(KEY, { ...p, history: p.history.slice(-1000) });
-export const resetProgress = () => save(KEY, EMPTY);
+/** Con cuentas, el progreso local se separa por usuario (dispositivos compartidos). */
+let owner: string | null = null;
+const listeners = new Set<(p: Progress) => void>();
+const key = () => (owner ? `${KEY}:${owner}` : KEY);
+
+export function setProgressOwner(userId: string | null) {
+  owner = userId;
+}
+export function onProgressSaved(fn: (p: Progress) => void) {
+  listeners.add(fn);
+  return () => listeners.delete(fn);
+}
+
+export const getProgress = (): Progress => ({ ...EMPTY, ...load<Progress>(key(), EMPTY) });
+export function setProgress(p: Progress, opts: { silent?: boolean } = {}) {
+  const next = { ...p, history: p.history.slice(-1000), updatedAt: opts.silent ? p.updatedAt : Date.now() };
+  save(key(), next);
+  if (!opts.silent) listeners.forEach((fn) => fn(next));
+}
+export const resetProgress = () => setProgress({ ...EMPTY });
+
+export { mergeProgress } from "./engine/merge";
+
 
 export const RANKS = [
   { min: 0, name: "Estudiante de 1.er año" },

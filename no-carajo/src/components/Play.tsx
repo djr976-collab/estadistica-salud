@@ -11,8 +11,10 @@ import { getBank, spicyAvailable } from "@/lib/settings";
 import { getProgress, newBadges, rankFor, setProgress, xpFor } from "@/lib/progress";
 import { listen, speak, stopSpeaking, sttSupported, type Listener } from "@/lib/speech";
 import { sfx } from "@/lib/sfx";
+import { finishCloudSession, recordCloudAttempt, startCloudSession } from "@/lib/cloud";
 import type { GameConfig, GradeResult, PlayableQuestion } from "@/lib/types";
 import type { Prefs } from "./Game";
+import VitalsMonitor from "./VitalsMonitor";
 
 export interface SessionItem {
   q: PlayableQuestion;
@@ -54,6 +56,8 @@ export default function Play({
   const personality = useMemo(() => effectivePersonality(config.personality, spicyAvailable()), [config.personality]);
   const [questions] = useState<PlayableQuestion[]>(() => buildSession(config, { bank: getBank(), wrongIds: Object.keys(getProgress().wrong) }));
   const [xpBefore] = useState(() => getProgress().xp);
+  // Sesión en la nube (si hay cuenta): se crea una sola vez por partida.
+  const [cloudSessionId] = useState(() => (questions.length ? startCloudSession(config, questions.length) : null));
 
   const [idx, setIdx] = useState(0);
   const [phase, setPhase] = useState<Phase>("asking");
@@ -273,7 +277,7 @@ export default function Play({
     if (g.verdict === "correcta" && !retried) delete p.wrong[q.id];
     else p.wrong[q.id] = (p.wrong[q.id] ?? 0) + 1;
     if (g.verdict === "grave") p.graveCount += 1;
-    p.history.push({
+    const record = {
       questionId: q.id,
       moduleId: q.moduleId,
       verdict: g.verdict,
@@ -282,8 +286,10 @@ export default function Play({
       answerText: answerText.slice(0, 300),
       at: Date.now(),
       revanchaOk: config.mode === "revancha" && wasPending && g.verdict === "correcta" && !retried,
-    });
+    };
+    p.history.push(record);
     setProgress(p);
+    recordCloudAttempt(cloudSessionId, record, g.source);
   }
 
   function retry() {
@@ -313,6 +319,14 @@ export default function Play({
       p.badges.push(...earned);
       setProgress(p);
       if (earned.length || rankFor(p.xp).level > rankFor(xpBefore).level) sfx.levelUp();
+      const total = items.length;
+      finishCloudSession(
+        cloudSessionId,
+        config,
+        total,
+        total ? items.reduce((s, i) => s + i.grade.score, 0) / total : 0,
+        items.reduce((s, i) => s + i.xp, 0),
+      );
       onFinish({
         items,
         xp: items.reduce((s, i) => s + i.xp, 0),
@@ -417,16 +431,25 @@ export default function Play({
       {/* Pregunta */}
       {(phase === "asking" || phase === "evaluating" || phase === "feedback") && (
         <div className="card rise">
-          {q.caseIntro && (
-            <div className="mb-3 rounded-xl border border-neon-rosa/30 bg-neon-rosa/10 p-3 text-sm">
-              <span className="font-bold text-neon-rosa">🧩 Caso clínico · </span>
-              {q.caseIntro}
+          {q.caseId && (
+            <p className="mb-2 font-display text-xs uppercase tracking-wider text-neon-rosa">
+              🧩 {questions.find((x) => x.caseId === q.caseId && x.caseTitle)?.caseTitle ?? "Caso clínico"}
+            </p>
+          )}
+          {q.caseIntro && <div className="mb-3 rounded-xl border border-neon-rosa/30 bg-neon-rosa/10 p-3 text-sm leading-relaxed">{q.caseIntro}</div>}
+          {q.vitals && (
+            <div className="mb-3">
+              <VitalsMonitor vitals={q.vitals} />
             </div>
           )}
           <div className="mb-1 flex flex-wrap gap-2">
             <span className="chip">{typeLabel(q.type)}</span>
             <span className="chip">{LEVEL_LABEL[q.level]}</span>
-            {q.caseStep && <span className="chip">Paso {q.caseStep}</span>}
+            {q.caseStep && (
+              <span className="chip">
+                Paso {q.caseStep}/{questions.filter((x) => x.caseId === q.caseId).length}
+              </span>
+            )}
           </div>
           <h2 className="mt-2 text-lg font-bold leading-snug sm:text-xl">{q.renderedPrompt}</h2>
 
