@@ -1,5 +1,7 @@
 # Despliegue: Supabase + Netlify
 
+> Guía simplificada para el proyecto ya creado: [GUIA_PUBLICACION.md](GUIA_PUBLICACION.md).
+
 > Use primero un proyecto de **prueba**. No cargue datos reales hasta contar con la autorización institucional.
 
 ## 1. Supabase
@@ -14,6 +16,7 @@
    - `…0004_seed_hospital.sql` (ubicaciones iniciales; idempotente)
    - `…0005_directory_occupancy.sql`
    - `…0006_nomenclatura_uco.sql` · `…0007_emergencias_observacion.sql` · `…0008_emergencias_camillas.sql`
+   - `…0009_planimetria.sql` · `20261101000010_hardening_funciones.sql`
    Resultado: **157 puestos**.
 5. (Opcional, solo prueba) `supabase/seed.sql`: pacientes **ficticios**, incluido el de CQ Sector 4, habitación 30, cama B.
 6. Cree el primer usuario en **Authentication → Users → Add user** y ejecute `scripts/promote-admin.sql` (reemplazando el correo).

@@ -185,7 +185,7 @@ create index locations_sector_idx on locations (sector_id);
 
 -- Indica si el puesto cuenta como cama de internación para indicadores.
 create or replace function location_counts_as_bed(t location_type)
-returns boolean language sql immutable as $$
+returns boolean language sql immutable set search_path = public as $$
   select t in ('cama_internacion', 'cama_uti', 'box_uti', 'cama_coronaria')
 $$;
 
@@ -213,6 +213,7 @@ create table patients (
   updated_at     timestamptz not null default now()
 );
 create index patients_name_idx on patients (lower(last_name), lower(first_name));
+create index patients_created_by_idx on patients (created_by);
 
 create table admissions (
   id                   uuid primary key default gen_random_uuid(),

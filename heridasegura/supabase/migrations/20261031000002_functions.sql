@@ -57,7 +57,7 @@ $$;
 -- updated_at
 -- ---------------------------------------------------------------------
 create or replace function trg_set_updated_at()
-returns trigger language plpgsql as $$
+returns trigger language plpgsql set search_path = public as $$
 begin
   new.updated_at := now();
   return new;
@@ -124,7 +124,7 @@ end $$;
 -- Inmutabilidad de registros clínicos confirmados
 -- ---------------------------------------------------------------------
 create or replace function trg_block_mutation()
-returns trigger language plpgsql as $$
+returns trigger language plpgsql set search_path = public as $$
 begin
   raise exception 'Los registros clínicos confirmados no pueden modificarse ni eliminarse. Utilice una adenda trazable.'
     using errcode = 'P0001';
@@ -132,7 +132,7 @@ end $$;
 
 -- Valoraciones: solo se permite registrar la revisión del supervisor.
 create or replace function trg_assessment_update_guard()
-returns trigger language plpgsql as $$
+returns trigger language plpgsql set search_path = public as $$
 begin
   if (to_jsonb(new) - 'supervisor_reviewed_by' - 'supervisor_reviewed_at')
      is distinct from (to_jsonb(old) - 'supervisor_reviewed_by' - 'supervisor_reviewed_at') then
@@ -172,7 +172,7 @@ create trigger no_delete before delete on patients for each row execute function
 -- ---------------------------------------------------------------------
 -- Gravedad para impedir la estadificación inversa.
 create or replace function pu_rank(c pu_category)
-returns int language sql immutable as $$
+returns int language sql immutable set search_path = public as $$
   select case c
     when 'estadio_1'       then 1
     when 'estadio_2'       then 2
@@ -185,7 +185,7 @@ $$;
 
 -- Devuelve NULL si la transición es válida o un mensaje de error.
 create or replace function pu_transition_error(prev pu_category, nxt pu_category)
-returns text language sql immutable as $$
+returns text language sql immutable set search_path = public as $$
   select case
     when prev is null or nxt is null or prev = nxt then null
     when prev = 'membrana_mucosa' or nxt = 'membrana_mucosa'
@@ -265,7 +265,7 @@ create trigger assessment_after after insert on wound_assessments
 
 -- Protección de campos de lesión que solo derivan de valoraciones.
 create or replace function trg_wound_guard()
-returns trigger language plpgsql as $$
+returns trigger language plpgsql set search_path = public as $$
 begin
   if tg_op = 'INSERT' then
     new.initial_pu_category := null;
@@ -461,7 +461,7 @@ create trigger on_auth_user_created after insert on auth.users
 
 -- Un usuario no puede cambiar su propio rol ni activarse.
 create or replace function trg_profile_guard()
-returns trigger language plpgsql as $$
+returns trigger language plpgsql set search_path = public as $$
 begin
   if not app_is_admin() and auth.uid() is not null
      and (new.role is distinct from old.role or new.active is distinct from old.active) then

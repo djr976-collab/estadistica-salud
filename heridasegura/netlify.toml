@@ -2,7 +2,7 @@
 # archivos en la raíz, configure "Base directory" = heridasegura en Netlify.
 [build]
   command = "npm run build"
-  publish = ".next"
+  publish = ".next"  # relativo a Base directory (heridasegura)
 
 [build.environment]
   NODE_VERSION = "22"
